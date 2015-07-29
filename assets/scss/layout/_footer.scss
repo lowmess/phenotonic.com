@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+footer {
+  background: $snorlax;
+  color: $lugia;
+  width: 100vw;
+  padding-top: $h4-margin-top;
+  padding-bottom: $h4-margin-bottom;
+}
+.footer {
+  @include grid;
+  section {
+    @include column;
+  }
+  &__list {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+    @include breakpoint($pint) {
+      text-align: left;
+    }
+    a {
+      color: $lugia;
+      &:hover {
+        color: $ivysaur;
+      }
+    }
+  }
+  &__icon {
+    display: none;
+    @include breakpoint($pint) {
+      display: block;
+      fill: $lugia;
+      margin-top: 0.25rem;
+    }
+  }
+}

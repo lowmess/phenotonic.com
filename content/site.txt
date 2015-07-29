@@ -1,17 +1,17 @@
-Title: Kirby Starterkit
+Title: Phenotonic
 
 ----
 
-Author: Bastian Allgeier GmbH
+Author: Alec Lomas
 
 ----
 
-Description: This is Kirby's Starterkit.
+Description: Phenotonic Garden Consulting provides expertise and education for gardens of all varieties & gardeners of all skill levels.
 
 ----
 
-Keywords: Kirby, CMS, file-based
+Keywords: grow, growing, garden, gardening, consulting, consultants, consultant, consult, experts, expert, expertise, mmj, marijuana, vegetable, hydroponic, organic
 
 ----
 
-Copyright: © 2009-(date: Year) (link: http://getkirby.com text: Kirby)
+Copyright: © 2009-(date: Year) Phenotonic, LLC.
