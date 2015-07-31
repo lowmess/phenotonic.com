@@ -27,8 +27,8 @@ $breakpoints: (
 
 // Font-stacks
 
-$geomanist: "Geomanist", $helvetica;
-$merriweather: "Merriweather", $georgia;
+$header-text: "Geomanist", $helvetica;
+$body-text: "Merriweather", $georgia;
 
 // Type Settings
 
@@ -83,19 +83,19 @@ $zindex: (
 // @link http://hmphry.com/useful-sass-mixins
 
 $font-stack:
-  (group: geomanist, id: regular, font: $geomanist, weight: 400, style: normal),
-  (group: geomanist, id: regular-italic, font: $geomanist, weight: 400, style: italic),
-  (group: geomanist, id: book, font: $geomanist, weight: 500, style: normal),
-  (group: geomanist, id: book-italic, font: $geomanist, weight: 500, style: italic),
-  (group: geomanist, id: medium, font: $geomanist, weight: 600, style: normal),
-  (group: geomanist, id: medium-italic, font: $geomanist, weight: 600, style: italic),
-  (group: geomanist, id: bold, font: $geomanist, weight: 700, style: normal),
-  (group: geomanist, id: bold-italic, font: $geomanist, weight: 700, style: italic),
+  (group: header, id: regular, font: $header-text, weight: 400, style: normal),
+  (group: header, id: regular-italic, font: $header-text, weight: 400, style: italic),
+  (group: header, id: book, font: $header-text, weight: 500, style: normal),
+  (group: header, id: book-italic, font: $header-text, weight: 500, style: italic),
+  (group: header, id: medium, font: $header-text, weight: 600, style: normal),
+  (group: header, id: medium-italic, font: $header-text, weight: 600, style: italic),
+  (group: header, id: bold, font: $header-text, weight: 700, style: normal),
+  (group: header, id: bold-italic, font: $header-text, weight: 700, style: italic),
 
-  (group: merriweather, id: regular, font: $merriweather, weight: 400, style: normal),
-  (group: merriweather, id: regular-italic, font: $merriweather, weight: 400, style: italic),
-  (group: merriweather, id: bold, font: $merriweather, weight: 700, style: normal),
-  (group: merriweather, id: bold-italic, font: $merriweather, weight: 400, style: italic),
+  (group: body, id: regular, font: $body-text, weight: 400, style: normal),
+  (group: body, id: regular-italic, font: $body-text, weight: 400, style: italic),
+  (group: body, id: bold, font: $body-text, weight: 700, style: normal),
+  (group: body, id: bold-italic, font: $body-text, weight: 400, style: italic),
 
   (group: monospace, id: regular, font: $monospace, weight: 400, style: normal),
   (group: monospace, id: regular-italic, font: $monospace, weight: 400, style: italic),

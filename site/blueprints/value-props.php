@@ -36,3 +36,9 @@ fields:
       #### Important!
 
       This page *must* be set to visible for the testimonials page to work.
+  headline:
+    label: Headline
+    type: text
+  text:
+    label: Text
+    type: textarea

@@ -1,4 +1,8 @@
 <article class="testimonials">
+  <?php if($data->headline()->isNotEmpty()): ?>
+    <h2><?php ech $data->headline()->html()) ?></h2>
+  <?php endif; ?>
+  <?php echo $data->text()->kirbytext() ?>
   <?php foreach($data->children()->visible() as $t): ?>
     <blockquote cite="//<?php e($t->website()->isNotEmpty(), $t->website()->html()) ?>" class ="testimonial testimonial--<?php echo $t->author()->html() ?>">
       <h1 class="testemonial__quotation">&ldquo;</h1>

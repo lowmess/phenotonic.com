@@ -2,6 +2,7 @@
   @include outer-container;
   @include row;
   @include position(absolute, 0 0 null 0);
+  @include font(header, medium);
   padding-top: 0.25rem;
   &__logo {
     @include span-columns(4);
@@ -22,7 +23,6 @@
     text-align: right;
     li {
       display: inline;
-      @include font(geomanist, medium);
       letter-spacing: 0.05rem;
       padding: 0 2rem;
     }

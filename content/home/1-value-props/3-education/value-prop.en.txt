@@ -1,0 +1,9 @@
+Title: Education
+
+----
+
+Icon: university
+
+----
+
+Text: Our mission isn’t just to quietly prevent or fix issues: we want to educate you. With every visit, you’ll receive a report that exhaustively examines your current grow situation, including explaining past problems and potential issues in detail.

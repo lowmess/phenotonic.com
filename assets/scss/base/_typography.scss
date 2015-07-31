@@ -7,6 +7,7 @@
 body {
   font-size: $base-font-size;
   line-height: $base-line-height;
+  @include font(body);
 }
 
 p, ul, ol, pre, table, blockquote, address {
@@ -20,7 +21,7 @@ h1 {
   font-size: $h1-font-size;
   line-height: $h1-line-height;
 
-  @include font(geomanist, medium);
+  @include font(header, bold);
   text-transform: capitalize;
   letter-spacing: -0.04rem;
   font-weight: 600;
@@ -31,7 +32,7 @@ h2 {
   font-size: $h2-font-size;
   line-height: $h2-line-height;
 
-  @include font(geomanist, book);
+  @include font(header, medium);
   text-transform: capitalize;
   letter-spacing: -0.02rem;
 }
@@ -39,14 +40,14 @@ h3 {
   font-size: $h3-font-size;
   line-height: $h3-line-height;
 
-  @include font(geomanist, book);
+  @include font(header, medium);
   text-transform: capitalize;
 }
 h4, h5, h6 {
   font-size: $h4-font-size;
   line-height: $h4-line-height;
 
-  @include font(geomanist, book);
+  @include font(header, book);
   text-transform: capitalize;
   letter-spacing: 0.01rem;
 }

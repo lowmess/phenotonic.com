@@ -15,26 +15,23 @@
       </div>
     </header>
 
-    <?php if($page->valueProps()->isTrue()): ?>
-      <section class="value">
-        <?php
-          foreach($page->children()->visible() as $section) {
-            $sectionName = $section->dirname();
-            $vp = 'value';
-            if(
-              strpos($sectionName, $vp) !== false
-              && strpos($sectionName, $vp) !== null
-              && $section->hasChildren()) {
-                snippet($section->uid(), array('data' => $section));
-            }
+    <?php
+      if($page->valueProps()->isTrue()) {
+        foreach($page->children()->visible() as $section) {
+          $sectionName = $section->dirname();
+          $vp = 'value';
+          if(
+            strpos($sectionName, $vp) !== false
+            && strpos($sectionName, $vp) !== null
+            && $section->hasChildren()) {
+              snippet($section->uid(), array('data' => $section));
           }
-        ?>
-      </section>
-    <?php endif; ?>
+        }
+      }
+    ?>
 
-  <?php if($page->testimonials()->isTrue()): ?>
-    <section class="testimonials">
-      <?php
+    <?php
+      if($page->testimonials()->isTrue()) {
         foreach($page->children()->visible() as $section) {
           $sectionName = $section->dirname();
           $test = 'testimonials';
@@ -45,9 +42,8 @@
               snippet($section->uid(), array('data' => $section));
           }
         }
-      ?>
-    </section>
-  <?php endif; ?>
+      }
+    ?>
 
     <section id="contact" class="contact">
       <div class="contact__text">
