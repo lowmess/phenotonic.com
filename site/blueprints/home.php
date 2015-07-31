@@ -1,6 +1,15 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Home
+pages:
+  max: 2
+  limit: 2
+  template:
+    - testimonials
+    - value-props
+files:
+  hide: true
+deletable: false
 fields:
   title:
     label: Title
@@ -43,47 +52,33 @@ fields:
   pageSettings:
     type: headline
     label: Page Settings
-  howToVP:
-    label: How to Create a Value Prop
-    type: info
-    text: >
-      1. Make sure that 'Value Props' setting is turned on below.
-
-      2. Create a new page (on the left).
-
-      3. Choose to make a new 'Value Prop' page.
-
-      4. Name the page "VP-[title]", where [title] is the name of the prop. [title] is only used for our reference, it is not visible to anyone externally.
-
-      5. Fill out the fields on the 'Value Prop' subpage.
-    width: 1/2
-  howToT:
-    label: How to Create a Testimonial
-    type: info
-    text: >
-      1. Make sure that 'Testimonials' setting is turned on below.
-
-      2. Create a new page (on the left).
-
-      3. Choose to make a new 'Testimonial' page.
-
-      4. Name the page "T-[person]", where [person] is the name of the person who wrote the testimonial. [person] is only used for our reference, it is not visible to anyone externally.
-
-      5. Fill out the fields on the 'Testimonial' subpage.
-    width: 1/2
   valueProps:
     label: Value Props
     type: toggle
     text: on/off
+    width: 1/2
+  howToVP:
+    label: How to Create a Value Prop
+    type: info
+    text: >
+      1. Make sure that 'Value Props' setting is turned on.
+
+      2. Click on 'value-props' under 'pages' in the sidebar.
+
+      3. Follow the unstructions in the value-props panel.
     width: 1/2
   testimonials:
     label: Testimonials
     type: toggle
     text: on/off
     width: 1/2
-pages:
-  max: 2
-  limit: 2
-files:
-  hide: true
-deletable: false
+  howToT:
+    label: How to Create a Testimonial
+    type: info
+    text: >
+      1. Make sure that 'Testimonials' setting is turned on.
+
+      2. Click on 'testimonials' under 'pages' in the sidebar.
+
+      3. Follow the unstructions in the testimonials panel.
+    width: 1/2

@@ -1,26 +1,30 @@
 .nav {
-  width: 100vw;
-  height: 50px;
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  background: transparent;
+  @include outer-container;
+  @include row;
+  @include position(absolute, 0 0 null 0);
+  padding-top: 0.25rem;
   &__logo {
+    @include span-columns(4);
+    height: 60px;
     svg {
-      padding-top: 0.25rem;
-      height: 60px;
+      height: 100%;
+      width: auto;
+    }
+    a:hover {
+      border: none; // really dumb that this is the only way to not have the border present on the hover state.
     }
   }
   &__links {
-    &__list {
-      list-style-type: none;
-      margin-top: 0.85rem;
-      text-align: right;
-      &__item {
-        display: inline;
-        @extend h5;
-        font-weight: 400;
-        padding: 0 2rem;
-      }
+    @include span-columns(8);
+    @include omega;
+    list-style-type: none;
+    margin-top: 20px;
+    text-align: right;
+    li {
+      display: inline;
+      @include font(geomanist, medium);
+      letter-spacing: 0.05rem;
+      padding: 0 2rem;
     }
   }
 }

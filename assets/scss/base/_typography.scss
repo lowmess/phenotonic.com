@@ -7,8 +7,6 @@
 body {
   font-size: $base-font-size;
   line-height: $base-line-height;
-  max-width: $measure;
-  margin: 0 auto;
 }
 
 p, ul, ol, pre, table, blockquote, address {
@@ -82,8 +80,13 @@ sub {
 a {
   color: $ivysaur;
   text-decoration: none;
+  border: none;
   &:hover {
-    color: $machoke;
+    color: $ivysaur;
+    border-bottom: 2px solid currentColor;
+    & > img, & > svg {
+      border: none; // this doesn't work for some fucking reason
+    }
   }
 }
 

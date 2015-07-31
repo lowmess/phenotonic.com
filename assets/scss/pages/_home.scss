@@ -2,7 +2,7 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-section {
+article {
   width: 100%;
   //max-width: $measure;
   margin: 0 auto;
@@ -18,11 +18,15 @@ section {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  &__hero {
+    padding: $base-font-size;
+    padding-top: 75px;
+    @include respond-to(pint) { padding-top: 20vh; }
+    @include outer-container;
+  }
 }
 .hero {
-  //margin-top: $gutter * -0.5;
-  padding-top: 5vh;
-  @include respond-to(pint) { padding-top: 25vh; }
+
   &__wrapper {
     @extend section;
     max-width: $measure;

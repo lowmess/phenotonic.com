@@ -1,6 +1,6 @@
-<footer>
-  <div class="footer__container">
-      <ul>
+<footer class="footer">
+  <div class="footer__contact">
+      <ul class="footer__column">
         <li>
           <a <?php e($page->isOpen(), 'class="active"') ?> href="<?php echo $site->url() ?>">Home</a>
         <?php foreach($pages->visible() as $p): ?>
@@ -9,7 +9,7 @@
           </li>
         <?php endforeach ?>
       </ul>
-      <ul>
+      <ul class="footer__column">
         <li>
           <?php echo kirbytag(array(
             'email' => 'info@phenotonic.com',
@@ -20,9 +20,9 @@
         <li><a href="//instagram.com/phenotonic">Instagram</a></li>
         <li><?php echo twitter('phenotonic', 'Twitter') ?></li>
       </ul>
-      <address>
+      <address class="footer__column">
         <ul>
-          <li><strong>Phenotonic, LLC</strong></li>
+          <li>Phenotonic, LLC</li>
           <li>P.O. Box #6073</li>
           <li>Peoria, AZ 85302</li>
           <li>
@@ -40,3 +40,4 @@
     </div>
   </div>
 </footer>
+<?php echo js('assets/js/svg4everybody.min.js') ?>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <?php snippet('head') ?>
   </head>
@@ -10,22 +10,12 @@
     <header class="landing">
       <div class="landing__hero">
         <h1><?php echo $page->tagline()->html() ?></h1>
-        <?php e(!$page->copy()->empty(), $page->copy()->kirbytext()) ?>
-        <button onClick="location.href='#contact'" type="button" name="contact" class="btn"><?php echo $page->landingButton() ?></button>
+        <?php e($page->copy()->isNotEmpty(), $page->copy()->kirbytext()) ?>
+        <button onClick="location.href='#contact'" type="button" name="contact" class="btn"><?php echo $page->landingButton()->html() ?></button>
       </div>
     </header>
 
-    <?php /*
-      if($page->hasVisibleChildren()) {
-        foreach($page->children()->visible() as $section) {
-          if($section->hasChildren()) {
-            snippet($section->uid(), array('data' => $section));
-          }
-        }
-      }
-      */ ?>
-
-    <?php if($page->valueProps()): ?>
+    <?php if($page->valueProps()->isTrue()): ?>
       <section class="value">
         <?php
           foreach($page->children()->visible() as $section) {
@@ -40,9 +30,9 @@
           }
         ?>
       </section>
-    <?php endif ?>
+    <?php endif; ?>
 
-  <?php if($page->testimonials()): ?>
+  <?php if($page->testimonials()->isTrue()): ?>
     <section class="testimonials">
       <?php
         foreach($page->children()->visible() as $section) {
@@ -57,7 +47,7 @@
         }
       ?>
     </section>
-  <?php endif ?>
+  <?php endif; ?>
 
     <section id="contact" class="contact">
       <div class="contact__text">

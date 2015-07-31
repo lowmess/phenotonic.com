@@ -2,37 +2,35 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 
-footer {
-  background: $snorlax;
+.footer {
+  background: $ivysaur;
   color: $lugia;
-  width: 100vw;
   padding-top: $base-font-size;
   padding-bottom: $base-font-size;
-}
-.footer {
-  section {
+  @include fill-parent;
+  @include font(geomanist);
+  &__contact {
+    @include outer-container;
   }
-  &__list {
+  &__column {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+
+  a {
+    color: $lugia;
+    &:hover {
+      color: $lugia;
+    }
+  }
+  ul {
     list-style-type: none;
     margin-left: 0;
-    padding-left: 0;
-    text-align: center;
     @include respond-to(pint) {
       text-align: left;
     }
-    a {
-      color: $lugia;
-      &:hover {
-        color: $ivysaur;
-      }
-    }
   }
-  &__icon {
-    display: none;
-    @include respond-to(pint) {
-      display: block;
-      fill: $lugia;
-      margin-top: 0.25rem;
-    }
+  address {
+    font-style: normal;
   }
 }

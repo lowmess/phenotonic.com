@@ -5,8 +5,11 @@ pages: false
 files:
   type: image
   max: 1
-preview: parent
+preview: false
 fields:
+  title:
+    label: Title
+    type: text
   instructions:
     label: Instructions
     type: info

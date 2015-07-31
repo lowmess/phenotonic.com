@@ -40,7 +40,13 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css"/>
 <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic"/>
-<?php echo css('assets/css/main.css') ?>
+<?php if( $page->isHomePage() ): ?>
+  <?php echo css('assets/css/home.css') ?>
+<?php elseif( $page->isErrorPage() ): ?>
+  <?php echo css('assets/css/error.css') ?>
+<?php else: ?>
+  <?php echo css('assets/css/main.css') ?>
+<?php endif ?>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-<?php echo js(array('assets/js/svg4everybody.min.js', 'assets/js/svg4everybody.ie8.min.js')) ?>
+
+<?php echo js(array('//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', 'assets/js/svg4everybody.ie8.min.js')) ?>
