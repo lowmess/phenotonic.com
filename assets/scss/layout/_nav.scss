@@ -4,19 +4,16 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   background: transparent;
-  @include grid;
   &__logo {
-    @include column(3);
     svg {
       padding-top: 0.25rem;
       height: 60px;
     }
   }
   &__links {
-    @include column(9);
     &__list {
       list-style-type: none;
-      margin-top: $h4-margin-top * 0.85;
+      margin-top: 0.85rem;
       text-align: right;
       &__item {
         display: inline;

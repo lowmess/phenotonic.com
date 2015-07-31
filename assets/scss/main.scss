@@ -4,8 +4,9 @@
 // 1. Vendors
 @import
   'vendor/normalize',
-  'vendor/bower-components/bourbon/app/assets/stylesheets/bourbon',
-  'vendor/bower-components/neat/app/assets/stylesheets/neat';
+  'vendor/uniform',
+  'vendor/bower_components/bourbon/app/assets/stylesheets/bourbon',
+  'vendor/bower_components/neat/app/assets/stylesheets/neat';
 
 // 2. Configuration and helpers
 @import

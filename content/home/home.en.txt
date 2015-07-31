@@ -1,0 +1,33 @@
+Title: Home
+
+----
+
+Tagline: We want to help you grow your best garden.
+
+----
+
+Copy: 
+
+----
+
+Landingbutton: Let&rsquo;s Grow
+
+----
+
+Contactheadline: Schedule an appointment now
+
+----
+
+Contacttext: Interested in working with us? Great! Shoot us an email by filling out the form, and you&rsquo;ll be connected with one of our consultants to find a time that works for everyone, as well as get some background information about your gardening environment.
+
+----
+
+Contactbutton: Get in Touch
+
+----
+
+Valueprops: false
+
+----
+
+Testimonials: false

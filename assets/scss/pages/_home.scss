@@ -13,8 +13,8 @@ section {
   height: 100vh;
   width: 100vw;
   background-image: url("../images/header__background.jpg");
-  @include breakpoint($pint) { background-image: url("../images/header__background@2x.jpg"); }
-  @include breakpoint($bomber) { background-image: url("../images/header__background@3x.jpg"); }
+  @include respond-to(pint) { background-image: url("../images/header__background@2x.jpg"); }
+  @include respond-to(bomber) { background-image: url("../images/header__background@3x.jpg"); }
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -22,7 +22,7 @@ section {
 .hero {
   //margin-top: $gutter * -0.5;
   padding-top: 5vh;
-  @include breakpoint($pint) { padding-top: 25vh; }
+  @include respond-to(pint) { padding-top: 25vh; }
   &__wrapper {
     @extend section;
     max-width: $measure;
@@ -38,19 +38,16 @@ section {
 // VPs
 .value {
   &__prop {
-    @include grid;
-    @include breakpoint($pint) {
-      margin-bottom: $h1-margin-bottom * 2;
+    @include respond-to(pint) {
+      margin-bottom: 3rem;
     }
     &__icon {
-      @include column(3);
-      font-size: $h1-font-size* 2;
+      font-size: $huge-font-size;
       text-align: center;
-      margin-top: $h1-margin-top * 1.5;
+      margin-top: 2rem;
       color: $ivysaur;
       &--net {
-        @include breakpoint($pint) {
-          order: 2;
+        @include respond-to(pint) {
           & ~ .value__prop__text {
             text-align: right;
           }
@@ -58,22 +55,18 @@ section {
       }
     }
     &__text {
-      @include column(9);
     }
   }
 }
 .contact {
   background: $machop;
   &__wrapper {
-    @include grid;
-    padding-bottom: $h2-margin-bottom;
+    padding-bottom: 1.5rem;
   }
   &__text {
-    @include column;
   }
   &__form {
-    @include column;
-    margin-top: $h2-margin-top;
+    margin-top: 1.5rem;
     padding-left: $gutter;
     label, input, textarea {
       width: 100%;
@@ -84,8 +77,8 @@ section {
       //margin-bottom: $h4-margin-bottom;
     }
     input, textarea {
-      margin-top: $h4-margin-top * 0.25;
-      margin-bottom: $h4-margin-bottom* 0.75;
+      margin-top: 0.25rem;
+      margin-bottom: 0.75rem;
       border: 1px solid $machoke;
       border-radius: 3px;
       padding-left: 0.5rem;

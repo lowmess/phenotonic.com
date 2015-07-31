@@ -2,7 +2,7 @@
   <div class="nav__logo">
     <a href="//phenotonic.com">
       <svg role="img" title="Phenotonic" class="nav__logo__svg">
-        <use xlink:href="&lt;?php echo url('assets/images/phenotonic.svg#logo__full--color') ?&gt;"></use>
+        <use xlink:href="<?php echo url('assets/images/phenotonic.svg#logo__full--color') ?>"></use>
       </svg>
     </a>
   </div>
@@ -10,7 +10,7 @@
     <ul class="nav__links__list">
       <?php foreach($pages->visible() as $p): ?>
         <li class="nav__links__list__item">
-          <a> <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?> </a>
+          <a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?> </a>
         </li>
       <?php endforeach ?>
     </ul>

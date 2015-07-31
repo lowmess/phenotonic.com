@@ -1,6 +1,5 @@
 <footer>
-  <div class="footer">
-    <section>
+  <div class="footer__container">
       <ul>
         <li>
           <a <?php e($page->isOpen(), 'class="active"') ?> href="<?php echo $site->url() ?>">Home</a>
@@ -10,9 +9,7 @@
           </li>
         <?php endforeach ?>
       </ul>
-    </section>
-    <section>
-      <ul class="footer__list">
+      <ul>
         <li>
           <?php echo kirbytag(array(
             'email' => 'info@phenotonic.com',
@@ -23,10 +20,8 @@
         <li><a href="//instagram.com/phenotonic">Instagram</a></li>
         <li><?php echo twitter('phenotonic', 'Twitter') ?></li>
       </ul>
-    </section>
-    <section>
       <address>
-        <ul class="footer__list">
+        <ul>
           <li><strong>Phenotonic, LLC</strong></li>
           <li>P.O. Box #6073</li>
           <li>Peoria, AZ 85302</li>
@@ -38,11 +33,10 @@
           </li>
         </ul>
       </address>
-    </section>
-    <section>
+    <div>
       <svg role="img" title="Phenotonic Icon" class="footer__icon">
         <use xlink:href="<?php url('assets/images/phenotonic.svg#logo__icon') ?>"></use>
       </svg>
-    </section>
+    </div>
   </div>
 </footer>

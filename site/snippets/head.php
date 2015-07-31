@@ -8,7 +8,7 @@
 
 <?php if( $page->isHomePage() ): ?>
   <title><?php echo $site->title()->html() ?></title>
-<?php else if( $page->isErrorPage() ): ?>
+<?php elseif( $page->isErrorPage() ): ?>
   <title>Something's Gone Horribly Wrong</title>
 <?php else: ?>
   <title><?php echo html($page->title() . ' • ' . $site->title()) ?></title>
@@ -38,7 +38,7 @@
 <meta name="msapplication-square310x310logo" content="<?php echo url('assets/images/favicon-ms-310.png') ?>"/>
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css"/>
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css"/>
+<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic"/>
 <?php echo css('assets/css/main.css') ?>
 

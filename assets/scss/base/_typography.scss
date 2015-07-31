@@ -104,3 +104,8 @@ pre {
     background: transparent;
   }
 }
+
+small {
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+}
