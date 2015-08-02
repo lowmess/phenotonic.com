@@ -75,7 +75,12 @@ $max-width: $measure;
 // A running list of z-indexii
 
 $zindex: (
-
+  landing: 1,
+  hero: 100,
+  value: 200,
+  value__icon: 210,
+  value__text: 220,
+  nav: 1000
 );
 
 // FONT STACKS for @MIXIN FONT
