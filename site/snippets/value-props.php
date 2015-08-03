@@ -101,7 +101,7 @@
   <?php endif; ?>
   <?php echo $data->text()->kirbytext() ?>
   <?php foreach($data->children()->visible() as $vp):
-
+    
     // Let's make some new images, maybe? Only if we need to tho. And there are images that exist
     if ($vp->hasImages() && $vp->images()->count() == 1) {
       if (strpos($vp->images()->first()->url(), '_background') === false) {

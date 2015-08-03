@@ -3,14 +3,11 @@
 // -----------------------------------------------------------------------------
 
 article {
-  width: 100%;
-  //max-width: $measure;
-  margin: 0 auto;
-  padding: 0 $base-line-height;
+  @include fill-parent;
 }
 
 .landing {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-image: url("../images/header__background.jpg");
   @include respond-to(pint) { background-image: url("../images/header__background@2x.jpg"); }
@@ -21,7 +18,9 @@ article {
   &__hero {
     padding: $base-font-size;
     padding-top: 75px;
-    @include respond-to(pint) { padding-top: 20vh; }
+    padding-bottom: 50px;
+    //@include respond-to(pint) { padding-top: 50px; }
+    @include respond-to(bomber) { padding-top: 20vh; }
     @include outer-container;
   }
 }
@@ -46,32 +45,99 @@ article {
 .prop {
   @include fill-parent;
   @include row;
-  @include outer-container(100%);
   position: relative;
   &__img {
-    @include span-columns(6);
     position: relative;
     padding: 0;
-    height: 50vh;
+    margin: 0;
+    height: 100%;
+    min-height: 20rem;
+    max-height: 100vh;
+    width: 100%;
+    float: left;
+    @include respond-to(pint) {
+      min-height: 50vh;
+      max-height: 125vh;
+      width: 50%;
+    }
+    @include respond-to(bomber) {
+      min-height: 50vh;
+      max-height: 75vh;
+    }
+    @include respond-to(shorty) {
+      width: 100%;
+      height: 100%;
+      min-height: 20rem;
+    }
   }
   &__background {
     background-color: $machop;
     background-size: cover;
+    background-position: center center;
     width: 100%;
     height: 100%;
+    min-height: 20rem;
+    max-height: 100vh;
+    @include respond-to(pint) {
+      min-height: 50vh;
+      max-height: 125vh;
+    }
+    @include respond-to(bomber) {
+      min-height: 50vh;
+      max-height: 75vh;
+    }
+    @include respond-to(shorty) {
+      width: 100%;
+      height: 100%;
+      min-height: 20rem;
+    }
   }
   &__overlay {
-    background-color: rgba($ivysaur, 0.5);
-    background: linear-gradient(to bottom, rgba($bulbasaur, 0.5), rgba($ivysaur, 0.5));
     width: 100%;
     height: 100%;
     @include position(absolute, 0 0 0 0);
+    background-color: rgba($snorlax, 0.5);
+    background: linear-gradient(to bottom, rgba($snorlax, 0.8), rgba($ivysaur, 0.75));
+    @include respond-to(pint) {
+      background-color: rgba($ivysaur, 0.5);
+      background: linear-gradient(to bottom, rgba($bulbasaur, 0.5), rgba($ivysaur, 0.5));
+    }
+    @include respond-to(shorty) {
+      background-color: rgba($snorlax, 0.5);
+      background: linear-gradient(to bottom, rgba($snorlax, 0.8), rgba($ivysaur, 0.75));
+    }
   }
   &__text {
-    @include span-columns(6);
-    @include omega;
+    float: left;
+    width: 100%;
+    min-height: 20rem;
+    max-height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
     z-index: z(value__text);
-    margin-top: 7vh;
+    @include pad;
+    padding-top: 0;
+    color: $lugia;
+    @include respond-to(pint) {
+      min-height: 50vh;
+      max-height: 125vh;
+      width: 50%;
+      position: relative;
+      color: $snorlax;
+    }
+    @include respond-to(bomber) {
+      min-height: 50vh;
+      max-height: 75vh;
+      padding-top: 5vh;
+    }
+    @include respond-to(shorty) {
+      color: $lugia;
+      min-height: 20rem;
+      @include position(absolute, 0 0 0 0);
+      width: 65%;
+      margin: 0 auto;
+    }
     h3, p {
       max-width: $measure * 0.75;
     }
@@ -79,29 +145,30 @@ article {
   &__icon {
     color: $ivysaur;
     font-size: $h3-font-size;
-    margin-left: 2vw;
+    margin-left: 3vw;
   }
 }
-
-
-@include direction-context(right-to-left) {
-  .prop:nth-of-type(2) {
-    @include row;
+.prop:nth-of-type(2n) {
+  & .prop__img {
+    float: right;
   }
-}
-@include direction-context(right-to-left) {
-  .prop:nth-of-type(2) .prop__img {
-    @include span-columns(6);
-    @include omega;
-  }
-}
-@include direction-context(right-to-left) {
-  .prop:nth-of-type(2) & .prop__text {
-    @include span-columns(6);
-    @include pad;
+  & .prop__text {
+    float: right;
     text-align: right;
     h3, p {
       margin-left: auto;
     }
+  }
+}
+
+.contact {
+  @include fill-parent;
+  background: $machop;
+  section {
+    @include outer-container;
+    @include row;
+  }
+  &__text {
+    @include span-columns(6);
   }
 }

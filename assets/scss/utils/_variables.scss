@@ -19,6 +19,7 @@ $machamp: #95a6a3;
 
 $breakpoints: (
   flight: "(max-width: 40rem)",
+  shorty: "(orientation: landscape) and (max-height: 40rem) and (max-width: 64rem)",
   pint: "(min-width: 40.1rem)",
   bomber: "(min-width: 64.1rem)",
   pony: "(min-width: 90.1rem)",

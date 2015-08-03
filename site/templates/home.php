@@ -44,13 +44,14 @@
         }
       }
     ?>
-
-    <section id="contact" class="contact">
-      <div class="contact__text">
-        <h2><?php echo $page->contactHeadline()->html() ?></h2>
-        <?php e(!$page->contactText()->empty(), $page->contactText()->kirbytext()) ?>
-      </div>
-    </section>
+    <article id="contact" class="contact">
+      <section>
+        <div class="contact__text">
+          <h2><?php echo $page->contactHeadline()->html() ?></h2>
+          <?php e(!$page->contactText()->empty(), $page->contactText()->kirbytext()) ?>
+        </div>
+      </section>
+    </article>
 
     <?php snippet('footer') ?>
 
