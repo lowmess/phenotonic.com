@@ -20,6 +20,10 @@ p, ul, ol, pre, table, blockquote, address {
 h1 {
   font-size: $h1-font-size;
   line-height: $h1-line-height;
+  @include respond-to(pint) {
+    font-size: $lg-h1-font-size;
+    line-height: $lg-h1-line-height;
+  }
 
   @include font(header, bold);
   text-transform: capitalize;
@@ -31,6 +35,10 @@ h1 {
 h2 {
   font-size: $h2-font-size;
   line-height: $h2-line-height;
+  @include respond-to(pint) {
+    font-size: $lg-h2-font-size;
+    line-height: $lg-h2-line-height;
+  }
 
   @include font(header, medium);
   text-transform: capitalize;
@@ -39,6 +47,10 @@ h2 {
 h3 {
   font-size: $h3-font-size;
   line-height: $h3-line-height;
+  @include respond-to(pint) {
+    font-size: $lg-h3-font-size;
+    line-height: $lg-h3-line-height;
+  }
 
   @include font(header, medium);
   text-transform: capitalize;
@@ -46,6 +58,10 @@ h3 {
 h4, h5, h6 {
   font-size: $h4-font-size;
   line-height: $h4-line-height;
+  @include respond-to(pint) {
+    font-size: $lg-h4-font-size;
+    line-height: $lg-h4-line-height;
+  }
 
   @include font(header, book);
   text-transform: capitalize;
@@ -112,4 +128,8 @@ pre {
 small {
   font-size: $small-font-size;
   line-height: $small-line-height;
+  @include respond-to(pint) {
+    font-size: $lg-small-font-size;
+    line-height: $lg-small-line-height;
+  }
 }

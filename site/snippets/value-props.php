@@ -1,3 +1,100 @@
+<?php
+  function saveBg($image, $ext, $imageName) {
+    switch ($ext) {
+      case 'jpeg':
+      case 'jpg':
+        imageinterlace($image, 1);
+        imagejpeg($image, $imageName, 80);
+        imagedestroy($image);
+        break;
+      case 'png':
+        imagepng($image, $imageName, 2);
+        imagedestroy($image);
+        break;
+      case 'gif':
+        imagegif($image, $imageName);
+        imagedestroy($image);
+        break;
+    }
+  }
+  function createBg($img) {
+
+    $imgHeight = $img->height();
+    $imgWidth  = $img->width();
+
+    $imgURL    = $img->url();
+    $imgRoot   = $img->dir();
+    $imgPage   = $img->page();
+    $imgExt    = $img->extension();
+    $imgName   = str_replace($img->dir().'\\', '', $img);
+    $imgTitle  = str_replace('.'.$imgExt, '', $imgName);
+
+    $imgString = $imgRoot.'\\'.$imgName;
+
+    if($imgHeight > $imgWidth) { // If portrait
+
+      if($imgHeight > 2100) { // If image is really, *really* frickin' tall
+        $bg3x = imagecreatefromstring(file_get_contents($imgString)); // Create @3x copy
+          $newWidth = (2100 * $imgWidth) / $imgHieght;
+          $bg3x = imagescale($bg3x, $newWidth, 2100); // Scale the @3x copy
+          saveBg($bg3x, $imgExt, $imgRoot.'/_background@3x.'.$imgExt); // Save the @3x copy
+        $bg3xExists = true; // Tell the world there is a @3x bg
+      }
+
+      if ($imgHeight > 1024) {
+        $bg2x = imagecreatefromstring(file_get_contents($imgString)); // Create @2x copy
+          $newWidth = (1024 * $imgWidth) / $imgHeight;
+          $bg2x = imagescale($bg2x, $newWidth, 1024); // Scale the @2x copy
+          saveBg($bg2x, $imgExt, $imgRoot.'/_background@2x.'.$imgExt); // Save the @2x copy
+        $bg2xExists = true; // Tell the world there is a @2x bg
+      }
+
+      if ($imgHeight > 640) {
+        $bg = imagecreatefromstring(file_get_contents($imgString)); // Create copy
+          $newWidth = (640 * $imgWidth) / $imgHeight;
+          $bg = imagescale($bg, $newWidth, 640); // Scale the bg
+          saveBg($bg, $imgExt, $imgRoot.'/_background.'.$imgExt); // Save the bg
+        $bgExists = true; // Tell the world there is a bg
+      }
+
+      if ($imgHeight < 640) {
+        $img->rename('_background'.$imgExt);
+        $bgExists = true; // Tell the world there is a bg
+      }
+
+    } else { // If landscape or square
+
+      if($imgWidth > 2100) { // If image is wide af
+        $bg3x = imagecreatefromstring(file_get_contents($imgString)); // Create @3x copy
+          $newHeight = (2100 * $imgHeight) / $imgWidth;
+          $bg3x = imagescale($bg3x, 2100, $newHeight); // Scale the @3x copy
+          saveBg($bg3x, $imgExt, $imgRoot.'/_background@3x.'.$imgExt); // Save the @3x copy
+        $bg3xExists = true; // Tell the world there is a @3x bg
+      }
+
+      if ($imgWidth > 1024) {
+        $bg2x = imagecreatefromstring(file_get_contents($imgString)); // Create @2x copy
+          $newHeight = (1024 * $imgHeight) / $imgWidth;
+          $bg2x = imagescale($bg2x, 1024, $newHeight); // Scale the @2x copy
+          saveBg($bg2x, $imgExt, $imgRoot.'/_background@2x.'.$imgExt); // Save the @2x copy
+        $bg2xExists = true; // Tell the world there is a @2x bg
+      }
+
+      if ($imgWidth > 640) {
+        $bg = imagecreatefromstring(file_get_contents($imgString)); // Create copy
+          $newHeight = (640 * $imgHeight) / $imgWidth;
+          $bg = imagescale($bg, 640, $newHeight); // Scale the bg
+          saveBg($bg, $imgExt, $imgRoot.'/_background.'.$imgExt); // Save the bg
+        $bgExists = true; // Tell the world there is a bg
+      }
+
+      if ($imgWidth < 640) {
+        $img->rename('_background'.$imgExt);
+        $bgExists = true; // Tell the world there is a bg
+      }
+    }
+  }
+?>
 <article class="value">
   <?php if($data->headline()->isNotEmpty()): ?>
     <h2><?php echo $data->headline()->html() ?></h2>
@@ -6,115 +103,88 @@
   <?php foreach($data->children()->visible() as $vp):
 
     // Let's make some new images, maybe? Only if we need to tho. And there are images that exist
-    if($vp->hasImages()) { // && $vp->images()->count() <= 1) {
+    if ($vp->hasImages() && $vp->images()->count() == 1) {
+      if (strpos($vp->images()->first()->url(), '_background') === false) {
+        createBg($vp->images()->first());
+        break;
+      }
+    } elseif ($vp->hasImages() && $vp->images()->count() > 1) {
 
+      $newBg    = false;
       $bgExists = false;
-      $resize   = false;
+      $i = 0;
 
-      foreach($vp->images() as $image) { // try to find a background
-        $n = strpos($image->dir(), '_background');
-        if ($n !== false) $bgExists = true;
-        if ($bgExists) break;
+      foreach ($vp->images() as $image) { // check for new background
+        $q = strpos($image->dir(), '_background');
+        if ($q === false) $newBg = true;
+        if ($newBg) break;
       }
 
-      if(!$bgExists) {
-
-        foreach($vp->images() as $image) { //delete old background images
-          $q = strpos($image->dir(), '_background@');
-          if ($q !== false) {
-            $image->delete();
-          }
-        }
-
-        foreach($vp->images() as $image) { // find new background image
-          $q = strpos($image->dir(), '_background');
-          if ($q === false) {
-            $image->rename('_background');
-            $bgExists = true;
-            $resize = true;
-          }
-          if ($resize) break;
-        }
+      foreach ($vp->images() as $image) { // check my work
+        if (strpos($image->url(), '_background') !== false) $bgExists = true;
       }
 
-      if ($resize) { // make responsive sizes
-        $img = $vp->images()->first();
-        $imgHeight = $img->height();
-        $imgWidth = $img->width();
-
-        $imgURL = $img->url();
-        $imgRoot = $img->dir();
-        $imgPage = $img->page();
-        $imgExt = $img->extension();
-        $imgName = str_replace($img->dir().'\\', '', $vp->images()->first());
-        $imgTitle = str_replace('.'.$imgExt, '', $imgName);
-
-        if($imgHeight > $imgWidth) { // If portrait
-
-          echo 'huh?';
-
-        } else { // If landscape or square
-
-          if($imgWidth > 1024) { // If image is wide af
-
-            copy($img, $imgRoot.'\\'.$imgTitle.'@3x.'.$imgExt);  // Make a @3x copy
-            if($imgWidth > 2100) { // If image is stupid wide
-              $img3x = imagecreatefrom.$imgExt($imgRoot.'\\'.$imgTitle.'@3x.'.$imgExt);
-              $newHeight = (2100 * $imgHeight) / $imgWidth;
-              imagescale($img3x, 2100, $newHeight); // Scale the @3x copy
-            }
-
-          } elseif ($imgWidth > 640) { // If image is only kinda wide
-
-          }
-        }
+      if ($newBg && $bgExists == false) { // make responsive sizes if there's a new background
+        createBg($vp->images()->first());
       }
 
-      if ($bgexists && !$resize) { // delete not background images
-        foreach($vp->images() as $image) {
-          $n = strpos($image->dir(), '_background');
-          if ($n === false) {
-            $image->delete();
-          }
-        }
-      }
+      foreach ($vp->images() as $image) {
+        if (strpos($image->url(), '_background'.'%40'.'3x') !== false) $bg3xExists = true;
+        if (strpos($image->url(), '_background'.'%40'.'2x') !== false) $bg2xExists = true;
+        if (strpos($image->url(), '_background.')           !== false) $bgExists   = true;
 
-      $img = $vp->images()->first();
-      $imgSan = $img->page().'/'.str_replace($img->dir().'\\', '', $img);
+        if(strpos($image->url(), '_background') === false) $image->rename('deleted-background-'.$i); // housekeeping
+        $i++;
+
+        if (strpos($image->url(), 'deleted-background-')) $image->delete();
+      }
+    }
 
     // Now let's set these suckers (if they exist)
-    if(isset($img)): ?>
+    if($vp->hasImages() && $bgExists):
+      $bg      = $vp->images()->first();
+      $bgExt   = $bg->extension();
+      $bgName  = str_replace($bg->dir().'\\', '', $bg);
+      $bgTitle = str_replace('.'.$bgExt, '', $bgName);
+      $bgSan   = $bg->page().'/'.$bgName;
+      ?>
+
       <style media="screen">
-        .value__background--<?php echo $vp->title()->html() ?> {
-          background-image: url(<?php echo $imgSan ?>);
+        .prop__background--<?php echo $vp->title()->html() ?> {
+          background-image: url(<?php echo $bgSan ?>);
         }
-        <?php if(isset($img2x)): ?>
+
+        <?php if($bg2xExists):
+          $bg2xSan = $bg->page().'/'.$bgTitle.'@2x.'.$bgExt;
+          ?>
           @media only screen and (min-width: 640px) {
-            .value__background--<?php echo $vp->title()->html() ?> {
-              background-image: url(<?php echo $imgSan ?>);
+            .prop__background--<?php echo $vp->title()->html() ?> {
+              background-image: url(<?php echo $bg2xSan ?>);
             }
           }
         <?php endif; ?>
-        <?php if(isset($img3x)): ?>
+
+        <?php if($bg3xExists):
+          $bg3xSan = $bg->page().'/'.$bgTitle.'@3x.'.$bgExt;
+          ?>
           @media only screen and (min-width: 1024px) {
-            .value__background--<?php echo $vp->title()->html() ?> {
-              background-image: url(<?php echo $imgSan ?>);
+            .prop__background--<?php echo $vp->title()->html() ?> {
+              background-image: url(<?php echo $bg3xSan ?>);
             }
           }
         <?php endif; ?>
+
       </style>
+
     <?php endif; ?>
 
-    <section class ="value__prop value__prop--<?php echo $vp->title()->html() ?>">
-      <div class="value__img">
-        <div class="value__background value__background--<?php echo $vp->title()->html() ?>"></div>
-        <div class="value__overlay"></div>
+    <section class="prop prop--<?php echo $vp->title()->html() ?>">
+      <div class="prop__img">
+        <div class="prop__background prop__background--<?php echo $vp->title()->html() ?>"></div>
+        <div class="prop__overlay"></div>
       </div>
-      <div class="value__text">
-        <div class="value__headline">
-          <h3><?php echo $vp->title()->html() ?></h3>
-          <i class="value__icon icon ion-<?php echo $vp->icon()->html() ?>"></i>
-        </div>
+      <div class="prop__text">
+        <h3><?php echo $vp->title()->html() ?><i class="prop__icon icon ion-<?php echo $vp->icon()->html() ?>"></i></h3>
         <?php echo $vp->text()->kirbytext() ?>
       </div>
     </section>

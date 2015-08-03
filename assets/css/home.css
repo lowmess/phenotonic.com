@@ -523,7 +523,7 @@ p, ul, ol, pre, table, blockquote, address {
 }
 
 h1 {
-  font-size: 4.2358rem;
+  font-size: 2.82715rem;
   line-height: 1.2;
   font-family: "Geomanist", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 700;
@@ -535,8 +535,15 @@ h1 {
   text-rendering: optimizeLegibility;
 }
 
+@media (min-width: 40.1rem) {
+  h1 {
+    font-size: 4.2358rem;
+    line-height: 1.1;
+  }
+}
+
 h2 {
-  font-size: 2.61792rem;
+  font-size: 1.9994rem;
   line-height: 1.3;
   font-family: "Geomanist", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 600;
@@ -545,13 +552,27 @@ h2 {
   letter-spacing: -0.02rem;
 }
 
+@media (min-width: 40.1rem) {
+  h2 {
+    font-size: 2.61792rem;
+    line-height: 1.25;
+  }
+}
+
 h3 {
-  font-size: 1.618rem;
+  font-size: 1.414rem;
   line-height: 1.4;
   font-family: "Geomanist", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 600;
   font-style: normal;
   text-transform: capitalize;
+}
+
+@media (min-width: 40.1rem) {
+  h3 {
+    font-size: 1.618rem;
+    line-height: 1.4;
+  }
 }
 
 h4, h5, h6 {
@@ -562,6 +583,13 @@ h4, h5, h6 {
   font-style: normal;
   text-transform: capitalize;
   letter-spacing: 0.01rem;
+}
+
+@media (min-width: 40.1rem) {
+  h4, h5, h6 {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
 }
 
 hr {
@@ -629,8 +657,15 @@ pre code {
 }
 
 small {
-  font-size: 0.61805rem;
+  font-size: 0.70721rem;
   line-height: 1.5;
+}
+
+@media (min-width: 40.1rem) {
+  small {
+    font-size: 0.61805rem;
+    line-height: 1.5;
+  }
 }
 
 .nav {
@@ -841,21 +876,28 @@ article {
   width: 100%;
 }
 
-.value__prop {
+.prop {
   width: 100%;
+  display: block;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  position: realtive;
+  position: relative;
 }
 
-.value__prop::after {
+.prop::after {
   clear: both;
   content: "";
   display: table;
 }
 
-.value__img {
+.prop::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.prop__img {
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -865,18 +907,18 @@ article {
   height: 50vh;
 }
 
-.value__img:last-child {
+.prop__img:last-child {
   margin-right: 0;
 }
 
-.value__background {
+.prop__background {
   background-color: #eae6e6;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
-.value__overlay {
+.prop__overlay {
   background-color: rgba(46, 167, 46, 0.5);
   background: -webkit-linear-gradient(top, rgba(62, 201, 62, 0.5), rgba(46, 167, 46, 0.5));
   background: linear-gradient(to bottom, rgba(62, 201, 62, 0.5), rgba(46, 167, 46, 0.5));
@@ -889,7 +931,7 @@ article {
   left: 0;
 }
 
-.value__text {
+.prop__text {
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -899,50 +941,57 @@ article {
   margin-top: 7vh;
 }
 
-.value__text:last-child {
+.prop__text:last-child {
   margin-right: 0;
 }
 
-.value__text h3, .value__text p {
+.prop__text h3, .prop__text p {
   max-width: 41.25rem;
 }
 
-.value__headline {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.prop__icon {
+  color: #2ea72e;
+  font-size: 1.414rem;
+  margin-left: 2vw;
 }
 
-.value__headline::after {
+.prop:nth-of-type(2) {
+  display: block;
+}
+
+.prop:nth-of-type(2)::after {
   clear: both;
   content: "";
   display: table;
 }
 
-.value__headline h3 {
-  float: left;
+.prop:nth-of-type(2) .prop__img {
+  float: right;
   display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
+  margin-left: 2.35765%;
+  width: 48.82117%;
+  margin-left: 0;
 }
 
-.value__headline h3:last-child {
-  margin-right: 0;
+.prop:nth-of-type(2) .prop__img:last-child {
+  margin-left: 0;
 }
 
-.value__icon {
-  float: left;
+.prop:nth-of-type(2) .prop__text {
+  float: right;
   display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%;
-  margin-right: 0;
-  color: #2ea72e;
-  font-size: 1.618rem;
-  margin-top: 1.35912rem;
+  margin-left: 2.35765%;
+  width: 48.82117%;
+  padding: 2.35765%;
+  text-align: right;
 }
 
-.value__icon:last-child {
-  margin-right: 0;
+.prop:nth-of-type(2) .prop__text:last-child {
+  margin-left: 0;
+}
+
+.prop:nth-of-type(2) .prop__text h3, .prop:nth-of-type(2) .prop__text p {
+  margin-left: auto;
 }
 
 /*

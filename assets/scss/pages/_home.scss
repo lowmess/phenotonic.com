@@ -42,11 +42,12 @@ article {
 // VPs
 .value {
   @include fill-parent;
-  &__prop {
-    @include fill-parent;
-    @include outer-container(100%);
-    position: realtive;
-  }
+}
+.prop {
+  @include fill-parent;
+  @include row;
+  @include outer-container(100%);
+  position: relative;
   &__img {
     @include span-columns(6);
     position: relative;
@@ -75,17 +76,32 @@ article {
       max-width: $measure * 0.75;
     }
   }
-  &__headline {
-    @include outer-container(100%);
-    h3 {
-      @include span-columns(3);
-    }
-  }
   &__icon {
-    @include span-columns(9);
-    @include omega;
     color: $ivysaur;
     font-size: $h3-font-size;
-    margin-top: ($h3-font-size * $h3-line-height) * 0.6;
+    margin-left: 2vw;
+  }
+}
+
+
+@include direction-context(right-to-left) {
+  .prop:nth-of-type(2) {
+    @include row;
+  }
+}
+@include direction-context(right-to-left) {
+  .prop:nth-of-type(2) .prop__img {
+    @include span-columns(6);
+    @include omega;
+  }
+}
+@include direction-context(right-to-left) {
+  .prop:nth-of-type(2) & .prop__text {
+    @include span-columns(6);
+    @include pad;
+    text-align: right;
+    h3, p {
+      margin-left: auto;
+    }
   }
 }
