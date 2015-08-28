@@ -40,4 +40,3 @@
     </div>
   </div>
 </footer>
-<?php echo js('assets/js/svg4everybody.min.js') ?>

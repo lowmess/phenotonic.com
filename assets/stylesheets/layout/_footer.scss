@@ -8,7 +8,6 @@
   padding-top: $base-font-size;
   padding-bottom: $base-font-size;
   @include fill-parent;
-  @include font(geomanist);
   &__contact {
     @include outer-container;
   }

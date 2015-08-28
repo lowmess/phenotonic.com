@@ -1,9 +1,7 @@
 <nav role="navigation" class="nav">
   <div class="nav__logo">
     <a href="//phenotonic.com">
-      <svg role="img" title="Phenotonic">
-        <use xlink:href="<?php echo url('assets/images/phenotonic.svg#logo__full--color') ?>"></use>
-      </svg>
+      <?php snippet('logo') ?>
     </a>
   </div>
   <ul class="nav__links">

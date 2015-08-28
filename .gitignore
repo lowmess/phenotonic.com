@@ -2,4 +2,5 @@
 /site/accounts
 /assets/avatars
 /assets/fonts
+/assets/node_modules
 /thumbs/*

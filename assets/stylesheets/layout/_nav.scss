@@ -2,7 +2,7 @@
   @include outer-container;
   @include row;
   @include position(absolute, 0 0 null 0);
-  @include font(header, medium);
+  @include font(heading, book);
   padding-top: 0.25rem;
   &__logo {
     @include span-columns(4);

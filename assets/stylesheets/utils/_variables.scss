@@ -28,7 +28,7 @@ $breakpoints: (
 
 // Font-stacks
 
-$header-text: "Geomanist", $helvetica;
+$heading-text: "Geomanist", $helvetica;
 $body-text: "Merriweather", $georgia;
 
 // Type Settings
@@ -40,34 +40,38 @@ $measure: 55rem;
 // Type Base
 
 $base-font-size: modular-scale(0);
-$base-line-height: 1.75;
+$base-line-height: 1.75rem;
+
+// line-heights
+
+$h1-line-height: $base-line-height * 2;
+$lg-h1-line-height: $base-line-height * 3;
+
+$h2-line-height: $base-line-height;
+$lg-h2-line-height: $base-line-height * 2;
+
+$h3-line-height: $base-line-height;
+
+$h4-line-height: $base-line-height;
 
 // Headers
 
 $h1-font-size: modular-scale(3);
-$h1-line-height: 1.2;
 
 $h2-font-size: modular-scale(2);
-$h2-line-height: 1.3;
 
 $h3-font-size: modular-scale(1);
-$h3-line-height: 1.4;
 
 $h4-font-size: modular-scale(0);
-$h4-line-height: 1.6;
 
 // Other
 $xsmall-font-size: modular-scale(-2);
-$xsmall-line-height: 1.25;
 
 $small-font-size: modular-scale(-1);
-$small-line-height: 1.5;
 
 $huge-font-size: modular-scale(4);
-$huge-line-height: 1.1;
 
 $xhuge-font-size: modular-scale(5);
-$xhuge-line-height: 1;
 
 // Large Font stuff
 $modular-scale-ratio: $golden;
@@ -119,14 +123,14 @@ $zindex: (
 // @link http://hmphry.com/useful-sass-mixins
 
 $font-stack:
-  (group: header, id: regular, font: $header-text, weight: 400, style: normal),
-  (group: header, id: regular-italic, font: $header-text, weight: 400, style: italic),
-  (group: header, id: book, font: $header-text, weight: 500, style: normal),
-  (group: header, id: book-italic, font: $header-text, weight: 500, style: italic),
-  (group: header, id: medium, font: $header-text, weight: 600, style: normal),
-  (group: header, id: medium-italic, font: $header-text, weight: 600, style: italic),
-  (group: header, id: bold, font: $header-text, weight: 700, style: normal),
-  (group: header, id: bold-italic, font: $header-text, weight: 700, style: italic),
+  (group: heading, id: regular, font: $heading-text, weight: 400, style: normal),
+  (group: heading, id: regular-italic, font: $heading-text, weight: 400, style: italic),
+  (group: heading, id: book, font: $heading-text, weight: 500, style: normal),
+  (group: heading, id: book-italic, font: $heading-text, weight: 500, style: italic),
+  (group: heading, id: medium, font: $heading-text, weight: 600, style: normal),
+  (group: heading, id: medium-italic, font: $heading-text, weight: 600, style: italic),
+  (group: heading, id: bold, font: $heading-text, weight: 700, style: normal),
+  (group: heading, id: bold-italic, font: $heading-text, weight: 700, style: italic),
 
   (group: body, id: regular, font: $body-text, weight: 400, style: normal),
   (group: body, id: regular-italic, font: $body-text, weight: 400, style: italic),

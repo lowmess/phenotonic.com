@@ -41,12 +41,9 @@
 <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic"/>
 <?php if( $page->isHomePage() ): ?>
-  <?php echo css('assets/css/home.css') ?>
+  <?php echo css('assets/css/home.min.css') ?>
 <?php elseif( $page->isErrorPage() ): ?>
-  <?php echo css('assets/css/error.css') ?>
+  <?php echo css('assets/css/error.min.css') ?>
 <?php else: ?>
-  <?php echo css('assets/css/main.css') ?>
+  <?php echo css('assets/css/main.min.css') ?>
 <?php endif ?>
-
-
-<?php echo js(array('//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', 'assets/js/svg4everybody.ie8.min.js')) ?>

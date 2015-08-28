@@ -5,9 +5,10 @@
 // Base
 
 body {
+  @include font(body);
+
   font-size: $base-font-size;
   line-height: $base-line-height;
-  @include font(body);
 }
 
 p, ul, ol, pre, table, blockquote, address {
@@ -18,54 +19,64 @@ p, ul, ol, pre, table, blockquote, address {
 // Headers
 
 h1 {
+  @include font(heading, bold);
+
   font-size: $h1-font-size;
   line-height: $h1-line-height;
+  text-transform: capitalize;
+  letter-spacing: -0.04rem;
+  color: $ivysaur;
+  text-rendering: optimizeLegibility;
+
+  margin: $base-line-height 0;
+
   @include respond-to(pint) {
     font-size: $lg-h1-font-size;
     line-height: $lg-h1-line-height;
   }
-
-  @include font(header, bold);
-  text-transform: capitalize;
-  letter-spacing: -0.04rem;
-  font-weight: 600;
-  color: $ivysaur;
-  text-rendering: optimizeLegibility;
 }
 h2 {
+  @include font(heading, medium);
+
   font-size: $h2-font-size;
   line-height: $h2-line-height;
+  text-transform: capitalize;
+  letter-spacing: -0.02rem;
+
+  margin: $base-line-height 0;
+
   @include respond-to(pint) {
     font-size: $lg-h2-font-size;
     line-height: $lg-h2-line-height;
   }
-
-  @include font(header, medium);
-  text-transform: capitalize;
-  letter-spacing: -0.02rem;
 }
 h3 {
+  @include font(heading, book);
+
   font-size: $h3-font-size;
   line-height: $h3-line-height;
+  text-transform: capitalize;
+
+  margin: $base-line-height 0;
+
   @include respond-to(pint) {
     font-size: $lg-h3-font-size;
-    line-height: $lg-h3-line-height;
+    @include font(heading, medium);
   }
-
-  @include font(header, medium);
-  text-transform: capitalize;
 }
 h4, h5, h6 {
+  @include font(heading, book);
+
   font-size: $h4-font-size;
   line-height: $h4-line-height;
-  @include respond-to(pint) {
-    font-size: $lg-h4-font-size;
-    line-height: $lg-h4-line-height;
-  }
-
-  @include font(header, book);
   text-transform: capitalize;
   letter-spacing: 0.01rem;
+
+  margin: $base-line-height 0;
+
+  @include respond-to(pint) {
+    font-size: $lg-h4-font-size;
+  }
 }
 
 // Type Elements
@@ -98,9 +109,11 @@ a {
   color: $ivysaur;
   text-decoration: none;
   border: none;
+
   &:hover {
     color: $ivysaur;
     border-bottom: 2px solid currentColor;
+
     & > img, & > svg {
       border: none; // this doesn't work for some fucking reason
     }
@@ -109,6 +122,7 @@ a {
 
 code {
   @include font(monospace);
+
   line-height: $base-line-height;
   background: $machop;
   padding: 0 3px;
@@ -120,6 +134,7 @@ pre {
   overflow-x: auto;
   background: $snorlax;
   color: $lugia;
+
   code {
     background: transparent;
   }
@@ -127,9 +142,9 @@ pre {
 
 small {
   font-size: $small-font-size;
-  line-height: $small-line-height;
+  line-height: $base-line-height;
+
   @include respond-to(pint) {
     font-size: $lg-small-font-size;
-    line-height: $lg-small-line-height;
   }
 }
