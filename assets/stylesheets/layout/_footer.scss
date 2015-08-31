@@ -10,6 +10,7 @@
   @include fill-parent;
   &__contact {
     @include outer-container;
+    @include row;
   }
   &__column {
     @include span-columns(4);
@@ -25,6 +26,7 @@
   ul {
     list-style-type: none;
     margin-left: 0;
+    padding-left: 0;
     @include respond-to(pint) {
       text-align: left;
     }

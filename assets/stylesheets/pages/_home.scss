@@ -7,34 +7,24 @@ article {
 }
 
 .landing {
+  @include fill-parent;
   min-height: 100vh;
-  width: 100vw;
+
   background-image: url("../images/header__background.jpg");
   @include respond-to(pint) { background-image: url("../images/header__background@2x.jpg"); }
   @include respond-to(bomber) { background-image: url("../images/header__background@3x.jpg"); }
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  &__hero {
-    padding: $base-font-size;
-    padding-top: 75px;
-    padding-bottom: 50px;
-    //@include respond-to(pint) { padding-top: 50px; }
-    @include respond-to(bomber) { padding-top: 20vh; }
-    @include outer-container;
-  }
-}
-.hero {
 
-  &__wrapper {
-    @extend section;
-    max-width: $measure;
-  }
-  &__tagline {
-    h1 {
-      //font-size: $h1-font-size * 1.25;
-      //line-height: $h1-line-height * 1.25;
-    }
+  @include pad;
+  &__hero {
+    @include outer-container;
+
+    padding-top: 100px;
+    padding-bottom: 50px;
+    @include respond-to(pint) { padding-top: 15vh;}
+    @include respond-to(bomber) { padding-top: 25vh; }
   }
 }
 
@@ -45,7 +35,9 @@ article {
 .prop {
   @include fill-parent;
   @include row;
+
   position: relative;
+
   &__img {
     position: relative;
     padding: 0;
@@ -70,6 +62,7 @@ article {
       min-height: 20rem;
     }
   }
+
   &__background {
     background-color: $machop;
     background-size: cover;
@@ -92,6 +85,7 @@ article {
       min-height: 20rem;
     }
   }
+
   &__overlay {
     width: 100%;
     height: 100%;
@@ -107,6 +101,7 @@ article {
       background: linear-gradient(to bottom, rgba($snorlax, 0.8), rgba($ivysaur, 0.75));
     }
   }
+
   &__text {
     float: left;
     width: 100%;
@@ -142,16 +137,20 @@ article {
       max-width: $measure * 0.75;
     }
   }
+
   &__icon {
     color: $ivysaur;
     font-size: $h3-font-size;
     margin-left: 3vw;
   }
 }
+
 .prop:nth-of-type(2n) {
+
   & .prop__img {
     float: right;
   }
+
   & .prop__text {
     float: right;
     text-align: right;
@@ -164,10 +163,12 @@ article {
 .contact {
   @include fill-parent;
   background: $machop;
+
   section {
     @include outer-container;
     @include row;
   }
+  
   &__text {
     @include span-columns(6);
   }

@@ -9,7 +9,7 @@
 
     <header class="landing">
       <div class="landing__hero">
-        <h1><?php echo $page->tagline()->html() ?></h1>
+        <h1><?php echo $page->tagline()->html()->widont() ?></h1>
         <?php e($page->copy()->isNotEmpty(), $page->copy()->kirbytext()) ?>
         <button onClick="location.href='#contact'" type="button" name="contact" class="btn"><?php echo $page->landingButton()->html() ?></button>
       </div>

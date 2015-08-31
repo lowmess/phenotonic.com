@@ -35,3 +35,8 @@ img {
   max-width: 100%;
   max-height: 90vh;
 }
+
+main {
+  @include outer-container;
+  padding-top: 100px;
+}

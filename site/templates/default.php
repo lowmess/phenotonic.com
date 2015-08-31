@@ -1,4 +1,11 @@
-<?php snippet('header') ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <?php snippet('head') ?>
+  </head>
+  <body>
+
+    <?php snippet('nav') ?>
 
   <main class="main" role="main">
 
@@ -9,4 +16,7 @@
 
   </main>
 
-<?php snippet('footer') ?>
+  <?php snippet('footer') ?>
+
+</body>
+</html>
