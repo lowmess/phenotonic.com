@@ -17,8 +17,10 @@ gulp.task('default', ['server']);
 
 gulp.task('sass', function() {
   return gulp.src('./assets/stylesheets/*.scss')
+    .pipe(sass({
+      includePaths: require('node-neat').includePaths
+    }))
     .pipe(sass().on('error', sass.logError))
-    .pipe(sass())
     .pipe(uncss({
       html: ['http://phenotonic.dev/']
     }))
@@ -30,8 +32,11 @@ gulp.task('sass', function() {
 
 gulp.task('sass:debug', function() {
   return gulp.src('./assets/stylesheets/*.scss')
+    .pipe(sass({
+      outputStyle: 'nested',
+      includePaths: require('node-neat').includePaths
+    }))
     .pipe(sass().on('error', sass.logError))
-    .pipe(sass({outputStyle: 'nested'}))
     .pipe(uncss({
       html: ['http://phenotonic.dev/']
     }))
