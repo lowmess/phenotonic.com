@@ -6,4 +6,4 @@ Icon: link
 
 ----
 
-Text: Over the course of our careers as gardening enthusiasts, we have built a network of independent contractors. If your garden has HVAC, water, or electrical needs, we know just the person for the job.
+Text: Over the course of our careers as gardening enthusiasts, we have built a network of independent contractors. If your garden has HVAC, water, or electrical needs, we know *just* the person for the job.

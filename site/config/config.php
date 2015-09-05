@@ -32,7 +32,7 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 /*
  * Languages
  */
- 
+
 c::set('languages', array(
     array(
         'code'    => 'en',
@@ -42,3 +42,9 @@ c::set('languages', array(
         'url'     => '/'
     )
 ));
+
+/*
+ * System Options
+ */
+
+ c::set('smartypants',true);

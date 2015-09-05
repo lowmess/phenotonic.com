@@ -22,3 +22,6 @@
 button {
   @extend .btn;
 }
+a.btn:hover {
+  border-color: $ivysaur;
+}

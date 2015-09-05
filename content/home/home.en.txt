@@ -6,7 +6,7 @@ Tagline: We want to help you grow your best garden.
 
 ----
 
-Copy: 
+Copy:
 
 ----
 
@@ -18,7 +18,7 @@ Contactheadline: Schedule an appointment now
 
 ----
 
-Contacttext: Interested in working with us? Great! Shoot us an email by filling out the form, and you’ll be connected with one of our consultants to find a time that works for everyone, as well as get some background information about your gardening environment.
+Contacttext: Interested in working with us? Great! Shoot us an email by filling out the form, and you'll be connected with one of our consultants to find a time that works for everyone, as well as get some background information about your gardening environment.
 
 ----
 

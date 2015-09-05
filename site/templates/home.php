@@ -11,7 +11,7 @@
       <div class="landing__hero">
         <h1><?php echo $page->tagline()->html()->widont() ?></h1>
         <?php e($page->copy()->isNotEmpty(), $page->copy()->kirbytext()) ?>
-        <button onClick="location.href='#contact'" type="button" name="contact" class="btn"><?php echo $page->landingButton()->html() ?></button>
+        <a href="#contact" class="btn" id="landing__button"><?php echo $page->landingButton()->html() ?></a>
       </div>
     </header>
 

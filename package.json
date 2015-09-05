@@ -1,0 +1,29 @@
+{
+  "name": "phenotonic",
+  "version": "1.0.0",
+  "description": "Phenotonic Consulting website. Built with Kirby.",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.9.1",
+    "del": "^2.0.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-csso": "^1.0.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-uncss": "^1.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lowmess/phenotonic.com.git"
+  },
+  "author": "Alec Lomas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lowmess/phenotonic.com/issues"
+  },
+  "homepage": "https://github.com/lowmess/phenotonic.com#readme"
+}
