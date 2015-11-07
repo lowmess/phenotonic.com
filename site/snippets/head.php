@@ -1,7 +1,7 @@
 <meta charset="UTF-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="theme-color" content="#eae6e6"/>
+<meta name="theme-color" content="#2d2926"/>
 
 <meta name="description" content="<?php echo $site->description()->html() ?>"/>
 <meta name="keywords" content="<?php echo $site->keywords()->html() ?>"/>
@@ -47,3 +47,15 @@
 <?php else: ?>
   <?php echo css('assets/css/main.css') ?>
 <?php endif ?>
+
+<!-- Snipcart -->
+<script
+  src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+  type="text/javascript"></script>
+<script type="text/javascript"
+  id="snipcart"
+  src="https://cdn.snipcart.com/scripts/snipcart.js"
+  data-api-key="YOUR_API_KEY"></script>
+<link id="snipcart-theme" type="text/css"
+  href="https://cdn.snipcart.com/themes/base/snipcart.min.css"
+  rel="stylesheet">
