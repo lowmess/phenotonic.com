@@ -1,0 +1,27 @@
+<footer class="footer">
+  <div class="footer__contact">
+      <ul class="footer__column">
+        {% for page in pages.children.visible %}
+          <li class="nav__mobile-item {% if page.active %} nav__mobile-item--active {% endif %}">
+              <a href="{{ page.url }}">
+                {{ page.menu }}
+              </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <ul class="footer__column">
+        <li><a href="mailto:info@phenotonic.com">info@phenotonic.com</a></li>
+        <li><a href="//facebook.com/phenotonic">Facebook</a></li>
+        <li><a href="//instagram.com/phenotonic">Instagram</a></li>
+        <li><a href="//twitter.com/phenotonic">Twitter</a></li>
+      </ul>
+      <address class="footer__column">
+        <ul>
+          <li>Phenotonic, LLC</li>
+          <li>P.O. Box #6073</li>
+          <li>Peoria, AZ 85302</li>
+          <li><a href="tel:+16025294769">(602) 529-GROW</a></li>
+        </ul>
+      </address>
+  </div>
+</footer>

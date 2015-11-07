@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% include 'partials/head.htm.twig' %}
+
+</head>
+<body>
+
+  {% include 'partials/nav.html.twig' %}
+
+  <main class="main" role="main">
+
+  {% block content %}
+
+    <div class="text">
+      <h1>{{ Title }}</h1>
+      {{ page.content }}
+    </div>
+
+  {% endblock %}
+
+  </main>
+
+  {% include 'partials/footer.html.twig' %}
+  {% include 'partials/scripts.html.twig' %}
+
+</body>
+</html>

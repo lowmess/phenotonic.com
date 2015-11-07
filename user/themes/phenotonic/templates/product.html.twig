@@ -1,0 +1,17 @@
+{% extends 'meta/base.html.twig' %}
+
+{% block content %}
+
+  <a href="#"
+    class="snipcart-add-item btn"
+    data-item-id="{{ page.header.product-id }}"
+    data-item-name="{{ page.header.product-name }}"
+    data-item-price="{{ page.header.product-price }}"
+    data-item-weight="{{ page.header.product-weight }}"
+    data-item-url="{{ page.url }}"
+    data-item-description="{{ page.header.product-description }}">
+
+    Add to Cart
+  </a>
+
+{% endblock %}

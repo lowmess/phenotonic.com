@@ -1,0 +1,10 @@
+email: alec@lowmess.com
+fullname: 'Alec Lomas'
+title: 'Resident Badass'
+access:
+  admin:
+    login: true
+    super: true
+language: en
+authenticated: true
+hashed_password: $2y$10$yPmFZr2us70zUshU1Sa9guLAU8TuP.utd.l.cI4E5S/CgCwzrQkWe

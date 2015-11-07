@@ -1,0 +1,49 @@
+<meta charset="UTF-8" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="theme-color" content="#2d2926" />
+
+<meta name="description" content="{{ site.description|e('html') }}" />
+<meta name="keywords" content="grow, growing, garden, gardening, consulting, consultants, consultant, consult, experts, expert, expertise, mmj, marijuana, vegetable, hydroponic, organic" />
+
+<title>{% if header.title %}{{ header.title|e('html') }} • {% endif %}{{ site.title|e('html') }}</title>
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ url(theme://images/favicon-57.png, true) }}" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url(theme://images/favicon-114.png, true) }}" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url(theme://images/favicon-72.png, true) }}" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url(theme://images/favicon-144.png, true) }}" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ url(theme://images/favicon-60.png, true) }}" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ url(theme://images/favicon-120.png, true) }}" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ url(theme://images/favicon-76.png, true) }}" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ url(theme://images/favicon-152.png, true) }}" />
+
+<link rel="icon" type="image/png" href="{{ url(theme://images/favicon-196.png, true) }}" sizes="196x196" />
+<link rel="icon" type="image/png" href="{{ url(theme://images/favicon-96.png, true) }}" sizes="96x96" />
+<link rel="icon" type="image/png" href="{{ url(theme://images/favicon-32.png, true) }}" sizes="32x32" />
+<link rel="icon" type="image/png" href="{{ url(theme://images/favicon-16.png, true) }}" sizes="16x16" />
+<link rel="icon" type="image/png" href="{{ url(theme://images/favicon-128.png, true) }}" sizes="128x128" />
+
+<meta name="application-name" content="Phenotonic" />
+<meta name="msapplication-TileColor" content="#2ea72e" />
+<meta name="msapplication-TileImage" content="{{ url(theme://images/favicon-ms-144.png, true) }}" />
+<meta name="msapplication-square70x70logo" content="{{ url(theme://images/favicon-ms-70.png, true) }}" />
+<meta name="msapplication-square150x150logo" content="{{ url(theme://images/favicon-ms-150.png, true) }}" />
+<meta name="msapplication-wide310x150logo" content="{{ url(theme://images/favicon-ms-310x150.png, true) }}" />
+<meta name="msapplication-square310x310logo" content="{{ url(theme://images/favicon-ms-310.png, true) }}" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" />
+<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic" />
+{{ assets.css() }}
+
+<!-- Snipcart -->
+<script
+  src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+  type="text/javascript"></script>
+<script type="text/javascript"
+  id="snipcart"
+  src="https://cdn.snipcart.com/scripts/snipcart.js"
+  data-api-key="YOUR_API_KEY"></script>
+<link id="snipcart-theme" type="text/css"
+  href="https://cdn.snipcart.com/themes/base/snipcart.min.css"
+  rel="stylesheet">
