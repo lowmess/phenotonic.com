@@ -1113,11 +1113,11 @@ return [
                 '@data-options' => '\\Grav\\Common\\Utils::dateFormats',
                 'options' => [
                     '' => 'Auto Guess or Enter Custom',
-                    'd-m-Y H:i' => 'd-m-Y H:i (e.g. 07-11-2015 07:13)',
-                    'Y-m-d H:i' => 'Y-m-d H:i (e.g. 2015-11-07 07:13)',
-                    'm/d/Y h:i a' => 'm/d/Y h:i (e.g. 11/07/2015 07:13 am)',
-                    'H:i d-m-Y' => 'H:i d-m-Y (e.g. 07:13 07-11-2015)',
-                    'h:i a m/d/Y' => 'h:i a m/d/Y (e.g. 07:13 am 11/07/2015)'
+                    'd-m-Y H:i' => 'd-m-Y H:i (e.g. 08-11-2015 04:17)',
+                    'Y-m-d H:i' => 'Y-m-d H:i (e.g. 2015-11-08 04:17)',
+                    'm/d/Y h:i a' => 'm/d/Y h:i (e.g. 11/08/2015 04:17 am)',
+                    'H:i d-m-Y' => 'H:i d-m-Y (e.g. 04:17 08-11-2015)',
+                    'h:i a m/d/Y' => 'h:i a m/d/Y (e.g. 04:17 am 11/08/2015)'
                 ],
                 'validate' => [
                     'type' => 'string'
