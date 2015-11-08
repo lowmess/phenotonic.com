@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+article {
+  @include fill-parent;
+}
+
+.landing {
+  @include fill-parent;
+  min-height: 100vh;
+
+  background-image: url("../images/header__background.jpg");
+  @include respond-to(small) { background-image: url("../images/header__background@2x.jpg"); }
+  @include respond-to(medium) { background-image: url("../images/header__background@3x.jpg"); }
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  @include pad;
+  &__hero {
+    @include outer-container;
+
+    padding-top: 100px;
+    padding-bottom: 50px;
+    @include respond-to(small) { padding-top: 15vh;}
+    @include respond-to(large) { padding-top: 25vh; }
+  }
+}
+
+.contact {
+  @include fill-parent;
+  background: $machop;
+
+  section {
+    @include outer-container;
+    @include row;
+  }
+
+  &__text {
+    @include span-columns(6);
+  }
+}

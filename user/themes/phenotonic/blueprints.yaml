@@ -10,3 +10,4 @@ homepage: https://github.com/phenotonic/phenotonic.com
 keywords: green, phenotonic
 bugs: https://github.com/phenotonic/phenotonic.com/issues
 license: MIT
+enabled: true

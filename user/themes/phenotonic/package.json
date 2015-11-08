@@ -1,17 +1,16 @@
 {
   "name": "phenotonic",
   "version": "1.0.0",
-  "description": "Phenotonic Consulting website. Built with Kirby.",
+  "description": "Phenotonic website theme. Built for Grav.",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.9.1",
     "del": "^2.0.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
+    "gulp-combine-media-queries": "^0.2.0",
     "gulp-csso": "^1.0.0",
     "gulp-sass": "^2.0.4",
-    "gulp-uncss": "^1.0.3",
     "node-neat": "^1.7.2"
   },
   "scripts": {
@@ -19,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lowmess/phenotonic.com.git"
+    "url": "git+https://github.com/phenotonic/phenotonic.com.git"
   },
   "author": "Alec Lomas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lowmess/phenotonic.com/issues"
+    "url": "https://github.com/phenotonic/phenotonic.com/issues"
   },
-  "homepage": "https://github.com/lowmess/phenotonic.com#readme"
+  "homepage": "https://github.com/phenotonic/phenotonic.com#readme"
 }
