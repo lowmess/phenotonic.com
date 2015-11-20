@@ -1,7 +1,18 @@
-title: Grav
+title: Phenotonic
 author:
-  name: Joe Bloggs
-  email: 'joe@test.com'
+  name: Alec
+  email: alec@phenotonic.com
+taxonomies:
+  - category
+  - tag
+  - author
 metadata:
-    description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
-
+  description: 'Phenotonic provides the tools, expertise, and education for gardens of all varieties & gardeners of all skill levels.'
+  keywords: 'grow, growing, garden, gardening, consulting, consultants, consultant, consult, experts, expert, expertise, mmj, marijuana, vegetable, hydroponic, organic, hydroponics, hydro'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog

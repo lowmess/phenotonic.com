@@ -1,7 +1,7 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'checksum' => 'f670072c91695d6438cf3759ff9f582d:55fabe22ffb3d6ef374d5d06f3b1f842',
+    'checksum' => 'f670072c91695d6438cf3759ff9f582d:2bfd1bb92eda17c6b3cce868d8e826d5',
     'files' => [
         'user/plugins' => [
             'plugins/admin' => [
@@ -27,6 +27,14 @@ return [
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
                 'modified' => 1446876670
+            ],
+            'plugins/simplesearch' => [
+                'file' => 'user/plugins/simplesearch/blueprints.yaml',
+                'modified' => 1447136101
+            ],
+            'plugins/smartypants' => [
+                'file' => 'user/plugins/smartypants/blueprints.yaml',
+                'modified' => 1447136025
             ]
         ],
         'system/blueprints/config' => [
@@ -486,6 +494,195 @@ return [
                     'type' => 'bool'
                 ],
                 'name' => 'plugins.problems.built_in_css'
+            ],
+            'plugins.simplesearch' => [
+                'type' => '_parent',
+                'name' => 'plugins.simplesearch'
+            ],
+            'plugins.simplesearch.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.simplesearch.enabled'
+            ],
+            'plugins.simplesearch.built_in_css' => [
+                'type' => 'toggle',
+                'label' => 'Use built in CSS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.simplesearch.built_in_css'
+            ],
+            'plugins.simplesearch.route' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'Route',
+                'default' => '/random',
+                'help' => 'Default route of the simplesearch plugin',
+                'name' => 'plugins.simplesearch.route'
+            ],
+            'plugins.simplesearch.template' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'Template',
+                'default' => 'simplesearch_results',
+                'help' => 'Name of the template for the search results',
+                'name' => 'plugins.simplesearch.template'
+            ],
+            'plugins.simplesearch.filters' => [
+                'type' => '_parent',
+                'name' => 'plugins.simplesearch.filters'
+            ],
+            'plugins.simplesearch.filters.category' => [
+                'type' => 'selectize',
+                'label' => 'Category filter',
+                'help' => 'Comma separated list of category names',
+                'validate' => [
+                    'type' => 'commalist'
+                ],
+                'name' => 'plugins.simplesearch.filters.category'
+            ],
+            'plugins.simplesearch.filter_combinator' => [
+                'type' => 'select',
+                'size' => 'medium',
+                'classes' => 'fancy',
+                'label' => 'Filter Combinator',
+                'default' => 'and',
+                'options' => [
+                    'and' => 'And - Boolean &&',
+                    'or' => 'Or - Boolean ||'
+                ],
+                'name' => 'plugins.simplesearch.filter_combinator'
+            ],
+            'plugins.simplesearch.order' => [
+                'type' => '_parent',
+                'name' => 'plugins.simplesearch.order'
+            ],
+            'plugins.simplesearch.order.by' => [
+                'type' => 'select',
+                'size' => 'long',
+                'classes' => 'fancy',
+                'label' => 'PLUGIN_ADMIN.DEFAULT_ORDERING',
+                'help' => 'PLUGIN_ADMIN.DEFAULT_ORDERING_HELP',
+                'options' => [
+                    'default' => 'PLUGIN_ADMIN.DEFAULT_ORDERING_DEFAULT',
+                    'folder' => 'PLUGIN_ADMIN.DEFAULT_ORDERING_FOLDER',
+                    'title' => 'PLUGIN_ADMIN.DEFAULT_ORDERING_TITLE',
+                    'date' => 'PLUGIN_ADMIN.DEFAULT_ORDERING_DATE'
+                ],
+                'name' => 'plugins.simplesearch.order.by'
+            ],
+            'plugins.simplesearch.order.dir' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADMIN.DEFAULT_ORDER_DIRECTION',
+                'highlight' => 'asc',
+                'default' => 'desc',
+                'help' => 'PLUGIN_ADMIN.DEFAULT_ORDER_DIRECTION_HELP',
+                'options' => [
+                    'asc' => 'PLUGIN_ADMIN.ASCENDING',
+                    'desc' => 'PLUGIN_ADMIN.DESCENDING'
+                ],
+                'name' => 'plugins.simplesearch.order.dir'
+            ],
+            'plugins.smartypants' => [
+                'type' => '_parent',
+                'name' => 'plugins.smartypants'
+            ],
+            'plugins.smartypants.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.smartypants.enabled'
+            ],
+            'plugins.smartypants.enabled_in_admin' => [
+                'type' => 'toggle',
+                'label' => 'Enable in admin',
+                'highlight' => 0,
+                'default' => 0,
+                'help' => 'Should Smartypants plugin work in the admin during content preview',
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.smartypants.enabled_in_admin'
+            ],
+            'plugins.smartypants.twig_filter' => [
+                'type' => 'toggle',
+                'label' => 'Twig filter',
+                'highlight' => 1,
+                'default' => 1,
+                'help' => 'Load the Twig filter to be availble in Twig templates',
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.smartypants.twig_filter'
+            ],
+            'plugins.smartypants.process_title' => [
+                'type' => 'toggle',
+                'label' => 'Process titles',
+                'highlight' => 0,
+                'default' => 0,
+                'help' => 'Process page titles for Smartypants content',
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.smartypants.process_title'
+            ],
+            'plugins.smartypants.process_content' => [
+                'type' => 'toggle',
+                'label' => 'Process content',
+                'highlight' => 1,
+                'default' => 1,
+                'help' => 'Process page content for Smartypants content',
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.smartypants.process_content'
+            ],
+            'plugins.smartypants.options' => [
+                'type' => 'text',
+                'label' => 'Options',
+                'size' => 'large',
+                'placeholder' => 'SmartyPants Options',
+                'help' => 'See the docs for documentation: https://github.com/michelf/php-smartypants',
+                'name' => 'plugins.smartypants.options'
             ],
             'site' => [
                 'type' => '_parent',
@@ -1113,11 +1310,11 @@ return [
                 '@data-options' => '\\Grav\\Common\\Utils::dateFormats',
                 'options' => [
                     '' => 'Auto Guess or Enter Custom',
-                    'd-m-Y H:i' => 'd-m-Y H:i (e.g. 08-11-2015 04:17)',
-                    'Y-m-d H:i' => 'Y-m-d H:i (e.g. 2015-11-08 04:17)',
-                    'm/d/Y h:i a' => 'm/d/Y h:i (e.g. 11/08/2015 04:17 am)',
-                    'H:i d-m-Y' => 'H:i d-m-Y (e.g. 04:17 08-11-2015)',
-                    'h:i a m/d/Y' => 'h:i a m/d/Y (e.g. 04:17 am 11/08/2015)'
+                    'd-m-Y H:i' => 'd-m-Y H:i (e.g. 10-11-2015 07:36)',
+                    'Y-m-d H:i' => 'Y-m-d H:i (e.g. 2015-11-10 07:36)',
+                    'm/d/Y h:i a' => 'm/d/Y h:i (e.g. 11/10/2015 07:36 am)',
+                    'H:i d-m-Y' => 'H:i d-m-Y (e.g. 07:36 10-11-2015)',
+                    'h:i a m/d/Y' => 'h:i a m/d/Y (e.g. 07:36 am 11/10/2015)'
                 ],
                 'validate' => [
                     'type' => 'string'
@@ -2087,6 +2284,28 @@ return [
                 'problems' => [
                     'enabled' => 'plugins.problems.enabled',
                     'built_in_css' => 'plugins.problems.built_in_css'
+                ],
+                'simplesearch' => [
+                    'enabled' => 'plugins.simplesearch.enabled',
+                    'built_in_css' => 'plugins.simplesearch.built_in_css',
+                    'route' => 'plugins.simplesearch.route',
+                    'template' => 'plugins.simplesearch.template',
+                    'filters' => [
+                        'category' => 'plugins.simplesearch.filters.category'
+                    ],
+                    'filter_combinator' => 'plugins.simplesearch.filter_combinator',
+                    'order' => [
+                        'by' => 'plugins.simplesearch.order.by',
+                        'dir' => 'plugins.simplesearch.order.dir'
+                    ]
+                ],
+                'smartypants' => [
+                    'enabled' => 'plugins.smartypants.enabled',
+                    'enabled_in_admin' => 'plugins.smartypants.enabled_in_admin',
+                    'twig_filter' => 'plugins.smartypants.twig_filter',
+                    'process_title' => 'plugins.smartypants.process_title',
+                    'process_content' => 'plugins.smartypants.process_content',
+                    'options' => 'plugins.smartypants.options'
                 ]
             ],
             'site' => [

@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'timestamp' => 1446952671,
-    'checksum' => '0fc6ed54828a5dd1c3c43ca688d85054',
+    'timestamp' => 1447137412,
+    'checksum' => '135f5bcd91a49a6e91eabc7a0cc8b6fa',
     'data' => [
         'streams' => [
             'schemes' => [
@@ -193,6 +193,28 @@ return [
             'problems' => [
                 'enabled' => true,
                 'built_in_css' => true
+            ],
+            'simplesearch' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'route' => '/search',
+                'template' => 'simplesearch_results',
+                'filters' => [
+                    'category' => 'blog'
+                ],
+                'filter_combinator' => 'and',
+                'order' => [
+                    'by' => 'date',
+                    'dir' => 'desc'
+                ]
+            ],
+            'smartypants' => [
+                'enabled' => true,
+                'twig_filter' => true,
+                'enabled_in_admin' => false,
+                'process_title' => true,
+                'process_content' => true,
+                'options' => 'qDew'
             ]
         ],
         'media' => [
@@ -433,17 +455,19 @@ return [
             ]
         ],
         'site' => [
-            'title' => 'Grav',
+            'title' => 'Phenotonic',
             'author' => [
-                'name' => 'Joe Bloggs',
-                'email' => 'joe@test.com'
+                'name' => 'Alec',
+                'email' => 'alec@phenotonic.com'
             ],
             'taxonomies' => [
                 0 => 'category',
-                1 => 'tag'
+                1 => 'tag',
+                2 => 'author'
             ],
             'metadata' => [
-                'description' => 'Grav is an easy to use, yet powerful, open source flat-file CMS'
+                'description' => 'Phenotonic provides the tools, expertise, and education for gardens of all varieties & gardeners of all skill levels.',
+                'keywords' => 'grow, growing, garden, gardening, consulting, consultants, consultant, consult, experts, expert, expertise, mmj, marijuana, vegetable, hydroponic, organic, hydroponics, hydro'
             ],
             'summary' => [
                 'enabled' => true,
@@ -546,7 +570,7 @@ return [
                     2 => 'jpeg',
                     3 => 'gif'
                 ],
-                'markdown_extra' => false
+                'markdown_extra' => true
             ],
             'cache' => [
                 'enabled' => true,

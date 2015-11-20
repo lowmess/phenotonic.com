@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'user/config/system.yaml',
-    'modified' => 1446952670,
+    'modified' => 1446966319,
     'data' => [
         'absolute_urls' => false,
         'home' => [
@@ -10,7 +10,7 @@ return [
         ],
         'pages' => [
             'theme' => 'antimatter',
-            'markdown_extra' => false,
+            'markdown_extra' => true,
             'process' => [
                 'markdown' => true,
                 'twig' => false
