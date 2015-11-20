@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'user/config/site.yaml',
-    'modified' => 1447133290,
+    'modified' => 1448010380,
     'data' => [
         'title' => 'Phenotonic',
         'author' => [

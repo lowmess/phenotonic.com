@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'E:/Drive/Websites/phenotonic/system/blueprints/config/system.yaml',
-    'modified' => 1446876665,
+    'modified' => 1448010379,
     'data' => [
         'title' => 'PLUGIN_ADMIN.SYSTEM',
         'form' => [

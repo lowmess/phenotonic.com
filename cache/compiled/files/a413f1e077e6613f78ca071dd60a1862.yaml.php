@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'E:/Drive/Websites/phenotonic/user/plugins/email/blueprints.yaml',
-    'modified' => 1446876679,
+    'modified' => 1448010383,
     'data' => [
         'name' => 'Email',
         'version' => '0.2.1',

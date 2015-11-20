@@ -1,36 +1,36 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'checksum' => '55bbda9fa086a7eeb071ea4677480c37:93bf089ec74b2596a5d9bb5d61c64d7c',
+    'checksum' => '55bbda9fa086a7eeb071ea4677480c37:4fc670e85aa430b624445a4335dc3f8e',
     'files' => [
         'system/languages' => [
             'cs' => [
                 'file' => 'system/languages/cs.yaml',
-                'modified' => 1446876666
+                'modified' => 1448010379
             ],
             'de' => [
                 'file' => 'system/languages/de.yaml',
-                'modified' => 1446876666
+                'modified' => 1448010379
             ],
             'en' => [
                 'file' => 'system/languages/en.yaml',
-                'modified' => 1446876666
+                'modified' => 1448010379
             ],
             'fr' => [
                 'file' => 'system/languages/fr.yaml',
-                'modified' => 1446876666
+                'modified' => 1448010379
             ],
             'it' => [
                 'file' => 'system/languages/it.yaml',
-                'modified' => 1446876666
+                'modified' => 1448010379
             ],
             'nl' => [
                 'file' => 'system/languages/nl.yaml',
-                'modified' => 1446876666
+                'modified' => 1448010379
             ],
             'ru' => [
                 'file' => 'system/languages/ru.yaml',
-                'modified' => 1446876666
+                'modified' => 1448010379
             ]
         ]
     ],

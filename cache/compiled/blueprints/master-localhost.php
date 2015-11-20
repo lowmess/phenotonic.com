@@ -1,58 +1,58 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'checksum' => 'f670072c91695d6438cf3759ff9f582d:2bfd1bb92eda17c6b3cce868d8e826d5',
+    'checksum' => 'f670072c91695d6438cf3759ff9f582d:391cfd04531a1e0db3aeecd9037859be',
     'files' => [
         'user/plugins' => [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/blueprints.yaml',
-                'modified' => 1446876670
+                'modified' => 1448010381
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/blueprints.yaml',
-                'modified' => 1446876679
+                'modified' => 1448010383
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/blueprints.yaml',
-                'modified' => 1446876670
+                'modified' => 1448010384
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/blueprints.yaml',
-                'modified' => 1446876686
+                'modified' => 1448010385
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/blueprints.yaml',
-                'modified' => 1446876687
+                'modified' => 1448010385
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
-                'modified' => 1446876670
+                'modified' => 1448010385
             ],
             'plugins/simplesearch' => [
                 'file' => 'user/plugins/simplesearch/blueprints.yaml',
-                'modified' => 1447136101
+                'modified' => 1448010798
             ],
             'plugins/smartypants' => [
                 'file' => 'user/plugins/smartypants/blueprints.yaml',
-                'modified' => 1447136025
+                'modified' => 1448010385
             ]
         ],
         'system/blueprints/config' => [
             'media' => [
                 'file' => 'system/blueprints/config/media.yaml',
-                'modified' => 1446876665
+                'modified' => 1448010379
             ],
             'site' => [
                 'file' => 'system/blueprints/config/site.yaml',
-                'modified' => 1446876665
+                'modified' => 1448010379
             ],
             'streams' => [
                 'file' => 'system/blueprints/config/streams.yaml',
-                'modified' => 1446876665
+                'modified' => 1448010379
             ],
             'system' => [
                 'file' => 'system/blueprints/config/system.yaml',
-                'modified' => 1446876665
+                'modified' => 1448010379
             ]
         ]
     ],
@@ -1310,11 +1310,11 @@ return [
                 '@data-options' => '\\Grav\\Common\\Utils::dateFormats',
                 'options' => [
                     '' => 'Auto Guess or Enter Custom',
-                    'd-m-Y H:i' => 'd-m-Y H:i (e.g. 10-11-2015 07:36)',
-                    'Y-m-d H:i' => 'Y-m-d H:i (e.g. 2015-11-10 07:36)',
-                    'm/d/Y h:i a' => 'm/d/Y h:i (e.g. 11/10/2015 07:36 am)',
-                    'H:i d-m-Y' => 'H:i d-m-Y (e.g. 07:36 10-11-2015)',
-                    'h:i a m/d/Y' => 'h:i a m/d/Y (e.g. 07:36 am 11/10/2015)'
+                    'd-m-Y H:i' => 'd-m-Y H:i (e.g. 20-11-2015 10:13)',
+                    'Y-m-d H:i' => 'Y-m-d H:i (e.g. 2015-11-20 10:13)',
+                    'm/d/Y h:i a' => 'm/d/Y h:i (e.g. 11/20/2015 10:13 am)',
+                    'H:i d-m-Y' => 'H:i d-m-Y (e.g. 10:13 20-11-2015)',
+                    'h:i a m/d/Y' => 'h:i a m/d/Y (e.g. 10:13 am 11/20/2015)'
                 ],
                 'validate' => [
                     'type' => 'string'
