@@ -1,0 +1,18 @@
+title: Phenotonic
+author:
+  name: Alec
+  email: alec@phenotonic.com
+taxonomies:
+  - category
+  - tag
+  - author
+metadata:
+  description: 'Phenotonic provides the tools, expertise, and education for gardens of all varieties & gardeners of all skill levels.'
+  keywords: 'grow, growing, garden, gardening, consulting, consultants, consultant, consult, experts, expert, expertise, mmj, marijuana, vegetable, hydroponic, organic, hydroponics, hydro'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog

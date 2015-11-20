@@ -4,3 +4,6 @@
 /assets/avatars
 /assets/fonts
 /thumbs/*
+/user/themes/phenotonic/node_modules
+/user/themes/phenotonic/fonts
+/cache
