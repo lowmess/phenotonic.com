@@ -1,13 +1,13 @@
-title: Phenotonic                                 # Name of the site
+title: Grav                                 # Name of the site
 
 author:
-  name: Alec Lomas                      # Default author name
-  email: 'alec@phenotonic.com'                   # Default author email
+  name: John Appleseed                      # Default author name
+  email: 'john@email.com'                   # Default author email
 
 taxonomies: [category,tag]                  # Arbitrary list of taxonomy types
 
 metadata:
-  description: 'Phenotonic provides the tools, expertise, and education for gardens of all varieties & gardeners of all skill levels.'               # Site description
+  description: 'My Grav Site'               # Site description
 
 summary:
   enabled: true                             # enable or disable summary of page

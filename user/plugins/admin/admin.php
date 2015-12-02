@@ -64,10 +64,14 @@ class AdminPlugin extends Plugin
      */
     public static function getSubscribedEvents()
     {
-        return [
-            'onPluginsInitialized' => [['login', 100000], ['onPluginsInitialized', 1000]],
-            'onShutdown'           => ['onShutdown', 1000]
-        ];
+        if (!Grav::instance()['config']->get('plugins.admin-pro.enabled')) {
+            return [
+                'onPluginsInitialized' => [['login', 100000], ['onPluginsInitialized', 1000]],
+                'onShutdown'           => ['onShutdown', 1000]
+            ];
+        } else {
+            return [];
+        }
     }
 
     /**
@@ -76,18 +80,10 @@ class AdminPlugin extends Plugin
      */
     public function login()
     {
-        // Check for Pro version is enabled
-        if ($this->config->get('plugins.admin-pro.enabled')) {
-            $this->active = false;
-            return;
-        }
-
         $route = $this->config->get('plugins.admin.route');
         if (!$route) {
             return;
         }
-
-        $this->grav['debugger']->addMessage("Admin Basic");
 
         $this->base = '/' . trim($route, '/');
         $this->uri = $this->grav['uri'];
@@ -106,16 +102,30 @@ class AdminPlugin extends Plugin
     {
         // Only activate admin if we're inside the admin path.
         if ($this->active) {
+            $this->grav['debugger']->addMessage("Admin Basic");
             $this->initializeAdmin();
 
             // Disable Asset pipelining
             $this->config->set('system.assets.css_pipeline', false);
             $this->config->set('system.assets.js_pipeline', false);
+
+            // Replace themes service with admin.
+            $this->grav['themes'] = function ($c) {
+                require_once __DIR__ . '/classes/themes.php';
+                return new Themes($this->grav);
+            };
         }
 
         // We need popularity no matter what
         require_once __DIR__ . '/classes/popularity.php';
         $this->popularity = new Popularity();
+    }
+
+    protected function initializeController($task, $post) {
+        require_once __DIR__ . '/classes/controller.php';
+        $controller = new AdminController($this->grav, $this->template, $task, $this->route, $post);
+        $controller->execute();
+        $controller->redirect();
     }
 
     /**
@@ -168,10 +178,7 @@ class AdminPlugin extends Plugin
         // Handle tasks.
         $this->admin->task = $task = !empty($post['task']) ? $post['task'] : $this->uri->param('task');
         if ($task) {
-            require_once __DIR__ . '/classes/controller.php';
-            $controller = new AdminController($this->grav, $this->template, $task, $this->route, $post);
-            $controller->execute();
-            $controller->redirect();
+            $this->initializeController($task, $post);
         } elseif ($this->template == 'logs' && $this->route) {
             // Display RAW error message.
             echo $this->admin->logEntry();
@@ -205,6 +212,17 @@ class AdminPlugin extends Plugin
                 }
             }
         };
+
+        if (empty($this->grav['page'])) {
+            $event = $this->grav->fireEvent('onPageNotFound');
+
+            if (isset($event->page)) {
+                unset($this->grav['page']);
+                $this->grav['page'] = $event->page;
+            } else {
+                throw new \RuntimeException('Page Not Found', 404);
+            }
+        }
     }
 
     /**
@@ -294,19 +312,23 @@ class AdminPlugin extends Plugin
             switch ($action) {
                 case 'getUpdates':
                     $resources_updates = $gpm->getUpdatable();
-                    $grav_updates = [
-                        "isUpdatable" => $gpm->grav->isUpdatable(),
-                        "assets"      => $gpm->grav->getAssets(),
-                        "version"     => GRAV_VERSION,
-                        "available"   => $gpm->grav->getVersion(),
-                        "date"        => $gpm->grav->getDate(),
-                        "isSymlink"   => $gpm->grav->isSymlink()
-                    ];
+                    if ($gpm->grav != null) {
+                        $grav_updates = [
+                            "isUpdatable" => $gpm->grav->isUpdatable(),
+                            "assets"      => $gpm->grav->getAssets(),
+                            "version"     => GRAV_VERSION,
+                            "available"   => $gpm->grav->getVersion(),
+                            "date"        => $gpm->grav->getDate(),
+                            "isSymlink"   => $gpm->grav->isSymlink()
+                        ];
 
-                    echo json_encode([
-                        "status" => "success",
-                        "payload" => ["resources" => $resources_updates, "grav" => $grav_updates, "installed" => $gpm->countInstalled(), 'flushed' => $flush]
-                    ]);
+                        echo json_encode([
+                            "status" => "success",
+                            "payload" => ["resources" => $resources_updates, "grav" => $grav_updates, "installed" => $gpm->countInstalled(), 'flushed' => $flush]
+                        ]);
+                    } else {
+                        echo json_encode(["status" => "error", "message" => "Cannot connect to the GPM"]);
+                    }
                     break;
             }
         } catch (\Exception $e) {
@@ -347,6 +369,14 @@ class AdminPlugin extends Plugin
             }
         }
 
+        // Initialize Admin Language if needed
+        /** @var Language $language */
+        $language = $this->grav['language'];
+        if ($language->enabled() && empty($this->grav['session']->admin_lang)) {
+            $this->grav['session']->admin_lang = $language->getLanguage();
+        }
+
+
         // Decide admin template and route.
         $path = trim(substr($this->uri->route(), strlen($this->base)), '/');
         $this->template = 'dashboard';
@@ -356,13 +386,6 @@ class AdminPlugin extends Plugin
             $this->template = array_shift($array);
             $this->route = array_shift($array);
         }
-
-        /** @var Language $language */
-//        $require_language = ['pages', 'translations'];
-//        $language = $this->grav['language'];
-//        if ($language->isLanguageInUrl() && !in_array($this->template, $require_language)) {
-//            $this->grav->redirect($this->uri->route());
-//        }
 
         // Initialize admin class.
         require_once __DIR__ . '/classes/admin.php';
@@ -376,6 +399,10 @@ class AdminPlugin extends Plugin
 
         $assets = $this->grav['assets'];
         $translations  = 'if (!window.translations) window.translations = {}; ' . PHP_EOL . 'window.translations.PLUGIN_ADMIN = {};' . PHP_EOL;
+
+        // Enable language translations
+        $translations_actual_state = $this->config->get('system.languages.translations');
+        $this->config->set('system.languages.translations', true);
 
         $strings = ['EVERYTHING_UP_TO_DATE',
             'UPDATES_ARE_AVAILABLE',
@@ -394,11 +421,18 @@ class AdminPlugin extends Plugin
             'UPDATE_AVAILABLE',
             'UPDATES_AVAILABLE',
             'FULLY_UPDATED',
-            'DAYS'];
+            'DAYS',
+            'PAGE_MODES',
+            'PAGE_TYPES',
+            'ACCESS_LEVELS'
+        ];
 
         foreach($strings as $string) {
             $translations .= 'translations.PLUGIN_ADMIN.' . $string .' = "' . $this->admin->translate('PLUGIN_ADMIN.' . $string) . '"; ' . PHP_EOL;;
         }
+
+        // set the actual translations state back
+        $this->config->set('system.languages.translations', $translations_actual_state);
 
         $assets->addInlineJs($translations);
     }
