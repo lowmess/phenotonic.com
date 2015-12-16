@@ -3,10 +3,10 @@ title: Home
 visible: false
 landing:
     headline: 'let''s make something cool'
-    copy: 'Nah really tho -- let''s get this shit poppin'' off.'
+    copy: "Nah really tho -- let's get this shit poppin' off.\r\n\r\n...in bed"
     button: 'Buy Now'
     product:
-        url: /services
+        url: /store/a-prod
 ---
 
 # Grav is Running!
