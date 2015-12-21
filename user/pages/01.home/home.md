@@ -1,15 +1,24 @@
 ---
 title: Home
+published: true
+date: '21-12-2015 10:32'
+publish_date: '21-12-2015 10:32'
+unpublish_date: '21-12-2015 10:32'
+process:
+    markdown: true
+child_type: default
+routable: true
+cache_enable: true
 visible: false
 landing:
     headline: 'Introducing the Bloom Box'
-    subhead: 'An Organic CO2 Generator'
-    copy: 'We''ve created the best CO2 box in the universe.'
-    button: 'Buy Now'
+    copy: 'We made the best organic CO2 generator in the universe to give plants the happy life they deserve.'
     product:
         url: /store/bloom-box
+    button: 'Buy Now'
 intro:
-    tagline: 'Phenotonic Wants to Help You Grow A Better Garden.'
+    tagline: 'We Want to Help You Grow A Better Garden'
+    copy: "We're Phenotonic, blah blah blah Arizona blah sustainable and shit\r\n\r\n#### \"How much does it cost do burn a guy? 500 Bucks? I could do it right now, _for fun_.\""
 ---
 
 # How To Adjust the Home Page

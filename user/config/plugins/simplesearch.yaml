@@ -1,12 +1,9 @@
 enabled: true
-built_in_css: true
+built_in_css: false
 route: /search
-template: simplesearch_results
-filters:
-  category:
-    - blog
-    - store
-filter_combinator: and
+template: search
+filters: 
+filter_combinator: or
 order:
   by: date
   dir: desc

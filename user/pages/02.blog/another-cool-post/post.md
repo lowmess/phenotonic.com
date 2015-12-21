@@ -5,8 +5,6 @@ taxonomy:
         - 'Alec Lomas'
     tag:
         - blog
-    category:
-        - blog
 ---
 
 Across the sea of space, the stars are other suns.
