@@ -18,7 +18,8 @@ landing:
     button: 'Buy Now'
 intro:
     tagline: 'We Want to Help You Grow A Better Garden'
-    copy: "We're Phenotonic, blah blah blah Arizona blah sustainable and shit\r\n\r\n#### \"How much does it cost do burn a guy? 500 Bucks? I could do it right now, _for fun_.\""
+    copy: "Sustainable practices and home gardening matter to us, so we created Phenotonic to promote organic sustainability and support gardeners with efficient, effective, & fresh amendments.\r\n\r\nWe aim to supply gardeners of all varieties and skill in the American Southwest with the best tools & knowledge available."
+    button: 'Get to Know Us'
 ---
 
 # How To Adjust the Home Page
