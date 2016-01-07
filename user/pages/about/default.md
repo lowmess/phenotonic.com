@@ -3,12 +3,21 @@ title: About
 published: true
 process:
     markdown: true
-child_type: default
+    twig: false
 routable: true
 cache_enable: true
 visible: false
+child_type: default
 ---
 
 Sustainable practices and home gardening matter to us, so we created Phenotonic to promote organic sustainability and support gardeners with efficient, effective, & fresh amendments.
 
 We aim to supply gardeners of all varieties and skill in the American Southwest with the best tools & knowledge available.
+
+### What We Do
+
+### Who We Are
+
+#### Mark Crouch
+
+#### Alec Lomas
