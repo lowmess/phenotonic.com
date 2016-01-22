@@ -11,7 +11,7 @@ languages:
 home:
   alias: /home
 pages:
-  theme: phenotonic-dev
+  theme: phenotonic-grav-theme
   order:
     by: default
     dir: asc
