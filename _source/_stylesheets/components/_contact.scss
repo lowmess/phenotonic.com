@@ -1,0 +1,14 @@
+.contact {
+
+}
+label {
+  @extend h4;
+}
+input, textarea {
+  @include clearfix;
+
+  width: 100%;
+
+  padding: $gutter*0.5;
+  margin-bottom: $h4-line-height;
+}

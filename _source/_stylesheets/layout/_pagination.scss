@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the pagination of the site.
+// -----------------------------------------------------------------------------
+
+.pagination {
+  @include row;
+  
+  &__previous {
+    @include span-columns(3);
+
+    min-height: 1px;
+  }
+
+  &__pages {
+    @include span-columns(6);
+    @include font(heading, regular);
+
+    position: relative;
+    top: $base-font-size * -1.5;
+
+    list-style-type: none;
+
+    font-size: $h3-font-size;
+    text-align: center;
+
+    li {
+      display: inline;
+
+      &:not(:last-child) {
+        margin-right: $gutter * 0.5;
+      }
+    }
+
+    a {
+      color: $machoke;
+
+      @include on-event {
+        color: $bulbasaur;
+      }
+    }
+  }
+  &__current {
+    color: $bulbasaur;
+    font-weight: 500;
+  }
+
+  &__next {
+    @include span-columns(3);
+    @include omega;
+
+    min-height: 1px;
+
+    text-align: right;
+  }
+}

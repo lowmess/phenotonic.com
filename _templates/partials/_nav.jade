@@ -1,0 +1,15 @@
+if header
+  nav.nav.nav--header(role="navigation")
+else
+  nav.nav(role="navigation")
+
+    .nav__content
+
+      i.material-icons.nav__button.nav__button--mobile menu
+
+      a.nav__logo(href="/")
+        include _logo.svg
+
+      ul.nav__links
+        li: a(href="/store") Store
+        li: a(href="/blog") Blog

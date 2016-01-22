@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the blog page.
+// -----------------------------------------------------------------------------
+
+.header--blog {
+  @include background-image('blog.jpg', 'blog@2x.jpg', 'blog@3x.jpg', 'blog@4x.jpg');
+}
+.post {
+  &:not(:last-of-type) {
+    margin-bottom: $gutter * 4;
+  }
+
+  &__meta {
+    @include row;
+
+    border-bottom: 3px solid $bulbasaur;
+  }
+  &__date {
+    @include span-columns(6);
+  }
+  &__tags {
+    @include span-columns(6);
+    @include omega;
+
+    text-align: right;
+  }
+  &__tag {
+    &:not(:last-child):after {
+      content: ', ';
+
+      user-select: text;
+    }
+  }
+  &__title {
+    margin-bottom: 0;
+  }
+  &__authors {
+    margin-top: 0;
+  }
+  &__author {
+    &:not(:last-child):after {
+      content: ', ';
+
+      user-select: text;
+    }
+    &:nth-last-child(2):after {
+      content: '';
+    }
+    &:last-child:not(:first-child):before {
+      content: '& ';
+
+      user-select: text;
+    }
+  }
+}

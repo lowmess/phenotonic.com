@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+  @include fill-parent;
+  @include background-image('default.jpg', 'default@2x.jpg', 'default@3x.jpg', 'default@4x.jpg');
+
+  background-color: $bulbasaur;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  color: $machop;
+
+  &__text {
+    @include outer-container;
+    @include pad;
+
+    padding-top: $gutter * 4;
+    padding-bottom: $gutter;
+  }
+
+  h1 {
+    color: $lugia;
+  }
+
+  a {
+    color: $lugia;
+  }
+
+  .btn {
+    border-color: $lugia;
+
+    color: $lugia;
+
+    @include on-event {
+      border-color: $lugia;
+
+      color: $bulbasaur;
+    }
+  }
+}

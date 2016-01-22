@@ -1,0 +1,49 @@
+@charset 'UTF-8';
+@viewport { width: device-width; zoom: 1.0; };
+
+// 1. Vendors
+@import
+  'vendor/normalize',
+  'bourbon',
+  'neat';
+
+// 2. Configuration and helpers
+@import
+  'utils/variables',
+  'utils/functions',
+  'utils/mixins';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography';
+
+// 4. Layout-related sections
+@import
+  'layout/nav',
+  'layout/header',
+  'layout/footer',
+  'layout/pagination',
+  'layout/post-pagination';
+
+// 5. Components
+@import
+  'components/buttons',
+  'components/input-bar',
+  'components/contact';
+
+// 6. Page-specific styles
+@import
+  'pages/home',
+  'pages/product',
+  'pages/search',
+  'pages/blog',
+  'pages/post',
+  'pages/error';
+
+// 7. Themes
+/*
+@import
+  'themes/default';
+*/

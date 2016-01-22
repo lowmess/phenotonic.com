@@ -1,0 +1,18 @@
+footer.footer
+  .footer__content
+    //- include 'partials/search-box.jade'
+    .footer__post
+      p Latest Blog Post
+      h2: a(href="/#{collections.blog[0].path}")= collections.blog[0].title
+    .footer__links
+        ul.footer__nav
+          li: a(href="/") Home
+          li: a(href="/store") Store
+          li: a(href="/blog") Blog
+          li: a(href="/contact") Contact
+          li: a(href="/about") About
+        ul.footer__contact
+          li: a(href="mailto:info@phenotonic.com") Email
+          li: a(href="//facebook.com/phenotonic") Facebook
+          li: a(href="//instagram.com/phenotonic") Instagram
+          li: a(href="//twitter.com/phenotonic") Twitter

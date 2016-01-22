@@ -1,9 +1,0 @@
-enabled: true
-built_in_css: false
-route: /search
-template: search
-filters: 
-filter_combinator: or
-order:
-  by: date
-  dir: desc
