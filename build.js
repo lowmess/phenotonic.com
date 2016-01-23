@@ -2,9 +2,11 @@ var Metalsmith  = require('metalsmith');
 var metadata    = require('metalsmith-metadata');
 // HTML
 var layouts     = require('metalsmith-layouts');
+var drafts      = require('metalsmith-drafts');
 var markdown    = require('metalsmith-markdown');
 var permalinks  = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
+var dateFormat  = require('metalsmith-date-formatter');
 // CSS
 var sass        = require('metalsmith-sass');
 var prefix      = require('metalsmith-autoprefixer');
@@ -37,6 +39,7 @@ Metalsmith(__dirname)
   // IMAGES
   .use(imagemin())
   // HTML
+  .use(drafts())
   .use(collections({
     blog: {
       pattern: 'blog/**/*.md',
@@ -62,6 +65,13 @@ Metalsmith(__dirname)
       match: { collection: 'pages' },
       pattern: ':title',
     }]
+  }))
+  .use(dateFormat({
+    dates: [
+      { key: 'date',
+        format: 'MMMM Do[,] YYYY'
+      }
+    ]
   }))
   .use(layouts({
     engine: 'jade',
