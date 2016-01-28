@@ -3,9 +3,11 @@ var metadata    = require('metalsmith-metadata');
 // HTML
 var layouts     = require('metalsmith-layouts');
 var drafts      = require('metalsmith-drafts');
+var snippet     = require('metalsmith-snippet');
 var markdown    = require('metalsmith-markdown');
 var permalinks  = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
+var pagination  = require('metalsmith-pagination');
 var dateFormat  = require('metalsmith-date-formatter');
 // CSS
 var sass        = require('metalsmith-sass');
@@ -19,11 +21,6 @@ var imagemin   = require('metalsmith-imagemin');
 Metalsmith(__dirname)
   .source('_source')
   .destination('build')
-  // Metadata
-  .use(metadata({
-    site: '_metadata/site.yaml',
-    landing: '_metadata/landing.yaml'
-  }))
   // CSS
   .use(sass({
     includePaths: bourbon,
@@ -53,10 +50,30 @@ Metalsmith(__dirname)
       pattern: '*.md'
     }
   }))
+  .use(metadata({
+    site: '_metadata/site.yaml',
+    landing: '_metadata/landing.yaml',
+    blog: '_metadata/blog.yaml'
+  }))
+  .use(pagination({
+    'collections.blog': {
+      perPage: 5,
+      layout: 'blog.jade',
+      first: 'blog/index.html',
+      noPageOne: true,
+      path: 'blog/page/:num/index.html',
+      pageMetadata: {
+        title: 'blog'
+      }
+    }
+  }))
   .use(markdown({
     gfm: true,
     smartypants: true,
     tables: true
+  }))
+  .use(snippet({
+    maxLength: 140
   }))
   .use(permalinks({
     pattern: ':collection/:title',

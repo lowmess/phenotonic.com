@@ -1,3 +1,24 @@
-extends default.jade
-
 - var header = true
+
+doctype html
+html
+  head
+    include partials/_head.jade
+  body
+    include partials/_nav.jade
+    
+    header(class="header header--#{ title }")
+      .header__text
+        if headerTitle
+          h1= headerTitle
+        else
+          h1= title
+        if description
+          p!= description
+
+    main.main(role="main")
+      block content
+        p!= contents
+
+    include partials/_footer.jade
+    include partials/_scripts.jade
