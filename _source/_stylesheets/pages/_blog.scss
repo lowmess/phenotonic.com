@@ -5,24 +5,30 @@
 .header--blog {
   @include background-image('blog.jpg', 'blog@2x.jpg', 'blog@3x.jpg', 'blog@4x.jpg');
 }
-.post {
+
+.post-preview {
   &:not(:last-of-type) {
-    margin-bottom: $gutter * 4;
+    margin-bottom: $gutter * 2;
   }
 
   &__meta {
-    @include row;
+    @include span-columns(3);
+    @include pad(0 default);
 
-    border-bottom: 3px solid $bulbasaur;
-  }
-  &__date {
-    @include span-columns(6);
-  }
-  &__tags {
-    @include span-columns(6);
-    @include omega;
+    border-right: 3px solid $machop;
 
     text-align: right;
+  }
+  &__date {
+    @include clearfix;
+
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  &__tags {
+    a {
+      color: $machop;
+    }
   }
   &__tag {
     &:not(:last-child):after {
@@ -31,25 +37,16 @@
       user-select: text;
     }
   }
+
+  &__text {
+    @include span-columns(9);
+    @include omega;
+  }
   &__title {
+    margin-top: 0;
     margin-bottom: 0;
   }
-  &__authors {
+  &__snippet {
     margin-top: 0;
-  }
-  &__author {
-    &:not(:last-child):after {
-      content: ', ';
-
-      user-select: text;
-    }
-    &:nth-last-child(2):after {
-      content: '';
-    }
-    &:last-child:not(:first-child):before {
-      content: '& ';
-
-      user-select: text;
-    }
   }
 }

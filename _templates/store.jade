@@ -15,6 +15,6 @@ block content
       h4.product-preview__data
         a.product-preview__price(href="/#{ item.path }") $#{ item.price }
         if item.categories
-          | &#032;
+          | &#032;|&#032;
           each category in item.categories
             a.product-preview__category(href="/#{ item.path }")= category

@@ -4,8 +4,8 @@
 
 .pagination {
   @include row;
-  
-  &__previous {
+
+  &__first {
     @include span-columns(3);
 
     min-height: 1px;
@@ -44,7 +44,7 @@
     font-weight: 500;
   }
 
-  &__next {
+  &__last {
     @include span-columns(3);
     @include omega;
 

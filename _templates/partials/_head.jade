@@ -4,48 +4,55 @@ meta(http-equiv="X-UA-Compatible", content="IE=edge")
 meta(name="theme-color", content="#2d2926")
 
 if description
-  meta(name="description", content="#{description}")
+  meta(name="description", content="#{ description }")
 else if site.description
-  meta(name="description", content="#{site.description}")
+  meta(name="description", content="#{ site.description }")
 
 if keywords
-  meta(name="keywords", content="#{keywords}")
+  meta(name="keywords", content="#{ keywords }")
 else if site.keywords
-  meta(name="keywords", content="#{site.keywords}")
+  meta(name="keywords", content="#{ site.keywords }")
 
-if title != "home" && site.title
-  title #{title} • #{site.title}
-else if title != "home" && !site.title
-  title #{title} • Phenotonic
-else if site.title
-  title= site.title
-else
-  title Phenotonic
+block title
+  if title != "home" && site.title
+    title #{title} • #{site.title}
+  else if title != "home" && !site.title
+    title #{title} • Phenotonic
+  else if site.title
+    title= site.title
+  else
+    title Phenotonic
 
-link(rel="canonical", href="#{path}")
+link(rel="canonical", href="#{ path }")
 
-link(rel="apple-touch-icon-precomposed", sizes="57x57", href="'/images/favicon-57.png'")
-link(rel="apple-touch-icon-precomposed", sizes="114x114", href="'/images/favicon-114.png'")
-link(rel="apple-touch-icon-precomposed", sizes="72x72", href="'/images/favicon-72.png'")
-link(rel="apple-touch-icon-precomposed", sizes="144x144", href="'/images/favicon-144.png'")
-link(rel="apple-touch-icon-precomposed", sizes="60x60", href="'/images/favicon-60.png'")
-link(rel="apple-touch-icon-precomposed", sizes="120x120", href="'/images/favicon-120.png'")
-link(rel="apple-touch-icon-precomposed", sizes="76x76", href="'/images/favicon-76.png'")
-link(rel="apple-touch-icon-precomposed", sizes="152x152", href="'/images/favicon-152.png'")
+if next
+  link(rel="next", href="/#{ next.path }")
+  
+if previous
+  link(rel="previous", href="/#{ previous.path }")
 
-link(rel="icon", type="image/png", href="'/images/favicon-196.png'", sizes="196x196")
-link(rel="icon", type="image/png", href="'/images/favicon-96.png'", sizes="96x96")
-link(rel="icon", type="image/png", href="'/images/favicon-32.png'", sizes="32x32")
-link(rel="icon", type="image/png", href="'/images/favicon-16.png'", sizes="16x16")
-link(rel="icon", type="image/png", href="'/images/favicon-128.png'", sizes="128x128")
+link(rel="apple-touch-icon-precomposed", sizes="57x57", href="/images/favicon-57.png")
+link(rel="apple-touch-icon-precomposed", sizes="114x114", href="/images/favicon-114.png")
+link(rel="apple-touch-icon-precomposed", sizes="72x72", href="/images/favicon-72.png")
+link(rel="apple-touch-icon-precomposed", sizes="144x144", href="/images/favicon-144.png")
+link(rel="apple-touch-icon-precomposed", sizes="60x60", href="/images/favicon-60.png")
+link(rel="apple-touch-icon-precomposed", sizes="120x120", href="/images/favicon-120.png")
+link(rel="apple-touch-icon-precomposed", sizes="76x76", href="/images/favicon-76.png")
+link(rel="apple-touch-icon-precomposed", sizes="152x152", href="/images/favicon-152.png")
+
+link(rel="icon", type="image/png", href="/images/favicon-196.png", sizes="196x196")
+link(rel="icon", type="image/png", href="/images/favicon-96.png", sizes="96x96")
+link(rel="icon", type="image/png", href="/images/favicon-32.png", sizes="32x32")
+link(rel="icon", type="image/png", href="/images/favicon-16.png", sizes="16x16")
+link(rel="icon", type="image/png", href="/images/favicon-128.png", sizes="128x128")
 
 meta(name="application-name", content="Phenotonic")
 meta(name="msapplication-TileColor", content="#2ea72e")
-meta(name="msapplication-TileImage", content="'/images/favicon-ms-144.png'")
-meta(name="msapplication-square70x70logo", content="'/images/favicon-ms-70.png'")
-meta(name="msapplication-square150x150logo", content="'/images/favicon-ms-150.png'")
-meta(name="msapplication-wide310x150logo", content="'/images/favicon-ms-310x150.png'")
-meta(name="msapplication-square310x310logo", content="'/images/favicon-ms-310.png'")
+meta(name="msapplication-TileImage", content="/images/favicon-ms-144.png")
+meta(name="msapplication-square70x70logo", content="/images/favicon-ms-70.png")
+meta(name="msapplication-square150x150logo", content="/images/favicon-ms-150.png")
+meta(name="msapplication-wide310x150logo", content="/images/favicon-ms-310x150.png")
+meta(name="msapplication-square310x310logo", content="/images/favicon-ms-310.png")
 
 link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/icon?family=Material+Icons|Bitter:400,400italic,700,700italic")
 link(rel="stylesheet", type="text/css", href="//cdn.snipcart.com/themes/base/snipcart.min.css")

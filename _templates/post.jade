@@ -2,7 +2,17 @@ extends default.jade
 
 block content
   h1= title
+  
+  if author
+    h4.post__authors by
+      if typeof author == "object"
+        each auth in author
+          span.post__author= auth
+      else
+        span.post__author= author
+        
   != contents
+  
   nav.post-pagination
     .post-pagination__prev
       if previous

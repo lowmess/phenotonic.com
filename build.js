@@ -1,7 +1,8 @@
 var Metalsmith  = require('metalsmith');
 var metadata    = require('metalsmith-metadata');
 var sitemap     = require('metalsmith-mapsite');
-var lunr        = require('metalsmith-lunr');
+var moment      = require('moment');
+// var lunr        = require('metalsmith-lunr');
 var branch      = require('metalsmith-branch');
 var each        = require('metalsmith-each');
 // HTML
@@ -12,7 +13,7 @@ var markdown    = require('metalsmith-markdown');
 var permalinks  = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
 var pagination  = require('metalsmith-pagination');
-var dateFormat  = require('metalsmith-date-formatter');
+var tags        = require('metalsmith-tags');
 // CSS
 var sass        = require('metalsmith-sass');
 var prefix      = require('metalsmith-autoprefixer');
@@ -59,7 +60,6 @@ Metalsmith(__dirname)
     .pattern('blog/**/*.md')
     .use(each(
       function (file, filename) {
-        file.lunr = true;
         file.layout = 'post.jade';
       }
     ))
@@ -69,7 +69,6 @@ Metalsmith(__dirname)
     .pattern('store/**/*.md')
     .use(each(
       function (file, filename) {
-        file.lunr = true;
         file.layout = 'product.jade';
       }
     ))
@@ -80,7 +79,7 @@ Metalsmith(__dirname)
   }))
   .use(pagination({
     'collections.blog': {
-      perPage: 5,
+      perPage: 10,
       layout: 'blog.jade',
       first: 'blog/index.html',
       noPageOne: true,
@@ -108,24 +107,18 @@ Metalsmith(__dirname)
       pattern: ':title',
     }]
   }))
-  .use(dateFormat({
-    dates: [
-      { key: 'date',
-        format: 'MMMM Do[,] YYYY'
-      }
-    ]
-  }))
-  .use(lunr({
-    fields: {
-      date: 1,
-      contents: 1,
-      title: 5,
-      categories: 10,
-      tags: 10
-    }
+  .use(tags({
+    handle: 'tags',
+    path:'tagged/:tag/index.html',
+    pathPage: "tagged/:tag/:num/index.html",
+    perPage: 10,
+    layout: 'tag.jade',
+    sortBy: 'date',
+    reverse: true
   }))
   .use(layouts({
     engine: 'jade',
+    moment: moment,
     directory: '_templates',
     default: 'default.jade',
     pattern: '**/*.html'

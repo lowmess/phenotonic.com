@@ -2,9 +2,10 @@
 // This file contains styles that are specific to the blog post page.
 // -----------------------------------------------------------------------------
 
+
 .post {
   &:not(:last-of-type) {
-    margin-bottom: $gutter * 2;
+    margin-bottom: $gutter * 4;
   }
 
   &__meta {
@@ -47,24 +48,6 @@
       content: '& ';
 
       user-select: text;
-    }
-  }
-
-  &__summary {
-    @include font(body);
-
-    font-size: $base-font-size;
-    text-transform: none;
-
-    h1, h2, h3, h4, h5, h6 {
-      @include font(body);
-
-      margin-top: $base-line-height;
-      margin-bottom: $base-line-height;
-
-      font-size: $base-font-size;
-      text-transform: none;
-      letter-spacing: inherit;
     }
   }
 }

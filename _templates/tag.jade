@@ -1,12 +1,16 @@
 extends page.jade
 
+block prepend title
+  - var title = tag
+
+block prepend header
+  - var headline = tag
+  - var description = "Posts tagged '" + tag + "'"
+
 block content
 
-  unless pagination.num == 1
-    h3.blog__page Page #{ pagination.num }
-
   each post in pagination.files
-  
+
     section.post-preview
     
       .post-preview__meta
@@ -16,17 +20,17 @@ block content
     
         if post.tags
           .post-preview__tags
-            for tag in post.tags
-              a.post-preview__tag(href="/tagged/#{ tag.toLowerCase() }")= tag
+            for hash in post.tags
+              a.post-preview__tag(href="/tagged/#{ tag.toLowerCase() }")= hash
         
       .post-preview__text
     
         h2.post-preview__title: a(href="/#{ post.path }")= post.title
 
         h4.post-preview__snippet= post.snippet
-
+      
   if pagination.next || pagination.previous
-  
+
     nav(role="pagination").pagination
     
       .pagination__first

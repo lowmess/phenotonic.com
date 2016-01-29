@@ -13,8 +13,9 @@ if ( thanks !== -1 && form && content ) {
   content.insertBefore(p, form);
 
   var img = document.createElement('img');
-  img.src = "http://i.giphy.com/slNwi1TTwR40U.gif";
-  img.alt = "Just playing my keyboard, nbd.";
+  img.src = '/images/contact-gif.gif';
+  img.alt = 'Just playing my keyboard, nbd.';
+  img.classList.add('is-full-width');
   content.insertBefore(img, form);
 
   var hr = document.createElement('hr');

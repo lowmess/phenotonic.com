@@ -5,5 +5,5 @@
 .header--error {
   @include background-image('error.jpg', 'error@2x.jpg', 'error@3x.jpg', 'error@4x.jpg');
 
-  min-height: 67vh;
+  min-height: 75vh;
 }

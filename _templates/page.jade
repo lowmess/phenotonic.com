@@ -7,14 +7,15 @@ html
   body
     include partials/_nav.jade
     
-    header(class="header header--#{ title }")
-      .header__text
-        if headline
-          h1= headline
-        else
-          h1= title
-        if description
-          h3!= description
+    block header
+      header(class="header header--#{ title.toLowerCase() }")
+        .header__text
+          if headline
+            h1= headline
+          else
+            h1= title
+          if description
+            h3!= description
 
     main.main(role="main")
       block content

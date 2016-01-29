@@ -32,8 +32,8 @@
   }
 
   &__links {
-    @include span-columns(6);
-    @include shift(3);
+    @include span-columns(8);
+    @include shift(2);
     @include omega;
     @include respond-to(medium) {
       @include span-columns(4);
@@ -54,5 +54,11 @@
   &__contact {
     @include span-columns(6);
     @include omega;
+  }
+
+  &__copyright {
+    @include outer-container;
+    @include row;
+    @include pad(0 default default default);
   }
 }
