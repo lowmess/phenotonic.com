@@ -11,7 +11,7 @@ layout: page.jade
   <input name="email" type="email" placeholder="kareem@ballsohard.com" />
 
   <label for="message">What Do You Have to Say?</label>
-  <textarea name="message"></textarea>
+  <textarea name="message" placeholder="I can do something else besides stuff a ball through a hoop. My biggest resource is my mind."></textarea>
 
   <input type="text" name="_gotcha" style="display:none" />
 

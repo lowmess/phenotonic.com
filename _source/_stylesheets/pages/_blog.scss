@@ -22,10 +22,12 @@
   &__date {
     @include clearfix;
 
-    margin-top: 1rem;
+    margin-top: 3rem;
     margin-bottom: 0.5rem;
   }
   &__tags {
+    margin-bottom: $h4-line-height;
+    
     a {
       color: $machop;
     }
@@ -43,7 +45,6 @@
     @include omega;
   }
   &__title {
-    margin-top: 0;
     margin-bottom: 0;
   }
   &__snippet {
