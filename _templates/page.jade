@@ -9,12 +9,12 @@ html
     
     header(class="header header--#{ title }")
       .header__text
-        if headerTitle
-          h1= headerTitle
+        if headline
+          h1= headline
         else
           h1= title
         if description
-          p!= description
+          h3!= description
 
     main.main(role="main")
       block content

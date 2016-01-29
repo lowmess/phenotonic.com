@@ -6,7 +6,6 @@ weight: 32
 image: bloom-box-case.jpg
 categories:
   - CO2
-layout: product.jade
 ---
 
 A case of 8 (count 'em!) of the product that plants are calling "Cravable", "Immensly Satisfying", and "Dude, plants can't talk", the [Bloom Box](/store/bloom-box)!

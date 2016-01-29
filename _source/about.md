@@ -1,5 +1,6 @@
 ---
-title: about
+title: About
+headline: About Us
 layout: page.jade
 ---
 

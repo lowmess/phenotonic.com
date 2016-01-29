@@ -1,6 +1,6 @@
 ---
-title: contact
-headerTitle: Contact Us
+title: Contact
+headline: Contact Us
 layout: page.jade
 ---
 

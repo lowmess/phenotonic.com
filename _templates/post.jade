@@ -1,0 +1,12 @@
+extends default.jade
+
+block content
+  h1= title
+  != contents
+  nav.post-pagination
+    .post-pagination__prev
+      if previous
+        a.btn(href="/#{ previous.path }") Newer Post
+    .post-pagination__next
+      if next
+        a.btn(href="/#{ next.path }") Older Post

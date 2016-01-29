@@ -12,14 +12,14 @@ block content
       header.post-preview__meta
         
         if post.date
-          .post-preview__date: a(href="#{ post.path }")= post.date
+          .post-preview__date: a(href="/#{ post.path }")= post.date
     
         if post.tags
           .post-preview__tags
             for tag in post.tags
               a.post-preview__tag(href="/tagged/#{ tag }")= tag
     
-      h2.post-preview__title: a(href="#{ post.path }")= post.title
+      h2.post-preview__title: a(href="/#{ post.path }")= post.title
     
       if post.author
         h4.post-preview__authors by
@@ -31,7 +31,7 @@ block content
     
       h4.post-preview__summary= post.snippet
         
-      a(href="#{ post.path }") View Post
+      a(href="/#{ post.path }") View Post
 
   if pagination.next || pagination.prev
   

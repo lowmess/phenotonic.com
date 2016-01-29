@@ -1,6 +1,6 @@
 footer.footer
   .footer__content
-    //- include 'partials/search-box.jade'
+    include search-box.jade
     .footer__post
       p Latest Blog Post
       h2: a(href="/#{collections.blog[0].path}")= collections.blog[0].title

@@ -1,5 +1,9 @@
 var Metalsmith  = require('metalsmith');
 var metadata    = require('metalsmith-metadata');
+var sitemap     = require('metalsmith-mapsite');
+var lunr        = require('metalsmith-lunr');
+var branch      = require('metalsmith-branch');
+var each        = require('metalsmith-each');
 // HTML
 var layouts     = require('metalsmith-layouts');
 var drafts      = require('metalsmith-drafts');
@@ -50,10 +54,29 @@ Metalsmith(__dirname)
       pattern: '*.md'
     }
   }))
+  // Make blog posts searchable and use the right layout
+  .use(branch()
+    .pattern('blog/**/*.md')
+    .use(each(
+      function (file, filename) {
+        file.lunr = true;
+        file.layout = 'post.jade';
+      }
+    ))
+  )
+  // Make store products searchable and use the right layout
+  .use(branch()
+    .pattern('store/**/*.md')
+    .use(each(
+      function (file, filename) {
+        file.lunr = true;
+        file.layout = 'product.jade';
+      }
+    ))
+  )
   .use(metadata({
     site: '_metadata/site.yaml',
     landing: '_metadata/landing.yaml',
-    blog: '_metadata/blog.yaml'
   }))
   .use(pagination({
     'collections.blog': {
@@ -63,7 +86,9 @@ Metalsmith(__dirname)
       noPageOne: true,
       path: 'blog/page/:num/index.html',
       pageMetadata: {
-        title: 'blog'
+        title: 'Blog',
+        headline: 'Adventures in Gardening',
+        description: 'The Phenotonic Blog'
       }
     }
   }))
@@ -90,12 +115,22 @@ Metalsmith(__dirname)
       }
     ]
   }))
+  .use(lunr({
+    fields: {
+      date: 1,
+      contents: 1,
+      title: 5,
+      categories: 10,
+      tags: 10
+    }
+  }))
   .use(layouts({
     engine: 'jade',
     directory: '_templates',
     default: 'default.jade',
     pattern: '**/*.html'
   }))
+  .use(sitemap('https://phenotonic.com'))
   .build(function(err) {
     if (err) throw err;
   });

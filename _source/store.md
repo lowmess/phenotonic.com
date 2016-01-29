@@ -1,4 +1,4 @@
 ---
-title: store
+title: Store
 layout: store.jade
 ---

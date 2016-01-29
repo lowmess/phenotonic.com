@@ -6,7 +6,6 @@ weight: 4
 image: bloom-box.jpg
 categories:
   - CO2
-layout: product.jade
 ---
 
 ## An Organic CO2 Generator
