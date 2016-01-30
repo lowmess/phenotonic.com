@@ -1,6 +1,7 @@
 var Metalsmith    = require('metalsmith');
 var metadata      = require('metalsmith-metadata');
 var sitemap       = require('metalsmith-mapsite');
+var feed          = require('metalsmith-feed');
 var moment        = require('moment');
 var defaultValues = require('metalsmith-default-values');
 // HTML
@@ -126,6 +127,7 @@ Metalsmith(__dirname)
     pattern: '**/*.html'
   }))
   .use(sitemap('https://phenotonic.com'))
+  .use(feed({collection: 'blog'}))
   .build(function(err) {
     if (err) throw err;
   });
