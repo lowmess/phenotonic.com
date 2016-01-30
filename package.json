@@ -3,8 +3,7 @@
   "version": "2.0.0",
   "description": "The website for Phenotonic, an Arizona-based gardening company. Generated with Metalsmith.",
   "main": "build.js",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "jade": "^1.11.0",
     "metalsmith": "^2.1.0",
     "metalsmith-autoprefixer": "^1.1.0",
@@ -26,6 +25,7 @@
     "moment": "^2.11.1",
     "node-neat": "^1.7.2"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
