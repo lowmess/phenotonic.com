@@ -30,6 +30,12 @@
       @include shift(0);
     }
   }
+  &__post-title {
+    margin-bottom: 0;
+  }
+  &__post-snippet {
+    margin-top: 0;
+  }
 
   &__links {
     @include span-columns(8);

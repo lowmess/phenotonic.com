@@ -4,23 +4,27 @@
 
 
 .post {
-  &:not(:last-of-type) {
-    margin-bottom: $gutter * 4;
-  }
 
-  &__meta {
+  &__header {
     @include row;
 
-    border-bottom: 3px solid $bulbasaur;
+    border-bottom: 3px solid $machop;
   }
-  &__date {
+  &__meta {
     @include span-columns(6);
+
+    margin-top: 0;
+    margin-bottom: 0;
   }
   &__tags {
     @include span-columns(6);
     @include omega;
 
     text-align: right;
+
+    a {
+      color: $machop;
+    }
   }
   &__tag {
     &:not(:last-child):after {
@@ -29,6 +33,7 @@
       user-select: text;
     }
   }
+
   &__title {
     margin-bottom: 0;
   }
@@ -42,7 +47,7 @@
       user-select: text;
     }
     &:nth-last-child(2):after {
-      content: '';
+      content: ' ';
     }
     &:last-child:not(:first-child):before {
       content: '& ';

@@ -3,7 +3,8 @@ footer.footer
     //- include search-box.jade
     .footer__post
       p Latest Blog Post
-      h2: a(href="/#{collections.blog[0].path}")= collections.blog[0].title
+      h2.footer__post-title: a(href="/#{collections.blog[0].path}")= collections.blog[0].title
+      h4.footer__post-snippet= collections.blog[0].snippet
     .footer__links
         ul.footer__nav
           li: a(href="/") Home
@@ -16,6 +17,6 @@ footer.footer
           li: a(href="//facebook.com/phenotonic") Facebook
           li: a(href="//instagram.com/phenotonic") Instagram
           li: a(href="//twitter.com/phenotonic") Twitter
-          li: a(href="//massroots.com/user/phenotonic") MassRoots
+          //- li: a(href="//massroots.com/user/phenotonic") MassRoots
   .footer__copyright
     p &copy; 2015&ndash;<span class="footer__copyright-year">2016</span> Phenotonic, LLC

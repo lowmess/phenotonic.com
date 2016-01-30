@@ -12,7 +12,7 @@ block content
       .post-preview__meta
         
         if post.date
-          h3.post-preview__date: a(href="/#{ post.path }")= moment(post.date).format("MMM Do")
+          h3.post-preview__date: a(href="/#{ post.path }"): time(datetime=moment.utc(post.date))= moment.utc(post.date).format("MMM Do")
     
         if post.tags
           .post-preview__tags

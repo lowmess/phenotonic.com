@@ -1,27 +1,25 @@
-var Metalsmith  = require('metalsmith');
-var metadata    = require('metalsmith-metadata');
-var sitemap     = require('metalsmith-mapsite');
-var moment      = require('moment');
-// var lunr        = require('metalsmith-lunr');
-var branch      = require('metalsmith-branch');
-var each        = require('metalsmith-each');
+var Metalsmith    = require('metalsmith');
+var metadata      = require('metalsmith-metadata');
+var sitemap       = require('metalsmith-mapsite');
+var moment        = require('moment');
+var defaultValues = require('metalsmith-default-values');
 // HTML
-var layouts     = require('metalsmith-layouts');
-var drafts      = require('metalsmith-drafts');
-var snippet     = require('metalsmith-snippet');
-var markdown    = require('metalsmith-markdown');
-var permalinks  = require('metalsmith-permalinks');
-var collections = require('metalsmith-collections');
-var pagination  = require('metalsmith-pagination');
-var tags        = require('metalsmith-tags');
+var layouts       = require('metalsmith-layouts');
+var drafts        = require('metalsmith-drafts');
+var snippet       = require('metalsmith-snippet');
+var markdown      = require('metalsmith-markdown');
+var permalinks    = require('metalsmith-permalinks');
+var collections   = require('metalsmith-collections');
+var pagination    = require('metalsmith-pagination');
+var tags          = require('metalsmith-tags');
 // CSS
-var sass        = require('metalsmith-sass');
-var prefix      = require('metalsmith-autoprefixer');
-var bourbon     = require('node-neat').includePaths;
+var sass          = require('metalsmith-sass');
+var prefix        = require('metalsmith-autoprefixer');
+var bourbon       = require('node-neat').includePaths;
 // JS
-var uglify     = require('metalsmith-uglify');
+var uglify        = require('metalsmith-uglify');
 // IMAGES
-var imagemin   = require('metalsmith-imagemin');
+var imagemin      = require('metalsmith-imagemin');
 
 Metalsmith(__dirname)
   .source('_source')
@@ -55,24 +53,21 @@ Metalsmith(__dirname)
       pattern: '*.md'
     }
   }))
-  // Make blog posts searchable and use the right layout
-  .use(branch()
-    .pattern('blog/**/*.md')
-    .use(each(
-      function (file, filename) {
-        file.layout = 'post.jade';
+  // Set default values
+  .use(defaultValues([
+    {
+      pattern: 'store/**/*.md',
+      defaults: {
+        layout: 'product.jade'
       }
-    ))
-  )
-  // Make store products searchable and use the right layout
-  .use(branch()
-    .pattern('store/**/*.md')
-    .use(each(
-      function (file, filename) {
-        file.layout = 'product.jade';
+    },
+    {
+      pattern: 'blog/**/*.md',
+      defaults: {
+        layout: 'post.jade'
       }
-    ))
-  )
+    }
+  ]))
   .use(metadata({
     site: '_metadata/site.yaml',
     landing: '_metadata/landing.yaml',
@@ -116,6 +111,13 @@ Metalsmith(__dirname)
     sortBy: 'date',
     reverse: true
   }))
+  /* Eventual category implementation
+  .use(tags({
+    handle: 'categories',
+    path:'store/categories/:tag/index.html',
+    layout: 'category.jade'
+  }))
+  */
   .use(layouts({
     engine: 'jade',
     moment: moment,
