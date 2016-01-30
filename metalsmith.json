@@ -1,0 +1,138 @@
+{
+  "source": "_source",
+  "destination": "build",
+  "plugins": [
+    {
+      "metalsmith-sass": {
+        "includePaths": "bourbon",
+        "outputStyle": "compressed",
+        "outputDir": "css/"
+      }
+    },
+    {
+      "metalsmith-autporefixer": {}
+    },
+    {
+      "metalsmith-uglify": {
+        "concat": "js/main.js",
+        "removeOriginal": true
+      }
+    },
+    {
+      "metalsmith-imagemin": {}
+    },
+    {
+      "metalmsith-drafts": {}
+    },
+    {
+      "metalsmith-collections": {
+        "blog": {
+          "pattern": "blog/**/*.md",
+          "sortBy": "date",
+          "reverse": true
+        },
+        "store": {
+          "pattern": "store/**/*.md"
+        },
+        "pages": {
+          "pattern": "*.md"
+        }
+      }
+    },
+    {
+      "metalsmith-default-values": {
+        "store": {
+          "pattern": "store/**/*.md",
+          "defaults": {
+            "layout": "product.jade"
+          }
+        },
+        "blog": {
+          "pattern": "blog/**/*.md",
+          "defaults": {
+            "layout": "post.jade"
+          }
+        }
+      }
+    },
+    {
+      "metalsmith-metadata": {
+        "site": "_metadata/site.yaml",
+        "landing": "_metadata/landing.yaml"
+      }
+    },
+    {
+      "metalsmith-pagination": {
+        "collections.blog": {
+          "perPage": 10,
+          "layout": "blog.jade",
+          "first": "blog/index.html",
+          "noPageOne": true,
+          "path": "blog/page/:num/index.html",
+          "pageMetadata": {
+            "title": "Blog",
+            "headline": "Adventures in Gardening",
+            "description": "The Phenotonic Blog"
+          }
+        }
+      }
+    },
+    {
+      "metalsmith-markdown": {
+        "gfm": true,
+        "smartypants": true,
+        "tables": true
+      }
+    },
+    {
+      "metalsmith-snippet": {
+        "maxLength": 140
+      }
+    },
+    {
+      "metalsmith-permalinks": {
+        "pattern": ":collection/:title",
+        "relative": false,
+        "linksets": [{
+          "match": { "collection": "pages" },
+          "pattern": ":title",
+        }]
+      }
+    },
+    {
+      "metalsmith-tags": {
+        "handle": "tags",
+        "path":"tagged/:tag/index.html",
+        "pathPage": "tagged/:tag/:num/index.html",
+        "perPage": 10,
+        "layout": "tag.jade",
+        "sortBy": "date",
+        "reverse": true
+      }
+    },
+    {
+      "metalsmith-tags": {
+        "handle": "categories",
+        "path":"store/categories/:tag/index.html",
+        "layout": "category.jade"
+      }
+    },
+    {
+      "metalsmith-layouts": {
+        "engine": "jade",
+        "moment": "moment",
+        "directory": "_templates",
+        "default": "default.jade",
+        "pattern": "**/*.html"
+      }
+    },
+    {
+      "metalsmith-mapsite": "https://phenotonic.com"
+    },
+    {
+      "metalsmith-feed": {
+        "collection": "blog"
+      }
+    }
+  ]
+}
