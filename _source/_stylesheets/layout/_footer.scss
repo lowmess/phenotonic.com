@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+  @include fill-parent;
+
+  background: $bulbasaur;
+
+  color: $lugia;
+
+  a {
+    color: $lugia;
+
+    @include on-event {
+      color: $lugia;
+    }
+  }
+
+  &__content {
+    @include outer-container;
+    @include row;
+    @include pad;
+  }
+
+  &__post {
+    @include shift(2);
+    @include span-columns(8);
+    @include respond-to(medium) {
+      @include shift(0);
+    }
+  }
+  &__post-title {
+    margin-bottom: 0;
+  }
+  &__post-snippet {
+    margin-top: 0;
+  }
+
+  &__links {
+    @include span-columns(8);
+    @include shift(2);
+    @include omega;
+    @include respond-to(medium) {
+      @include span-columns(4);
+      @include shift(0);
+    }
+    @include row;
+
+    ul {
+      margin: inherit 0 0;
+      padding: 0;
+
+      list-style-type: none;
+    }
+  }
+  &__nav {
+    @include span-columns(6);
+  }
+  &__contact {
+    @include span-columns(6);
+    @include omega;
+  }
+
+  &__copyright {
+    @include outer-container;
+    @include row;
+    @include pad(0 default default default);
+  }
+}

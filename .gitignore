@@ -1,11 +1,2 @@
-.DS_Store
-/node_modules
-/site/accounts
-/assets/avatars
-/assets/fonts
-/thumbs/*
-/user/themes/phenotonic/node_modules
-/user/themes/phenotonic/fonts
-/cache
-/user/themes/phenotonic-dev
-*.exe
+node_modules
+build

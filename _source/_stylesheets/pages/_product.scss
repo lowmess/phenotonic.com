@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the product page.
+// -----------------------------------------------------------------------------
+
+.product {
+
+  &__image {
+    display: block;
+
+    @include respond-to(large) {
+      @include direction-context(right-to-left) {
+        @include span-columns(6);
+      }
+    }
+
+    height: auto;
+    min-height: 250px;
+    max-height: 75vh;
+
+    margin: 0 auto;
+
+    background: $machop;
+
+    &--placeholder {
+      padding-top: 75vh;
+    }
+  }
+
+  &__info {
+    @include respond-to(large) {
+      @include direction-context(right-to-left) {
+        @include span-columns(6);
+        @include omega;
+      }
+    }
+
+    text-align: center;
+  }
+  &__price {
+    display: inline;
+
+    position: relative;
+    top: $base-font-size * 0.25;
+
+    margin-right: $gutter;
+  }
+}

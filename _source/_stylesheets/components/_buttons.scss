@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+  @include font(heading, medium);
+
+  padding: $base-font-size * 0.5 $base-font-size * 1.5;
+  border: 3px solid $bulbasaur;
+  border-radius: $base-font-size * 1.5;
+
+  background: transparent;
+
+  text-align: center;
+  // text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  color: $bulbasaur;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  @include on-event {
+    border-color: $bulbasaur;
+    border-width: 3px;
+
+    background: $bulbasaur;
+
+    color: $lugia;
+  }
+
+  &--inactive {
+    border-color: $machoke;
+    color: $machoke;
+
+    cursor: default;
+
+    @include on-event {
+      border-color: $machoke;
+      border-width: 3px;
+
+      background: transparent;
+
+      color: $machoke;
+    }
+  }
+}
+button {
+  @extend .btn;
+}

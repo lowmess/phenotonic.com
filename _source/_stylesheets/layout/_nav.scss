@@ -1,0 +1,69 @@
+.nav {
+  @include font(heading, medium);
+  @include position(absolute, 0 0 null 0);
+
+  height: rem(75);
+
+  &--header {
+    background: $lugia;
+
+    box-shadow: 0 0 5px 0 $machamp;
+  }
+
+  &__content {
+    @include outer-container;
+    @include pad;
+    padding-top: $gutter;
+
+    // height: 45px;
+  }
+
+  &__logo {
+    //@include respond-to(small) {
+      @include span-columns(4);
+
+      position: relative;
+      top: -$base-font-size;
+  //  }
+
+    @include on-event {
+      border: none;
+    }
+
+    svg {
+      display: block;
+
+      height: 45px;
+      width: 100%;
+      max-width: 200px;
+
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  &__links {
+    //@include respond-to(small) {
+      @include span-columns(8);
+      @include omega;
+    //}
+
+    margin: 0;
+
+    text-align: right;
+
+    list-style-type: none;
+
+    li {
+      display: inline;
+
+      &:not(:last-child) {
+        margin-right: $gutter;
+      }
+    }
+  }
+
+  &__button--mobile {
+    display: none;
+  }
+}
