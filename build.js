@@ -20,7 +20,7 @@ var bourbon       = require('node-neat').includePaths;
 // JS
 var uglify        = require('metalsmith-uglify');
 // IMAGES
-var imagemin      = require('metalsmith-imagemin');
+// var imagemin      = require('metalsmith-imagemin');
 
 Metalsmith(__dirname)
   .source('_source')
@@ -38,7 +38,7 @@ Metalsmith(__dirname)
     removeOriginal: true
     }))
   // IMAGES
-  .use(imagemin())
+  // .use(imagemin())
   // HTML
   .use(drafts())
   .use(collections({
