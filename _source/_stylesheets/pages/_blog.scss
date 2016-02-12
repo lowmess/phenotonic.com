@@ -7,13 +7,12 @@
 }
 
 .post-preview {
-  &:not(:last-of-type) {
-    margin-bottom: $gutter * 2;
-  }
-
   &__meta {
-    @include span-columns(3);
     @include pad(0 default);
+
+    width: 25%;
+
+    float: left;
 
     border-right: 3px solid $machop;
 
@@ -27,7 +26,7 @@
   }
   &__tags {
     margin-bottom: $h4-line-height;
-    
+
     a {
       color: $machop;
     }
@@ -41,8 +40,14 @@
   }
 
   &__text {
-    @include span-columns(9);
-    @include omega;
+    @include pad(0.1px default);
+    @include clearfix;
+
+    width: 75%;
+
+    margin-left: auto;
+    margin-right: 3px;
+    border-left: 3px solid $machop;
   }
   &__title {
     margin-bottom: 0;

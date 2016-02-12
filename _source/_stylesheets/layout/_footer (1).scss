@@ -24,9 +24,10 @@
   }
 
   &__post {
-    @include row;
+    @include shift(2);
+    @include span-columns(8);
     @include respond-to(medium) {
-      @include span-columns(8);
+      @include shift(0);
     }
   }
   &__post-title {
@@ -37,10 +38,12 @@
   }
 
   &__links {
-    @include row;
+    @include span-columns(8);
+    @include shift(2);
+    @include omega;
     @include respond-to(medium) {
       @include span-columns(4);
-      @include omega;
+      @include shift(0);
     }
     @include row;
 
