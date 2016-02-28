@@ -1,0 +1,24 @@
+mixin mini-product(name)
+
+  for product in collections.store
+    if name == product.id
+
+      .mini-product
+        
+        a(href="/"+product.path): img.mini-product__image(src="/images/#{ product.image }", alt="#{ product.title }")
+          
+        h3.mini-product__name= product.title
+          
+        hr
+          
+        .mini-product__info
+          
+          h4.mini-product__price: a(href="/"+product.path)= product.price
+
+          a.snipcart-add-item.btn.product__button(href="#",
+            data-item-id= product.id ,
+            data-item-name= product.title ,
+            data-item-price= product.price ,
+            data-item-weight= product.weight ,
+            data-item-url= product.path ,
+            data-item-description= product.description ? product.description : '') Add to Cart
