@@ -1,0 +1,50 @@
+mixin mini-product(name)
+
+  for product in collections.store
+    if name == product.id
+
+      .mini-product
+        
+        a(href="/"+product.path).mini-product__image: img(src="/images/#{ product.image }", alt="#{ product.title }")
+          
+        .mini-product__info
+          
+          h2.mini-product__name= product.title
+          
+          if product.snippet
+            h4.mini-product__snippet= product.snippet
+            
+          hr
+            
+          .mini-product__purchase
+            
+            h3.mini-product__price: a(href="/"+product.path) $#{ product.price }
+
+            a.snipcart-add-item.btn.mini-product__button(href="#",
+              data-item-id= product.id ,
+              data-item-name= product.title ,
+              data-item-price= product.price ,
+              data-item-weight= product.weight ,
+              data-item-url= product.path ,
+              data-item-description= product.description ? product.description : '') Add to Cart
+
+mixin product-preview(name)
+
+  for product in collections.store
+    
+    if name == product.id
+
+      .product-preview
+    
+        if product.image
+          a.product-preview__image(href="/#{ product.path }"): img(src="/images/#{ product.image }")
+        else
+          .product-preview__placeholder
+        
+        h3.product-preview__name: a(href="/#{ product.path }")= product.title
+        h4.product-preview__data
+          a.product-preview__price(href="/#{ product.path }") $#{ product.price }
+          if product.categories
+            | &#032;|&#032;
+            each category in product.categories
+              a.product-preview__category(href="/#{ product.path }")= category

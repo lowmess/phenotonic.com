@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the mini-product component.
+// -----------------------------------------------------------------------------
+
+.mini-product {
+  @include outer-container;
+  @include pad;
+  @include clearfix;
+
+  flex: 0 1 auto;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  max-height: 50vh;
+
+  &__image {
+    flex: 0 1 auto;
+
+    max-height: 50vh;
+  }
+  &__info {
+    flex: 0 1 auto;
+  }
+  &__purchase {
+    text-align: center;
+  }
+  &__price {
+    display: inline;
+
+    position: relative;
+    top: $base-font-size * 0.25;
+
+    margin-right: $gutter;
+  }
+}

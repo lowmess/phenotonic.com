@@ -1,0 +1,137 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Colors
+$bulbasaur: #4daa50;
+$ivysaur: #65a969;
+$venusaur: #5e745d;
+
+$snorlax: #4c4845;
+$lugia: #ffffff;
+
+$machop: #dbd5cd;
+$machoke: #a9a19c;
+$machamp: #867f7c;
+
+$eevee: #92695c;
+$flareon: #daa563;
+$jolteon: #c8b94e;
+$glaceon: #48c1ac;
+$vaporeon: #518eaa;
+
+$brand-primary: $bulbasaur;
+$success: $ivysaur;
+$warning: $jolteon;
+$failure: $flareon;
+
+// Breakpoints
+
+$breakpoints: (
+  small: "(min-width: 480px)",
+  is-small: "(max-width: 479px)",
+  medium: "(min-width: 640px)",
+  is-medium: "(min-width: 640px) and (max-width: 1023px)",
+  large: "(min-width: 1024px)",
+  not-large: "(max-width: 1023px)",
+  is-large: "(min-width: 1024px) and (max-width: 1439px)",
+  xlarge: "(min-width: 1440px)",
+  huge: "(min-width: 1920px)"
+);
+
+// Font-stacks
+
+$heading-text: "Geomanist", $helvetica;
+$body-text: "Bitter", $georgia;
+
+// Type Settings
+
+$modular-scale-ratio: $golden;
+$modular-scale-base: 1rem;
+$measure: 55rem;
+
+// Type Base
+
+$base-font-size: modular-scale(0);
+$base-line-height: 1.75rem;
+
+// line-heights
+
+$h1-line-height: $base-line-height * 3;
+
+$h2-line-height: $base-line-height * 2;
+
+$h3-line-height: $base-line-height;
+
+$h4-line-height: $base-line-height;
+
+// Headers
+
+$h1-font-size: modular-scale(3);
+
+$h2-font-size: modular-scale(2);
+
+$h3-font-size: modular-scale(1);
+
+$h4-font-size: modular-scale(0);
+
+// Other
+$xsmall-font-size: modular-scale(-2);
+
+$small-font-size: modular-scale(-1);
+
+$huge-font-size: modular-scale(4);
+
+$xhuge-font-size: modular-scale(5);
+
+// Grid (Neat) Settings
+
+$max-width: 64rem;
+
+// A running list of z-indexii
+
+$zindex: (
+  landing: 1,
+  hero: 100,
+  value: 200,
+  value__img: 210,
+  value__text: 220,
+  nav: 1000
+);
+
+// FONT STACKS for @MIXIN FONT
+// @author hmphry
+// @link http://hmphry.com/useful-sass-mixins
+
+$font-stack:
+  (group: heading, id: light, font: $heading-text, weight: 300, style: normal),
+  (group: heading, id: light-italic, font: $heading-text, weight: 300, style: italic),
+  (group: heading, id: regular, font: $heading-text, weight: 400, style: normal),
+  (group: heading, id: regular-italic, font: $heading-text, weight: 400, style: italic),
+  (group: heading, id: book, font: $heading-text, weight: 500, style: normal),
+  (group: heading, id: book-italic, font: $heading-text, weight: 500, style: italic),
+  (group: heading, id: medium, font: $heading-text, weight: 600, style: normal),
+  (group: heading, id: medium-italic, font: $heading-text, weight: 600, style: italic),
+  (group: heading, id: bold, font: $heading-text, weight: 700, style: normal),
+  (group: heading, id: bold-italic, font: $heading-text, weight: 700, style: italic),
+
+  (group: body, id: regular, font: $body-text, weight: 400, style: normal),
+  (group: body, id: regular-italic, font: $body-text, weight: 400, style: italic),
+  (group: body, id: bold, font: $body-text, weight: 700, style: normal),
+  (group: body, id: bold-italic, font: $body-text, weight: 400, style: italic),
+
+  (group: monospace, id: regular, font: $monospace, weight: 400, style: normal),
+  (group: monospace, id: regular-italic, font: $monospace, weight: 400, style: italic),
+  (group: monospace, id: bold, font: $monospace, weight: 700, style: normal),
+  (group: monospace, id: bold-italic, font: $monospace, weight: 400, style: italic);
+
+  // (group: geomanist, id: thin, font: $geomanist, weight: 100, style: normal),
+  // (group: geomanist, id: thin-italic, font: $geomanist, weight: 100, style: italic),
+  // (group: geomanist, id: extralight, font: $geomanist, weight: 200, style: normal),
+  // (group: geomanist, id: extralight-italic, font: $geomanist, weight: 200, style: italic),
+  // (group: geomanist, id: light, font: $geomanist, weight: 300, style: normal),
+  // (group: geomanist, id: light-italic, font: $geomanist, weight: 300, style: italic),
+  // (group: geomanist, id: black, font: $geomanist, weight: 800, style: normal),
+  // (group: geomanist, id: black-italic, font: $geomanist, weight: 800, style: italic),
+  // (group: geomanist, id: ultra, font: $geomanist, weight: 900, style: normal),
+  // (group: geomanist, id: ultra-italic, font: $geomanist, weight: 900, style: italic),
