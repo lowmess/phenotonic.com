@@ -4,6 +4,8 @@
 
 .bloom-box {
 
+  margin-top: $gutter;
+
   &__row {
 
     @include outer-container;
@@ -11,7 +13,6 @@
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     &--reverse {
       flex-flow: row-reverse nowrap;
@@ -19,13 +20,23 @@
       text-align: right;
     }
 
-    &--vertical {
-      flex: 0 1 auto;
+    &--info {
+      align-items: center;
+    }
 
-      flex-flow: column nowrap;
+    &--icons {
+      align-items: top;
+
+      text-align: center;
     }
 
     flex-flow: row nowrap;
+  }
+
+  &__column {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
   }
 
   &__illustration {
@@ -41,14 +52,19 @@
 
     width: 75%;
 
-    padding: 0 $gutter;
+    // padding: 0 $gutter;
 
-    &--vertical {
+    &--icons {
       width: 100%;
+
+      margin-top: 0;
+      margin-bottom: 0;
+
+      color: $machop;
     }
   }
 
-  &__info {
+  &__icons {
     background: $bulbasaur;
   }
 }

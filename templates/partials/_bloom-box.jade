@@ -15,32 +15,24 @@ section.bloom-box
       h3 Plants Made Happy
       p When plants first evolved, Earth’s atmosphere was rich in CO2. Plants practiced a lot, and got really good at splitting CO2 into it’s two main parts: carbon and oxygen. Unfortunately, they got a little too good at it, eventually reducing the CO2 in the atmosphere to a mere fraction of what it once was. Since plants need the energy stored in the carbon, they're always craving extra CO2. This makes the plants sad. Don't make your plants sad.
     
-  .bloom-box__info
-    .bloom-box__row
-      .bloom-box__row.bloom-box__row--vertical
-        .bloom-box__illustration.bloom-box__illustration--vertical
-          include ../svg/mushroom.svg
-        .bloom-box__blurb.bloom-box__blurb--vertical
-          h3 A Delicious Byproduct
-          p
-            | After this bag stops CO2 production, you may notice mushroom sprouts in the bag. They are perfectly healthy to eat, organic, and taste great! Use them in your next meal after rinsing.
-            br
-            | (We recommend a good eggplant parmesan.)
-            
-      .bloom-box__row.bloom-box__row--vertical
-        .bloom-box__illustration.bloom-box__illustration--vertical
-          include ../svg/recycle.svg
-        .bloom-box__blurb.bloom-box__blurb--vertical
-          h3 The Virtuous Cycle
-          p The Bloom Box is 100% recyclable. And not just the packaging materials, either. The substrate that houses the mycelium mushroom spores makes for perfect, nutrient-rich composting material. Plus, yeah, all the packaging (including the hanger) can be chucked into the recycling bin when you're done with them!
-        
-      .bloom-box__row.bloom-box__row--vertical
-        .bloom-box__illustration.bloom-box__illustration--vertical
+  .bloom-box__icons
+    .bloom-box__row.bloom-box__row--icons
+    
+      .bloom-box__column
+        .bloom-box__illustration
           include ../svg/time.svg
-        .bloom-box__blurb.bloom-box__blurb--vertical
-          h3 Good for 293 Million Miles
-          p Our high-quality blend produces CO2 for up to 6 months. During that time, the Earth will tavel about 293 million miles. Meanwhile, you'll sneeze 400 times, sleep for 60 days, eat 998 pounds of food, and watch 858 hours of television.
+        h4.bloom-box__blurb.bloom-box__blurb--icons 6 Month Supply
+        
+      .bloom-box__column
+        .bloom-box__illustration
+          include ../svg/mushroom.svg
+        h4.bloom-box__blurb.bloom-box__blurb--icons Produces Mushrooms
+            
+      .bloom-box__column
+        .bloom-box__illustration
+          include ../svg/recycle.svg
+        h4.bloom-box__blurb.bloom-box__blurb--icons Recyclable &amp; Compostable
           
-  .bloom-box__row
+  .bloom-box__row.bloom-box__row--products
     +mini-product("bloom-box")
     +mini-product("bloom-box-case")
