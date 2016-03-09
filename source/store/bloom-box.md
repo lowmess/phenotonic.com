@@ -7,6 +7,7 @@ weight: 4
 image: bloom-box.jpg
 categories:
   - CO2
+layout: product--bloom-box.jade
 ---
 
 We made this box to give plants the happy life they deserve.

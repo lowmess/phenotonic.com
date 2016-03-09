@@ -4,13 +4,18 @@
 
 .product {
 
+  display: flex;
+  flex-flow: column nowrap;
+
+  @include respond-to(large) {
+    flex-flow: row-reverse nowrap;
+  }
+
   &__image {
     display: block;
 
     @include respond-to(large) {
-      @include direction-context(right-to-left) {
-        @include span-columns(6);
-      }
+      width: 50%;
     }
 
     height: auto;
@@ -28,12 +33,10 @@
 
   &__info {
     @include respond-to(large) {
-      @include direction-context(right-to-left) {
-        @include span-columns(6);
-        @include omega;
-      }
+      width: 50%;
     }
-
+  }
+  &__buy {
     text-align: center;
   }
   &__price {
@@ -42,6 +45,10 @@
     position: relative;
     top: $base-font-size * 0.25;
 
-    margin-right: $gutter;
+    margin-right: $gutter * 0.5;
+
+    @include respond-to(small) {
+      margin-right: $gutter;
+    }
   }
 }

@@ -19,20 +19,19 @@ section.bloom-box
     .bloom-box__row.bloom-box__row--icons
     
       .bloom-box__column
-        .bloom-box__illustration
-          include ../svg/time.svg
-        h4.bloom-box__blurb.bloom-box__blurb--icons 6 Month Supply
-        
-      .bloom-box__column
-        .bloom-box__illustration
+        .bloom-box__illustration.bloom-box__illustration--icons
           include ../svg/mushroom.svg
         h4.bloom-box__blurb.bloom-box__blurb--icons Produces Mushrooms
+    
+      .bloom-box__column
+        .bloom-box__illustration.bloom-box__illustration--icons
+          include ../svg/time.svg
+        h4.bloom-box__blurb.bloom-box__blurb--icons 6 Month Supply
             
       .bloom-box__column
-        .bloom-box__illustration
+        .bloom-box__illustration.bloom-box__illustration--icons
           include ../svg/recycle.svg
         h4.bloom-box__blurb.bloom-box__blurb--icons Recyclable &amp; Compostable
-          
-  .bloom-box__row.bloom-box__row--products
+        
+  .bloom-box__products
     +mini-product("bloom-box")
-    +mini-product("bloom-box-case")

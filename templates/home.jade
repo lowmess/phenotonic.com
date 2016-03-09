@@ -13,12 +13,7 @@ html
         p= landing.copy
         a(href="#{ landing.url }", class="btn")= landing.button
         
-    include partials/_bloom-box.jade
-
-    main.main.main--home(role="main")
-      section.intro
-        != contents
-        a(href="/about", class="btn") Get to Know Us
+    +bloom-box("bloom-box")
 
     include partials/_footer.jade
     include partials/_scripts.jade

@@ -3,21 +3,32 @@
 // -----------------------------------------------------------------------------
 
 .bloom-box {
+  @include fill-parent;
 
-  margin-top: $gutter;
+  margin-top: $h1-line-height;
 
   &__row {
 
     @include outer-container;
     @include pad;
+    @include clearfix;
 
     display: flex;
-    justify-content: space-between;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    @include respond-to(small) {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: none;
+    }
 
     &--reverse {
-      flex-flow: row-reverse nowrap;
+      @include respond-to(small) {
+        flex-flow: row-reverse nowrap;
 
-      text-align: right;
+        text-align: right;
+      }
     }
 
     &--info {
@@ -25,12 +36,12 @@
     }
 
     &--icons {
+      flex-flow: row nowrap;
+      justify-content: space-between;
       align-items: top;
 
       text-align: center;
     }
-
-    flex-flow: row nowrap;
   }
 
   &__column {
@@ -42,15 +53,25 @@
   &__illustration {
     flex: 0 1 auto;
 
-    &--vertical {
-      width: 100%;
+    &--icons {
+      height: 100px;
+
+      @include respond-to(small) {
+        height: 150px;
+      }
+
+      @include respond-to(medium) {
+        height: auto;
+      }
     }
   }
 
   &__blurb {
     flex: 0 1 auto;
 
-    width: 75%;
+    @include respond-to(small) {
+      width: 75%;
+    }
 
     // padding: 0 $gutter;
 
@@ -66,5 +87,10 @@
 
   &__icons {
     background: $bulbasaur;
+  }
+
+  &__products {
+    @include outer-container;
+    @include pad;
   }
 }
