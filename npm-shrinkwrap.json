@@ -1,6 +1,6 @@
 {
   "name": "phenotonic",
-  "version": "2.0.0",
+  "version": "0.1.1",
   "dependencies": {
     "abbrev": {
       "version": "1.0.7",
@@ -2051,11 +2051,6 @@
       "version": "0.2.1",
       "from": "metalsmith-markdown@>=0.2.1 <0.3.0",
       "resolved": "https://registry.npmjs.org/metalsmith-markdown/-/metalsmith-markdown-0.2.1.tgz"
-    },
-    "metalsmith-metadata": {
-      "version": "0.0.4",
-      "from": "metalsmith-metadata@*",
-      "resolved": "https://registry.npmjs.org/metalsmith-metadata/-/metalsmith-metadata-0.0.4.tgz"
     },
     "metalsmith-pagination": {
       "version": "1.4.0",

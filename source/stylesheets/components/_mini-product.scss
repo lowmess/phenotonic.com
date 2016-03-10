@@ -1,0 +1,73 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the mini-product component.
+// -----------------------------------------------------------------------------
+
+.mini-product {
+  @include pad;
+  @include clearfix;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+
+  max-height: 50vh;
+
+  &__image {
+    flex: 0 1 auto;
+
+    height: 200px;
+
+    @include respond-to(small) {
+      height: 250px;
+    }
+
+    @include respond-to(medium) {
+      height: 300px;
+    }
+
+    max-height: 50vh;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      height: auto;
+      width: auto;
+
+      margin: 0 auto;
+    }
+
+    @include on-event {
+      border: none;
+    }
+  }
+  &__info {
+    flex: 0 1 auto;
+
+    width: 50%;
+
+    text-align: center;
+  }
+  &__name {
+    margin-bottom: 0;
+  }
+  &__snippet {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__purchase {
+    margin-top: 0;
+  }
+  &__price {
+    display: inline;
+
+    position: relative;
+    top: $base-font-size * 0.25;
+
+    margin-right: $gutter * 0.5;
+
+    @include respond-to(small) {
+      margin-right: $gutter;
+    }
+  }
+}

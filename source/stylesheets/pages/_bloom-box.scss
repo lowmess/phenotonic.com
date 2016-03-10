@@ -1,0 +1,96 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Bloom Box section.
+// -----------------------------------------------------------------------------
+
+.bloom-box {
+  @include fill-parent;
+
+  margin-top: $h1-line-height;
+
+  &__row {
+
+    @include outer-container;
+    @include pad;
+    @include clearfix;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    @include respond-to(small) {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: none;
+    }
+
+    &--reverse {
+      @include respond-to(small) {
+        flex-flow: row-reverse nowrap;
+
+        text-align: right;
+      }
+    }
+
+    &--info {
+      align-items: center;
+    }
+
+    &--icons {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: top;
+
+      text-align: center;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  &__illustration {
+    flex: 0 1 auto;
+
+    &--icons {
+      height: 100px;
+
+      @include respond-to(small) {
+        height: 150px;
+      }
+
+      @include respond-to(medium) {
+        height: auto;
+      }
+    }
+  }
+
+  &__blurb {
+    flex: 0 1 auto;
+
+    @include respond-to(small) {
+      width: 75%;
+    }
+
+    // padding: 0 $gutter;
+
+    &--icons {
+      width: 100%;
+
+      margin-top: 0;
+      margin-bottom: 0;
+
+      color: $machop;
+    }
+  }
+
+  &__icons {
+    background: $bulbasaur;
+  }
+
+  &__products {
+    @include outer-container;
+    @include pad;
+  }
+}

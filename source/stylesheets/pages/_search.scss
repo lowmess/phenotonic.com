@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the search page.
+// -----------------------------------------------------------------------------
+
+.search {
+  &__query {
+    text-transform: none;
+  }
+}
+.search-result {
+  &__icon {
+    @include span-columns(3 of 24);
+
+    position: relative;
+    top: $base-font-size * 0.5;
+
+    i {
+      width: $h1-font-size;
+      height: $h1-font-size;
+
+      margin: 0 auto;
+      border-radius: 50%;
+      padding-top: 0.75rem;
+
+      background: $bulbasaur;
+
+      color: $lugia;
+      font-size: $h2-font-size;
+      text-align: center;
+
+      user-select: none;
+      cursor: default;
+    }
+  }
+  &__item {
+    @include span-columns(21 of 24);
+    @include omega;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__category {
+    margin-top: 0;
+  }
+}

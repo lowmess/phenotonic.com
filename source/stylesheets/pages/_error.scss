@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the error page.
+// -----------------------------------------------------------------------------
+
+.header--error {
+  @include background-image('error.jpg', 'error@2x.jpg', 'error@3x.jpg', 'error@4x.jpg');
+
+  min-height: 75vh;
+}

@@ -1,8 +1,6 @@
 var Metalsmith    = require('metalsmith');
-var metadata      = require('metalsmith-metadata');
 var sitemap       = require('metalsmith-mapsite');
 var feed          = require('metalsmith-feed');
-var moment        = require('moment');
 var defaultValues = require('metalsmith-default-values');
 // HTML
 var layouts       = require('metalsmith-layouts');
@@ -16,18 +14,34 @@ var tags          = require('metalsmith-tags');
 // CSS
 var sass          = require('metalsmith-sass');
 var prefix        = require('metalsmith-autoprefixer');
-var bourbon       = require('node-neat').includePaths;
 // JS
 var uglify        = require('metalsmith-uglify');
 // IMAGES
 var imagemin      = require('metalsmith-imagemin');
 
 Metalsmith(__dirname)
-  .source('_source')
-  .destination('build')
+  .source('source')
+  .destination('_build')
+  .metadata({
+    site: {
+      url: "https://wwwphenotonic.com",
+      title: "Phenotonic",
+      description: "Phenotonic provides the tools, expertise, and education for gardens of all varieties & gardeners of all skill levels.",
+      keywords: "grow, growing, garden, gardening, consulting, consultants, consultant, consult, experts, expert, expertise, mmj, marijuana, vegetable, hydroponic, organic, hydroponics, hydro",
+      snipcart: {
+        key: "NmNhYWY2MGYtZTljYi00YzE4LThlNjktNGRhMGE2OTM2ZjAx"
+      }
+    },
+    landing: {
+      headline: "Introducing the Bloom Box",
+      copy: "We made the best organic CO2 generator in the universe to give plants the happy life they deserve.",
+      url: "/store/bloom-box",
+      button: "Let's Grow"
+    }
+  })
   // CSS
   .use(sass({
-    includePaths: bourbon,
+    includePaths: require('node-neat').includePaths,
     outputStyle: 'compressed',
     outputDir: 'css/'
   }))
@@ -69,10 +83,6 @@ Metalsmith(__dirname)
       }
     }
   ]))
-  .use(metadata({
-    site: '_metadata/site.yaml',
-    landing: '_metadata/landing.yaml',
-  }))
   .use(pagination({
     'collections.blog': {
       perPage: 10,
@@ -121,8 +131,8 @@ Metalsmith(__dirname)
   */
   .use(layouts({
     engine: 'jade',
-    moment: moment,
-    directory: '_templates',
+    moment: require('moment'),
+    directory: 'templates',
     default: 'default.jade',
     pattern: '**/*.html'
   }))
