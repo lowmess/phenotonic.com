@@ -1,5 +1,5 @@
 .nav {
-  @include font(heading, medium);
+  @include font(heading, book);
   @include position(absolute, 0 0 null 0);
 
   height: rem(75);
