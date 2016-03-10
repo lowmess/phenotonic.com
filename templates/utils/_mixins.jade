@@ -1,7 +1,7 @@
-mixin mini-product(name)
+mixin mini-product(id)
 
   for product in collections.store
-    if name == product.id
+    if id == product.id
 
       .mini-product
         
@@ -28,11 +28,11 @@ mixin mini-product(name)
               data-item-url= product.path ,
               data-item-description= product.description ? product.description : '') Add to Cart
 
-mixin product-preview(name)
+mixin product-preview(id)
 
   for product in collections.store
     
-    if name == product.id
+    if id == product.id
 
       .product-preview
     
@@ -65,7 +65,7 @@ mixin bloom-box(id)
           include ../svg/plants-co2.svg
         .bloom-box__blurb
           h3 Plants Made Happy
-          p When plants first evolved, Earth’s atmosphere was rich in CO2. Plants practiced a lot, and got really good at splitting CO2 into it’s two main parts: carbon and oxygen. Unfortunately, they got a little too good at it, eventually reducing the CO2 in the atmosphere to a mere fraction of what it once was. Since plants need the energy stored in the carbon, they're always craving extra CO2. This makes the plants sad. Don't make your plants sad.
+          p When plants first evolved, Earth’s atmosphere was rich in CO2. Plants practiced a lot, and got really good at splitting CO2 into it’s two main parts: carbon and oxygen. Unfortunately, they got a little too good at it, eventually reducing the CO2 in the atmosphere to a mere fraction of what it once was. Since plants need the energy stored in the carbon, they're always craving extra CO2. Wanting extra CO2 makes plants sad. Don't make your plants sad.
       
     .bloom-box__icons
       .bloom-box__row.bloom-box__row--icons
