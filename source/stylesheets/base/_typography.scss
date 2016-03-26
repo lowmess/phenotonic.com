@@ -5,8 +5,9 @@
 // Base
 
 html {
-  font-size: 12px;
-  @include respond-to(medium) { font-size: 1rem; };
+  font-size: 87.5%;
+  @include respond-to(medium) { font-size: 100%; };
+  @include respond-to(xlarge) { font-size: 125%; };
 }
 
 body {
