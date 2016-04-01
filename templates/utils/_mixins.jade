@@ -25,7 +25,7 @@ mixin mini-product(id)
               data-item-name= product.title ,
               data-item-price= product.price ,
               data-item-weight= product.weight ,
-              data-item-url= product.path ,
+              data-item-url= site.url + product.path ,
               data-item-description= product.description ? product.description : '') Add to Cart
 
 mixin product-preview(id)

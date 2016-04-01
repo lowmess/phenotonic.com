@@ -28,15 +28,15 @@ $failure: $flareon;
 // Breakpoints
 
 $breakpoints: (
-  small: "(min-width: 480px)",
-  is-small: "(max-width: 479px)",
-  medium: "(min-width: 640px)",
-  is-medium: "(min-width: 640px) and (max-width: 1023px)",
-  large: "(min-width: 1024px)",
-  not-large: "(max-width: 1023px)",
-  is-large: "(min-width: 1024px) and (max-width: 1439px)",
-  xlarge: "(min-width: 1440px)",
-  huge: "(min-width: 1920px)"
+  small: "(min-width: 30em)",
+  is-small: "(max-width: 29.9em)",
+  medium: "(min-width: 40em)",
+  is-medium: "(min-width: 40em) and (max-width: 63.9em)",
+  large: "(min-width: 64em)",
+  not-large: "(max-width: 63.9em)",
+  is-large: "(min-width: 64em) and (max-width: 89.9em)",
+  xlarge: "(min-width: 90em)",
+  huge: "(min-width: 120em)"
 );
 
 // Font-stacks

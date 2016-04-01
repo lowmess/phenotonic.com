@@ -24,7 +24,7 @@ Metalsmith(__dirname)
   .destination('_build')
   .metadata({
     site: {
-      url: "https://wwwphenotonic.com",
+      url: "https://www.phenotonic.com/",
       title: "Phenotonic",
       description: "Phenotonic provides the tools, expertise, and education for gardens of all varieties & gardeners of all skill levels.",
       keywords: "grow, growing, garden, gardening, consulting, consultants, consultant, consult, experts, expert, expertise, mmj, marijuana, vegetable, hydroponic, organic, hydroponics, hydro",
