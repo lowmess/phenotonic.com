@@ -1,3 +1,5 @@
+/* global q$$ */
+
 // Add query strings to external links
 // @link https://gist.github.com/lowmess/473f4c425b5be8d26e00
 // @link http://codepen.io/lowmess/pen/VvLBLR?editors=0010
@@ -26,10 +28,8 @@ var addQueryString = function (el, queryString) {
   }
 }
 
-var links = $$('a')
+var links = q$$('a')
 var utmString = 'utm_source=phenotonic&utm_medium=referral'
 
-for (var i = 0; i < links.length; i++) {
-  // Add query string to valid links
-  addQueryString(links[i], utmString)
-}
+// Add query string to valid links
+for (var i = 0; i < links.length; i++) addQueryString(links[i], utmString)

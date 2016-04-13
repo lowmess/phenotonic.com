@@ -1,10 +1,24 @@
+/* global q$, q$$, Snipcart */
+
 var cartLink = function (remove) {
-  if (remove === null || remove === undefined) {
-    remove = false
-  }
+  if (remove === null || remove === undefined) remove = false
 
   var count = Snipcart.api.getItemsCount()
-  var snipLinks = $$('.nav__snipcart')
+
+  if ((count === null || count === undefined || count <= 0) && snipLinks.length > 0) remove = true
+
+  if (remove) {
+    // delete snipcart info if they exist and cart is empty
+    for (i = 0; i < snipLinks.length; i++) {
+      var snipLink = snipLinks[i]
+      snipLink.parentNode.removeChild(snipLink)
+    }
+
+    console.log('Checkout link removed')
+    return
+  }
+
+  var snipLinks = q$$('.nav__snipcart')
 
   // only cartLink if there's stuff in the cart
   if (count !== null && count !== undefined && count > 0) {
@@ -19,14 +33,13 @@ var cartLink = function (remove) {
     }
 
     // Attempt to get items previously created with cartLink
-    var checkoutLink = $('.nav__subtotal')
+    var checkoutLink = q$('.nav__subtotal')
     // If subtotal link exists, update price, else create nodes
     if (checkoutLink) {
       checkoutLink.innerHTML = '$' + subtotal
-
       console.log('Subtotal updated to $' + subtotal)
     } else {
-      var links = $('.nav__links')
+      var links = q$('.nav__links')
       var pipe = document.createElement('li')
       var checkout = document.createElement('li')
 
@@ -40,20 +53,6 @@ var cartLink = function (remove) {
 
       console.log('Checkout link created. Subtotal is $' + subtotal)
     }
-  }
-
-  if ((count === null || count === undefined || count <= 0) && snipLinks.length > 0) {
-    remove = true
-  }
-
-  if (remove) {
-    // delete snipcart info if they exist and cart is empty
-    for (i = 0; i < snipLinks.length; i++) {
-      var snipLink = snipLinks[i]
-      snipLink.parentNode.removeChild(snipLink)
-    }
-
-    console.log('Checkout link removed')
   }
 }
 

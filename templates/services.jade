@@ -1,0 +1,18 @@
+doctype html
+include utils/_mixins.jade
+
+html
+  head
+    include partials/_head.jade
+  body
+    include partials/_nav.jade
+
+    main.main(role="main")
+      block content
+        h1= title
+        p!= contents
+
+    block postscript
+
+    include partials/_footer.jade
+    include partials/_scripts.jade

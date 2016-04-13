@@ -1,7 +1,9 @@
+/* global q$ */
+
 var page = window.location.href
 var thanks = page.search('/?thanks')
-var form = $('.contact')
-var content = $('.main')
+var form = q$('.contact')
+var content = q$('.main')
 
 if (thanks !== -1 && form && content) {
   var h2 = document.createElement('h2')

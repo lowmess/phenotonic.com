@@ -29,7 +29,8 @@
     "node-neat": "^1.7.2"
   },
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "test": "node build.js && surge _build phenotest.surge.sh"
   },
   "repository": {
     "type": "git",
