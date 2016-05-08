@@ -2,6 +2,8 @@ var Metalsmith = require('metalsmith')
 var sitemap = require('metalsmith-mapsite')
 var feed = require('metalsmith-feed')
 var defaultValues = require('metalsmith-default-values')
+var watch = require('metalsmith-watch')
+var serve = require('metalsmith-serve')
 // HTML
 var layouts = require('metalsmith-layouts')
 var drafts = require('metalsmith-drafts')
@@ -19,7 +21,7 @@ var uglify = require('metalsmith-uglify')
 // IMAGES
 // var imagemin = require('metalsmith-imagemin')
 
-Metalsmith(__dirname)
+var siteBuild = Metalsmith(__dirname)
   .source('source')
   .destination('_build')
   .metadata({
@@ -138,6 +140,28 @@ Metalsmith(__dirname)
   }))
   .use(sitemap('https://phenotonic.com'))
   .use(feed({collection: 'blog'}))
-  .build(function (err) {
-    if (err) throw err
-  })
+
+if (process.env.NODE_ENV !== 'production') {
+  siteBuild = siteBuild
+    .use(serve({
+      port: 8080,
+      verbose: true
+    }))
+    .use(watch({
+      paths: {
+        'source/**/*': true,
+        'source/stylesheets/**/*' : '**/*.scss',
+        'source/scripts/**/*' : '**/*.js',
+        'templates/**/*': '**/*.jade'
+      },
+      livereload: true
+    }))
+}
+
+siteBuild.build(function (err) {
+  if (err) {
+    console.log(err)
+  } else {
+    console.log('Site build complete!')
+  }
+})
