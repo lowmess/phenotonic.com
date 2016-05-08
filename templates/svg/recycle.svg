@@ -1,6 +1,6 @@
 <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="250" height="200" viewBox="0 0 250 200" preserveAspectRatio="xMidYMid meet" role="img" title="Recycle">
-  <circle fill="#dbd5cd" cx="128.6" cy="108.1" r="60.4"/>
-  <g fill="none" stroke="#4c4845" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+  <circle fill="#ebefeb" cx="128.6" cy="108.1" r="60.4"/>
+  <g fill="none" stroke="#454e3e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
     <polygon points="75.9,97.9 76,97.9 74.6,100.3 72,104.8 69.4,109.2 69.4,109.2 72,104.7 74.6,100.3"/>
     <polygon points="128.6,68 128.5,68.2 127,70.8 124.4,75.3 121.8,79.7 119.2,84.2 116.6,88.7 114,93.2 111.4,97.6 108.9,102.1 107,105.4 105.6,100.2 103.7,93.2 101.9,86.1 101.4,84.5 99.8,84.9 92.7,86.8 85.7,88.8 80.4,90.2 82.3,86.8 84.9,82.3 87.5,77.9 90.1,73.4 92.7,68.9 95.3,64.4 97.9,59.9 100.4,55.5 103,51 105.6,46.5 108.2,42 110.8,37.6"/>
     <line x1="92.7" y1="86.8" x2="84.9" y2="82.3"/>

@@ -6,13 +6,47 @@ html
     include partials/_head.jade
   body
     include partials/_nav.jade
+    
+    .page--services
+    
+      header.header.header--services
+        .header__text
+          h1 Services
+          p We offer...
+          
+      section.services
+        .services__container
+          h3 Consulting
+          h3 Planning
+          h3 Installation
+          h3 Maintenance
+        
+      section.pricing#pricing
+        h2 Pricing
+        
+      section.contact
+        form.contact__form(action="//formspree.io/hi@phenotonic.com", method="POST")
+          label(for="name") Who Are You?
+          input(name="name", type="text", placeholder="Kareem Abdul-Jabbar", required)
+          label(for="email") Where Can We Contact You?
+          input(name="email", type="email", placeholder="kareem@ballsohard.com", required)
+            
+          label(for="service") How Can We Help?
+          select(name="service", required)
+            option(value="consulting") Consulting
+            option(value="planning") Planning
+            option(value="installation") Installation
+            option(value="maintenance") Maintenance
+            option(value="other") Something Special
 
-    main.main(role="main")
-      block content
-        h1= title
-        p!= contents
+          label(for="message") What Do You Have to Say?
+          textarea(name="message", placeholder="I can do something else besides stuff a ball through a hoop. My biggest resource is my mind.")
 
-    block postscript
+          input(type="text", name="_gotcha", style="display:none")
+
+          input(type="hidden", name="_next", value="/#{ path }/?thanks")
+
+          button Get in Touch
 
     include partials/_footer.jade
     include partials/_scripts.jade

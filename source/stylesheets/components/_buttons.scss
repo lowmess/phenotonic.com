@@ -6,7 +6,7 @@
   @include font(heading, medium);
 
   padding: $base-font-size * 0.5 $base-font-size * 1.5 $base-font-size * 0.5;
-  border: 3px solid $bulbasaur;
+  border: 3px solid $button-primary;
   border-radius: $base-font-size * 1.5;
 
   background: transparent;
@@ -14,34 +14,30 @@
   text-align: center;
   // text-transform: uppercase;
   letter-spacing: 0.05rem;
-  color: $bulbasaur;
+  color: $button-primary;
 
   cursor: pointer;
 
   transition: all 0.3s ease;
 
   @include on-event {
-    border-color: $bulbasaur;
+    border-color: $button-primary;
     border-width: 3px;
 
-    background: $bulbasaur;
+    background: $button-primary;
 
-    color: $lugia;
+    color: $button-reverse;
   }
 
-  &--inactive {
-    border-color: $machoke;
-    color: $machoke;
+  &--reverse {
+    border-color: $button-reverse;
 
-    cursor: default;
+    color: $button-reverse;
 
     @include on-event {
-      border-color: $machoke;
-      border-width: 3px;
+      border-color: $button-reverse;
 
-      background: transparent;
-
-      color: $machoke;
+      color: $button-primary;
     }
   }
 }

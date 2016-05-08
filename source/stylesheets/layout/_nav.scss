@@ -4,10 +4,13 @@
 
   height: rem(75);
 
-  &--header {
-    background: $lugia;
+  background: $background-primary;
 
-    box-shadow: 0 0 5px 0 $machamp;
+  box-shadow: 0 0 5px 0 rgba($shadow-primary, 0.25);
+
+  &::selection {
+    background-color: $accent-primary;
+    background-color: rgba($accent-primary, 0.75);
   }
 
   &__content {

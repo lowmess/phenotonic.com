@@ -1,0 +1,53 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the services page.
+// -----------------------------------------------------------------------------
+.page--services {
+  color: $services-text;
+
+  h1 {
+    color: $services-primary;
+  }
+
+  a {
+    color: $services-link;
+  }
+}
+.header--services {
+  @include background-image('services');
+
+  padding-bottom: $services-offset;
+
+  background-color: $services-primary;
+
+  color: $services-text-reverse;
+
+  h1 {
+    color: $services-header;
+  }
+}
+
+.services {
+  @include pad(0 default);
+
+  background-color: $services-background;
+
+  h3:first-of-type {
+    margin-top: 0;
+  }
+
+  &__container {
+    position: relative;
+    top: -$services-offset;
+
+    max-width: $max-width;
+
+    margin: 0 auto;
+    padding: $gutter;
+
+    border-radius: $gutter * 0.5;
+
+    background-color: $background-primary;
+
+    box-shadow: 0 0 5px rgba($services-shadow, 0.25);
+  }
+}

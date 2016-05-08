@@ -16,15 +16,15 @@
     padding: $gutter*0.25 0;
 
     border: none;
-    border-bottom: 3px solid $snorlax;
+    border-bottom: 3px solid $text-primary;
     border-radius: 0;
 
     background: transparent;
 
-    color: $snorlax;
+    color: $text-primary;
 
     &::placeholder {
-      color: $machamp;
+      color: $outline-primary;
     }
   }
 
@@ -38,37 +38,37 @@
     background: transparent;
 
     font-size: $h3-font-size;
-    color: $snorlax;
+    color: $text-primary;
 
     @include on-event {
-      color: $venusaur;
+      color: $accent-primary;
     }
 
     &:active {
-      color: $ivysaur;
+      color: darken($accent-primary, 10%);
     }
   }
 }
 
-.input-bar--white {
+.input-bar--reverse {
   input {
-    border-bottom-color: $lugia;
+    border-bottom-color: $text-reverse;
 
-    color: $lugia;
+    color: $text-reverse;
 
     &::placeholder {
-      color: $machop;
+      color: $outline-primary;
     }
   }
   button {
-    color: $lugia;
+    color: $text-primary;
 
     @include on-event {
-      color: $machop;
+      color: $outline-primary;
     }
 
     &:active {
-      color: $machamp;
+      color: darken($outline-primary, 10%);
     }
   }
 }

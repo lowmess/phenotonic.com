@@ -3,27 +3,47 @@
 // -----------------------------------------------------------------------------
 
 // Colors
-$bulbasaur: #4daa50;
-$ivysaur: #65a969;
-$venusaur: #5e745d;
+$bulbasaur: #ebefeb;
+$ivysaur: #4daa50;
+$venusaur: #454e3e;
 
-$snorlax: #4c4845;
+$zapdos: #d7d76d;
+
+$squirtle: #ebeeef;
+$wartortle: #518eaa;
+$blastoise: #464a4b;
+
 $lugia: #ffffff;
+$onix: #dbd5cd;
+$snorlax: #4c4845;
 
-$machop: #dbd5cd;
-$machoke: #a9a19c;
-$machamp: #867f7c;
+/************************/
 
-$eevee: #92695c;
-$flareon: #daa563;
-$jolteon: #c8b94e;
-$glaceon: #48c1ac;
-$vaporeon: #518eaa;
+$brand-primary: $ivysaur;
+$accent-primary: $zapdos;
+$text-primary: $venusaur;
+$link-primary: $ivysaur;
+$button-primary: $ivysaur;
+$outline-primary: $onix;
+$background-primary: $lugia;
+$shadow-primary: $venusaur;
 
-$brand-primary: $bulbasaur;
-$success: $ivysaur;
-$warning: $jolteon;
-$failure: $flareon;
+$link-inactive: $onix;
+$button-inactive: $onix;
+
+$text-reverse: $bulbasaur;
+$link-reverse: $lugia;
+$button-reverse: $lugia;
+$background-reverse: $venusaur;
+
+$services-primary: $wartortle;
+$services-header: $lugia;
+$services-text: $blastoise;
+$services-text-reverse: $squirtle;
+$services-link: $wartortle;
+$services-button: $wartortle;
+$services-background: $squirtle;
+$services-shadow: $blastoise;
 
 // Breakpoints
 
@@ -87,6 +107,10 @@ $xhuge-font-size: modular-scale(5);
 // Grid (Neat) Settings
 
 $max-width: 64rem;
+
+// Section settings
+
+$services-offset: $gutter * 3;
 
 // A running list of z-indexii
 

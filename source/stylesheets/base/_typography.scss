@@ -16,7 +16,12 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
 
-  color: $snorlax;
+  color: $text-primary;
+}
+
+::selection {
+  background-color: $brand-primary;
+  background-color: rgba($brand-primary, 0.75);
 }
 
 p, ul, ol, pre, table, blockquote, address {
@@ -37,7 +42,7 @@ h1 {
   line-height: $h1-line-height;
   text-transform: capitalize;
   letter-spacing: -0.04rem;
-  color: $bulbasaur;
+  color: $brand-primary;
   text-rendering: optimizeLegibility;
 
   margin: $base-line-height 0;
@@ -80,7 +85,7 @@ hr {
   border: 0;
   margin: modular-scale(1) auto;
 
-  background: $machop;
+  background: $outline-primary;
 }
 ul ul, ol ol, ul ol, ol ul {
   margin-top: 0;
@@ -99,12 +104,12 @@ sub {
 }
 
 a {
-  color: $bulbasaur;
+  color: $link-primary;
   text-decoration: none;
   border: none;
 
   &:hover {
-    color: $bulbasaur;
+    color: $link-primary;
     border-bottom: 2px solid currentColor;
 
     & > img, & > svg {
@@ -117,7 +122,7 @@ code {
   @include font(monospace);
 
   line-height: $base-line-height;
-  background: $machop;
+  background: $outline-primary;
   padding: 0 3px;
   border-radius: 3px;
 }
@@ -125,8 +130,8 @@ code {
 pre {
   width: 100%;
   overflow-x: auto;
-  background: $snorlax;
-  color: $lugia;
+  background: $background-reverse;
+  color: $text-reverse;
 
   code {
     background: transparent;

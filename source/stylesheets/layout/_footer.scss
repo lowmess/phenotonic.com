@@ -5,15 +5,20 @@
 .footer {
   @include fill-parent;
 
-  background: $bulbasaur;
+  background: $brand-primary;
 
-  color: $lugia;
+  color: $text-reverse;
+
+  &::selection {
+    background-color: $accent-primary;
+    background-color: rgba($accent-primary, 0.75);
+  }
 
   a {
-    color: $lugia;
+    color: $link-reverse;
 
     @include on-event {
-      color: $lugia;
+      color: $link-reverse;
     }
   }
 

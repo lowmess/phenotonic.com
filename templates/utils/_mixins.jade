@@ -1,6 +1,6 @@
 mixin mini-product(id)
 
-  for product in collections.store
+  for product in collections.products
     if id == product.id
 
       .mini-product
@@ -30,7 +30,7 @@ mixin mini-product(id)
 
 mixin product-preview(id)
 
-  for product in collections.store
+  for product in collections.products
     
     if id == product.id
 

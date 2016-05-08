@@ -35,7 +35,7 @@ Metalsmith(__dirname)
     landing: {
       headline: 'Introducing the Bloom Box',
       copy: 'We made the best organic CO2 generator in the universe to give plants the happy life they deserve.',
-      url: '/store/bloom-box',
+      url: '/products/bloom-box',
       button: "Let's Grow"
     }
   })
@@ -61,8 +61,8 @@ Metalsmith(__dirname)
       sortBy: 'date',
       reverse: true
     },
-    store: {
-      pattern: 'store/**/*.md'
+    products: {
+      pattern: 'products/**/*.md'
     },
     pages: {
       pattern: '*.md'
@@ -71,7 +71,7 @@ Metalsmith(__dirname)
   // Set default values
   .use(defaultValues([
     {
-      pattern: 'store/**/*.md',
+      pattern: 'products/**/*.md',
       defaults: {
         layout: 'product.jade'
       }

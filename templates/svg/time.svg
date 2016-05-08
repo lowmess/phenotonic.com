@@ -1,7 +1,7 @@
 <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="250" height="200" viewBox="0 0 250 200" preserveAspectRatio="xMidYMid meet" role="img" title="Time">
-  <path fill="#dbd5cd" d="M116.5 7.7L39.3 84.9c-4.7 4.7-4.7 12.3 0 17l77.2 77.2c4.7 4.7 12.3 4.7 17 0l77.2-77.2c4.7-4.7 4.7-12.3 0-17L133.5 7.7c-4.7-4.6-12.3-4.6-17 0z"/>
-  <circle fill="none" stroke="#4c4845" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6.6422,6.6422" cx="223.5" cy="91.3" r="21.1"/>
-  <g fill="none" stroke="#4c4845" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+  <path fill="#ebefeb" d="M116.5 7.7L39.3 84.9c-4.7 4.7-4.7 12.3 0 17l77.2 77.2c4.7 4.7 12.3 4.7 17 0l77.2-77.2c4.7-4.7 4.7-12.3 0-17L133.5 7.7c-4.7-4.6-12.3-4.6-17 0z"/>
+  <circle fill="none" stroke="#454e3e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6.6422,6.6422" cx="223.5" cy="91.3" r="21.1"/>
+  <g fill="none" stroke="#454e3e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
     <circle cx="125.5" cy="93.4" r="32.6"/>
     <path d="M125.5 53.4l19.1-6.2 9.2 17.9 17.9 9.1-6.2 19.2 6.2 19.1-17.9 9.2-9.2 17.9-19.1-6.2-19.1 6.2-9.2-17.9-17.9-9.2 6.2-19.1-6.2-19.2 17.9-9.1 9.2-17.9z"/>
     <path d="M32.2 123.5c12.7 39.4 49.7 67.9 93.3 67.9 43.6 0 80.6-28.5 93.3-67.9"/>
