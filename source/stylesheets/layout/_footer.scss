@@ -9,11 +9,6 @@
 
   color: $text-reverse;
 
-  &::selection {
-    background-color: $accent-primary;
-    background-color: rgba($accent-primary, 0.75);
-  }
-
   a {
     color: $link-reverse;
 
@@ -50,7 +45,7 @@
     @include row;
 
     ul {
-      margin: inherit 0 0;
+      margin: $base-line-height 0 0;
       padding: 0;
 
       list-style-type: none;

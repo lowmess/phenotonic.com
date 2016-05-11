@@ -75,20 +75,19 @@
 
 // BACKGROUND IMAGE GENERATOR
 // ==========================
-// @param {String} $image - Image name, including ext
-// @param {String} $image2x - Image name @2x, including ext
-// @param {String} $image3x - Image name @3x, including ext
-// @param {String} $image4x - Image name @4x, including ext
+// @param {String} $image - Image name
+// @param {String} $ext - Image extension (.jpg, .png, .gif)
+// @param {Number} $level - # of image variants, including base image
 
-@mixin background-image($image, $suffix: 'jpg', $level: 4) {
-  background-image: url("../images/#{$image}.#{$suffix}");
+@mixin background-image($image, $ext: 'jpg', $level: 4) {
+  background-image: url("../images/#{$image}.#{$ext}");
   @if $level > 1 {
-    @include respond-to(small) { background-image: url("../images/#{$image}@2x.#{$suffix}"); }
+    @include respond-to(small) { background-image: url("../images/#{$image}@2x.#{$ext}"); }
   }
   @if $level > 2 {
-    @include respond-to(medium) { background-image: url("../images/#{$image}@3x.#{$suffix}"); }
+    @include respond-to(medium) { background-image: url("../images/#{$image}@3x.#{$ext}"); }
   }
   @if $level > 3 {
-    @include respond-to(large) { background-image: url("../images/#{$image}@4x.#{$suffix}"); }
+    @include respond-to(large) { background-image: url("../images/#{$image}@4x.#{$ext}"); }
   }
 }

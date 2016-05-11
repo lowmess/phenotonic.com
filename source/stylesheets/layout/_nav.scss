@@ -8,11 +8,6 @@
 
   box-shadow: 0 0 5px 0 rgba($shadow-primary, 0.25);
 
-  &::selection {
-    background-color: $accent-primary;
-    background-color: rgba($accent-primary, 0.75);
-  }
-
   &__content {
     @include outer-container;
     @include pad;
@@ -45,11 +40,19 @@
     }
   }
 
+  &__menu-icon {
+    @include respond-to(small) {
+      display: none;
+    }
+  }
+
   &__links {
-    //@include respond-to(small) {
-      @include span-columns(8);
-      @include omega;
-    //}
+    display: none;
+    @include span-columns(6);
+
+    @include respond-to(small) {
+      display: inline;
+    }
 
     margin: 0;
 
@@ -64,6 +67,11 @@
         margin-right: $gutter;
       }
     }
+  }
+
+  &__cart-icon {
+    @include span-columns(2);
+    @include omega;
   }
 
   &__button--mobile {

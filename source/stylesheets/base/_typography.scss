@@ -20,8 +20,7 @@ body {
 }
 
 ::selection {
-  background-color: $brand-primary;
-  background-color: rgba($brand-primary, 0.75);
+  background-color: $accent-primary;
 }
 
 p, ul, ol, pre, table, blockquote, address {

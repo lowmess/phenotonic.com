@@ -18,8 +18,6 @@ var sass = require('metalsmith-sass')
 var prefix = require('metalsmith-autoprefixer')
 // JS
 var uglify = require('metalsmith-uglify')
-// IMAGES
-// var imagemin = require('metalsmith-imagemin')
 
 var siteBuild = Metalsmith(__dirname)
   .source('source')
@@ -33,28 +31,23 @@ var siteBuild = Metalsmith(__dirname)
       snipcart: {
         key: 'NmNhYWY2MGYtZTljYi00YzE4LThlNjktNGRhMGE2OTM2ZjAx'
       }
-    },
-    landing: {
-      headline: 'Introducing the Bloom Box',
-      copy: 'We made the best organic CO2 generator in the universe to give plants the happy life they deserve.',
-      url: '/products/bloom-box',
-      button: "Let's Grow"
     }
   })
   // CSS
   .use(sass({
     includePaths: require('node-neat').includePaths,
-    outputStyle: 'compressed',
+    sourceMap: true,
+    sourceMapContents: true,
+    outputStyle: 'nested',
     outputDir: 'css/'
   }))
   .use(prefix())
   // JS
   .use(uglify({
+    sourceMap: true,
     concat: 'js/main.js',
     removeOriginal: true
   }))
-  // IMAGES
-  // .use(imagemin())
   // HTML
   .use(drafts())
   .use(collections({
@@ -144,18 +137,21 @@ var siteBuild = Metalsmith(__dirname)
 if (process.env.NODE_ENV !== 'production') {
   siteBuild = siteBuild
     .use(serve({
-      port: 8080,
-      verbose: true
+      verbose: true,
+      http_error_files: {
+        404: "/404.html"
+      }
     }))
-    .use(watch({
-      paths: {
-        'source/**/*': true,
-        'source/stylesheets/**/*' : '**/*.scss',
-        'source/scripts/**/*' : '**/*.js',
-        'templates/**/*': '**/*.jade'
-      },
-      livereload: true
-    }))
+//    .use(watch({
+//      paths: {
+//        'source/images/**/*': true,
+//        'source/fonts/**/*': true,
+//        'source/stylesheets/**/*': '**/main.scss',
+//        'source/scripts/**/*': 'source/scripts/**/*.js',
+//        'templates/**/*': 'source/**/*.md',
+//        'templates/**/*': '**/*.jade'
+//      }
+//    }))
 }
 
 siteBuild.build(function (err) {

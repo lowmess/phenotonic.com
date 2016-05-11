@@ -27,7 +27,7 @@
 }
 
 .services {
-  @include pad(0 default);
+  @include pad(0 default 0 default);
 
   background-color: $services-background;
 
