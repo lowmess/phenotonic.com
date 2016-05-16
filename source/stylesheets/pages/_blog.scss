@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .header--blog {
-  @include background-image('blog');
+  @include background-image('blog.header');
 }
 
 .post-preview {

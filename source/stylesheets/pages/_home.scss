@@ -7,7 +7,7 @@
 
 .landing {
   @include fill-parent;
-  @include background-image('landing');
+  @include background-image('landing.header');
 
   min-height: 100vh;
 

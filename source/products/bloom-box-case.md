@@ -4,7 +4,7 @@ snippet: A Whole Mess of Bloom Boxes
 id: bloom-box-case
 price: 175
 weight: 32
-image: bloom-box-case.jpg
+image: products.bloom-box-case.jpg
 categories:
   - CO2
 layout: product--bloom-box.jade

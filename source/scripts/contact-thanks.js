@@ -15,7 +15,7 @@ if (thanks !== -1 && form && content) {
   content.insertBefore(p, form)
 
   var img = document.createElement('img')
-  img.src = '/images/contact-gif.gif'
+  img.src = '/images/contact.thanks.gif'
   img.alt = 'Just playing my keyboard, nbd.'
   img.classList.add('is-full-width')
   content.insertBefore(img, form)

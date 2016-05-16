@@ -13,7 +13,7 @@
   }
 }
 .header--services {
-  @include background-image('services');
+  @include background-image('services.header');
 
   padding-bottom: $services-offset;
 

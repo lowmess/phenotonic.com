@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .header--error {
-  @include background-image('error');
+  @include background-image('error.header');
 
   min-height: 75vh;
 }

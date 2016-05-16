@@ -4,7 +4,7 @@ snippet: An Organic CO2 Generator
 id: bloom-box
 price: 25
 weight: 4
-image: bloom-box.jpg
+image: products.bloom-box.jpg
 categories:
   - CO2
 layout: product--bloom-box.jade

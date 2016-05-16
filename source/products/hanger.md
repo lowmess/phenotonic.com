@@ -4,7 +4,7 @@ snippet: The Ultimate (Only) Bloom Box Accessory
 id: hanger
 price: 5
 weight: 0.1
-image: hanger.jpg
+image: products.hanger.jpg
 categories:
   - accessories
 ---
