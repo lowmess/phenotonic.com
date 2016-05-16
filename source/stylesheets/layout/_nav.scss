@@ -9,20 +9,27 @@
   box-shadow: 0 0 5px 0 rgba($shadow-primary, 0.25);
 
   &__content {
-    @include outer-container;
-    @include pad;
-    padding-top: $gutter;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
 
-    // height: 45px;
+    width: 100%;
+    max-width: $max-width;
+
+    margin: 0 auto;
+    padding: $gutter * 0.25 $gutter;
   }
 
   &__logo {
-    //@include respond-to(small) {
-      @include span-columns(4);
+    flex: 0 1 auto;
+    align-self: flex-start; // doesn't work?
 
-      position: relative;
-      top: -$base-font-size;
-  //  }
+    position: relative;
+    top: $base-line-height * 0.25;
+
+    margin-left:0;
+    margin-right: auto;
 
     @include on-event {
       border: none;
@@ -34,24 +41,14 @@
       height: 45px;
       width: 100%;
       max-width: 200px;
-
-      margin-left: 0;
-      margin-right: auto;
-    }
-  }
-
-  &__menu-icon {
-    @include respond-to(small) {
-      display: none;
     }
   }
 
   &__links {
     display: none;
-    @include span-columns(6);
 
     @include respond-to(small) {
-      display: inline;
+      flex: 0 1 auto;
     }
 
     margin: 0;
@@ -69,12 +66,47 @@
     }
   }
 
-  &__cart-icon {
-    @include span-columns(2);
-    @include omega;
-  }
+  &__icon {
+    flex: 0 1 auto;
 
-  &__button--mobile {
-    display: none;
+    width: $base-line-height;
+    height: $base-line-height;
+
+    fill: $text-primary;
+
+    cursor: pointer;
+
+    transition: fill 0.2s ease;
+
+    svg {
+      display: inline-block;
+
+      width: $base-line-height;
+      height: $base-line-height;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: $gutter;
+    }
+
+    @include on-event {
+      fill: $link-primary;
+    }
+
+    &--cart {
+      width: $base-line-height * 2;
+
+      &:after {
+        content: attr(data-snipcart-count);
+
+        @include font(heading, medium);
+
+        position: relative;
+        top: $base-line-height * -0.25;
+        left: $gutter * 0.125;
+
+        color: $link-primary;
+      }
+    }
   }
 }
