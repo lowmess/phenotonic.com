@@ -53,15 +53,17 @@
   &__illustration {
     flex: 0 1 auto;
 
+    height: $base-line-height * 8;
+
     &--icons {
-      height: 100px;
+      height: $base-line-height * 5;
 
       @include respond-to(small) {
-        height: 150px;
+        height: $base-line-height * 6;
       }
 
       @include respond-to(medium) {
-        height: auto;
+        height: $base-line-height * 7;
       }
     }
   }

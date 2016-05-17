@@ -2,6 +2,18 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
+// Settings
+
+$nav-height: rem(75);
+$modular-scale-ratio: $golden;
+$modular-scale-base: 1rem;
+$base-font-size: modular-scale(0);
+$base-line-height: 1.618rem;
+$gutter: $base-line-height;
+$measure: 55rem;
+$max-width: 64rem;
+$services-offset: $gutter * 3;
+
 // Colors
 $bulbasaur: #ebefeb;
 $ivysaur: #4daa50;
@@ -64,53 +76,25 @@ $breakpoints: (
 $heading-text: "Geomanist", $helvetica;
 $body-text: "Bitter", $georgia;
 
-// Type Settings
-
-$modular-scale-ratio: $golden;
-$modular-scale-base: 1rem;
-$measure: 55rem;
-
-// Type Base
-
-$base-font-size: modular-scale(0);
-$base-line-height: 1.75rem;
-
 // line-heights
 
 $h1-line-height: $base-line-height * 3;
-
 $h2-line-height: $base-line-height * 2;
-
 $h3-line-height: $base-line-height;
-
 $h4-line-height: $base-line-height;
 
 // Headers
 
 $h1-font-size: modular-scale(3);
-
 $h2-font-size: modular-scale(2);
-
 $h3-font-size: modular-scale(1);
-
 $h4-font-size: modular-scale(0);
 
 // Other
 $xsmall-font-size: modular-scale(-2);
-
 $small-font-size: modular-scale(-1);
-
 $huge-font-size: modular-scale(4);
-
 $xhuge-font-size: modular-scale(5);
-
-// Grid (Neat) Settings
-
-$max-width: 64rem;
-
-// Section settings
-
-$services-offset: $gutter * 3;
 
 // A running list of z-indexii
 
@@ -120,7 +104,9 @@ $zindex: (
   value: 200,
   value__img: 210,
   value__text: 220,
-  nav: 1000
+  nav: 1000,
+  nav-content: 1010,
+  nav-bar: 1100
 );
 
 // FONT STACKS for @MIXIN FONT

@@ -2,22 +2,52 @@
   @include font(heading, book);
   @include position(absolute, 0 0 null 0);
 
-  height: rem(75);
+  z-index: z(nav);
 
-  background: $background-primary;
+  background-color: $background-primary;
 
-  box-shadow: 0 0 5px 0 rgba($shadow-primary, 0.25);
+  &__container {
+    position: absolute;
 
-  &__content {
+    background-color: $background-primary;
+
+    width: 100%;
+
+    box-shadow: 0 0 5px 0 rgba($shadow-primary, 0.25);
+
+    transition: transform 0.3s ease;
+
+    &--bar {
+      top: 0; left: 0; right: 0;
+
+      z-index: z(nav-bar);
+
+      height: $nav-height;
+    }
+    &--links {
+      top: $nav-height;
+
+      z-index: z(nav-content);
+
+      // background-color: $text-reverse;
+
+      transform: translateY($base-line-height * -20);
+    }
+    &--open {
+      transform: translateY(0);
+    }
+  }
+
+  &__bar {
+    @include container;
+
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-end;
     justify-content: flex-end;
 
-    width: 100%;
-    max-width: $max-width;
+    z-index: z(nav-bar);
 
-    margin: 0 auto;
     padding: $gutter * 0.25 $gutter;
   }
 
@@ -41,28 +71,6 @@
       height: 45px;
       width: 100%;
       max-width: 200px;
-    }
-  }
-
-  &__links {
-    display: none;
-
-    @include respond-to(small) {
-      flex: 0 1 auto;
-    }
-
-    margin: 0;
-
-    text-align: right;
-
-    list-style-type: none;
-
-    li {
-      display: inline;
-
-      &:not(:last-child) {
-        margin-right: $gutter;
-      }
     }
   }
 
@@ -107,6 +115,59 @@
 
         color: $link-primary;
       }
+    }
+  }
+
+  // Nav content
+  &__links {
+    @include container;
+
+    @include respond-to(medium) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__section {
+    text-align: center;
+
+    @include respond-to(medium) {
+      flex: 0 1 auto;
+
+      text-align: left;
+    }
+
+    &--expanded {
+      display: none;
+
+      @include respond-to(medium) {
+        display: block;
+      }
+    }
+  }
+  &__list {
+    margin-left: 0;
+    padding-left: 0;
+
+    list-style-type: none;
+  }
+  &__item {
+    @extend h3;
+
+    &--expanded {
+      @include respond-to(medium) {
+        display: none;
+      }
+    }
+  }
+  &__sub-item {
+    @include font(body);
+
+    a {
+      color: $text-primary;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $base-line-height * 0.25;
     }
   }
 }

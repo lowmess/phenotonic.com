@@ -91,3 +91,16 @@
     @include respond-to(large) { background-image: url("../images/#{$image}@4x.#{$ext}"); }
   }
 }
+
+// CONTAINER
+// =========
+
+@mixin container($max: $max-width) {
+  display: relative;
+  
+  width: 100%;
+  max-width: $max;
+
+  margin: 0 auto;
+  padding: $gutter;
+}
