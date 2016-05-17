@@ -8,6 +8,7 @@
   "main": "build.js",
   "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.12.8",
     "jade": "^1.11.0",
     "metalsmith": "^2.1.0",
     "metalsmith-autoprefixer": "^1.1.0",
@@ -27,11 +28,13 @@
     "metalsmith-uglify": "^1.2.1",
     "metalsmith-watch": "^1.0.1",
     "moment": "^2.11.1",
-    "node-neat": "^1.7.2"
+    "node-neat": "^1.7.2",
+    "nodemon": "^1.9.2"
   },
   "scripts": {
-    "build": "NODE_ENV=production node build.js",
-    "develop": "NODE_ENV=development node build.js"
+    "start": "node build.js",
+    "develop": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm start && browser-sync reload'",
+    "browser_sync": "browser-sync start --server _build"
   },
   "repository": {
     "type": "git",
