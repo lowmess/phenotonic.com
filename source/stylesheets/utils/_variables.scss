@@ -15,13 +15,13 @@ $max-width: 64rem;
 $services-offset: $gutter * 3;
 
 // Colors
-$bulbasaur: #ebefeb;
+$bulbasaur: #f4f6f4;
 $ivysaur: #4daa50;
 $venusaur: #454e3e;
 
 $zapdos: #d7d76d;
 
-$squirtle: #ebeeef;
+$squirtle: #f4f5f6;
 $wartortle: #518eaa;
 $blastoise: #464a4b;
 
@@ -47,6 +47,8 @@ $text-reverse: $bulbasaur;
 $link-reverse: $lugia;
 $button-reverse: $lugia;
 $background-reverse: $venusaur;
+
+$nav-background: $bulbasaur;
 
 $services-primary: $wartortle;
 $services-header: $lugia;
