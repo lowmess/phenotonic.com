@@ -25,8 +25,8 @@ nav.nav(role="navigation")
         ul.nav__list
           - for (var i = 0; i < 3; i++)
             li.nav__sub-item: a(href="/#{collections.products[i].path}")= collections.products[i].title
-          hr
-          li.nav__sub-item: a(href="/products") View All Products
+          //- hr
+          //- li.nav__sub-item: a(href="/products") View All Products
         
       .nav__section.nav__section--expanded.nav__section--services
         h3.nav__section-title: a(href="/services") Services

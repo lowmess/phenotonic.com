@@ -3,8 +3,6 @@
 // -----------------------------------------------------------------------------
 
 // Settings
-
-$nav-height: rem(75);
 $modular-scale-ratio: $golden;
 $modular-scale-base: 1rem;
 $base-font-size: modular-scale(0);
@@ -12,6 +10,7 @@ $base-line-height: 1.618rem;
 $gutter: $base-line-height;
 $measure: 55rem;
 $max-width: 64rem;
+$nav-height: $base-line-height * 2.5;
 $services-offset: $gutter * 3;
 
 // Colors
