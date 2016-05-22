@@ -1,4 +1,4 @@
-extends page.pug
+extends page
 
 block content
 
@@ -12,16 +12,16 @@ block content
       .post-preview__meta
 
         if post.date
-          h3.post-preview__date: a(href="/#{ post.path }"): time(datetime=moment.utc(post.date))= moment.utc(post.date).format("MMM Do")
+          h3.post-preview__date: a(href="/" + post.path): time(datetime=moment.utc(post.date))= moment.utc(post.date).format("MMM Do")
 
         if post.tags
           .post-preview__tags
             for tag in post.tags
-              a.post-preview__tag(href="/tagged/#{ tag.toLowerCase() }")= tag
+              a.post-preview__tag(href="/tagged/" + tag.toLowerCase())= tag
 
       .post-preview__text
 
-        h2.post-preview__title: a(href="/#{ post.path }")= post.title
+        h2.post-preview__title: a(href="/" + post.path)= post.title
 
         h4.post-preview__snippet= post.snippet
 
@@ -31,15 +31,15 @@ block content
 
       .pagination__first
         if pagination.num != 1
-          a.btn(rel="first", href="/#{ pagination.first.path }") Newest
+          a.btn(rel="first", href="/" + pagination.first.path) Newest
 
       ul.pagination__pages
         if pagination.previous
-          li: a(href="/#{ pagination.previous.path }")= pagination.num - 1
+          li: a(href="/" + pagination.previous.path)= pagination.num - 1
         li.pagination__current= pagination.num
         if pagination.next
-          li: a(href="/#{ pagination.next.path }")= pagination.num + 1
+          li: a(href="/" + pagination.next.path)= pagination.num + 1
 
       .pagination__last
         if pagination.num != pagination.pages.length
-          a.btn(rel="last", href="/#{ pagination.last.path }") Oldest
+          a.btn(rel="last", href="/" + pagination.last.path) Oldest

@@ -1,11 +1,11 @@
 doctype html
-include utils/mixins.pug
+include mixins
 
 html
   head
-    include partials/head.pug
+    include partials/head
   body
-    include partials/nav.pug
+    include partials/navigation
 
     block page
       main.main(role="main")
@@ -13,5 +13,5 @@ html
           h1= title
           != contents
 
-    include partials/footer.pug
-    include partials/scripts.pug
+    include partials/footer
+    include partials/scripts

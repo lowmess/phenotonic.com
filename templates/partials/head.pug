@@ -3,34 +3,37 @@ meta(content="width=device-width, initial-scale=1", name="viewport")
 meta(http-equiv="X-UA-Compatible", content="IE=edge")
 meta(name="theme-color", content="#2d2926")
 
-if description
-  meta(name="description", content="#{ description }")
-else if site.description
-  meta(name="description", content="#{ site.description }")
-
-if keywords
-  meta(name="keywords", content="#{ keywords }")
-else if site.keywords
-  meta(name="keywords", content="#{ site.keywords }")
-
-block title
-  if title != "home" && site.title
-    title #{title} • #{site.title}
-  else if title != "home" && !site.title
-    title #{title} • Phenotonic
-  else if site.title
-    title= site.title
+//- Title & Description
+block meta
+  if title != site.title
+    title= title + " • " + site.title
   else
-    title Phenotonic
+    title= site.title
 
-link(rel="canonical", href="#{ path }")
+  meta(name="description", content=description ? description : site.description)
 
+//- Open Graph / Twitter Card
+meta(name="twitter:site", content="@phenotonic")
+meta(name="twitter:card", content="summary")
+meta(property="og:site_name", content=site.title)
+meta(property="og:title", name="twitter:title", content=title)
+meta(property="og:url", content=path)
+meta(property="og:image", content=image ? image : "/images/site.favicon-196.png")
+if description
+  meta(property="og:description", name="twitter:description", content=description)
+else if snippet
+  meta(property="og:description", name="twitter:description", content=snippet)
+else
+  meta(property="og:description", name="twitter:description", content=site.description)
+
+//- Pages
+link(rel="canonical", href=path)
 if next
-  link(rel="next", href="/#{ next.path }")
-  
+  link(rel="next", href="/" + next.path)
 if previous
-  link(rel="previous", href="/#{ previous.path }")
+  link(rel="previous", href="/" + previous.path)
 
+//- Favicons
 link(rel="apple-touch-icon-precomposed", sizes="57x57", href="/images/site.favicon-57.png")
 link(rel="apple-touch-icon-precomposed", sizes="114x114", href="/images/site.favicon-114.png")
 link(rel="apple-touch-icon-precomposed", sizes="72x72", href="/images/site.favicon-72.png")
