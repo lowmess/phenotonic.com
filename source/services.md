@@ -1,4 +1,4 @@
 ---
 title: Services
-layout: services.jade
+layout: services.pug
 ---

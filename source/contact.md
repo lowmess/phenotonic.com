@@ -1,5 +1,5 @@
 ---
 title: Contact
 headline: Contact Us
-layout: contact.jade
+layout: contact.pug
 ---

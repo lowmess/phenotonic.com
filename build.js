@@ -66,20 +66,20 @@ var siteBuild = Metalsmith(__dirname)
     {
       pattern: 'products/**/*.md',
       defaults: {
-        layout: 'product.jade'
+        layout: 'product.pug'
       }
     },
     {
       pattern: 'blog/**/*.md',
       defaults: {
-        layout: 'post.jade'
+        layout: 'post.pug'
       }
     }
   ]))
   .use(pagination({
     'collections.blog': {
       perPage: 10,
-      layout: 'blog.jade',
+      layout: 'blog.pug',
       first: 'blog/index.html',
       noPageOne: true,
       path: 'blog/page/:num/index.html',
@@ -111,7 +111,7 @@ var siteBuild = Metalsmith(__dirname)
     path: 'tagged/:tag/index.html',
     pathPage: 'tagged/:tag/:num/index.html',
     perPage: 10,
-    layout: 'tag.jade',
+    layout: 'tag.pug',
     sortBy: 'date',
     reverse: true
   }))
@@ -119,14 +119,15 @@ var siteBuild = Metalsmith(__dirname)
   .use(tags({
     handle: 'categories',
     path:'store/categories/:tag/index.html',
-    layout: 'category.jade'
+    layout: 'category.pug'
   }))
   */
   .use(layouts({
-    engine: 'jade',
+    engine: 'pug',
+    pretty: true,
     moment: require('moment'),
     directory: 'templates',
-    default: 'default.jade',
+    default: 'default.pug',
     pattern: '**/*.html'
   }))
   .use(sitemap('https://phenotonic.com'))

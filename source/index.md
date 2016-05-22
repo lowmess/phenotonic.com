@@ -1,5 +1,5 @@
 ---
 title: home
-layout: home.jade
+layout: home.pug
 permalink: false
 ---

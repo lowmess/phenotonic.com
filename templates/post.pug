@@ -1,9 +1,9 @@
-extends default.jade
+extends default.pug
 
 block content
 
   article.post
-  
+
     header.post__header
       h4.post__meta
         if author
@@ -15,36 +15,34 @@ block content
               span.post__author= author
         if date
           time(datetime=moment.utc(date)).post__date= " on " + moment.utc(date).format("MMMM Do, YYYY")
-        
+
       .post__tags
         if tags
           for tag in tags
             a.post__tag(href="/tagged/#{ tag.toLowerCase() }")= tag
-            
+
     h1.post__title= title
-          
+
     != contents
-    
+
   if previous || next
-    
+
     hr
-    
+
     section.post-preview
-  
+
       if previous
-      
+
         p Next Post:
-        
+
         h2.post-preview__title: a(href="/#{ previous.path }")= previous.title
-      
+
         h4.post-preview__snippet= previous.snippet
-      
+
       else if next
-      
+
         p Previous Post:
-        
+
         h2.post-preview__title: a(href="/#{ next.path }")= next.title
-      
+
         h4.post-preview__snippet= next.snippet
-    
-      

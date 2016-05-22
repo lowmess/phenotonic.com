@@ -1,4 +1,4 @@
 ---
 title: Products
-layout: products.jade
+layout: products.pug
 ---

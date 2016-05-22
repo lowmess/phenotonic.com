@@ -3,7 +3,7 @@ footer.footer
     //- include search-box.jade
     .footer__post
       p Latest Blog Post
-      h2.footer__post-title: a(href="/#{collections.blog[0].path}")= collections.blog[0].title
+      h2.footer__post-title: a(href="/" + collections.blog[0].path)= collections.blog[0].title
       h4.footer__post-snippet= collections.blog[0].snippet
     .footer__links
       ul.footer__list.footer__list--nav

@@ -1,0 +1,17 @@
+doctype html
+include utils/mixins.pug
+
+html
+  head
+    include partials/head.pug
+  body
+    include partials/nav.pug
+
+    block page
+      main.main(role="main")
+        block content
+          h1= title
+          != contents
+
+    include partials/footer.pug
+    include partials/scripts.pug

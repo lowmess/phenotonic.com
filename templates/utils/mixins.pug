@@ -4,20 +4,20 @@ mixin mini-product(id)
     if id == product.id
 
       .mini-product
-        
-        a(href="/"+product.path).mini-product__image: img(src="/images/#{ product.image }", alt="#{ product.title }")
-          
+
+        a(href="/"+product.path).mini-product__image: img(src="/images/" + product.image, alt=product.title)
+
         .mini-product__info
-          
-          h2.mini-product__name: a(href="/"+product.path)= product.title
-          
+
+          h2.mini-product__name: a(href="/" + product.path)= product.title
+
           if product.snippet
             h4.mini-product__snippet= product.snippet
-            
+
           hr
-            
+
           .mini-product__purchase
-            
+
             h3.mini-product__price $#{ product.price }
 
             a.snipcart-add-item.btn.mini-product__button(href="#",
@@ -31,23 +31,23 @@ mixin mini-product(id)
 mixin product-preview(id)
 
   for product in collections.products
-    
+
     if id == product.id
 
       .product-preview
-    
+
         if product.image
-          a.product-preview__image(href="/#{ product.path }"): img(src="/images/#{ product.image }")
+          a.product-preview__image(href="/" + product.path): img(src="/images/" + product.image)
         else
           .product-preview__placeholder
-        
-        h3.product-preview__name: a(href="/#{ product.path }")= product.title
+
+        h3.product-preview__name: a(href="/" + product.path)= product.title
         h4.product-preview__data
-          a.product-preview__price(href="/#{ product.path }") $#{ product.price }
+          a.product-preview__price(href="/" + product.path) $#{ product.price }
           if product.categories
             | &#032;|&#032;
             each category in product.categories
-              a.product-preview__category(href="/#{ product.path }")= category
+              a.product-preview__category(href="/" + product.path)= category
 
 mixin bloom-box(id)
   section.bloom-box
@@ -57,31 +57,31 @@ mixin bloom-box(id)
       .bloom-box__blurb
         h3 An Organic Generator
         p The mushroom spores in the Bloom Box are voracious eaters surrounded by food. They break down organic matter in the substrate they live in, producing excess CO2 in the process. Hanging the Bloom Box above the plants in your garden allows the CO2 to trickle down over your plants, because CO2 is heavier than the air around it.
-      
+
     .bloom-box__row.bloom-box__row--reverse
       .bloom-box__illustration
         svg(role="img", title="Plabts absorb CO2 throughout the day, storing it for energy."): use(xlink:href="/images/products.bloom-box.svg#plants-co2")
       .bloom-box__blurb
         h3 Plants Made Happy
         p When plants first evolved, Earth’s atmosphere was rich in CO2. Plants practiced a lot, and got really good at splitting CO2 into it’s two main parts: carbon and oxygen. Unfortunately, they got a little too good at it, eventually reducing the CO2 in the atmosphere to a mere fraction of what it once was. Since plants need the energy stored in the carbon, they're always craving extra CO2. This makes the plants sad. Don't make your plants sad.
-      
+
     .bloom-box__icons
       .bloom-box__row.bloom-box__row--icons
-      
+
         .bloom-box__column
           .bloom-box__illustration.bloom-box__illustration--icons
             svg(role="img", title="THe Bloom Box will produce mushrooms as a natural byproduct of CO2 output."): use(xlink:href="/images/products.bloom-box.svg#mushroom")
           h4.bloom-box__blurb.bloom-box__blurb--icons Produces Mushrooms
-      
+
         .bloom-box__column
           .bloom-box__illustration.bloom-box__illustration--icons
             svg(role="img", title="The Bloom Box will output CO2 for up to six months"): use(xlink:href="/images/products.bloom-box.svg#time")
           h4.bloom-box__blurb.bloom-box__blurb--icons 6 Month Supply
-              
+
         .bloom-box__column
           .bloom-box__illustration.bloom-box__illustration--icons
             svg(role="img", title="The Bloom Box is fully recyclable & compostable"): use(xlink:href="/images/products.bloom-box.svg#recycle")
           h4.bloom-box__blurb.bloom-box__blurb--icons Recyclable &amp; Compostable
-          
+
     .bloom-box__products
       +mini-product("bloom-box")

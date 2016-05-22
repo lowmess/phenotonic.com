@@ -1,0 +1,8 @@
+header(class="header header--" + title.toLowerCase())
+  .header__text
+    if headline
+      h1= headline
+    else
+      h1= title
+    if description
+      h3!= description
