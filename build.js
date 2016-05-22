@@ -126,7 +126,6 @@ var siteBuild = Metalsmith(__dirname)
     engine: 'pug',
     pretty: true,
     moment: require('moment'),
-    // env: NODE_ENV,
     directory: 'templates',
     default: 'default.pug',
     pattern: '**/*.html'
