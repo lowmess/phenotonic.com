@@ -7,22 +7,16 @@ var cartCount = function () {
 }
 
 // cartCount when cart is loaded
-Snipcart.execute('bind', 'cart.ready', function (data) {
-  cartCount()
-})
+Snipcart.execute('bind', 'cart.ready', cartCount())
 
 // cartCount when item is added
-Snipcart.execute('bind', 'item.added', function (item) {
-  cartCount()
-})
+Snipcart.execute('bind', 'item.added', cartCount())
 
 // cartCount when item is removed
-Snipcart.execute('bind', 'item.removed', function (item) {
-  cartCount()
-})
+Snipcart.execute('bind', 'item.removed', cartCount())
 
 // cartCount after order is done
 Snipcart.execute('bind', 'order.completed', function (data) {
   console.log('Order Complete')
-  cartCount(true)
+  cartCount()
 })
