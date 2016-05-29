@@ -183,33 +183,24 @@
   }
 }
 
-.contact {
-  max-width: $max-width * 0.75;
-
+.contact--services {
   margin: $base-line-height auto;
   padding: 0 $gutter;
 
-  &__tagline {
-    text-align: center;
-  }
-
-  @include respond-to(contact) {
-    &__row {
-      display: flex;
-      justify-content: space-between;
+  .contact {
+    &__tagline {
+      text-align: center;
     }
-    &__col {
-      flex: 1;
 
-      &:not(:last-child) {
-        margin-right: $gutter;
+    &__button {
+      color: $services-button;
+      border-color: $services-button;
+
+      @include on-event {
+        background-color: $services-button;
+
+        color: $button-reverse;
       }
     }
-  }
-
-  &__button {
-    display: block;
-
-    margin: 0 auto;
   }
 }

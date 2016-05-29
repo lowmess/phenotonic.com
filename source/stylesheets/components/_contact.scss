@@ -1,3 +1,29 @@
+.contact {
+  &__form {
+    max-width: $max-width * 0.75;
+
+    margin: $base-line-height auto;
+  }
+  @include respond-to(contact) {
+    &__row {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__col {
+      flex: 1;
+
+      &:not(:last-child) {
+        margin-right: $gutter;
+      }
+    }
+  }
+  &__button {
+    display: block;
+
+    margin: 0 auto;
+  }
+}
+
 label {
   @extend h4;
 }
