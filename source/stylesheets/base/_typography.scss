@@ -107,12 +107,13 @@ a {
   text-decoration: none;
   border: none;
 
-  &:hover {
-    color: $link-primary;
-    border-bottom: 2px solid currentColor;
+  @include on-event {
+    &:not(.btn):hover {
+      border-bottom: 2px solid currentColor;
 
-    & > img, & > svg {
-      border: none; // this doesn't work for some fucking reason
+      & > img, & > svg {
+        border: none; // this doesn't work for some fucking reason
+      }
     }
   }
 }
