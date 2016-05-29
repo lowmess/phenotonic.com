@@ -24,10 +24,4 @@ block content
 
         h3.product__price $#{ price }
 
-        a.snipcart-add-item.btn.product__button(href="#",
-          data-item-id= id ,
-          data-item-name= title ,
-          data-item-price= price ,
-          data-item-weight= weight ,
-          data-item-url= site.url + path ,
-          data-item-description= description ? description : '') Add to Cart
+        +add-product(id)

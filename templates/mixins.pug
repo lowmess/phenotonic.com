@@ -1,3 +1,15 @@
+mixin add-product(id)
+
+  for product in collections.products
+    if id == product.id
+      a.snipcart-add-item.btn(href="#",
+        data-item-id= product.id ,
+        data-item-name= product.title ,
+        data-item-price= product.price ,
+        data-item-weight= product.weight ,
+        data-item-url= site.url + product.path ,
+        data-item-description= product.description ? product.description : '') Add to Cart
+
 mixin mini-product(id)
 
   for product in collections.products
@@ -20,13 +32,7 @@ mixin mini-product(id)
 
             h3.mini-product__price $#{ product.price }
 
-            a.snipcart-add-item.btn.mini-product__button(href="#",
-              data-item-id= product.id ,
-              data-item-name= product.title ,
-              data-item-price= product.price ,
-              data-item-weight= product.weight ,
-              data-item-url= site.url + product.path ,
-              data-item-description= product.description ? product.description : '') Add to Cart
+            +add-product(id)
 
 mixin product-preview(id)
 

@@ -108,12 +108,8 @@ a {
   border: none;
 
   @include on-event {
-    &:not(.btn):hover {
+    &:not(.btn, img, svg):hover {
       border-bottom: 2px solid currentColor;
-
-      & > img, & > svg {
-        border: none; // this doesn't work for some fucking reason
-      }
     }
   }
 }

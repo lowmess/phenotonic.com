@@ -7,6 +7,7 @@ menuButton.addEventListener('click', function () {
   navLinks.classList.toggle('nav__container--open')
 }, false)
 
+// Add item count next to cart icon
 function cartCount () {
   var count = Snipcart.api.getItemsCount()
 
@@ -14,13 +15,19 @@ function cartCount () {
 }
 
 // cartCount when cart is loaded
-Snipcart.subscribe('cart.ready', cartCount())
+Snipcart.subscribe('cart.ready', function () {
+  cartCount()
+})
 
 // cartCount when item is added
-Snipcart.subscribe('item.added', cartCount())
+Snipcart.subscribe('item.added', function() {
+  cartCount()
+})
 
 // cartCount when item is removed
-Snipcart.subscribe('item.removed', cartCount())
+Snipcart.subscribe('item.removed', function() {
+  cartCount()
+})
 
 // cartCount after order is done
 Snipcart.subscribe('order.completed', function (data) {
