@@ -139,5 +139,5 @@ pre {
 
 small {
   font-size: $small-font-size;
-  line-height: $base-line-height;
+  line-height: $base-line-height * 0.5;
 }

@@ -7,7 +7,7 @@ input, textarea, select {
 
   width: 100%;
 
-  padding: $gutter*0.5;
+  padding: 0 $gutter * 0.5;
   margin-top: $h4-line-height * 0.25;
   margin-bottom: $h4-line-height;
   border: 1px solid $outline-primary;
@@ -17,6 +17,11 @@ input, textarea, select {
 }
 input, select {
   height: $base-font-size + $base-line-height;
+}
+textarea {
+  min-height: $base-font-size * 3 + $base-line-height * 2;
+
+  padding: $gutter * 0.5;
 }
 ::placeholder {
   color: $outline-primary;

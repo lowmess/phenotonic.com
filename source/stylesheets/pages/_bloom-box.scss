@@ -17,10 +17,14 @@
     flex-flow: column nowrap;
     align-items: center;
 
+    text-align: center;
+
     @include respond-to(small) {
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: none;
+
+      text-align: left;
     }
 
     &--reverse {

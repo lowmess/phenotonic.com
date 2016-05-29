@@ -7,7 +7,7 @@ menuButton.addEventListener('click', function () {
   navLinks.classList.toggle('nav__container--open')
 }, false)
 
-var cartCount = function () {
+function cartCount () {
   var count = Snipcart.api.getItemsCount()
 
   q$('.nav__icon--cart').setAttribute('data-snipcart-count', count)

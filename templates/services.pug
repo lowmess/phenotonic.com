@@ -5,7 +5,7 @@ block page
 
     header.header.header--services
       .header__text
-        h1 With a Little Help From Your&nbsp;Friends
+        h1 With a Little Help From Your Friends
         h3 Us. Phenotonic! We're your friends. #brands
 
     section.services
@@ -39,21 +39,21 @@ block page
         span.pricing__rate.pricing__rate--price 100
         span.pricing__rate.pricing__rate--time per hour
         hr.pricing__divider
-        span.pricing__rate.pricing__rate--block Pre-schedule a block of four hours for just $350
-        span.pricing__rate.pricing__rate--emergency Emergency visit* additional $75
+        span.pricing__rate.pricing__rate--block Schedule your first block of four hours for&nbsp;just&nbsp;$300
+        span.pricing__rate.pricing__rate--emergency Emergency visit* additional $50
         span.pricing__rate.pricing__rate--def: small *Emergency visit is any visit that takes place within 48 hours of initial contact
 
 
-    section.contact
-      h2.contact__tagline Help Us Help You
-      form.contact__form(action="//formspree.io/hi@phenotonic.com", method="POST")
+    section.contact.contact--services#contact
+      h2.contact__tagline Help Us Help&nbsp;You
+      form.contact__form(action="//formspree.io/services@phenotonic.com", method="POST")
         .contact__row.contact__row--info
           .contact__col.contact__col--name
             label(for="name") Who Are You?*
-            input(name="name", type="text", placeholder="Anne Ominous", required)
+            input(name="name", type="text", placeholder="Anne Onimuss", required)
           .contact__col.contact__col--email
             label(for="email") Where Can We Contact You?*
-            input(name="email", type="email", placeholder="anne.onimous@psuedonym.com", required)
+            input(name="email", type="email", placeholder="anne.onimuss@psuedonym.com", required)
 
         .contact__row.contact__row--info
           .contact__col.contact__col--service
@@ -76,6 +76,6 @@ block page
 
         input(type="text", name="_gotcha", style="display:none")
 
-        input(type="hidden", name="_next", value=path + "/?thanks")
+        input(type="hidden", name="_next", value=path + "/?thanks#contact")
 
         button.contact__button Get in Touch

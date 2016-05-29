@@ -174,11 +174,11 @@
     }
     &--emergency {
       margin-top: $base-line-height * 0.5;
-      margin-bottom: $base-line-height * -0.25;
     }
     &--def {
       @include font(body);
-      margin-top: $base-line-height * -0.25;
+
+      line-height: $base-line-height * 0.5;
     }
   }
 }
