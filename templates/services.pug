@@ -34,28 +34,48 @@ block page
             p So if you need a vacation, or an emergency takes you away, let us keep your garden fed and growing. Have the peace of mind that our qualified professionals are checking on your garden and making sure you come home to a thriving garden, just the way you left it.
 
     section.pricing#pricing
-      h2 Pricing
+      .pricing__container
+        span.pricing__rate.pricing__rate--just Just
+        span.pricing__rate.pricing__rate--price 100
+        span.pricing__rate.pricing__rate--time per hour
+        hr.pricing__divider
+        span.pricing__rate.pricing__rate--block Pre-schedule a block of four hours for just $350
+        span.pricing__rate.pricing__rate--emergency Emergency visit* additional $75
+        span.pricing__rate.pricing__rate--def: small *Emergency visit is any visit that takes place within 48 hours of initial contact
+
 
     section.contact
+      h2.contact__tagline Help Us Help You
       form.contact__form(action="//formspree.io/hi@phenotonic.com", method="POST")
-        label(for="name") Who Are You?
-        input(name="name", type="text", placeholder="Kareem Abdul-Jabbar", required)
-        label(for="email") Where Can We Contact You?
-        input(name="email", type="email", placeholder="kareem@ballsohard.com", required)
+        .contact__row.contact__row--info
+          .contact__col.contact__col--name
+            label(for="name") Who Are You?*
+            input(name="name", type="text", placeholder="Anne Ominous", required)
+          .contact__col.contact__col--email
+            label(for="email") Where Can We Contact You?*
+            input(name="email", type="email", placeholder="anne.onimous@psuedonym.com", required)
 
-        label(for="service") How Can We Help?
-        select(name="service", required)
-          option(value="consulting") Consulting
-          option(value="planning") Planning
-          option(value="installation") Installation
-          option(value="maintenance") Maintenance
-          option(value="other") Something Special
+        .contact__row.contact__row--info
+          .contact__col.contact__col--service
+            label(for="service") How Can We Help?*
+            select(name="service", required)
+              option(value="", disabled, selected) Select a Service
+              option(value="consulting") Consulting
+              option(value="planning") Planning
+              option(value="installation") Installation
+              option(value="maintenance") Maintenance
+              option(value="other") Something Special
+          .contact__col.contact__col--emergency
+            label(for="emergency") Is This an Emergency?
+            select(name="emergency")
+              option(value="no") No
+              option(value="yes") Yes
 
-        label(for="message") What Do You Have to Say?
-        textarea(name="message", placeholder="I can do something else besides stuff a ball through a hoop. My biggest resource is my mind.")
+        label(for="message") Anything We Should Know?
+        textarea(name="message", placeholder="Help! My venus fly traps learned to walk and are terrorizing my pet ferret!")
 
         input(type="text", name="_gotcha", style="display:none")
 
-        input(type="hidden", name="_next", value="/#{ path }/?thanks")
+        input(type="hidden", name="_next", value=path + "/?thanks")
 
-        button Get in Touch
+        button.contact__button Get in Touch

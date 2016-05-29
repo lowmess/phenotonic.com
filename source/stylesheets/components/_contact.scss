@@ -1,10 +1,8 @@
-.contact {
-
-}
 label {
   @extend h4;
 }
-input, textarea {
+
+input, textarea, select {
   @include clearfix;
 
   width: 100%;
@@ -14,4 +12,12 @@ input, textarea {
   margin-bottom: $h4-line-height;
   border: 1px solid $outline-primary;
   border-radius: 3px;
+
+  background-color: $background-primary;
+}
+input, select {
+  height: $base-font-size + $base-line-height;
+}
+::placeholder {
+  color: $outline-primary;
 }

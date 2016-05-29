@@ -55,8 +55,10 @@ $services-text: $blastoise;
 $services-text-reverse: $squirtle;
 $services-link: $wartortle;
 $services-button: $wartortle;
+$services-callout: $wartortle;
 $services-background: $squirtle;
 $services-shadow: $blastoise;
+$services-divider: $wartortle;
 
 // Breakpoints
 
@@ -69,7 +71,9 @@ $breakpoints: (
   not-large: "(max-width: 63.9em)",
   is-large: "(min-width: 64em) and (max-width: 89.9em)",
   xlarge: "(min-width: 90em)",
-  huge: "(min-width: 120em)"
+  huge: "(min-width: 120em)",
+
+  contact: "(min-width: 35em)"
 );
 
 // Font-stacks

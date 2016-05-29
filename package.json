@@ -1,6 +1,6 @@
 {
   "name": "phenotonic",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The website for Phenotonic, an Arizona-based gardening company. Generated with Metalsmith.",
   "engines": {
     "node": "5.9.0"

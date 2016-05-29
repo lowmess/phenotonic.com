@@ -58,23 +58,44 @@
   flex-flow: column nowrap;
   align-items: center;
 
+  text-align: center;
+
   @include respond-to(medium) {
     flex-flow: row nowrap;
+
+    text-align: left;
+
+    &__text {
+      padding-left: $gutter;
+    }
 
     &:nth-child(2n) {
       flex-flow: row-reverse nowrap;
 
       text-align: right;
+
+      .service__text {
+        padding-left: 0;
+        padding-right: $gutter;
+      }
     }
   }
 
   &:not(:last-child) {
-    margin-bottom: $base-line-height;
+    margin-bottom: $base-line-height * 0.5;
+
+    @include respond-to(medium) {
+      margin-bottom: $base-line-height;
+    }
   }
 
   &__icon {
+    height: 75px;
+
     @include respond-to(medium) {
       flex: 1;
+
+      height: auto;
     }
   }
 
@@ -85,5 +106,110 @@
     @include respond-to(large) {
       flex: 3;
     }
+  }
+}
+
+.pricing {
+  background-color: $services-background;
+
+  text-align: center;
+
+  &__container {
+    max-width: $max-width;
+
+    margin: 0 auto;
+    margin-top: $services-offset * -0.5;
+    padding: 0 $gutter $gutter;
+  }
+
+  &__divider {
+    max-width: 50%;
+
+    background-color: $services-divider;
+  }
+
+  &__rate {
+    @include font(heading, book);
+
+    display: block;
+
+    &--just {
+      @include font(heading, medium);
+
+      height: $h3-font-size;
+
+      font-size: $h3-font-size;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+    }
+    &--price { // This is completely fucked for some reason
+      @include font(heading, bold);
+
+      position: relative;
+      right: $gutter * 0.375;
+      top: $h1-font-size * 0.75;
+
+      height: $h1-font-size * 1.825;
+
+      margin: $base-line-height * 0.5 auto;
+
+      font-size: $h1-font-size * 2.5;
+      color: $services-callout;
+      letter-spacing: -0.05em;
+
+      &:before {
+        content: '$';
+
+        position: relative;
+        bottom: $base-line-height;
+        right: $gutter * 0.25;
+
+        font-size: $h1-font-size;
+      }
+    }
+    &--time {
+      height: $h3-font-size * 1.25;
+
+      font-size: $h3-font-size * 1.25;
+    }
+    &--emergency {
+      margin-top: $base-line-height * 0.5;
+      margin-bottom: $base-line-height * -0.25;
+    }
+    &--def {
+      @include font(body);
+      margin-top: $base-line-height * -0.25;
+    }
+  }
+}
+
+.contact {
+  max-width: $max-width * 0.75;
+
+  margin: $base-line-height auto;
+  padding: 0 $gutter;
+
+  &__tagline {
+    text-align: center;
+  }
+
+  @include respond-to(contact) {
+    &__row {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__col {
+      flex: 1;
+
+      &:not(:last-child) {
+        margin-right: $gutter;
+      }
+    }
+  }
+
+  &__button {
+    display: block;
+
+    margin: 0 auto;
   }
 }
