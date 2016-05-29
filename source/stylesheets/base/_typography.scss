@@ -16,7 +16,11 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
 
-  color: $snorlax;
+  color: $text-primary;
+}
+
+::selection {
+  background-color: $accent-primary;
 }
 
 p, ul, ol, pre, table, blockquote, address {
@@ -37,7 +41,7 @@ h1 {
   line-height: $h1-line-height;
   text-transform: capitalize;
   letter-spacing: -0.04rem;
-  color: $bulbasaur;
+  color: $brand-primary;
   text-rendering: optimizeLegibility;
 
   margin: $base-line-height 0;
@@ -80,7 +84,7 @@ hr {
   border: 0;
   margin: modular-scale(1) auto;
 
-  background: $machop;
+  background: $outline-primary;
 }
 ul ul, ol ol, ul ol, ol ul {
   margin-top: 0;
@@ -99,16 +103,13 @@ sub {
 }
 
 a {
-  color: $bulbasaur;
+  color: $link-primary;
   text-decoration: none;
   border: none;
 
-  &:hover {
-    color: $bulbasaur;
-    border-bottom: 2px solid currentColor;
-
-    & > img, & > svg {
-      border: none; // this doesn't work for some fucking reason
+  @include on-event {
+    &:not(.btn, img, svg):hover {
+      border-bottom: 2px solid currentColor;
     }
   }
 }
@@ -117,7 +118,7 @@ code {
   @include font(monospace);
 
   line-height: $base-line-height;
-  background: $machop;
+  background: $outline-primary;
   padding: 0 3px;
   border-radius: 3px;
 }
@@ -125,8 +126,8 @@ code {
 pre {
   width: 100%;
   overflow-x: auto;
-  background: $snorlax;
-  color: $lugia;
+  background: $background-reverse;
+  color: $text-reverse;
 
   code {
     background: transparent;
@@ -135,5 +136,5 @@ pre {
 
 small {
   font-size: $small-font-size;
-  line-height: $base-line-height;
+  line-height: $base-line-height * 0.5;
 }

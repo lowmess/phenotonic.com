@@ -1,0 +1,206 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the services page.
+// -----------------------------------------------------------------------------
+.page--services {
+  color: $services-text;
+
+  h1 {
+    color: $services-primary;
+  }
+
+  a {
+    color: $services-link;
+  }
+}
+.header--services {
+  @include background-image('services.header');
+
+  padding-bottom: $services-offset;
+
+  background-color: $services-primary;
+
+  color: $services-text-reverse;
+
+  h1 {
+    color: $services-header;
+  }
+}
+
+.services {
+  @include pad(0 default 0 default);
+
+  background-color: $services-background;
+
+  h3:first-of-type {
+    margin-top: 0;
+  }
+
+  &__container {
+    position: relative;
+    top: -$services-offset;
+
+    max-width: $max-width;
+
+    margin: 0 auto;
+    padding: $gutter;
+
+    border-radius: $gutter * 0.5;
+
+    background-color: $background-primary;
+
+    box-shadow: 0 0 5px rgba($services-shadow, 0.25);
+  }
+}
+
+
+.service {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  text-align: center;
+
+  @include respond-to(medium) {
+    flex-flow: row nowrap;
+
+    text-align: left;
+
+    &__text {
+      padding-left: $gutter;
+    }
+
+    &:nth-child(2n) {
+      flex-flow: row-reverse nowrap;
+
+      text-align: right;
+
+      .service__text {
+        padding-left: 0;
+        padding-right: $gutter;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $base-line-height * 0.5;
+
+    @include respond-to(medium) {
+      margin-bottom: $base-line-height;
+    }
+  }
+
+  &__icon {
+    height: 75px;
+
+    @include respond-to(medium) {
+      flex: 1;
+
+      height: auto;
+    }
+  }
+
+  &__text {
+    @include respond-to(medium) {
+      flex: 2;
+    }
+    @include respond-to(large) {
+      flex: 3;
+    }
+  }
+}
+
+.pricing {
+  background-color: $services-background;
+
+  text-align: center;
+
+  &__container {
+    max-width: $max-width;
+
+    margin: 0 auto;
+    margin-top: $services-offset * -0.5;
+    padding: 0 $gutter $gutter;
+  }
+
+  &__divider {
+    max-width: 50%;
+
+    background-color: $services-divider;
+  }
+
+  &__rate {
+    @include font(heading, book);
+
+    display: block;
+
+    &--just {
+      @include font(heading, medium);
+
+      height: $h3-font-size;
+
+      font-size: $h3-font-size;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+    }
+    &--price { // This is completely fucked for some reason
+      @include font(heading, bold);
+
+      position: relative;
+      right: $gutter * 0.375;
+      top: $h1-font-size * 0.75;
+
+      height: $h1-font-size * 1.825;
+
+      margin: $base-line-height * 0.5 auto;
+
+      font-size: $h1-font-size * 2.5;
+      color: $services-callout;
+      letter-spacing: -0.05em;
+
+      &:before {
+        content: '$';
+
+        position: relative;
+        bottom: $base-line-height;
+        right: $gutter * 0.25;
+
+        font-size: $h1-font-size;
+      }
+    }
+    &--time {
+      height: $h3-font-size * 1.25;
+
+      font-size: $h3-font-size * 1.25;
+    }
+    &--emergency {
+      margin-top: $base-line-height * 0.5;
+    }
+    &--def {
+      @include font(body);
+
+      line-height: $base-line-height * 0.5;
+    }
+  }
+}
+
+.contact--services {
+  margin: $base-line-height auto;
+  padding: 0 $gutter;
+
+  .contact {
+    &__tagline {
+      text-align: center;
+    }
+
+    &__button {
+      color: $services-button;
+      border-color: $services-button;
+
+      @include on-event {
+        background-color: $services-button;
+
+        color: $button-reverse;
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .header--blog {
-  @include background-image('blog.jpg', 'blog@2x.jpg', 'blog@3x.jpg', 'blog@4x.jpg');
+  @include background-image('blog.header');
 }
 
 .post-preview {
@@ -14,7 +14,7 @@
 
     float: left;
 
-    border-right: 3px solid $machop;
+    border-right: 3px solid $outline-primary;
 
     text-align: right;
   }
@@ -28,7 +28,7 @@
     margin-bottom: $h4-line-height;
 
     a {
-      color: $machop;
+      color: $link-inactive;
     }
   }
   &__tag {
@@ -47,7 +47,7 @@
 
     margin-left: auto;
     margin-right: 3px;
-    border-left: 3px solid $machop;
+    border-left: 3px solid $outline-primary;
   }
   &__title {
     margin-bottom: 0;

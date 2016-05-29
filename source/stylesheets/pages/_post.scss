@@ -8,7 +8,7 @@
   &__header {
     @include row;
 
-    border-bottom: 3px solid $machop;
+    border-bottom: 3px solid $outline-primary;
   }
   &__meta {
     @include span-columns(6);
@@ -23,7 +23,7 @@
     text-align: right;
 
     a {
-      color: $machop;
+      color: $link-inactive;
     }
   }
   &__tag {

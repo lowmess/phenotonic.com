@@ -32,15 +32,15 @@
     }
 
     a {
-      color: $machoke;
+      color: $link-inactive;
 
       @include on-event {
-        color: $bulbasaur;
+        color: $link-primary;
       }
     }
   }
   &__current {
-    color: $bulbasaur;
+    color: $link-primary;
     font-weight: 500;
   }
 

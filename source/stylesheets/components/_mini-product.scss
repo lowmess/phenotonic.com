@@ -3,18 +3,21 @@
 // -----------------------------------------------------------------------------
 
 .mini-product {
-  @include pad;
-  @include clearfix;
-
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
-  max-height: 50vh;
+  padding: $gutter;
+
+  @include respond-to(small) {
+    flex-flow: row nowrap;
+  }
+
+  // max-height: 50vh;
 
   &__image {
-    flex: 0 1 auto;
+    flex: 1;
 
     height: 200px;
 
@@ -42,9 +45,7 @@
     }
   }
   &__info {
-    flex: 0 1 auto;
-
-    width: 50%;
+    flex: 1;
 
     text-align: center;
   }

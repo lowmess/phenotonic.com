@@ -2,28 +2,63 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
+// Settings
+$modular-scale-ratio: $golden;
+$modular-scale-base: 1rem;
+$base-font-size: modular-scale(0);
+$base-line-height: 1.618rem;
+$gutter: $base-line-height;
+$measure: 55rem;
+$max-width: 64rem;
+$nav-height: $base-line-height * 2.5;
+$services-offset: $gutter * 3;
+
 // Colors
-$bulbasaur: #4daa50;
-$ivysaur: #65a969;
-$venusaur: #5e745d;
+$bulbasaur: #f4f6f4;
+$ivysaur: #4daa50;
+$venusaur: #454e3e;
 
-$snorlax: #4c4845;
+$zapdos: #d7d76d;
+
+$squirtle: #f4f5f6;
+$wartortle: #518eaa;
+$blastoise: #464a4b;
+
 $lugia: #ffffff;
+$onix: #dbd5cd;
+$snorlax: #4c4845;
 
-$machop: #dbd5cd;
-$machoke: #a9a19c;
-$machamp: #867f7c;
+/************************/
 
-$eevee: #92695c;
-$flareon: #daa563;
-$jolteon: #c8b94e;
-$glaceon: #48c1ac;
-$vaporeon: #518eaa;
+$brand-primary: $ivysaur;
+$accent-primary: $zapdos;
+$text-primary: $venusaur;
+$link-primary: $ivysaur;
+$button-primary: $ivysaur;
+$outline-primary: $onix;
+$background-primary: $lugia;
+$shadow-primary: $venusaur;
 
-$brand-primary: $bulbasaur;
-$success: $ivysaur;
-$warning: $jolteon;
-$failure: $flareon;
+$link-inactive: $onix;
+$button-inactive: $onix;
+
+$text-reverse: $bulbasaur;
+$link-reverse: $lugia;
+$button-reverse: $lugia;
+$background-reverse: $venusaur;
+
+$nav-background: $bulbasaur;
+
+$services-primary: $wartortle;
+$services-header: $lugia;
+$services-text: $blastoise;
+$services-text-reverse: $squirtle;
+$services-link: $wartortle;
+$services-button: $wartortle;
+$services-callout: $wartortle;
+$services-background: $squirtle;
+$services-shadow: $blastoise;
+$services-divider: $wartortle;
 
 // Breakpoints
 
@@ -36,7 +71,9 @@ $breakpoints: (
   not-large: "(max-width: 63.9em)",
   is-large: "(min-width: 64em) and (max-width: 89.9em)",
   xlarge: "(min-width: 90em)",
-  huge: "(min-width: 120em)"
+  huge: "(min-width: 120em)",
+
+  contact: "(min-width: 35em)"
 );
 
 // Font-stacks
@@ -44,49 +81,25 @@ $breakpoints: (
 $heading-text: "Geomanist", $helvetica;
 $body-text: "Bitter", $georgia;
 
-// Type Settings
-
-$modular-scale-ratio: $golden;
-$modular-scale-base: 1rem;
-$measure: 55rem;
-
-// Type Base
-
-$base-font-size: modular-scale(0);
-$base-line-height: 1.75rem;
-
 // line-heights
 
 $h1-line-height: $base-line-height * 3;
-
 $h2-line-height: $base-line-height * 2;
-
 $h3-line-height: $base-line-height;
-
 $h4-line-height: $base-line-height;
 
 // Headers
 
 $h1-font-size: modular-scale(3);
-
 $h2-font-size: modular-scale(2);
-
 $h3-font-size: modular-scale(1);
-
 $h4-font-size: modular-scale(0);
 
 // Other
 $xsmall-font-size: modular-scale(-2);
-
 $small-font-size: modular-scale(-1);
-
 $huge-font-size: modular-scale(4);
-
 $xhuge-font-size: modular-scale(5);
-
-// Grid (Neat) Settings
-
-$max-width: 64rem;
 
 // A running list of z-indexii
 
@@ -96,7 +109,9 @@ $zindex: (
   value: 200,
   value__img: 210,
   value__text: 220,
-  nav: 1000
+  nav: 1000,
+  nav-content: 1010,
+  nav-bar: 1100
 );
 
 // FONT STACKS for @MIXIN FONT

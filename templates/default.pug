@@ -1,0 +1,17 @@
+doctype html
+include mixins
+
+html
+  head
+    include partials/head
+  body
+    include partials/navigation
+
+    block page
+      main.main(role="main")
+        block content
+          h1= title
+          != contents
+
+    include partials/footer
+    include partials/scripts

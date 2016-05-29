@@ -17,10 +17,14 @@
     flex-flow: column nowrap;
     align-items: center;
 
+    text-align: center;
+
     @include respond-to(small) {
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: none;
+
+      text-align: left;
     }
 
     &--reverse {
@@ -53,15 +57,17 @@
   &__illustration {
     flex: 0 1 auto;
 
+    height: $base-line-height * 8;
+
     &--icons {
-      height: 100px;
+      height: $base-line-height * 5;
 
       @include respond-to(small) {
-        height: 150px;
+        height: $base-line-height * 6;
       }
 
       @include respond-to(medium) {
-        height: auto;
+        height: $base-line-height * 7;
       }
     }
   }
@@ -81,12 +87,12 @@
       margin-top: 0;
       margin-bottom: 0;
 
-      color: $machop;
+      color: $outline-primary;
     }
   }
 
   &__icons {
-    background: $bulbasaur;
+    background: $brand-primary;
   }
 
   &__products {

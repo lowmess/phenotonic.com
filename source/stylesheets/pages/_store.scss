@@ -1,7 +1,0 @@
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the product page.
-// -----------------------------------------------------------------------------
-
-.header--store {
-  @include background-image('store.jpg', 'store@2x.jpg', 'store@3x.jpg', 'store@4x.jpg');
-}

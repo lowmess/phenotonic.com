@@ -1,0 +1,27 @@
+extends default
+
+block content
+
+  article.product
+
+    if image
+      img.product__image(src="/images/" + image, alt=title)
+    else
+      .product__image.product__image--placeholder
+
+    section.product__info
+
+      h1.product__title= title
+
+      if snippet
+        h3.product__snippet= snippet
+
+      != contents
+
+      hr
+
+      .product__buy
+
+        h3.product__price $#{ price }
+
+        +add-product(id)

@@ -4,14 +4,14 @@
 
 .header {
   @include fill-parent;
-  @include background-image('default.jpg', 'default@2x.jpg', 'default@3x.jpg', 'default@4x.jpg');
+  @include background-image('site.header');
 
-  background-color: $bulbasaur;
+  background-color: $brand-primary;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
 
-  color: $machop;
+  color: $text-reverse;
 
   &__text {
     @include outer-container;
@@ -22,22 +22,10 @@
   }
 
   h1 {
-    color: $lugia;
+    color: $text-reverse;
   }
 
   a {
-    color: $lugia;
-  }
-
-  .btn {
-    border-color: $lugia;
-
-    color: $lugia;
-
-    @include on-event {
-      border-color: $lugia;
-
-      color: $bulbasaur;
-    }
+    color: $text-reverse;
   }
 }

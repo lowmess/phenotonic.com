@@ -5,15 +5,15 @@
 .footer {
   @include fill-parent;
 
-  background: $bulbasaur;
+  background: $brand-primary;
 
-  color: $lugia;
+  color: $text-reverse;
 
   a {
-    color: $lugia;
+    color: $link-reverse;
 
     @include on-event {
-      color: $lugia;
+      color: $link-reverse;
     }
   }
 
@@ -25,7 +25,7 @@
 
   &__post {
     @include row;
-    @include respond-to(medium) {
+    @include respond-to(small) {
       @include span-columns(8);
     }
   }
@@ -38,25 +38,40 @@
 
   &__links {
     @include row;
-    @include respond-to(medium) {
+    @include respond-to(small) {
       @include span-columns(4);
       @include omega;
     }
-    @include row;
+  }
 
-    ul {
-      margin: inherit 0 0;
-      padding: 0;
+  &__list {
+    @include span-columns(6 of 13);
+    @include omega(2n);
 
-      list-style-type: none;
+    margin: $base-line-height 0 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    @include respond-to(small) {
+      @include span-columns(6);
     }
-  }
-  &__nav {
-    @include span-columns(6);
-  }
-  &__contact {
-    @include span-columns(6);
-    @include omega;
+
+    &--nav {
+      text-align: right;
+
+      @include respond-to(small) {
+        text-align: left;
+      }
+    }
+
+    &--contact {
+      @include shift(1 of 13);
+
+      @include respond-to(small) {
+        @include shift(0);
+      }
+    }
   }
 
   &__copyright {

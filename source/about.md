@@ -1,7 +1,7 @@
 ---
 title: About
 headline: About Us
-layout: page.jade
+layout: page.pug
 ---
 
 Sustainable practices and home gardening matter to us, so we created Phenotonic to promote organic sustainability and support gardeners with efficient, effective, & fresh amendments.

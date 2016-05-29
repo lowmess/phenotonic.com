@@ -75,20 +75,32 @@
 
 // BACKGROUND IMAGE GENERATOR
 // ==========================
-// @param {String} $image - Image name, including ext
-// @param {String} $image2x - Image name @2x, including ext
-// @param {String} $image3x - Image name @3x, including ext
-// @param {String} $image4x - Image name @4x, including ext
+// @param {String} $image - Image name
+// @param {String} $ext - Image extension (.jpg, .png, .gif)
+// @param {Number} $level - # of image variants, including base image
 
-@mixin background-image($image, $image2x: false, $image3x: false, $image4x: false) {
-  background-image: url("../images/#{$image}");
-  @if $image2x {
-    @include respond-to(small) { background-image: url("../images/#{$image2x}"); }
+@mixin background-image($image, $ext: 'jpg', $level: 4) {
+  background-image: url("../images/#{$image}.#{$ext}");
+  @if $level > 1 {
+    @include respond-to(small) { background-image: url("../images/#{$image}@2x.#{$ext}"); }
   }
-  @if $image3x {
-    @include respond-to(medium) { background-image: url("../images/#{$image3x}"); }
+  @if $level > 2 {
+    @include respond-to(medium) { background-image: url("../images/#{$image}@3x.#{$ext}"); }
   }
-  @if $image4x {
-    @include respond-to(large) { background-image: url("../images/#{$image4x}"); }
+  @if $level > 3 {
+    @include respond-to(large) { background-image: url("../images/#{$image}@4x.#{$ext}"); }
   }
+}
+
+// CONTAINER
+// =========
+
+@mixin container($max: $max-width) {
+  display: relative;
+  
+  width: 100%;
+  max-width: $max;
+
+  margin: 0 auto;
+  padding: $gutter;
 }

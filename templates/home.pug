@@ -1,0 +1,10 @@
+extends default
+
+block page
+  header.landing
+    .landing__hero
+      h1 Introducing the Bloom Box
+      p We made the best organic CO2 generator in the universe to give plants the happy life they deserve.
+      a(href="/products/bloom-box", class="btn") Let's Grow
+
+  +bloom-box("bloom-box")

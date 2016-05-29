@@ -16,10 +16,8 @@ var sass = require('metalsmith-sass')
 var prefix = require('metalsmith-autoprefixer')
 // JS
 var uglify = require('metalsmith-uglify')
-// IMAGES
-// var imagemin = require('metalsmith-imagemin')
 
-Metalsmith(__dirname)
+var siteBuild = Metalsmith(__dirname)
   .source('source')
   .destination('_build')
   .metadata({
@@ -31,28 +29,23 @@ Metalsmith(__dirname)
       snipcart: {
         key: 'NmNhYWY2MGYtZTljYi00YzE4LThlNjktNGRhMGE2OTM2ZjAx'
       }
-    },
-    landing: {
-      headline: 'Introducing the Bloom Box',
-      copy: 'We made the best organic CO2 generator in the universe to give plants the happy life they deserve.',
-      url: '/store/bloom-box',
-      button: "Let's Grow"
     }
   })
   // CSS
   .use(sass({
     includePaths: require('node-neat').includePaths,
-    outputStyle: 'compressed',
+    sourceMap: true,
+    sourceMapContents: true,
+    outputStyle: 'nested',
     outputDir: 'css/'
   }))
   .use(prefix())
   // JS
   .use(uglify({
+    sourceMap: true,
     concat: 'js/main.js',
     removeOriginal: true
   }))
-  // IMAGES
-  // .use(imagemin())
   // HTML
   .use(drafts())
   .use(collections({
@@ -61,8 +54,8 @@ Metalsmith(__dirname)
       sortBy: 'date',
       reverse: true
     },
-    store: {
-      pattern: 'store/**/*.md'
+    products: {
+      pattern: 'products/**/*.md'
     },
     pages: {
       pattern: '*.md'
@@ -71,22 +64,22 @@ Metalsmith(__dirname)
   // Set default values
   .use(defaultValues([
     {
-      pattern: 'store/**/*.md',
+      pattern: 'products/**/*.md',
       defaults: {
-        layout: 'product.jade'
+        layout: 'product.pug'
       }
     },
     {
       pattern: 'blog/**/*.md',
       defaults: {
-        layout: 'post.jade'
+        layout: 'post.pug'
       }
     }
   ]))
   .use(pagination({
     'collections.blog': {
       perPage: 10,
-      layout: 'blog.jade',
+      layout: 'blog.pug',
       first: 'blog/index.html',
       noPageOne: true,
       path: 'blog/page/:num/index.html',
@@ -118,7 +111,7 @@ Metalsmith(__dirname)
     path: 'tagged/:tag/index.html',
     pathPage: 'tagged/:tag/:num/index.html',
     perPage: 10,
-    layout: 'tag.jade',
+    layout: 'tag.pug',
     sortBy: 'date',
     reverse: true
   }))
@@ -126,18 +119,24 @@ Metalsmith(__dirname)
   .use(tags({
     handle: 'categories',
     path:'store/categories/:tag/index.html',
-    layout: 'category.jade'
+    layout: 'category.pug'
   }))
   */
   .use(layouts({
-    engine: 'jade',
+    engine: 'pug',
+    pretty: true,
     moment: require('moment'),
     directory: 'templates',
-    default: 'default.jade',
+    default: 'default.pug',
     pattern: '**/*.html'
   }))
   .use(sitemap('https://phenotonic.com'))
   .use(feed({collection: 'blog'}))
-  .build(function (err) {
-    if (err) throw err
-  })
+
+siteBuild.build(function (err) {
+  if (err) {
+    console.log(err)
+  } else {
+    console.log('Site build complete!')
+  }
+})
