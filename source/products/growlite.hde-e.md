@@ -8,8 +8,8 @@ price: 155
 weight: 8
 image: products.growlite.hde-e.jpg
 categories:
-  - Lighting
-  - Reflectors
+  - lighting
+  - reflectors
 ---
 
 A versatile reflector that combines exceptional double-ended HID lamp performance with a extremely economical design. The HDE-E versatility and functionality make this product the most flexible double-ended fixture on the market.
