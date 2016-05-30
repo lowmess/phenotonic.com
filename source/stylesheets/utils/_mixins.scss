@@ -97,7 +97,7 @@
 
 @mixin container($max: $max-width) {
   display: relative;
-  
+
   width: 100%;
   max-width: $max;
 
