@@ -1,4 +1,16 @@
-
+---
+title: SEDE 1000W Ballast
+id: growlite-1000wballast
+manufacturer: Growlite
+description: Growlite 1000w ballast runs 400,600,or 1000w lamps as well as double ended lamps.
+snippet: One ballast fires everything!
+price: 275
+weight: 8
+image: products.manufacturer.product.jpg
+categories:
+  - Lighting
+  - Ballast
+---
 
 ### SINGLE OR DOUBLE ENDED ENABLED 400W-600W-1000W SWITCHABLE SLIM BALLAST
 
