@@ -1,9 +1,9 @@
 ---
 title: Growlite HDE 8" Reflector
-description: 
-snippet: DOUBLE ENDED LAMP CONCEALED VACUUM AIRFLOW TECHNOLOGY™ 400-1000W HPS
+description: The first Double Ended Horticultural Reflector suitable for both indoor and greenhouse applications.
+snippet: Built to be Cool
 id: growlite-hde-8
-price 225
+price: 225
 weight: 8
 image: products.growlite.hde8.jpg
 categories:
@@ -33,4 +33,3 @@ The patented Concealed Vacuum Airflow Technology reflector utilizes 100% of the 
 * 400-1000w HPS DE standard or high frequency lamps
  Units with 1000w lamps generate 3700 BTU, 600w lamps generate 2200 BTU
 * 650 to 875 CFM fan recommended for air cooling
-
