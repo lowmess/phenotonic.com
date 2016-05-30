@@ -17,7 +17,7 @@ mixin mini-product(id)
 
       .mini-product
 
-        a(href="/"+product.path).mini-product__image: img(src="/images/" + product.image, alt=product.title)
+        a.mini-product__image.is-image(href="/" + product.path): img(src="/images/" + product.image, alt=product.title)
 
         .mini-product__info
 
@@ -43,7 +43,7 @@ mixin product-preview(id)
       .product-preview
 
         if product.image
-          a.product-preview__image(href="/" + product.path): img(src="/images/" + product.image)
+          a.product-preview__image.is-image(href="/" + product.path): img(src="/images/" + product.image)
         else
           .product-preview__placeholder
 
