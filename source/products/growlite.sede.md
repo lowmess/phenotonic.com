@@ -1,24 +1,20 @@
 ---
 title: SEDE 1000W Ballast
-id: growlite-1000wballast
+id: growlite-sede
 manufacturer: Growlite
-description: Growlite 1000w ballast runs 400,600,or 1000w lamps as well as double ended lamps.
+description: This diverse ballast runs almost any HID lamp you throw at it.
 snippet: One ballast fires everything!
 price: 275
 weight: 8
-image: products.manufacturer.product.jpg
+image: products.growlite.sede.jpg
 categories:
-  - Lighting
-  - Ballast
+  - lighting
+  - ballasts
 ---
-
-### SINGLE OR DOUBLE ENDED ENABLED 400W-600W-1000W SWITCHABLE SLIM BALLAST
 
 #### Features
 
-
-* F.A.T. Frequency Adapting Technology fires ALL single-ended (SE) and double-ended (DE) lamps
-including high-frequency DE lamps
+* F.A.T. Frequency Adapting Technology fires ALL single-ended (SE) and double-ended (DE) lamps including high-frequency DE lamps
 * MH/HPS switchable up to 1000 watts
 * Starts lamps up to a 150’ distance between lamp and ballast
 * Generator ready
