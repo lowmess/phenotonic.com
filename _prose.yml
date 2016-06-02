@@ -94,7 +94,7 @@ prose:
           element: 'text'
           label: 'Tagline'
           help: 'A snappy tagline for the post'
-          placeholder: 'Exploring the Garden's Underrated Supplement'
+          placeholder: "Exploring the Garden's Underrated Supplement"
           type: 'text'
       - name: 'description'
         field:
