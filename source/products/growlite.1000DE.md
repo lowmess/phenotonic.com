@@ -1,6 +1,6 @@
 ---
 title: 1000DE Ballast
-id: growlite-sede
+id: growlite-1000de
 manufacturer: Growlite
 description: This diverse ballast runs almost any HID lamp you throw at it.
 snippet: One ballast fires everything!
@@ -10,6 +10,7 @@ image: products.growlite.1000DE.jpg
 categories:
   - lighting
   - ballasts
+published: true
 ---
 
 #### Features
