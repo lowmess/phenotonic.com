@@ -1,22 +1,20 @@
 ---
-title: 315 watt ceramic metal halide ballast SE or DE
+title: 315 Ballast
 id: growlite-315-ballast
 manufacturer: Growlite
-description: Single or Double ended enabled 315W Ceramic Metal Halide Ballast
+description: The 315's Soft Start stabilizes start-up loads and extends lamp life and performance.
 snippet: Bright as Gandalf's staff!
 price: 199
 weight: 8
-image: products.manufacturer.product.jpg
+image: products.growlite.315.jpg
 categories:
-  - category
-  - category
+  - lighting
+  - ballasts
 ---
-
-### SINGLE OR DOUBLE ENDED ENABLED 315W CERAMIC METAL HALIDE BALLAST
 
 #### Features
 
-* Soft start stabalizes start-up loads and extends lamp life and performance.
+* Soft Start stabilizes start-up loads and extends lamp life and performance
 * LED power indicator
 * 6’ 120VAC power cord provided
 * 120/208/240/277VAC voltage sensing input

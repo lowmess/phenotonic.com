@@ -1,12 +1,12 @@
 ---
-title: SEDE 1000W Ballast
+title: 1000DE Ballast
 id: growlite-sede
 manufacturer: Growlite
 description: This diverse ballast runs almost any HID lamp you throw at it.
 snippet: One ballast fires everything!
 price: 275
 weight: 8
-image: products.growlite.sede.jpg
+image: products.growlite.1000DE.jpg
 categories:
   - lighting
   - ballasts
