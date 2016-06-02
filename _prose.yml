@@ -1,6 +1,6 @@
 prose:
   rooturl: 'source'
-  ignore: ['index.md', 'contact.md', 'products.md', 'services.md', 'fonts', 'scripts', 'stylesheets']
+  ignore: ['index.md', 'contact.md', 'products.md', 'services.md', 'fonts', 'scripts', 'stylesheets', 'robots.txt']
   media: 'source/images'
   metadata:
     'source/products':
@@ -23,10 +23,10 @@ prose:
           help: 'A unique, hyphen seperated ID for the product'
           placeholder: 'phenotonic-bloom-box'
           type: 'text'
-      - name: 'Tagline'
+      - name: 'snippet'
         field:
           element: 'text'
-          label: 'Snippet'
+          label: 'Tagline'
           help: 'A snappy tagline for the product'
           placeholder: 'An Organic CO2 Generator'
           type: 'text'
