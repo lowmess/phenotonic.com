@@ -1,0 +1,4 @@
+prose:
+  rooturl: 'source'
+  ignore: ['index.md', 'contact.md', 'products.md', 'services.md', 'fonts', 'scripts', 'stylesheets']
+  media: 'source/images'
