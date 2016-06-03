@@ -2,7 +2,7 @@
 price: 104
 weight: 0
 published: false
-title: ''
+title: Growlite-315w-CMH-SE
 manufacturer: Growlite
 id: growlite-315W-SE-CMH
 snippet: Like a thunderbolt from zeus himself
