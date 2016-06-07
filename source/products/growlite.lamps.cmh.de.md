@@ -1,21 +1,20 @@
 ---
 price: 115
 weight: 0
-published: false
-title: Growlite-315W-CMH-DE
+title: Double-Ended CMH
 manufacturer: Growlite
-id: Growlite-315w-CMH-DE
-snippet: Supernova of light
-description: >-
-  Growlite's double jacketed CMH technology, just the best veg light on the
-  market.
+id: growlite-cmh-de
+snippet: A Supernova of Light
+description: Growlite's double-jacketed CMH technology makes the best veg light on the market.
+image: products.growlite.lamps.cmh-de.jpg
 categories:
   - lighting
   - lamps
+  - CMH
+  - double-ended
 ---
-### 315W DOUBLE ENDED FULL SPECTRUM CERAMIC METAL HALIDE 4000K
 
-#### 315W CMH
+#### Features
 
 * Initial Lumens: 28,500
 * Lamp Lumens Per Watt: 90

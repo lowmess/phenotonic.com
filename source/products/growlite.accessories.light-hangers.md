@@ -2,14 +2,15 @@
 price: 12
 weight: 0
 published: false
-title: Growlite-Light-Hangers
+title: Light Hangers
 manufacturer: Growlite
-id: Growlite-light-hangers
-description: HEAVY DUTY  REFLECTOR HANGERS
+id: growlite-light-hangers
+description: These heavy duty light hangers can hold (almost) anything.
+image: products.growlite.accessories.light-hangers.jpg
 categories:
+  - lighting
   - accessories
 ---
-### HEAVY DUTY REFLECTOR HANGERS
 
 #### Features
 
@@ -18,4 +19,3 @@ categories:
 * Suitable for large reflectors
 * Max weight capacity - 150 lbs / 68 kgs
 * 8 ft rope
-

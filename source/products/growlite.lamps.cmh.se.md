@@ -1,19 +1,19 @@
 ---
 price: 104
 weight: 0
-published: false
-title: Growlite-315w-CMH-SE
+title: Single-Ended CMH
 manufacturer: Growlite
-id: growlite-315W-SE-CMH
-snippet: Like a thunderbolt from zeus himself
-description: 'New Ceramic Metal Halide '
+id: growlite-cmh-se
+snippet: A Zeus-Like Thunderbolt
+description: Growlite's double-jacketed CMH technology makes the best veg light on the market.
+image: products.growlite.lamps.cmh-se.jpg
 categories:
   - lighting
   - lamps
+  - CMH
 ---
-### 315W SINGLE ENDED MOGUL BASE FULL SPECTRUM CERAMIC METAL HALIDE 4000K
 
-#### 315W CMH
+#### Features
 
 * Initial Lumens: 32,000
 * Lamp Lumens Per Watt: 102

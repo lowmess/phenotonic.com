@@ -1,12 +1,12 @@
 ---
-title: 315 Ballast
-id: growlite-315-ballast
+title: 315-CMH Ballast
+id: growlite-315-cmh
 manufacturer: Growlite
 description: The 315's Soft Start stabilizes start-up loads and extends lamp life and performance.
-snippet: Bright as Gandalf's staff!
+snippet: Bright yet Gentle
 price: 199
 weight: 8
-image: products.growlite.315.jpg
+image: products.growlite.ballasts.315-cmh.jpg
 categories:
   - lighting
   - ballasts

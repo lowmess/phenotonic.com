@@ -1,18 +1,18 @@
 ---
-title: HDE-E
-id: growlite-hde-e
+title: HSE Reflector
+id: growlite-hse
 manufacturer: Growlite
-description: A versatile reflector that combines exceptional double-ended HID lamp performance with a extremely economical design.
-snippet: Saves money, grows more
+description: The versatile reflector that combines the convenience of a single-ended mogul base HID lamps with an extremely economical design.
+snippet: Lamps In-and-Out with a Snap
 price: 155
 weight: 8
-image: products.growlite.hde-e.jpg
+image: products.growlite.reflectors.hse.jpg
 categories:
   - lighting
   - reflectors
 ---
 
-A versatile reflector that combines exceptional double-ended HID lamp performance with a extremely economical design. The HDE-E versatility and functionality make this product the most flexible double-ended fixture on the market.
+The versatile reflector that combines the convenience of a single-ended mogul base HID lamps with an extremely economical design. The HSE’s small footprint and functionality make this product a unique fixture on the market.
 
 #### Features
 
@@ -25,4 +25,4 @@ A versatile reflector that combines exceptional double-ended HID lamp performanc
 * Constructed of heavy-duty 22 gauge steel
 * 12” 16AWG ballast connector and 15’ lamp extension included standard
 * One (1) pair of V-hooks for mounting
-* 600-1000w HPS DE standard or high frequency lamps
+* Mogul base socket allows the HSE to use commonly available lamps

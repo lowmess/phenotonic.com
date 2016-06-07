@@ -1,16 +1,15 @@
 ---
-title: 1000DE Ballast
-id: growlite-1000de
+title: 1000-DE Ballast
+id: growlite-1000-de
 manufacturer: Growlite
 description: This diverse ballast runs almost any HID lamp you throw at it.
 snippet: One ballast fires everything!
 price: 275
 weight: 8
-image: products.growlite.1000DE.jpg
+image: products.growlite.ballasts.1000-DE.jpg
 categories:
   - lighting
   - ballasts
-published: true
 ---
 
 #### Features
@@ -22,7 +21,7 @@ published: true
 * Delayed ignition stabilizes start-up loads and extends lamp life
 * Four (4) switchable wattage settings (400W SE, 600W SE, 1000W SE, 1000W DE)
 * LED status/wattage indicators
-* Built-in fan for cooloing
+* Built-in fan for cooling
 * 120/208/240/277VAC voltage sensing input
 * Rated Voltage: AC90-305VAC
 * Input Frequency: 50/60Hz

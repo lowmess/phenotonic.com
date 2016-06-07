@@ -6,7 +6,7 @@ snippet: Built to be Cool
 id: growlite-hde-8
 price: 225
 weight: 8
-image: products.growlite.hde-8.jpg
+image: products.growlite.reflectors.hde-8.jpg
 categories:
   - lighting
   - reflectors

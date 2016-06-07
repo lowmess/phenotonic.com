@@ -1,12 +1,12 @@
 ---
-title: Karma Reflector
-id: growlite-karma
+title: OG
+id: growlite-og
 manufacturer: Growlite
-description: Karma's superior photometric performance creates a greater amount of uniform light nutrients.
-snippet: Karma: your plants got it coming
-price: 245
+description: The OG reflector is engineered with a vertical lamp for the even light distribution and use of all lumens.
+snippet: Turning the lighting world on its head
+price: 319
 weight: 8
-image: products.growlite.karma.jpg
+image: products.growlite.reflectors.og.jpg
 categories:
   - lighting
   - reflectors
@@ -16,8 +16,13 @@ categories:
 
 The patented Concealed Vacuum Airflow Technology reflector utilizes 100% of the hood's reflective surface to maximize the lumens provided by the lamp. The parabolic reflectors stretch, bend and magnify the lamp’s internal components. No open ducts increases reflective surface area by 30%. Compared to standard designs, this patented reflector technology will create more uniform light nutrients, promoting larger yields at harvest time.
 
+### Why use a vertical lamp?
+
+The OG reflector is engineered with a vertical lamp for the even light distribution and use of all lumens. Exceptional photometric performance and maximized thermal dissipation results in more consistent growing environments, with accelerated grow cycles and higher yields. The OG reflector is uniquely designed to take advantage of all of the lamp's available output.
+
 #### Features
 
+* Vertical lamp orientation provides longer lamp life resulting in more cycles and less lumen depreciation between lamp changes
 * Superior photometric performance creates a greater amount of uniform light nutrients
 * Patented reflector design creates a 30% improvement in light output over traditional, vented hoods
 * 8” push/pull duct openings maintain 100% reflective capability and improve airflow efficiency which allows more hoods to be vented using fewer fans
