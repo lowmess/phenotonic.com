@@ -1,13 +1,14 @@
 ---
 title: The Importance of CO2
-date: 2016-04-25
+date: 2016-04-20
 tags:
   - CO2
+  - Products
 author: Mark Crouch
 snippet: Exploring the Garden's Underrated Supplement
 ---
 
-Gardeners often ask me what the best nutrient is to make them have larger yields. When I ask them a few questions, I typically find that there is no CO2 supplementation in there garden. How do plants use the nutrients we give them? How is CO2 used in this process? How do these questions lead gardeners to more yields? 
+Gardeners often ask me what the best nutrient is to make them have larger yields. When I ask them a few questions, I typically find that there is no CO2 supplementation in there garden. How do plants use the nutrients we give them? How is CO2 used in this process? How do these questions lead gardeners to more yields?
 
 Increased levels of CO2 has profound effects on plants. It allows for more sugar production, or an increased metabolism. This causes the plant to have increased vigor. Plants will grow larger than they would under normal CO2 conditions, and more quickly. Increased growth rates mean the plants can eat more food; plants that eat more food means larger plants; larger plants means bigger yields. Just what every gardener is after.
 
