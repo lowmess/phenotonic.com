@@ -49,11 +49,9 @@ mixin product-preview(id)
 
         h3.product-preview__name: a(href="/" + product.path)= product.title
         h4.product-preview__data
-          a.product-preview__price(href="/" + product.path) $#{ product.price }
-          if product.categories
-            | &#032;|&#032;
-            each category in product.categories
-              a.product-preview__category(href="/" + product.path)= category
+          a.product-preview__manufacturer(href="/" + product.path)= product.manufacturer
+          | &#032;|&#032;
+          a.product-preview__price(href="/" + product.path)= "$" + product.price
 
 mixin bloom-box(id)
   section.bloom-box

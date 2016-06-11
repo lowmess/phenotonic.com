@@ -115,13 +115,18 @@ var siteBuild = Metalsmith(__dirname)
     sortBy: 'date',
     reverse: true
   }))
-  /* Eventual category implementation
+  /*
   .use(tags({
     handle: 'categories',
-    path:'store/categories/:tag/index.html',
-    layout: 'category.pug'
+    path:'products/categories/:tag/index.html',
+    layout: 'products.pug'
   }))
   */
+  .use(tags({
+    handle: 'manufacturer',
+    path:'products/manufacturer/:tag/index.html',
+    layout: 'manufacturer.pug'
+  }))
   .use(layouts({
     engine: 'pug',
     pretty: true,

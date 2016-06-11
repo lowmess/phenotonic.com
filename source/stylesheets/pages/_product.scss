@@ -36,6 +36,14 @@
       width: 50%;
     }
   }
+  &__manufacturer {
+    margin-bottom: 0;
+  }
+  &__title {
+    margin-top: 0;
+
+    color: $text-primary;
+  }
   &__buy {
     text-align: center;
   }

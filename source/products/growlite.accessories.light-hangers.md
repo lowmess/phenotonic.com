@@ -1,7 +1,6 @@
 ---
 price: 12
 weight: 0
-published: false
 title: Light Hangers
 manufacturer: Growlite
 id: growlite-light-hangers
