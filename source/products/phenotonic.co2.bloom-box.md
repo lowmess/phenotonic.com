@@ -11,6 +11,7 @@ categories:
   - environment
   - CO2
 layout: product--bloom-box.pug
+position: 3
 ---
 
 We made this box to give plants the happy life they deserve.

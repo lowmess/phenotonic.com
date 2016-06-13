@@ -55,7 +55,9 @@ var siteBuild = Metalsmith(__dirname)
       reverse: true
     },
     products: {
-      pattern: 'products/**/*.md'
+      pattern: 'products/**/*.md',
+      sortBy: 'position',
+      reverse: true
     },
     pages: {
       pattern: '*.md'

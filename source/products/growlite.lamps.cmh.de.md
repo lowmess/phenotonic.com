@@ -12,6 +12,7 @@ categories:
   - lamps
   - CMH
   - double-ended
+position: 2
 ---
 
 #### Features
