@@ -1,4 +1,4 @@
-header.header(class= title ? "header--" + title.toLowerCase() : "")
+header.header(class= title ? "header--" + title.replace(/'/g, "").replace(/\s/g, "-").toLowerCase() : "")
   .header__text
     if headline
       h1= headline

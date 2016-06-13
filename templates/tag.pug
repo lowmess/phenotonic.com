@@ -1,7 +1,7 @@
 extends page
 
 block prepend meta
-  - var title = tag
+  - var title = "Posts Tagged '" + tag + "'"
   - var headline = tag
   - var description = "Posts tagged '" + tag + "'"
 
@@ -19,7 +19,7 @@ block content
         if post.tags
           .post-preview__tags
             for hash in post.tags
-              a.post-preview__tag(href="/tagged/" + tag.toLowerCase())= hash
+              a.post-preview__tag(href="/tagged/" + hash.toLowerCase())= hash
 
       .post-preview__text
 

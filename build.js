@@ -126,7 +126,7 @@ var siteBuild = Metalsmith(__dirname)
   */
   .use(tags({
     handle: 'manufacturer',
-    path:'products/manufacturer/:tag/index.html',
+    path: 'products/manufacturer/:tag/index.html',
     layout: 'manufacturer.pug'
   }))
   .use(layouts({

@@ -13,7 +13,7 @@
 
     width: 100%;
 
-    box-shadow: 0 0 5px 0 rgba($shadow-primary, 0.25);
+    box-shadow: 0 0 5px 0 $shadow-primary;
 
     transition: transform 0.3s ease-in-out;
 

@@ -15,7 +15,7 @@
 .header--services {
   @include background-image('services.header');
 
-  padding-bottom: $services-offset;
+  padding-bottom: $card-offset;
 
   background-color: $services-primary;
 
@@ -36,19 +36,14 @@
   }
 
   &__container {
+    @include card($shadow: $services-shadow);
+
     position: relative;
-    top: -$services-offset;
+    top: -$card-offset;
 
     max-width: $max-width;
 
     margin: 0 auto;
-    padding: $gutter;
-
-    border-radius: $gutter * 0.5;
-
-    background-color: $background-primary;
-
-    box-shadow: 0 0 5px rgba($services-shadow, 0.25);
   }
 }
 
@@ -118,7 +113,7 @@
     max-width: $max-width;
 
     margin: 0 auto;
-    margin-top: $services-offset * -0.5;
+    margin-top: $card-offset * -0.5;
     padding: 0 $gutter $gutter;
   }
 

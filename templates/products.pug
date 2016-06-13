@@ -1,7 +1,14 @@
-extends page
+extends default
 
-block content
+block page
+  include partials/header
 
-  each item in collections.products
+  .page.page--products
 
-    +product-preview(item.id)
+    main.main.main--products(role="main")
+
+      block products
+
+        each item in collections.products
+
+          +product-preview(item.id)

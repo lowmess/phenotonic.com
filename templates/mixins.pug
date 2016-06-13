@@ -40,18 +40,18 @@ mixin product-preview(id)
 
     if id == product.id
 
-      .product-preview
+      a.product-preview.is-image(href="/" + product.path)
 
         if product.image
-          a.product-preview__image.is-image(href="/" + product.path): img(src="/images/" + product.image)
+          .product-preview__image: img(src="/images/" + product.image)
         else
           .product-preview__placeholder
 
-        h3.product-preview__name: a(href="/" + product.path)= product.title
+        h3.product-preview__name= product.title
         h4.product-preview__data
-          a.product-preview__manufacturer(href="/" + product.path)= product.manufacturer
+          span.product-preview__manufacturer= product.manufacturer
           | &#032;|&#032;
-          a.product-preview__price(href="/" + product.path)= "$" + product.price
+          span.product-preview__price= "$" + product.price
 
 mixin bloom-box(id)
   section.bloom-box

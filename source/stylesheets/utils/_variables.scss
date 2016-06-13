@@ -11,7 +11,7 @@ $gutter: $base-line-height;
 $measure: 55rem;
 $max-width: 64rem;
 $nav-height: $base-line-height * 2.5;
-$services-offset: $gutter * 3;
+$card-offset: $gutter * 3;
 
 // Colors
 $bulbasaur: #f4f6f4;
@@ -37,7 +37,7 @@ $link-primary: $ivysaur;
 $button-primary: $ivysaur;
 $outline-primary: $onix;
 $background-primary: $lugia;
-$shadow-primary: $venusaur;
+$shadow-primary: rgba($venusaur, 0.25);
 
 $link-inactive: $onix;
 $button-inactive: $onix;
@@ -49,6 +49,8 @@ $background-reverse: $venusaur;
 
 $nav-background: $bulbasaur;
 
+$products-background: $bulbasaur;
+
 $services-primary: $wartortle;
 $services-header: $lugia;
 $services-text: $blastoise;
@@ -57,7 +59,7 @@ $services-link: $wartortle;
 $services-button: $wartortle;
 $services-callout: $wartortle;
 $services-background: $squirtle;
-$services-shadow: $blastoise;
+$services-shadow: rgba($blastoise, 0.25);
 $services-divider: $wartortle;
 
 // Breakpoints
@@ -75,7 +77,9 @@ $breakpoints: (
 
   contact: "(min-width: 35em)",
 
-  mobile-nav: "(min-height: 22.5em)"
+  mobile-nav: "(min-height: 22.5em)",
+
+  product-cards: "(min-width: 35em) and (max-width: 63.9em)"
 );
 
 // Font-stacks
