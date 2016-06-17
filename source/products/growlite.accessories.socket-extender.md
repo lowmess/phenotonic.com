@@ -5,7 +5,7 @@ title: Socket Extender
 manufacturer: Growlite
 id: growlite-socket-extender
 description: Reach the farthest corners of your garden with this socket extender for HID lamps.
-snippet: \"Go! Go! Gadget Light Extender!\"
+snippet: '"Go! Go! Gadget Light Extender!"'
 image: products.growlite.accessories.socket-extender.jpg
 categories:
   - lighting

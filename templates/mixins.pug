@@ -49,6 +49,11 @@ mixin product-preview(id)
           .product-preview__placeholder
 
         h3.product-preview__name: a(href="/" + product.path)= product.title
+        if product.snippet
+          h4.product-preview__snippet= product.snippet
+
+        hr
+
         h4.product-preview__data
           a(href="/products/manufacturer/" + product.manufacturer).product-preview__manufacturer= product.manufacturer
           | &#032;|&#032;

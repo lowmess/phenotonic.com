@@ -71,7 +71,10 @@
   }
 
   &__name {
-    color: $link-primary;
+    margin-bottom: $base-line-height * 0.25;
+  }
+  &__snippet {
+    margin-top: $base-line-height * 0.25;
   }
   &__data {
     margin-bottom: 0;

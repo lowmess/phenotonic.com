@@ -5,7 +5,6 @@ var defaultValues = require('metalsmith-default-values')
 // HTML
 var layouts = require('metalsmith-layouts')
 var drafts = require('metalsmith-drafts')
-var snippet = require('metalsmith-snippet')
 var markdown = require('metalsmith-markdown')
 var permalinks = require('metalsmith-permalinks')
 var collections = require('metalsmith-collections')
@@ -96,9 +95,6 @@ var siteBuild = Metalsmith(__dirname)
     gfm: true,
     smartypants: true,
     tables: true
-  }))
-  .use(snippet({
-    maxLength: 140
   }))
   .use(permalinks({
     pattern: ':collection/:title',
