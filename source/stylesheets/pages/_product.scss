@@ -3,7 +3,11 @@
 // -----------------------------------------------------------------------------
 
 .main--product {
-  padding-top: 0;
+  padding-top: $base-line-height;
+
+  max-width: $measure;
+
+  margin: 0 auto;
 }
 .product {
   background: $products-background;
