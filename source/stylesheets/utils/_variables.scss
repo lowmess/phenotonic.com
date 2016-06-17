@@ -12,6 +12,7 @@ $measure: 55rem;
 $max-width: 64rem;
 $nav-height: $base-line-height * 2.5;
 $card-offset: $gutter * 3;
+$card-width: 48rem;
 
 // Colors
 $bulbasaur: #f4f6f4;
@@ -41,6 +42,8 @@ $shadow-primary: rgba($venusaur, 0.25);
 
 $link-inactive: $onix;
 $button-inactive: $onix;
+
+$header-heading: $lugia;
 
 $text-reverse: $bulbasaur;
 $link-reverse: $lugia;

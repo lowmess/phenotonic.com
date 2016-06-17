@@ -8,22 +8,23 @@ mixin add-product(id)
         data-item-price= product.price ,
         data-item-weight= product.weight ,
         data-item-url= site.url + product.path ,
-        data-item-description= product.description ? product.description : '') Add to Cart
+        data-item-description= product.snippet ? product.snippet : product.description ? product.description : '') Add to Cart
 
 mixin mini-product(id)
 
   for product in collections.products
     if id == product.id
 
-      .mini-product
+      .mini-product&attributes(attributes)
 
         a.mini-product__image.is-image(href="/" + product.path): img(src="/images/" + product.image, alt=product.title)
 
         .mini-product__info
 
+          h3.mini-product__manufacturer: a(href="/products/manufacturer/" + product.manufacturer)= product.manufacturer
           h2.mini-product__name: a(href="/" + product.path)= product.title
 
-          if product.snippet
+          //- if product.snippet
             h4.mini-product__snippet= product.snippet
 
           hr
@@ -40,16 +41,16 @@ mixin product-preview(id)
 
     if id == product.id
 
-      a.product-preview.is-image(href="/" + product.path)
+      .product-preview.is-image
 
         if product.image
-          .product-preview__image: img(src="/images/" + product.image)
+          a.product-preview__image.is-image(href="/" + product.path): img(src="/images/" + product.image)
         else
           .product-preview__placeholder
 
-        h3.product-preview__name= product.title
+        h3.product-preview__name: a(href="/" + product.path)= product.title
         h4.product-preview__data
-          span.product-preview__manufacturer= product.manufacturer
+          a(href="/products/manufacturer/" + product.manufacturer).product-preview__manufacturer= product.manufacturer
           | &#032;|&#032;
           span.product-preview__price= "$" + product.price
 

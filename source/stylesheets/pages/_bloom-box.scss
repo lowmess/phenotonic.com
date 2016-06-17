@@ -96,7 +96,8 @@
   }
 
   &__products {
-    @include outer-container;
-    @include pad;
+    padding: $gutter 0;
+
+    background-color: $products-background;
   }
 }

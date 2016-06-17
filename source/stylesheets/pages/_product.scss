@@ -2,61 +2,9 @@
 // This file contains styles that are specific to the product page.
 // -----------------------------------------------------------------------------
 
+.main--product {
+  padding-top: 0;
+}
 .product {
-
-  display: flex;
-  flex-flow: column nowrap;
-
-  @include respond-to(large) {
-    flex-flow: row-reverse nowrap;
-  }
-
-  &__image {
-    display: block;
-
-    @include respond-to(large) {
-      width: 50%;
-    }
-
-    height: auto;
-    min-height: 250px;
-    max-height: 75vh;
-
-    margin: 0 auto;
-
-    background: $outline-primary;
-
-    &--placeholder {
-      padding-top: 75vh;
-    }
-  }
-
-  &__info {
-    @include respond-to(large) {
-      width: 50%;
-    }
-  }
-  &__manufacturer {
-    margin-bottom: 0;
-  }
-  &__title {
-    margin-top: 0;
-
-    color: $text-primary;
-  }
-  &__buy {
-    text-align: center;
-  }
-  &__price {
-    display: inline;
-
-    position: relative;
-    top: $base-font-size * 0.25;
-
-    margin-right: $gutter * 0.5;
-
-    @include respond-to(small) {
-      margin-right: $gutter;
-    }
-  }
+  background: $products-background;
 }

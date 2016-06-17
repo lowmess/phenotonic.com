@@ -15,8 +15,6 @@
 .header--services {
   @include background-image('services.header');
 
-  padding-bottom: $card-offset;
-
   background-color: $services-primary;
 
   color: $services-text-reverse;

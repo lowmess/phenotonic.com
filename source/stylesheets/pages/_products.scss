@@ -2,9 +2,8 @@
 // This file contains styles that are specific to the product page.
 // -----------------------------------------------------------------------------
 
-.header--products, .header--phenotonic, .header--growlite {
+.header--products {
   @include background-image('products.header');
-  padding-bottom: $card-offset;
 }
 .page--products {
   margin-bottom: $card-offset * -1;
@@ -13,5 +12,7 @@
 }
 .main--products {
   position: relative;
-  top: $card-offset * -2.5;
+  top: $card-offset * -1;
+
+  padding-top: 0;
 }

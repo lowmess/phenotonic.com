@@ -1,29 +1,11 @@
 extends default
 
-block content
+block page
+  - var card = true
+  include partials/header
 
   article.product
 
-    if image
-      img.product__image(src="/images/" + image, alt=title)
-    else
-      .product__image.product__image--placeholder
+    +mini-product(id)(class="mini-product--float")
 
-    section.product__info
-
-      h3.product__manufacturer: a(href="/products/manufacturer/" + manufacturer)= manufacturer
-
-      h1.product__title= title
-
-      if snippet
-        h3.product__snippet= snippet
-
-      != contents
-
-      hr
-
-      .product__buy
-
-        h3.product__price $#{ price }
-
-        +add-product(id)
+    main.main.main--product(role="main")!= contents

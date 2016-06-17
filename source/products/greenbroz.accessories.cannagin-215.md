@@ -2,7 +2,7 @@
 price: 3500
 weight: 0
 title: CannaGin 215
-manufacturer: Greenbroz
+manufacturer: GreenBroz
 id: greenbroz-cannagin-215
 snippet: Separating the green from the chaff
 description: Designed to save time and labor hours, this productive bud-removal machine offers variable speeds and four automatic doors for different stem sizes.
@@ -10,7 +10,7 @@ categories:
   - accessories
 ---
 
-The CannaGin represents the first step in the Greenbroz harvesting process, getting you material ready to be trimmed. Designed to save time and labor hours, this productive bud-removal machine offers variable speeds and four automatic doors for different stem sizes.
+The CannaGin represents the first step in the GreenBroz harvesting process, getting you material ready to be trimmed. Designed to save time and labor hours, this productive bud-removal machine offers variable speeds and four automatic doors for different stem sizes.
 
 #### Features:
 
