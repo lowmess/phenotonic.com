@@ -1,5 +1,5 @@
 ---
-title: LED Clone Light
+title: LED Cloner
 id: growlite-led
 manufacturer: Growlite
 description: Growlite's full-spectrum LED clone light.

@@ -1,5 +1,5 @@
 ---
-title: Karma Reflector
+title: Karma
 id: growlite-karma
 manufacturer: Growlite
 description: Karma's superior photometric performance creates a greater amount of uniform light nutrients.

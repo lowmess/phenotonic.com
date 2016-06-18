@@ -1,5 +1,5 @@
 ---
-title: 315-CMH Ballast
+title: 315-CMH
 id: growlite-315-cmh
 manufacturer: Growlite
 description: The 315's Soft Start stabilizes start-up loads and extends lamp life and performance.

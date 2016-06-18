@@ -1,5 +1,5 @@
 ---
-title: 1000-DE Ballast
+title: 1000-DE
 id: growlite-1000-de
 manufacturer: Growlite
 description: This diverse ballast runs almost any HID lamp you throw at it.

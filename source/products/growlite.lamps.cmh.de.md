@@ -1,7 +1,7 @@
 ---
 price: 115
 weight: 0
-title: Double-Ended CMH
+title: DE CMH
 manufacturer: Growlite
 id: growlite-cmh-de
 snippet: A Supernova of Light
