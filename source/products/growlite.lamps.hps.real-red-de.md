@@ -5,7 +5,7 @@ title: Double-Ended Real Red HPS
 manufacturer: Growlite
 id: growlite-real-red-hps-double-ended
 description: Real Red HPS lamps are the best lamps on the market for flowering plants and are designed to maximize the light spectrum to give you outstanding results.
-image: products.growlite.lamps.real-red-hps-double-ended.jpg
+image: products.growlite.lamps.hps.real-red-de.jpg
 categories:
   - lighting
   - lamps

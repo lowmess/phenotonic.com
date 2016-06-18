@@ -4,7 +4,7 @@ weight: 0
 title: CannaGin 215
 manufacturer: GreenBroz
 id: greenbroz-cannagin-215
-snippet: Separating the green from the chaff
+snippet: Separate the bud from the chaff
 description: Designed to save time and labor hours, this productive bud-removal machine offers variable speeds and four automatic doors for different stem sizes.
 categories:
   - accessories

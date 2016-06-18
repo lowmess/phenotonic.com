@@ -6,7 +6,7 @@ description: Growlite's full-spectrum LED clone light.
 snippet: Clones love this light
 price: 300
 weight: 8
-image: products.growlite.reflectors.led.jpg
+image: products.growlite.reflectors.led-cloner.jpg
 categories:
   - lighting
   - reflectors
