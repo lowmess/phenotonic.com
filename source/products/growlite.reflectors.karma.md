@@ -1,9 +1,9 @@
 ---
-title: Karma Reflector
+title: Karma
 id: growlite-karma
 manufacturer: Growlite
 description: Karma's superior photometric performance creates a greater amount of uniform light nutrients.
-snippet: Karma: your plants got it coming
+snippet: "Karma: your plants got it coming"
 price: 245
 weight: 8
 image: products.growlite.reflectors.karma.jpg

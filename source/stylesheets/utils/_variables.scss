@@ -8,10 +8,10 @@ $modular-scale-base: 1rem;
 $base-font-size: modular-scale(0);
 $base-line-height: 1.618rem;
 $gutter: $base-line-height;
-$measure: 55rem;
+$measure: 48rem;
 $max-width: 64rem;
 $nav-height: $base-line-height * 2.5;
-$services-offset: $gutter * 3;
+$card-offset: $gutter * 3;
 
 // Colors
 $bulbasaur: #f4f6f4;
@@ -37,10 +37,12 @@ $link-primary: $ivysaur;
 $button-primary: $ivysaur;
 $outline-primary: $onix;
 $background-primary: $lugia;
-$shadow-primary: $venusaur;
+$shadow-primary: rgba($venusaur, 0.25);
 
 $link-inactive: $onix;
 $button-inactive: $onix;
+
+$header-heading: $lugia;
 
 $text-reverse: $bulbasaur;
 $link-reverse: $lugia;
@@ -48,6 +50,8 @@ $button-reverse: $lugia;
 $background-reverse: $venusaur;
 
 $nav-background: $bulbasaur;
+
+$products-background: $bulbasaur;
 
 $services-primary: $wartortle;
 $services-header: $lugia;
@@ -57,7 +61,7 @@ $services-link: $wartortle;
 $services-button: $wartortle;
 $services-callout: $wartortle;
 $services-background: $squirtle;
-$services-shadow: $blastoise;
+$services-shadow: rgba($blastoise, 0.25);
 $services-divider: $wartortle;
 
 // Breakpoints
@@ -73,7 +77,11 @@ $breakpoints: (
   xlarge: "(min-width: 90em)",
   huge: "(min-width: 120em)",
 
-  contact: "(min-width: 35em)"
+  contact: "(min-width: 35em)",
+
+  mobile-nav: "(min-height: 22.5em)",
+
+  product-cards: "(min-width: 35em) and (max-width: 63.9em)"
 );
 
 // Font-stacks
@@ -85,7 +93,7 @@ $body-text: "Bitter", $georgia;
 
 $h1-line-height: $base-line-height * 3;
 $h2-line-height: $base-line-height * 2;
-$h3-line-height: $base-line-height;
+$h3-line-height: $base-line-height * 1;
 $h4-line-height: $base-line-height;
 
 // Headers

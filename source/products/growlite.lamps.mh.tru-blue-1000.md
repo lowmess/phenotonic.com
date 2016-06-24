@@ -5,6 +5,7 @@ title: 1000W Tru Blue MH
 manufacturer: Growlite
 id: growlite-tru-blue-mh-1000
 description: Tru Blue lamps are the only true MH lamp for vegetation cycles and are designed to provide the complete blue spectrum to optimize overall vegetation quality and stability.
+image: products.growlite.lamps.mh.tru-blue.jpg
 categories:
   - lighting
   - lamps

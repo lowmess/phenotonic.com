@@ -1,11 +1,11 @@
 ---
-price: 9.5
+price: 10
 weight: 0
 title: 24W Real Red T5HO
 manufacturer: Growlite
 id: growlite-t5ho-real-red-24
 description: Real Red T5HO lamps are the best lamps on the market for flowering plants and are designed to maximize the light spectrum to give you outstanding results.
-image: products.growlite.lamps.t5ho.real-red-24.jpg
+image: products.growlite.lamps.t5ho.jpg
 categories:
   - lighting
   - lamps

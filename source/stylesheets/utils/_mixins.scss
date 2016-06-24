@@ -97,10 +97,23 @@
 
 @mixin container($max: $max-width) {
   display: relative;
-  
+
   width: 100%;
   max-width: $max;
 
   margin: 0 auto;
   padding: $gutter;
+}
+
+// CARD
+// ====
+
+@mixin card($bg: $background-primary, $shadow: $shadow-primary) {
+  padding: $gutter;
+
+  border-radius: $gutter * 0.5;
+
+  background-color: $bg;
+
+  box-shadow: 0 0 5px $shadow;
 }

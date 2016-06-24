@@ -1,15 +1,16 @@
 ---
-title: 1000-DE Ballast
+title: 1000-DE
 id: growlite-1000-de
 manufacturer: Growlite
 description: This diverse ballast runs almost any HID lamp you throw at it.
 snippet: One ballast fires everything!
 price: 275
 weight: 8
-image: products.growlite.ballasts.1000-DE.jpg
+image: products.growlite.ballasts.1000-de.jpg
 categories:
   - lighting
   - ballasts
+position: 1
 ---
 
 #### Features

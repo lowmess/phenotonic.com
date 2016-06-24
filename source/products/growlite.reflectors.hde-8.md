@@ -1,5 +1,5 @@
 ---
-title: HDE 8" Reflector
+title: HDE
 manufacturer: Growlite
 description: The first double-ended horticultural reflector suitable for both indoor and greenhouse applications.
 snippet: Built to be Cool

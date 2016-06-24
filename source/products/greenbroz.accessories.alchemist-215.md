@@ -2,15 +2,19 @@
 price: 3500
 weight: 0
 title: Alchemist 215
-manufacturer: Greenbroz
+manufacturer: GreenBroz
 id: greenbroz-alchemist-215
 snippet: Pure, solvent-less trichome extraction
-description: The Alchemist 215 is Greenbroz solvent-free trichome extraction system.
+description: The Alchemist 215 is GreenBroz solvent-free trichome extraction system.
 categories:
   - accessories
 ---
 
+<<<<<<< HEAD
 The Alchemist 215 is Greenbroz solvent-free trichome extraction system. A variable run time fits your specific needs and the 130 stainless steel micron screen provides the perfect option for this machine to be used for dry-sift, or with pulverized dry-ice.
+=======
+The Alchemist 215 is GreenBroz solvent-free trichome extraction system. A variable run time fits your specific needs and the 130 stainless steel micron screen provides the perfect option for this machine to be used for dry-sift, or with pulverized dry-ice.
+>>>>>>> new-products
 
 #### Features:
 

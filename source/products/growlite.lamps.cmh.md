@@ -1,7 +1,7 @@
 ---
 price: 104
 weight: 0
-title: Single-Ended CMH
+title: CMH
 manufacturer: Growlite
 id: growlite-cmh-se
 snippet: A Zeus-Like Thunderbolt

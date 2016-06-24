@@ -1,5 +1,5 @@
 ---
-title: HSE Reflector
+title: HSE
 id: growlite-hse
 manufacturer: Growlite
 description: The versatile reflector that combines the convenience of a single-ended mogul base HID lamps with an extremely economical design.

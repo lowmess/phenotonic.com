@@ -5,7 +5,7 @@ title: 1000W Real Red HPS
 manufacturer: Growlite
 id: growlite-real-red-hps-1000
 description: Real Red HPS lamps are the best lamps on the market for flowering plants and are designed to maximize the light spectrum to give you outstanding results.
-image: products.growlite.lamps.real-red-hps-1000w.jpg
+image: products.growlite.lamps.hps.real-red.jpg
 categories:
   - lighting
   - lamps
