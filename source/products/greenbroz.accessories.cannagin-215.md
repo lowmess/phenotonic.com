@@ -10,11 +10,7 @@ categories:
   - accessories
 ---
 
-<<<<<<< HEAD
-The CannaGin represents the first step in the Greenbroz harvesting process, getting you material ready to be trimmed. Designed to save time and labor hours, this productive bud-removal machine offers variable speeds and four automatic doors for different stem sizes.
-=======
 The CannaGin represents the first step in the GreenBroz harvesting process, getting you material ready to be trimmed. Designed to save time and labor hours, this productive bud-removal machine offers variable speeds and four automatic doors for different stem sizes.
->>>>>>> new-products
 
 #### Features:
 
