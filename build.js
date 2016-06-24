@@ -26,7 +26,8 @@ var siteBuild = Metalsmith(__dirname)
       description: 'Phenotonic provides the tools, expertise, and education for gardens of all varieties & gardeners of all skill levels.',
       keywords: 'grow, growing, garden, gardening, consulting, consultants, consultant, consult, experts, expert, expertise, mmj, marijuana, vegetable, hydroponic, organic, hydroponics, hydro',
       snipcart: {
-        key: 'NmNhYWY2MGYtZTljYi00YzE4LThlNjktNGRhMGE2OTM2ZjAx'
+        key: 'NmNhYWY2MGYtZTljYi00YzE4LThlNjktNGRhMGE2OTM2ZjAx',
+        testKey: 'OTMzNjYxMTUtYmVmZS00MDhjLTgwODMtMzU2NWYwNzg1MDkx'
       }
     }
   })
