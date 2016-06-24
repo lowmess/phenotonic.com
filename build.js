@@ -5,7 +5,6 @@ var defaultValues = require('metalsmith-default-values')
 // HTML
 var layouts = require('metalsmith-layouts')
 var drafts = require('metalsmith-drafts')
-var snippet = require('metalsmith-snippet')
 var markdown = require('metalsmith-markdown')
 var permalinks = require('metalsmith-permalinks')
 var collections = require('metalsmith-collections')
@@ -55,7 +54,9 @@ var siteBuild = Metalsmith(__dirname)
       reverse: true
     },
     products: {
-      pattern: 'products/**/*.md'
+      pattern: 'products/**/*.md',
+      sortBy: 'position',
+      reverse: true
     },
     pages: {
       pattern: '*.md'
@@ -95,9 +96,6 @@ var siteBuild = Metalsmith(__dirname)
     smartypants: true,
     tables: true
   }))
-  .use(snippet({
-    maxLength: 140
-  }))
   .use(permalinks({
     pattern: ':collection/:title',
     relative: false,
@@ -115,13 +113,18 @@ var siteBuild = Metalsmith(__dirname)
     sortBy: 'date',
     reverse: true
   }))
-  /* Eventual category implementation
+  /*
   .use(tags({
     handle: 'categories',
-    path:'store/categories/:tag/index.html',
-    layout: 'category.pug'
+    path:'products/categories/:tag/index.html',
+    layout: 'products.pug'
   }))
   */
+  .use(tags({
+    handle: 'manufacturer',
+    path: 'products/manufacturer/:tag/index.html',
+    layout: 'manufacturer.pug'
+  }))
   .use(layouts({
     engine: 'pug',
     pretty: true,

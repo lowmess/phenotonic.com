@@ -1,19 +1,21 @@
 ---
-title: Growlite HDE 8" Reflector
-description: The first Double Ended Horticultural Reflector suitable for both indoor and greenhouse applications.
+title: HDE
+manufacturer: Growlite
+description: The first double-ended horticultural reflector suitable for both indoor and greenhouse applications.
 snippet: Built to be Cool
 id: growlite-hde-8
 price: 225
 weight: 8
-image: products.growlite.hde8.jpg
+image: products.growlite.reflectors.hde-8.jpg
 categories:
   - lighting
+  - reflectors
 ---
 
-### Double-Ended Horticultural Reflector
-The first Double Ended Horticultural Reflector suitable for both indoor and greenhouse applications. Flexibility within the unit, combined with end user functionality, makes this product one of a kind.
+The first double-ended horticultural reflector suitable for both indoor and greenhouse applications. Flexibility within the unit, combined with end user functionality, makes this product one of a kind.
 
 ### What is Concealed Vacuum Airflow Technology?
+
 The patented Concealed Vacuum Airflow Technology reflector utilizes 100% of the hood's reflective surface to maximize the lumens provided by the lamp. The parabolic reflectors stretch, bend and magnify the lamp’s internal components. No open ducts increases reflective surface area by 30%. Compared to standard designs, this patented reflector technology will create more uniform light nutrients, promoting larger yields at harvest time.
 
 #### Features
@@ -31,5 +33,5 @@ The patented Concealed Vacuum Airflow Technology reflector utilizes 100% of the 
 * Standard w/15’ cord and ballast plug
 * One (1) pair of V-hooks for mounting
 * 400-1000w HPS DE standard or high frequency lamps
- Units with 1000w lamps generate 3700 BTU, 600w lamps generate 2200 BTU
+* Units with 1000w lamps generate 3700 BTU, 600w lamps generate 2200 BTU
 * 650 to 875 CFM fan recommended for air cooling

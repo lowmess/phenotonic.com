@@ -1,0 +1,11 @@
+extends products
+
+block prepend meta
+  - var title = tag
+  - var headline = tag
+
+block products
+
+  each product in pagination.files
+
+    +product-preview(product.id)

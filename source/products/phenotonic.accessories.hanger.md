@@ -1,10 +1,12 @@
 ---
 title: Hanger
+manufacturer: Phenotonic
 snippet: The Ultimate (Only) Bloom Box Accessory
-id: hanger
+description: This revolutionary device allows you to never not hang things again.
+id: phenotonic-hanger
 price: 5
 weight: 0.1
-image: products.hanger.jpg
+image: products.phenotonic.accessories.hanger.jpg
 categories:
   - accessories
 ---

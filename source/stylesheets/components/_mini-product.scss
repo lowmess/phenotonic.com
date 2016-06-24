@@ -3,18 +3,31 @@
 // -----------------------------------------------------------------------------
 
 .mini-product {
+  @include card;
+
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-between;
 
-  padding: $gutter;
+  max-width: $measure;
+
+  margin: 0 $gutter;
 
   @include respond-to(small) {
     flex-flow: row nowrap;
   }
 
-  // max-height: 50vh;
+  @include respond-to(large) {
+    margin: 0 auto;
+  }
+
+  &--float {
+    position: relative;
+    top: $card-offset * -1;
+
+    margin-bottom: $card-offset * -1;
+  }
 
   &__image {
     flex: 1;
@@ -49,12 +62,15 @@
 
     text-align: center;
   }
-  &__name {
-    margin-bottom: 0;
+  &__manufacturer {
+    margin-bottom: $base-line-height * 0.25;
+
+    a {
+      color: $text-primary;
+    }
   }
-  &__snippet {
-    margin-top: 0;
-    margin-bottom: 0;
+  &__name {
+    margin-top: $base-line-height * 0.25;
   }
   &__purchase {
     margin-top: 0;

@@ -13,6 +13,10 @@
 
   color: $text-reverse;
 
+  &--card {
+    padding-bottom: $card-offset;
+  }
+
   &__text {
     @include outer-container;
     @include pad;
@@ -20,9 +24,16 @@
     padding-top: $gutter * 4;
     padding-bottom: $gutter;
   }
+  &__manufacturer {
+    margin-bottom: $base-line-height * 0.25;
 
-  h1 {
-    color: $text-reverse;
+    & + .header__title {
+      margin-top: $base-line-height * 0.25;
+    }
+  }
+
+  &__title {
+    color: $header-heading;
   }
 
   a {
