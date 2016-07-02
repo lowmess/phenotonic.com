@@ -16,7 +16,8 @@
     &:focus {
       @content;
     }
-  } @else {
+  }
+  @else {
     &:hover,
     &:active,
     &:focus {
@@ -63,9 +64,9 @@
 // @author hmphry
 // @link http://hmphry.com/useful-sass-mixins
 
-@mixin font($group, $id:regular){
-  @each $font in $font-stack{
-    @if($group == map-get($font, group) and $id == map-get($font, id)){
+@mixin font($group, $id:regular) {
+  @each $font in $font-stack {
+    @if ($group == map-get($font, group) and $id == map-get($font, id)) {
       font-family: map-get($font, font);
       font-weight: map-get($font, weight);
       font-style: map-get($font, style);
@@ -80,15 +81,15 @@
 // @param {Number} $level - # of image variants, including base image
 
 @mixin background-image($image, $ext: 'jpg', $level: 4) {
-  background-image: url("../images/#{$image}.#{$ext}");
+  background-image: url('../images/#{$image}.#{$ext}');
   @if $level > 1 {
-    @include respond-to(small) { background-image: url("../images/#{$image}@2x.#{$ext}"); }
+    @include respond-to(small) { background-image: url('../images/#{$image}@2x.#{$ext}'); }
   }
   @if $level > 2 {
-    @include respond-to(medium) { background-image: url("../images/#{$image}@3x.#{$ext}"); }
+    @include respond-to(medium) { background-image: url('../images/#{$image}@3x.#{$ext}'); }
   }
   @if $level > 3 {
-    @include respond-to(large) { background-image: url("../images/#{$image}@4x.#{$ext}"); }
+    @include respond-to(large) { background-image: url('../images/#{$image}@4x.#{$ext}'); }
   }
 }
 
@@ -109,9 +110,8 @@
 // ====
 
 @mixin card($bg: $background-primary, $shadow: $shadow-primary) {
-  padding: $gutter;
-
   border-radius: $gutter * 0.5;
+  padding: $gutter;
 
   background-color: $bg;
 

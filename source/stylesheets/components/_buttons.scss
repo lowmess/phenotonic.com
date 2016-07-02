@@ -7,16 +7,16 @@
 
   display: inline-block;
 
-  padding: $base-font-size * 0.5 $base-font-size * 1.5 $base-font-size * 0.5;
   border-bottom: 0;
   border: 3px solid $button-primary;
   border-radius: $base-font-size * 1.5;
+  padding: $base-font-size * 0.5 $base-font-size * 1.5 $base-font-size * 0.5;
 
   background-color: transparent;
 
+  color: $button-primary;
   text-align: center;
   letter-spacing: 0.05rem;
-  color: $button-primary;
 
   cursor: pointer;
 

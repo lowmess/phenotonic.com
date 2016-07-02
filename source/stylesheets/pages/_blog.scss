@@ -18,12 +18,14 @@
 
     text-align: right;
   }
+
   &__date {
     @include clearfix;
 
     margin-top: 2.75rem;
     margin-bottom: 0.5rem;
   }
+
   &__tags {
     margin-bottom: $h4-line-height;
 
@@ -31,8 +33,9 @@
       color: $link-inactive;
     }
   }
+
   &__tag {
-    &:not(:last-child):after {
+    &:not(:last-child)::after {
       content: ', ';
 
       user-select: text;
@@ -49,9 +52,11 @@
     margin-right: 3px;
     border-left: 3px solid $outline-primary;
   }
+
   &__title {
     margin-bottom: 0;
   }
+
   &__snippet {
     margin-top: 0;
   }

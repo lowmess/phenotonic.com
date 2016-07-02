@@ -67,27 +67,27 @@ $services-divider: $wartortle;
 // Breakpoints
 
 $breakpoints: (
-  small: "(min-width: 30em)",
-  is-small: "(max-width: 29.9em)",
-  medium: "(min-width: 40em)",
-  is-medium: "(min-width: 40em) and (max-width: 63.9em)",
-  large: "(min-width: 64em)",
-  not-large: "(max-width: 63.9em)",
-  is-large: "(min-width: 64em) and (max-width: 89.9em)",
-  xlarge: "(min-width: 90em)",
-  huge: "(min-width: 120em)",
+  small: '(min-width: 30em)',
+  is-small: '(max-width: 29.9em)',
+  medium: '(min-width: 40em)',
+  is-medium: '(min-width: 40em) and (max-width: 63.9em)',
+  large: '(min-width: 64em)',
+  not-large: '(max-width: 63.9em)',
+  is-large: '(min-width: 64em) and (max-width: 89.9em)',
+  xlarge: '(min-width: 90em)',
+  huge: '(min-width: 120em)',
 
-  contact: "(min-width: 35em)",
+  contact: '(min-width: 35em)',
 
-  mobile-nav: "(min-height: 22.5em)",
+  mobile-nav: '(min-height: 22.5em)',
 
-  product-cards: "(min-width: 35em) and (max-width: 63.9em)"
+  product-cards: '(min-width: 35em) and (max-width: 63.9em)'
 );
 
 // Font-stacks
 
-$heading-text: "Geomanist", $helvetica;
-$body-text: "Bitter", $georgia;
+$heading-text: 'Geomanist', $helvetica;
+$body-text: 'Bitter', $georgia;
 
 // line-heights
 
@@ -147,14 +147,3 @@ $font-stack:
   (group: monospace, id: regular-italic, font: $monospace, weight: 400, style: italic),
   (group: monospace, id: bold, font: $monospace, weight: 700, style: normal),
   (group: monospace, id: bold-italic, font: $monospace, weight: 400, style: italic);
-
-  // (group: geomanist, id: thin, font: $geomanist, weight: 100, style: normal),
-  // (group: geomanist, id: thin-italic, font: $geomanist, weight: 100, style: italic),
-  // (group: geomanist, id: extralight, font: $geomanist, weight: 200, style: normal),
-  // (group: geomanist, id: extralight-italic, font: $geomanist, weight: 200, style: italic),
-  // (group: geomanist, id: light, font: $geomanist, weight: 300, style: normal),
-  // (group: geomanist, id: light-italic, font: $geomanist, weight: 300, style: italic),
-  // (group: geomanist, id: black, font: $geomanist, weight: 800, style: normal),
-  // (group: geomanist, id: black-italic, font: $geomanist, weight: 800, style: italic),
-  // (group: geomanist, id: ultra, font: $geomanist, weight: 900, style: normal),
-  // (group: geomanist, id: ultra-italic, font: $geomanist, weight: 900, style: italic),

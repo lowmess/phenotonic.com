@@ -45,7 +45,6 @@
   }
 }
 
-
 .service {
   display: flex;
   flex-flow: column nowrap;
@@ -135,6 +134,7 @@
       text-transform: uppercase;
       letter-spacing: 0.25em;
     }
+
     &--price { // This is completely fucked for some reason
       @include font(heading, bold);
 
@@ -146,11 +146,11 @@
 
       margin: $base-line-height * 0.5 auto;
 
-      font-size: $h1-font-size * 2.5;
       color: $services-callout;
+      font-size: $h1-font-size * 2.5;
       letter-spacing: -0.05em;
 
-      &:before {
+      &::before {
         content: '$';
 
         position: relative;
@@ -160,14 +160,17 @@
         font-size: $h1-font-size;
       }
     }
+
     &--time {
       height: $h3-font-size * 1.25;
 
       font-size: $h3-font-size * 1.25;
     }
+
     &--emergency {
       margin-top: $base-line-height * 0.5;
     }
+
     &--def {
       @include font(body);
 
@@ -186,8 +189,9 @@
     }
 
     &__button {
-      color: $services-button;
       border-color: $services-button;
+
+      color: $services-button;
 
       @include on-event {
         background-color: $services-button;

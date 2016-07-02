@@ -4,5 +4,5 @@
 
 // Return a z-index from map $zindex
 @function z($label) {
-    @return map-get($zindex,$label);
+  @return map-get($zindex,$label);
 }

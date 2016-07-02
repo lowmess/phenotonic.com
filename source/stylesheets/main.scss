@@ -1,54 +1,47 @@
 @charset 'UTF-8';
-@viewport { width: device-width; zoom: 1.0; };
+@viewport { width: device-width; zoom: 1.0; }
 
 // 1. Vendors
-@import
-  'vendor/normalize',
-  'bourbon',
-  'neat';
+@import 'vendor/normalize';
+@import 'bourbon';
+@import 'neat';
 
 // 2. Configuration and helpers
-@import
-  'utils/variables',
-  'utils/functions',
-  'utils/mixins';
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/mixins';
 
 // 3. Base stuff
-@import
-  'base/base',
-  'base/helpers',
-  'base/fonts',
-  'base/typography';
+@import 'base/base';
+@import 'base/helpers';
+@import 'base/fonts';
+@import 'base/typography';
 
 // 4. Layout-related sections
-@import
-  'layout/nav',
-  'layout/header',
-  'layout/footer',
-  'layout/pagination',
-  'layout/post-pagination';
+@import 'layout/nav';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/pagination';
+@import 'layout/post-pagination';
 
 // 5. Components
-@import
-  'components/buttons',
-  'components/input-bar',
-  'components/contact',
-  'components/product-preview',
-  'components/mini-product';
+@import 'components/buttons';
+@import 'components/input-bar';
+@import 'components/contact';
+@import 'components/product-preview';
+@import 'components/mini-product';
 
 // 6. Page-specific styles
-@import
-  'pages/home',
-  'pages/products',
-  'pages/product',
-  'pages/blog',
-  'pages/post',
-  'pages/error',
-  'pages/bloom-box',
-  'pages/services';
+@import 'pages/home';
+@import 'pages/products';
+@import 'pages/product';
+@import 'pages/blog';
+@import 'pages/post';
+@import 'pages/error';
+@import 'pages/bloom-box';
+@import 'pages/services';
 
 // 7. Themes
 /*
-@import
-  'themes/default';
+@import 'themes/default';
 */

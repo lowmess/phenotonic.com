@@ -45,10 +45,10 @@
     max-height: 50vh;
 
     img {
-      max-height: 100%;
       max-width: 100%;
-      height: auto;
       width: auto;
+      max-height: 100%;
+      height: auto;
 
       margin: 0 auto;
     }
@@ -57,11 +57,13 @@
       border: none;
     }
   }
+
   &__info {
     flex: 1;
 
     text-align: center;
   }
+
   &__manufacturer {
     margin-bottom: $base-line-height * 0.25;
 
@@ -69,17 +71,20 @@
       color: $text-primary;
     }
   }
+
   &__name {
     margin-top: $base-line-height * 0.25;
   }
+
   &__purchase {
     margin-top: 0;
   }
-  &__price {
-    display: inline;
 
+  &__price {
     position: relative;
     top: $base-font-size * 0.25;
+
+    display: inline;
 
     margin-right: $gutter * 0.5;
 
