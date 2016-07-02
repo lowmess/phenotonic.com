@@ -54,6 +54,7 @@
           , "color"
           , "font"
           , "line"
+          , "letter"
           , "text"
           , "animation"
           , "transition"

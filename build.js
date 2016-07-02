@@ -1,3 +1,4 @@
+// Metalsmith
 var Metalsmith = require('metalsmith')
 var sitemap = require('metalsmith-mapsite')
 var feed = require('metalsmith-feed')
