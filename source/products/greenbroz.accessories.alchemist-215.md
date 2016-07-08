@@ -6,6 +6,7 @@ manufacturer: GreenBroz
 id: greenbroz-alchemist-215
 snippet: Pure, solvent-less trichome extraction
 description: The Alchemist 215 is GreenBroz solvent-free trichome extraction system.
+image: products.greenbroz.accessories.alchemist-215.jpg
 categories:
   - accessories
 ---

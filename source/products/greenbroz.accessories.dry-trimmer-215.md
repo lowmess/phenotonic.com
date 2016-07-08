@@ -1,12 +1,13 @@
 ---
 price: 5740
-weight: 0
+weight: 21772
 published: false
 title: Dry Trimmer 215
 manufacturer: GreenBroz
 id: greenbroz-dry-trimmer-215
 snippet: This trimmer doesn't show up stoned.
 description: GreenBroz Dry Trimmers produce hand trim quality and operate on three key principles; they're quick, quiet, and gentle.
+image: products.greenbroz.accessories.dry-trimmer-215.jpg
 categories:
   - accessories
 ---

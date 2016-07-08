@@ -1,11 +1,12 @@
 ---
 price: 10780
-weight: 0
+weight: 23743
 title: Dry Trimmer 420
 manufacturer: GreenBroz
 id: greenbroz-dry-trimmer-420
 snippet: The best trimmer ever made, made bigger
 description: GreenBroz Dry Trimmers produce hand trim quality and operate on three key principles; they're quick, quiet, and gentle.
+image: products.greenbroz.accessories.dry-trimmer-420.jpg
 categories:
   - accessories
 ---

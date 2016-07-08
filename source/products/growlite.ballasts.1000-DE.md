@@ -5,7 +5,7 @@ manufacturer: Growlite
 description: This diverse ballast runs almost any HID lamp you throw at it.
 snippet: One ballast fires everything!
 price: 275
-weight: 8
+weight: 3629
 image: products.growlite.ballasts.1000-de.jpg
 categories:
   - lighting

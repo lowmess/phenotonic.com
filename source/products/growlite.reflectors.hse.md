@@ -5,7 +5,7 @@ manufacturer: Growlite
 description: The versatile reflector that combines the convenience of a single-ended mogul base HID lamps with an extremely economical design.
 snippet: Lamps In-and-Out with a Snap
 price: 155
-weight: 8
+weight: 4536
 image: products.growlite.reflectors.hse.jpg
 categories:
   - lighting

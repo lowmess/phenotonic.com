@@ -1,6 +1,6 @@
 ---
 price: 10
-weight: 0
+weight: 136
 title: 54W Real Red T5HO
 manufacturer: Growlite
 id: growlite-t5ho-real-red-54

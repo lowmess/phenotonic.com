@@ -1,6 +1,6 @@
 ---
 price: 104
-weight: 0
+weight: 605
 title: CMH
 manufacturer: Growlite
 id: growlite-cmh-se

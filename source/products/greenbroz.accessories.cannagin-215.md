@@ -6,6 +6,7 @@ manufacturer: GreenBroz
 id: greenbroz-cannagin-215
 snippet: Separate the bud from the chaff
 description: Designed to save time and labor hours, this productive bud-removal machine offers variable speeds and four automatic doors for different stem sizes.
+image: products.greenbroz.accessories.cannagin-215.jpg
 categories:
   - accessories
 ---

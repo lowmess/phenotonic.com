@@ -1,6 +1,6 @@
 ---
 price: 89
-weight: 0
+weight: 454
 title: 600W Real Red HPS
 manufacturer: Growlite
 id: growlite-real-red-hps-600
