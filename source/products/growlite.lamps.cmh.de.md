@@ -1,5 +1,5 @@
 ---
-price: 115
+price: 145
 weight: 567
 title: DE CMH
 manufacturer: Growlite
