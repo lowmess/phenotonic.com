@@ -9,6 +9,7 @@ description: GreenBroz Dry Trimmers produce hand trim quality and operate on thr
 image: products.greenbroz.accessories.dry-trimmer-420.jpg
 categories:
   - accessories
+position: 1
 ---
 
 GreenBroz Dry Trimmers produce hand trim quality and operate on three key principles; they're quick, quiet, and gentle on your flowers. The patented blade design and gentle rolling action provide a very tight finish, while protecting the purity, potency, and natural curves of your flower. Built with food grade material, GreenBroz trimmers are easy to load, operate, unload, and clean.

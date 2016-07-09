@@ -14,5 +14,9 @@
   position: relative;
   top: $card-offset * -1;
 
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
   padding-top: 0;
 }

@@ -10,7 +10,7 @@ image: products.growlite.ballasts.1000-de.jpg
 categories:
   - lighting
   - ballasts
-position: 1
+position: 2
 ---
 
 #### Features

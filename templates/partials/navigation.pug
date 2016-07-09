@@ -23,8 +23,13 @@ nav.nav(role="navigation")
       .nav__section.nav__section--expanded.nav__section--products
         h3.nav__section-title: a(href="/products") Products
         ul.nav__list
-          - for (var i = 0; i < 3; i++)
-            li.nav__sub-item: a(href="/" + collections.products[i].path)= collections.products[i].manufacturer + " " + collections.products[i].title
+          - var manufacturers = []
+          - var count = 0
+          each product in collections.products
+            if (manufacturers.indexOf(product.manufacturer) == -1 && count < 3)
+              - manufacturers.push(product.manufacturer)
+              - count++
+              li.nav__sub-item: a(href="/products/manufacturer/" + product.manufacturer)= product.manufacturer
           hr
           li.nav__sub-item: a(href="/products") View All Products
 
