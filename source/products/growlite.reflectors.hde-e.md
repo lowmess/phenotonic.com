@@ -5,7 +5,7 @@ manufacturer: Growlite
 description: A versatile reflector that combines exceptional double-ended HID lamp performance with a extremely economical design.
 snippet: Saves money, grows more
 price: 155
-weight: 8
+weight: 4536
 image: products.growlite.reflectors.hde-e.jpg
 categories:
   - lighting

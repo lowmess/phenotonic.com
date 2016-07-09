@@ -1,6 +1,6 @@
 ---
 price: 98
-weight: 0
+weight: 454
 title: 1000W Real Red HPS
 manufacturer: Growlite
 id: growlite-real-red-hps-1000

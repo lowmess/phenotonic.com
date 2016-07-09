@@ -46,8 +46,8 @@ prose:
       - name: 'weight'
         field:
           element: 'number'
-          label: 'Weight'
-          placeholder: '4'
+          label: 'Weight in Grams'
+          placeholder: '454'
           type: 'number'
       - name: 'image'
         field:

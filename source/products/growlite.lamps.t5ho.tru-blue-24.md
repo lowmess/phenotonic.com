@@ -1,6 +1,6 @@
 ---
 price: 10
-weight: 0
+weight: 73
 title: 24W Tru Blue T5HO
 manufacturer: Growlite
 id: growlite-t5ho-tru-blue-24

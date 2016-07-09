@@ -1,6 +1,6 @@
 ---
 price: 98
-weight: 0
+weight: 605
 title: 1000W Tru Blue MH
 manufacturer: Growlite
 id: growlite-tru-blue-mh-1000

@@ -5,7 +5,7 @@ manufacturer: Growlite
 description: The 315's Soft Start stabilizes start-up loads and extends lamp life and performance.
 snippet: Bright yet Gentle
 price: 199
-weight: 8
+weight: 1890
 image: products.growlite.ballasts.315-cmh.jpg
 categories:
   - lighting

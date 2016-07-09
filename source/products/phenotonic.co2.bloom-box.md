@@ -5,7 +5,7 @@ description: The best CO2 generator in the universe, for only $25.
 snippet: An Organic CO2 Generator
 id: bloom-box
 price: 25
-weight: 4
+weight: 1814
 image: products.phenotonic.co2.bloom-box.jpg
 categories:
   - environment

@@ -1,6 +1,6 @@
 ---
 price: 68
-weight: 0
+weight: 454
 title: 400W Real Red HPS
 manufacturer: Growlite
 id: growlite-real-red-hps-400

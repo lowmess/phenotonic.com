@@ -1,6 +1,6 @@
 ---
 price: 89
-weight: 0
+weight: 419
 title: 600W Tru Blue MH
 manufacturer: Growlite
 id: growlite-mh-tru-blue-600

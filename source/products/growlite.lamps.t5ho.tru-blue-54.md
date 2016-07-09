@@ -1,6 +1,6 @@
 ---
 price: 10
-weight: 0
+weight: 136
 title: 54W True Blue T5HO
 description: Tru Blue lamps are the only true T5HO lamp for vegetation cycles and are designed to provide the complete blue spectrum to optimize overall vegetation quality and stability.
 manufacturer: Growlite

@@ -1,6 +1,6 @@
 ---
 price: 15
-weight: 0
+weight: 45
 title: Socket Extender
 manufacturer: Growlite
 id: growlite-socket-extender

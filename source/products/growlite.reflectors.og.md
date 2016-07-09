@@ -5,7 +5,7 @@ manufacturer: Growlite
 description: The OG reflector is engineered with a vertical lamp for the even light distribution and use of all lumens.
 snippet: Turning the lighting world on its head
 price: 319
-weight: 8
+weight: 14969
 image: products.growlite.reflectors.og.jpg
 categories:
   - lighting

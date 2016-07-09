@@ -5,7 +5,7 @@ description: The first double-ended horticultural reflector suitable for both in
 snippet: Built to be Cool
 id: growlite-hde-8
 price: 225
-weight: 8
+weight: 8165
 image: products.growlite.reflectors.hde-8.jpg
 categories:
   - lighting

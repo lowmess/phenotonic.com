@@ -1,6 +1,6 @@
 ---
 price: 109
-weight: 0
+weight: 454
 title: DE Real Red HPS
 manufacturer: Growlite
 id: growlite-real-red-hps-de
