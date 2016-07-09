@@ -26,7 +26,7 @@ nav.nav(role="navigation")
           - var manufacturers = []
           - var count = 0
           each product in collections.products
-            if (manufacturers.indexOf(product.manufacturer) == -1 && count < 3)
+            if (manufacturers.indexOf(product.manufacturer) === -1 && count < 3)
               - manufacturers.push(product.manufacturer)
               - count++
               li.nav__sub-item: a(href="/products/manufacturer/" + product.manufacturer)= product.manufacturer
