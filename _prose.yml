@@ -1,0 +1,128 @@
+prose:
+  rooturl: 'source'
+  ignore: ['index.md', 'contact.md', 'products.md', 'services.md', 'fonts', 'scripts', 'stylesheets', 'robots.txt']
+  media: 'source/images'
+  metadata:
+    'source/products':
+      - name: 'manufacturer'
+        field:
+          element: 'text'
+          label: 'Product Manufacturer'
+          placeholder: 'Phenotonic'
+          type: 'text'
+      - name: 'title'
+        field:
+          element: 'text'
+          label: 'Product Name'
+          placeholder: 'Bloom Box'
+          type: 'text'
+      - name: 'id'
+        field:
+          element: 'text'
+          label: 'ID'
+          help: 'A unique, hyphen seperated ID for the product'
+          placeholder: 'phenotonic-bloom-box'
+          type: 'text'
+      - name: 'snippet'
+        field:
+          element: 'text'
+          label: 'Tagline'
+          help: 'A snappy tagline for the product'
+          placeholder: 'An Organic CO2 Generator'
+          type: 'text'
+      - name: 'description'
+        field:
+          element: 'text'
+          label: 'Description'
+          help: 'A complete sentence describing the product'
+          placeholder: 'The best CO2 generator in the universe, for only $25.'
+          type: 'text'
+      - name: 'price'
+        field:
+          element: 'number'
+          label: 'Price'
+          placeholder: '25'
+          type: 'number'
+      - name: 'weight'
+        field:
+          element: 'number'
+          label: 'Weight in Grams'
+          placeholder: '454'
+          type: 'number'
+      - name: 'image'
+        field:
+          element: 'text'
+          label: 'Image'
+          help: 'The name of the image to use for product previews'
+          placeholder: 'products.phenotonic.bloom-box.jpg'
+          type: 'text'
+      - name: 'categories'
+        field:
+          element: 'multiselect'
+          alterable: true
+          label: 'Categories'
+          options:
+            - name: 'Lighting'
+              value: 'lighting'
+            - name: 'Reflectors'
+              value: 'reflectors'
+            - name: 'Ballasts'
+              value: 'ballasts'
+            - name: 'Lamps'
+              value: 'lamps'
+            - name: 'Environment'
+              value: 'environment'
+            - name: 'CO2'
+              value: 'CO2'
+            - name: 'Accessories'
+              value: 'accessories'
+    'source/blog':
+      - name: 'title'
+        field:
+          element: 'text'
+          label: 'Post Title'
+          placeholder: 'The Importance of CO2'
+          type: 'text'
+      - name: 'date'
+        field:
+          element: 'text'
+          label: 'Publish Date'
+          placeholder: '2016-04-20'
+          type: 'text'
+      - name: 'snippet'
+        field:
+          element: 'text'
+          label: 'Tagline'
+          help: 'A snappy tagline for the post'
+          placeholder: "Exploring the Garden's Underrated Supplement"
+          type: 'text'
+      - name: 'description'
+        field:
+          element: 'textarea'
+          label: 'Description'
+          help: 'A sentence or two describing the post'
+          placeholder: 'When you want bigger yields, stop looking to the nutrient shelf. Increase CO2 in your garden and get the results you’re looking for.'
+      - name: 'author'
+        field:
+          element: 'multiselect'
+          alterable: true
+          label: 'Author(s)'
+          options:
+            - name: 'Mark Crouch'
+              value: 'Mark Crouch'
+            - name: 'Alec Lomas'
+              value: 'Alec Lomas'
+            - name: 'Chris Maines'
+              value: 'Chris Maines'
+      - name: 'tags'
+        field:
+          element: 'multiselect'
+          alterable: true
+          label: 'Tags'
+          options:
+            - name: 'products'
+              value: 'products'
+            - name: 'meta'
+              value: 'meta'
+            - name: 'services'
+              value: 'services'

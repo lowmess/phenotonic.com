@@ -5,3 +5,18 @@
 .header--products {
   @include background-image('products.header');
 }
+.page--products {
+  margin-bottom: $card-offset * -1;
+
+  background: $products-background;
+}
+.main--products {
+  position: relative;
+  top: $card-offset * -1;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  padding-top: 0;
+}

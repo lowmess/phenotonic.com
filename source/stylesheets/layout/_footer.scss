@@ -29,9 +29,11 @@
       @include span-columns(8);
     }
   }
+
   &__post-title {
     margin-bottom: 0;
   }
+
   &__post-snippet {
     margin-top: 0;
   }

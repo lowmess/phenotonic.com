@@ -6,17 +6,16 @@
 
 html {
   font-size: 87.5%;
-  @include respond-to(medium) { font-size: 100%; };
-  @include respond-to(xlarge) { font-size: 125%; };
+  @include respond-to(medium) { font-size: 100%; }
+  @include respond-to(xlarge) { font-size: 125%; }
 }
 
 body {
   @include font(body);
 
+  color: $text-primary;
   font-size: $base-font-size;
   line-height: $base-line-height;
-
-  color: $text-primary;
 }
 
 ::selection {
@@ -37,52 +36,53 @@ h3, h4, h5, h6, p, ul, ol, pre, table, blockquote, address {
 h1 {
   @include font(heading, bold);
 
+  margin: $base-line-height 0;
+
+  color: $brand-primary;
+
   font-size: $h1-font-size;
   line-height: $h1-line-height;
   text-transform: capitalize;
   letter-spacing: -0.04rem;
-  color: $brand-primary;
   text-rendering: optimizeLegibility;
-
-  margin: $base-line-height 0;
 }
 h2 {
   @include font(heading, medium);
+
+  margin: $base-line-height 0;
 
   font-size: $h2-font-size;
   line-height: $h2-line-height;
   text-transform: capitalize;
   letter-spacing: -0.02rem;
-
-  margin: $base-line-height 0;
 }
 h3 {
   @include font(heading, book);
 
+  margin: $base-line-height 0;
+
   font-size: $h3-font-size;
   line-height: $h3-line-height;
   text-transform: capitalize;
-
-  margin: $base-line-height 0;
 }
 h4, h5, h6 {
   @include font(heading, book);
+
+  margin: $base-line-height 0;
 
   font-size: $h4-font-size;
   line-height: $h4-line-height;
   text-transform: capitalize;
   letter-spacing: 0.01rem;
-
-  margin: $base-line-height 0;
 }
 
 // Type Elements
 hr {
-  height: 3px;
   width: 100%;
+  height: 3px;
 
-  border: 0;
   margin: modular-scale(1) auto;
+  border: 0;
 
   background: $outline-primary;
 }
@@ -103,9 +103,10 @@ sub {
 }
 
 a {
+  border: none;
+
   color: $link-primary;
   text-decoration: none;
-  border: none;
 
   @include on-event {
     &:not(.btn):not(.is-image) {
@@ -117,10 +118,12 @@ a {
 code {
   @include font(monospace);
 
-  line-height: $base-line-height;
-  background: $outline-primary;
-  padding: 0 3px;
   border-radius: 3px;
+  padding: 0 3px;
+
+  background: $outline-primary;
+
+  line-height: $base-line-height;
 }
 
 pre {

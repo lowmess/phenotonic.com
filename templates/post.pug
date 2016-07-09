@@ -19,7 +19,7 @@ block content
       .post__tags
         if tags
           for tag in tags
-            a.post__tag(href="/tagged/#{ tag.toLowerCase() }")= tag
+            a.post__tag(href="/tagged/" + tag.toLowerCase())= tag
 
     h1.post__title= title
 

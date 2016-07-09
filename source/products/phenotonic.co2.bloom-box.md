@@ -1,14 +1,17 @@
 ---
 title: Bloom Box
+manufacturer: Phenotonic
 description: The best CO2 generator in the universe, for only $25.
 snippet: An Organic CO2 Generator
 id: bloom-box
 price: 25
-weight: 4
-image: products.bloom-box.jpg
+weight: 1814
+image: products.phenotonic.co2.bloom-box.jpg
 categories:
+  - environment
   - CO2
 layout: product--bloom-box.pug
+position: 3
 ---
 
 We made this box to give plants the happy life they deserve.

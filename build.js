@@ -1,3 +1,4 @@
+// Metalsmith
 var Metalsmith = require('metalsmith')
 var sitemap = require('metalsmith-mapsite')
 var feed = require('metalsmith-feed')
@@ -5,7 +6,6 @@ var defaultValues = require('metalsmith-default-values')
 // HTML
 var layouts = require('metalsmith-layouts')
 var drafts = require('metalsmith-drafts')
-var snippet = require('metalsmith-snippet')
 var markdown = require('metalsmith-markdown')
 var permalinks = require('metalsmith-permalinks')
 var collections = require('metalsmith-collections')
@@ -27,7 +27,8 @@ var siteBuild = Metalsmith(__dirname)
       description: 'Phenotonic provides the tools, expertise, and education for gardens of all varieties & gardeners of all skill levels.',
       keywords: 'grow, growing, garden, gardening, consulting, consultants, consultant, consult, experts, expert, expertise, mmj, marijuana, vegetable, hydroponic, organic, hydroponics, hydro',
       snipcart: {
-        key: 'NmNhYWY2MGYtZTljYi00YzE4LThlNjktNGRhMGE2OTM2ZjAx'
+        key: 'NmNhYWY2MGYtZTljYi00YzE4LThlNjktNGRhMGE2OTM2ZjAx',
+        testKey: 'OTMzNjYxMTUtYmVmZS00MDhjLTgwODMtMzU2NWYwNzg1MDkx'
       }
     }
   })
@@ -55,7 +56,9 @@ var siteBuild = Metalsmith(__dirname)
       reverse: true
     },
     products: {
-      pattern: 'products/**/*.md'
+      pattern: 'products/**/*.md',
+      sortBy: 'position',
+      reverse: true
     },
     pages: {
       pattern: '*.md'
@@ -95,9 +98,6 @@ var siteBuild = Metalsmith(__dirname)
     smartypants: true,
     tables: true
   }))
-  .use(snippet({
-    maxLength: 140
-  }))
   .use(permalinks({
     pattern: ':collection/:title',
     relative: false,
@@ -115,13 +115,18 @@ var siteBuild = Metalsmith(__dirname)
     sortBy: 'date',
     reverse: true
   }))
-  /* Eventual category implementation
+  /*
   .use(tags({
     handle: 'categories',
-    path:'store/categories/:tag/index.html',
-    layout: 'category.pug'
+    path:'products/categories/:tag/index.html',
+    layout: 'products.pug'
   }))
   */
+  .use(tags({
+    handle: 'manufacturer',
+    path: 'products/manufacturer/:tag/index.html',
+    layout: 'manufacturer.pug'
+  }))
   .use(layouts({
     engine: 'pug',
     pretty: true,

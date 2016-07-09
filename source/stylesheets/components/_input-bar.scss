@@ -13,11 +13,10 @@
 
     width: calc(100% - 50px);
 
-    padding: $gutter*0.25 0;
-
     border: none;
     border-bottom: 3px solid $text-primary;
     border-radius: 0;
+    padding: $gutter*0.25 0;
 
     background: transparent;
 
@@ -31,14 +30,13 @@
   button {
     width: 50px;
 
-    padding: $gutter*0.25 0;
-
     border: none;
+    padding: $gutter*0.25 0;
 
     background: transparent;
 
-    font-size: $h3-font-size;
     color: $text-primary;
+    font-size: $h3-font-size;
 
     @include on-event {
       color: $accent-primary;
@@ -60,6 +58,7 @@
       color: $outline-primary;
     }
   }
+
   button {
     color: $text-primary;
 

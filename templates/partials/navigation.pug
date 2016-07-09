@@ -23,10 +23,15 @@ nav.nav(role="navigation")
       .nav__section.nav__section--expanded.nav__section--products
         h3.nav__section-title: a(href="/products") Products
         ul.nav__list
-          - for (var i = 0; i < 3; i++)
-            li.nav__sub-item: a(href="/" + collections.products[i].path)= collections.products[i].title
-          //- hr
-          //- li.nav__sub-item: a(href="/products") View All Products
+          - var manufacturers = []
+          - var count = 0
+          each product in collections.products
+            if (manufacturers.indexOf(product.manufacturer) === -1 && count < 3)
+              - manufacturers.push(product.manufacturer)
+              - count++
+              li.nav__sub-item: a(href="/products/manufacturer/" + product.manufacturer)= product.manufacturer
+          hr
+          li.nav__sub-item: a(href="/products") View All Products
 
       .nav__section.nav__section--expanded.nav__section--services
         h3.nav__section-title: a(href="/services") Services
@@ -41,5 +46,5 @@ nav.nav(role="navigation")
         ul.nav__list
           - for (var i = 0; i < 3; i++)
             li.nav__sub-item: a(href="/" + collections.blog[i].path)= collections.blog[i].title
-          //- hr
-          //- li.nav__sub-item: a(href="/products") View All Posts
+          hr
+          li.nav__sub-item: a(href="/products") View All Posts

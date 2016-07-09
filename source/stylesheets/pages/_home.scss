@@ -21,7 +21,7 @@
 
     padding-top: 100px;
     padding-bottom: 50px;
-    @include respond-to(small) { padding-top: 15vh;}
+    @include respond-to(small) { padding-top: 15vh; }
     @include respond-to(large) { padding-top: 25vh; }
   }
 }
