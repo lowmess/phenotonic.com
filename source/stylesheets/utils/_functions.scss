@@ -1,8 +1,0 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass functions.
-// -----------------------------------------------------------------------------
-
-// Return a z-index from map $zindex
-@function z($label) {
-  @return map-get($zindex,$label);
-}
