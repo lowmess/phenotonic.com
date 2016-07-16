@@ -13,6 +13,7 @@
     "css-modularscale": "^1.1.0",
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.7.3",
+    "globcat": "^1.0.0",
     "metalsmith": "^2.1.0",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-default-values": "0.0.2",
