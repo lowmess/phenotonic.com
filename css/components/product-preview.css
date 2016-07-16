@@ -1,0 +1,85 @@
+/*******************************************************************************
+ This file contains all styles related to the product-preview component.
+ ******************************************************************************/
+
+.product-preview {
+  @extend .card;
+
+  @neat-span-columns 12;
+
+  @media (--product-cards) {
+    @neat-span-columns 6;
+    @neat-omega 2n;
+  }
+
+  @media (--large) {
+    @neat-span-columns 4;
+    @neat-omega 3n;
+
+    &:enter {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px var(--shadow-primary);
+    }
+  }
+
+  display: block;
+
+  margin-bottom: var(--base-line-height);
+
+  color: var(--text-primary);
+  text-align: center;
+
+  transition: 0.2s ease transform, 0.3s ease box-shadow;
+
+  &__image {
+    display: block;
+
+    width: 250px;
+    max-width: 100%;
+    height: 250px;
+
+    margin: 0 auto;
+
+    img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      margin: 0 auto;
+    }
+
+    &:enter {
+      border: none;
+    }
+  }
+
+  &__placeholder {
+    display: block;
+
+    width: 250px;
+    max-width: 100%;
+    height: 250px;
+
+    margin: 0 auto;
+    padding-top: 250px;
+
+    background: var(--accent-primary);
+  }
+
+  &__name {
+    margin-bottom: calc(var(--base-line-height) * 0.25);
+  }
+
+  &__snippet {
+    margin-top: calc(var(--base-line-height) * 0.25);
+  }
+
+  &__data {
+    margin-bottom: 0;
+
+    a {
+      color: var(--text-primary);
+    }
+  }
+}

@@ -1,0 +1,65 @@
+/*******************************************************************************
+ This file contains all styles that are specific to the blog page.
+ ******************************************************************************/
+
+.header--blog {
+  background-image: url('../images/blog.header.jpg');
+  @media (--small) { background-image: url('../images/blog.header@2x.jpg'); }
+  @media (--medium) { background-image: url('../images/blog.header@3x.jpg'); }
+  @media (--large) { background-image: url('../images/blog.header@4x.jpg'); }
+}
+
+.post-preview {
+  &__meta {
+    width: 25%;
+
+    float: left;
+
+    border-right: 3px solid var(--outline-primary);
+    padding: 0 var(--gutter);
+
+    text-align: right;
+  }
+
+  &__date {
+    clear: fix;
+
+    margin-top: 2.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__tags {
+    margin-bottom: var(--h4-line-height);
+
+    a {
+      color: var(--link-inactive);
+    }
+  }
+
+  &__tag {
+    &:not(:last-child)::after {
+      content: ', ';
+
+      user-select: text;
+    }
+  }
+
+  &__text {
+    clear: fix;
+
+    width: 75%;
+
+    margin-left: auto;
+    margin-right: 3px;
+    border-left: 3px solid var(--outline-primary);
+    padding: 0.1px var(--gutter);
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__snippet {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,95 @@
+/*******************************************************************************
+ This file contains all styles related to the mini-product component.
+ ******************************************************************************/
+
+.mini-product {
+  @extend .card;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: var(--measure);
+
+  margin: 0 var(--gutter);
+
+  @media (--small) {
+    flex-flow: row nowrap;
+  }
+
+  @media (--large) {
+    margin: 0 auto;
+  }
+
+  &--float {
+    position: relative;
+    top: calc(var(--card-offset) * -1);
+
+    margin-bottom: calc(var(--card-offset) * -1);
+  }
+
+  &__image {
+    flex: 1;
+
+    height: 200px;
+
+    @media (--small) {
+      height: 250px;
+    }
+
+    @media (--medium) {
+      height: 300px;
+    }
+
+    max-height: 50vh;
+
+    img {
+      max-width: 100%;
+      width: auto;
+      max-height: 100%;
+      height: auto;
+
+      margin: 0 auto;
+    }
+
+    &:enter {
+      border: none;
+    }
+  }
+
+  &__info {
+    flex: 1;
+
+    text-align: center;
+  }
+
+  &__manufacturer {
+    margin-bottom: calc(var(--base-line-height) * 0.25);
+
+    a {
+      color: var(--text-primary);
+    }
+  }
+
+  &__name {
+    margin-top: calc(var(--base-line-height) * 0.25);
+  }
+
+  &__purchase {
+    margin-top: 0;
+  }
+
+  &__price {
+    position: relative;
+    top: calc(var(--base-font-size) * 0.25);
+
+    display: inline;
+
+    margin-right: calc(var(--gutter) * 0.5);
+
+    @media (--small) {
+      margin-right: var(--gutter);
+    }
+  }
+}

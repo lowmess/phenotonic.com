@@ -1,0 +1,27 @@
+{
+  "use": [
+    "postcss-import",
+    "postcss-neat",
+    "postcss-nested",
+    "postcss-custom-properties",
+    "postcss-custom-media",
+    "postcss-extend",
+    "postcss-clearfix",
+    "postcss-color-function",
+    "postcss-fontpath",
+    "postcss-pseudo-class-enter",
+    "postcss-uncss",
+    "autoprefixer",
+    "css-mqpacker",
+    "cssnano"
+  ],
+  "postcss-neat": {
+    "neatMaxWidth": "64rem"
+  },
+  "postcss-uncss": {
+    "html": ["_build/**/*.html"]
+  },
+  "autoprefixer": {
+    "browsers": ["last 2 versions", "> 5%"]
+  }
+}

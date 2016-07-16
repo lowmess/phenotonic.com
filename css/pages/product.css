@@ -1,0 +1,13 @@
+/*******************************************************************************
+ This file contains all styles that are specific to the product page.
+ ******************************************************************************/
+
+.main--product {
+  max-width: var(--measure);
+
+  margin: 0 auto;
+  padding-top: var(--base-line-height);
+}
+.product {
+  background: var(--products-background);
+}
