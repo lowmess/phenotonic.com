@@ -5,22 +5,21 @@ var query = (window.location.search === '?thanks') ? true : false
 if (query && q$('.contact--contact')) {
   var contact = q$('.contact--contact')
 
+  contact.removeChild(q$('.contact__form'))
+
   var h2 = document.createElement('h2')
   h2.innerHTML = 'Thanks!'
-  contact.insertBefore(h2, form)
+  contact.appendChild(h2)
 
   var p = document.createElement('p')
   p.innerHTML = "We'll be getting back to you shortly. In the meantime, please enjoy this gif of an otter playing a keyboard."
-  contact.insertBefore(p, form)
+  contact.appendChild(p)
 
   var img = document.createElement('img')
   img.src = '/images/contact.thanks.gif'
   img.alt = 'Just playing my keyboard, nbd.'
   img.classList.add('is-full-width')
-  contact.insertBefore(img, form)
-
-  var hr = document.createElement('hr')
-  contact.insertBefore(hr, form)
+  contact.appendChild(img)
 }
 
 if (query && q$('.contact--services')) {
