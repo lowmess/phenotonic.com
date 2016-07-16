@@ -1,0 +1,55 @@
+/*******************************************************************************
+ This file contains all @font-face declarations, if any.
+ ******************************************************************************/
+
+@font-face {
+  font-family: geomanist;
+  font-path: '../fonts/geomanist-regular-webfont';
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: geomanist;
+  font-path: '../fonts/geomanist-regular-italic-webfont';
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: geomanist;
+  font-path: '../fonts/geomanist-book-webfont';
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: geomanist;
+  font-path: '../fonts/geomanist-book-italic-webfont';
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: geomanist;
+  font-path: '../fonts/geomanist-medium-webfont';
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: geomanist;
+  font-path: '../fonts/geomanist-medium-italic-webfont';
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: geomanist;
+  font-path: '../fonts/geomanist-bold-webfont';
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: geomanist;
+  font-path: '../fonts/geomanist-bold-italic-webfont';
+  font-weight: 700;
+  font-style: italic;
+}

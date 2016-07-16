@@ -1,0 +1,57 @@
+/*******************************************************************************
+ This file contains all styles related to the pagination of the site.
+ ******************************************************************************/
+
+.pagination {
+  @neat-row;
+
+  &__first {
+    @neat-span-columns 3;
+
+    min-height: 1px;
+  }
+
+  &__pages {
+    @neat-span-columns 6;
+
+    position: relative;
+    top: calc(var(--base-font-size) * -1.5);
+
+    list-style-type: none;
+
+    font-family: var(--heading-text);
+    font-weight: 400;
+    font-size: var(--h3-font-size);
+    text-align: center;
+
+    li {
+      display: inline;
+
+      &:not(:last-child) {
+        margin-right: calc(var(--gutter) * 0.5);
+      }
+    }
+
+    a {
+      color: var(--link-inactive);
+
+      &:enter {
+        color: var(--link-primary);
+      }
+    }
+  }
+
+  &__current {
+    color: var(--link-primary);
+    font-weight: 500;
+  }
+
+  &__last {
+    @neat-span-columns 3;
+    @neat-omega;
+
+    min-height: 1px;
+
+    text-align: right;
+  }
+}

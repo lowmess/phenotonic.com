@@ -1,0 +1,46 @@
+/*******************************************************************************
+ This file contains all styles related to the header of the site.
+ ******************************************************************************/
+
+.header {
+  @neat-fill-parent;
+
+  background-color: var(--brand-primary);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url('../images/site.header.jpg');
+  @media (--small) { background-image: url('../images/site.header@2x.jpg'); }
+  @media (--medium) { background-image: url('../images/site.header@3x.jpg'); }
+  @media (--large) { background-image: url('../images/site.header@4x.jpg'); }
+
+  color: var(--text-reverse);
+
+  &--card {
+    padding-bottom: var(--card-offset);
+  }
+
+  &__text {
+    @neat-outer-container;
+    @neat-pad;
+
+    padding-top: calc(var(--gutter) * 4);
+    padding-bottom: var(--gutter);
+  }
+
+  &__manufacturer {
+    margin-bottom: calc(var(--base-line-height) * 0.25);
+
+    & + .header__title {
+      margin-top: calc(var(--base-line-height) * 0.25);
+    }
+  }
+
+  &__title {
+    color: var(--header-heading);
+  }
+
+  a {
+    color: var(--text-reverse);
+  }
+}

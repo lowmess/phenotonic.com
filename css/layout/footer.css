@@ -1,0 +1,86 @@
+/*******************************************************************************
+ This file contains all styles related to the footer of the site/application.
+ ******************************************************************************/
+
+.footer {
+  @neat-fill-parent;
+
+  background: var(--brand-primary);
+
+  color: var(--text-reverse);
+
+  a {
+    color: var(--link-reverse);
+
+    &:enter {
+      color: var(--link-reverse);
+    }
+  }
+
+  &__content {
+    @neat-outer-container;
+    @neat-row;
+
+    padding: var(--gutter);
+  }
+
+  &__post {
+    @neat-row;
+    @media (--small) {
+      @neat-span-columns 8;
+    }
+  }
+
+  &__post-title {
+    margin-bottom: 0;
+  }
+
+  &__post-snippet {
+    margin-top: 0;
+  }
+
+  &__links {
+    @neat-row;
+    @media (--small) {
+      @neat-span-columns 4;
+      @neat-omega;
+    }
+  }
+
+  &__list {
+    @neat-span-columns 6 13;
+    @neat-omega 2n;
+
+    margin: var(--base-line-height) 0 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    @media (--small) {
+      @neat-span-columns 6;
+    }
+
+    &--nav {
+      text-align: right;
+
+      @media (--small) {
+        text-align: left;
+      }
+    }
+
+    &--contact {
+      @neat-shift 1 13;
+
+      @media (--small) {
+        @neat-shift 0;
+      }
+    }
+  }
+
+  &__copyright {
+    @neat-outer-container;
+    @neat-row;
+
+    padding: var(--gutter);
+  }
+}

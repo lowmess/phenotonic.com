@@ -1,0 +1,25 @@
+/*******************************************************************************
+ This file contains all styles that are specific to the products page.
+ ******************************************************************************/
+
+.header--products {
+  background-image: url('../images/products.header.jpg');
+  @media (--small) { background-image: url('../images/products.header@2x.jpg'); }
+  @media (--medium) { background-image: url('../images/products.header@3x.jpg'); }
+  @media (--large) { background-image: url('../images/products.header@4x.jpg'); }
+}
+.page--products {
+  margin-bottom: calc(var(--card-offset) * -1);
+
+  background: var(--products-background);
+}
+.main--products {
+  position: relative;
+  top: calc(var(--card-offset) * -1);
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  padding-top: 0;
+}

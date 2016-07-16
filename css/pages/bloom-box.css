@@ -1,0 +1,103 @@
+/*******************************************************************************
+ This file contains all styles that are specific to the Bloom Box section
+ ******************************************************************************/
+
+.bloom-box {
+  @neat-fill-parent;
+
+  margin-top: var(--h1-line-height);
+
+  &__row {
+
+    @neat-outer-container;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    padding: var(--gutter);
+
+    text-align: center;
+
+    @media (--small) {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: none;
+
+      text-align: left;
+    }
+
+    &--reverse {
+      @media (--small) {
+        flex-flow: row-reverse nowrap;
+
+        text-align: right;
+      }
+    }
+
+    &--info {
+      align-items: center;
+    }
+
+    &--icons {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: top;
+
+      text-align: center;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  &__illustration {
+    flex: 0 1 auto;
+
+    height: calc(var(--base-line-height) * 8);
+
+    &--icons {
+      height: calc(var(--base-line-height) * 5);
+
+      @media (--small) {
+        height: calc(var(--base-line-height) * 6);
+      }
+
+      @media (--medium) {
+        height: calc(var(--base-line-height) * 7);
+      }
+    }
+  }
+
+  &__blurb {
+    flex: 0 1 auto;
+
+    @media (--small) {
+      width: 75%;
+    }
+
+    /* padding: 0 var(--gutter); */
+
+    &--icons {
+      width: 100%;
+
+      margin-top: 0;
+      margin-bottom: 0;
+
+      color: var(--outline-primary);
+    }
+  }
+
+  &__icons {
+    background: var(--brand-primary);
+  }
+
+  &__products {
+    padding: var(--gutter) 0;
+
+    background-color: var(--products-background);
+  }
+}

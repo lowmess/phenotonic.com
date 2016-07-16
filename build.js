@@ -11,11 +11,6 @@ var permalinks = require('metalsmith-permalinks')
 var collections = require('metalsmith-collections')
 var pagination = require('metalsmith-pagination')
 var tags = require('metalsmith-tags')
-// CSS
-var sass = require('metalsmith-sass')
-var prefix = require('metalsmith-autoprefixer')
-// JS
-var uglify = require('metalsmith-uglify')
 
 var siteBuild = Metalsmith(__dirname)
   .source('source')
@@ -32,21 +27,6 @@ var siteBuild = Metalsmith(__dirname)
       }
     }
   })
-  // CSS
-  .use(sass({
-    includePaths: require('node-neat').includePaths,
-    sourceMap: true,
-    sourceMapContents: true,
-    outputStyle: 'nested',
-    outputDir: 'css/'
-  }))
-  .use(prefix())
-  // JS
-  .use(uglify({
-    sourceMap: true,
-    concat: 'js/main.js',
-    removeOriginal: true
-  }))
   // HTML
   .use(drafts())
   .use(collections({

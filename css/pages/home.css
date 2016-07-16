@@ -1,0 +1,35 @@
+/*******************************************************************************
+ This file contains all styles that are specific to the home page.
+ ******************************************************************************/
+
+.main--home {
+  padding-top: 0;
+}
+
+.landing {
+  @neat-fill-parent;
+
+  min-height: 100vh;
+
+  background-position: center;
+  background-attachment: scroll;
+  background-size: cover;
+  background-image: url('../images/landing.header.jpg');
+  @media (--small) { background-image: url('../images/landing.header@2x.jpg'); }
+  @media (--medium) { background-image: url('../images/landing.header@3x.jpg'); }
+  @media (--large) { background-image: url('../images/landing.header@4x.jpg'); }
+
+  &__hero {
+    @neat-outer-container;
+
+    padding: var(--gutter);
+    padding-top: 100px;
+    padding-bottom: 50px;
+    @media (--small) { padding-top: 15vh; }
+    @media (--large) { padding-top: 25vh; }
+  }
+}
+
+.intro {
+  @neat-outer-container;
+}
