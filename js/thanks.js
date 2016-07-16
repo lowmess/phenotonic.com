@@ -7,20 +7,20 @@ if (query && q$('.contact--contact')) {
 
   var h2 = document.createElement('h2')
   h2.innerHTML = 'Thanks!'
-  content.insertBefore(h2, form)
+  contact.insertBefore(h2, form)
 
   var p = document.createElement('p')
   p.innerHTML = "We'll be getting back to you shortly. In the meantime, please enjoy this gif of an otter playing a keyboard."
-  content.insertBefore(p, form)
+  contact.insertBefore(p, form)
 
   var img = document.createElement('img')
   img.src = '/images/contact.thanks.gif'
   img.alt = 'Just playing my keyboard, nbd.'
   img.classList.add('is-full-width')
-  content.insertBefore(img, form)
+  contact.insertBefore(img, form)
 
   var hr = document.createElement('hr')
-  content.insertBefore(hr, form)
+  contact.insertBefore(hr, form)
 }
 
 if (query && q$('.contact--services')) {
