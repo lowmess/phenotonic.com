@@ -20,6 +20,8 @@
   @media (--medium) { background-image: url('../images/services.header@3x.jpg'); }
   @media (--large) { background-image: url('../images/services.header@4x.jpg'); }
 
+  padding-bottom: var(--card-offset);
+
   color: var(--services-text-reverse);
 
   h1 {
@@ -40,7 +42,7 @@
     @extend .card;
 
     position: relative;
-    top: -var(--card-offset);
+    top: calc(var(--card-offset) * -1);
 
     max-width: var(--max-width);
 
@@ -112,9 +114,9 @@
   text-align: center;
 
   &__container {
-    max-width: var(--max-width);
+    @neat-outer-container;
 
-    margin: 0 auto;
+    margin-bottom: 0;
     margin-top: calc(var(--card-offset) * -0.5);
     padding: 0 var(--gutter) var(--gutter);
   }
@@ -128,7 +130,7 @@
   &__rate {
     display: block;
 
-    font-family: var(--headng-text);
+    font-family: var(--heading-text);
     font-weight: 500;
 
     &--just {
@@ -179,8 +181,8 @@
     }
 
     &--def {
-      @include font(body);
-
+      font-family: var(--body-text);
+      font-family: 400;
       line-height: calc(var(--base-line-height) * 0.5);
     }
   }

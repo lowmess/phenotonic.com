@@ -2,6 +2,13 @@
  This file contains very basic styles.
  ******************************************************************************/
 
+/* stylelint-disable number-no-trailing-zeros */
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+/* stylelint-enable */
+
 /**
  * Set up a decent box model on the root element
  */

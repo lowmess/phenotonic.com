@@ -1,41 +1,37 @@
 @charset 'UTF-8';
-@viewport { width: device-width; zoom: 1; }
 
-/* 1. Vendors */
+/* 2. Vendors */
 @import 'normalize.css';
 @import 'css-modularscale';
 
-/* 2. Configuration and helpers */
+/* 1. Configuration and helpers */
 @import 'common/variables.css';
-@import 'common/functions.css';
-@import 'common/mixins.css';
 
 /* 3. Base stuff */
 @import 'base/base.css';
-@import 'base/helpers.css';
 @import 'base/fonts.css';
+@import 'base/helpers.css';
 @import 'base/typography.css';
 
 /* 4. Layout-related sections */
-@import 'layout/nav.css';
-@import 'layout/header.css';
 @import 'layout/footer.css';
+@import 'layout/header.css';
+@import 'layout/nav.css';
 @import 'layout/pagination.css';
-@import 'layout/post-pagination.css';
 
 /* 5. Components */
 @import 'components/buttons.css';
-@import 'components/input-bar.css';
 @import 'components/contact.css';
-@import 'components/product-preview.css';
+@import 'components/input-bar.css';
 @import 'components/mini-product.css';
+@import 'components/product-preview.css';
 
 /* 6. Page-specific styles */
-@import 'pages/home.css';
-@import 'pages/products.css';
-@import 'pages/product.css';
 @import 'pages/blog.css';
-@import 'pages/post.css';
-@import 'pages/error.css';
 @import 'pages/bloom-box.css';
+@import 'pages/error.css';
+@import 'pages/home.css';
+@import 'pages/post.css';
+@import 'pages/product.css';
+@import 'pages/products.css';
 @import 'pages/services.css';

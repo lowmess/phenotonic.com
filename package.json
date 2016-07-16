@@ -49,8 +49,9 @@
     "start": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm run build && browser-sync reload'",
     "browser_sync": "browser-sync start --server _build --no-ui --no-notify",
     "build:html": "node build.js",
-    "build:css": "postcss -c postcss.json -o _build/css/main.css --no-map.inline css/main.css",
-    "build": "npm run build:html && npm run build:css"
+    "build:css": "mkdir -p _build/css && postcss -c postcss.json --no-map.inline --local-plugins -o _build/css/main.css css/main.css",
+    "build:js": "mkdir -p _build/js && globcat js/**/*.js --output _build/js/main.js && uglifyjs _build/js/main.js --compress --mangle -o _build/js/main.js",
+    "build": "npm run build:html && npm run build:js && npm run build:css"
   },
   "repository": {
     "type": "git",

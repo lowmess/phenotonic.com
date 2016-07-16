@@ -35,7 +35,7 @@ block content
 
         p Next Post:
 
-        h2.post-preview__title: a(href="/#{ previous.path }")= previous.title
+        h2.post-preview__title: a(href="/" + previous.path)= previous.title
 
         h4.post-preview__snippet= previous.snippet
 
@@ -43,6 +43,6 @@ block content
 
         p Previous Post:
 
-        h2.post-preview__title: a(href="/#{ next.path }")= next.title
+        h2.post-preview__title: a(href="/" + next.path)= next.title
 
         h4.post-preview__snippet= next.snippet

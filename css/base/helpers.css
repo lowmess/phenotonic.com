@@ -17,7 +17,7 @@
 }
 
 .card {
-  border-radius: var(--gutter) * 0.5;
+  border-radius: calc(var(--gutter) * 0.5);
   padding: var(--gutter);
 
   background-color: var(--background-primary);

@@ -20,7 +20,8 @@
   &__content {
     @neat-outer-container;
     @neat-row;
-    @neat-pad;
+
+    padding: var(--gutter);
   }
 
   &__post {
@@ -79,6 +80,7 @@
   &__copyright {
     @neat-outer-container;
     @neat-row;
-    @neat-pad 0 default default default;
+
+    padding: var(--gutter);
   }
 }

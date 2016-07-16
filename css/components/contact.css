@@ -1,6 +1,6 @@
 .contact {
   &__form {
-    max-width: var(--max-width) * 0.75;
+    max-width: calc(var(--max-width) * 0.75);
 
     margin: var(--base-line-height) auto;
   }
@@ -39,23 +39,23 @@ input, textarea, select {
 
   width: 100%;
 
-  margin-top: var(--h4-line-height) * 0.25;
+  margin-top: calc(var(--h4-line-height) * 0.25);
   margin-bottom: var(--h4-line-height);
   border: 1px solid var(--outline-primary);
   border-radius: 3px;
-  padding: 0 var(--gutter) * 0.5;
+  padding: 0 calc(var(--gutter) * 0.5);
 
   background-color: var(--background-primary);
 }
 
 input, select {
-  height: var(--base-font-size) + var(--base-line-height);
+  height: calc(var(--base-font-size) + var(--base-line-height));
 }
 
 textarea {
-  min-height: var(--base-font-size) * 3 + var(--base-line-height) * 2;
+  min-height: calc(var(--base-font-size) * 3 + var(--base-line-height) * 2);
 
-  padding: var(--gutter) * 0.5;
+  padding: calc(var(--gutter) * 0.5);
 }
 
 ::placeholder {

@@ -7,7 +7,7 @@
 html {
   font-size: 87.5%;
   @media (--medium) { font-size: 100%; }
-  @media (--large) { font-size: 125%; }
+  @media (--huge) { font-size: 125%; }
 }
 
 body {
@@ -37,7 +37,7 @@ h1 {
   margin: var(--base-line-height) 0;
 
   color: var(--brand-primary);
-  font-family: var(--body-text);
+  font-family: var(--heading-text);
   font-weight: 700;
   font-size: var(--h1-font-size);
   line-height: var(--h1-line-height);
@@ -48,7 +48,7 @@ h1 {
 h2 {
   margin: var(--base-line-height) 0;
 
-  font-family: var(--body-text);
+  font-family: var(--heading-text);
   font-weight: 600;
   font-size: var(--h2-font-size);
   line-height: var(--h2-line-height);
@@ -58,7 +58,7 @@ h2 {
 h3 {
   margin: var(--base-line-height) 0;
 
-  font-family: var(--body-text);
+  font-family: var(--heading-text);
   font-weight: 500;
   font-size: var(--h3-font-size);
   line-height: var(--h3-line-height);
@@ -67,7 +67,7 @@ h3 {
 h4, h5, h6 {
   margin: var(--base-line-height) 0;
 
-  font-family: var(--body-text);
+  font-family: var(--heading-text);
   font-weight: 500;
   font-size: var(--h4-font-size);
   line-height: var(--h4-line-height);

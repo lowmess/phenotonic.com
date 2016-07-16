@@ -43,7 +43,7 @@
 
       height: calc(100vh - var(--nav-height));
 
-      background-color: var(nav-background);
+      background-color: var(--nav-background);
 
       transform: translateY(calc(var(--base-line-height) * -24));
 
@@ -61,7 +61,7 @@
   }
 
   &__bar {
-    @include container;
+    @neat-outer-container;
 
     z-index: var(--z-nav-bar);
 
@@ -101,7 +101,7 @@
     width: var(--base-line-height);
     height: var(--base-line-height);
 
-    fill: $=var(--text-primary);
+    fill: var(--text-primary);
 
     cursor: pointer;
 
@@ -115,7 +115,7 @@
     }
 
     &:not(:last-of-type) {
-      margin-right: calc(var(--$gutter) * 0.5);
+      margin-right: calc(var(--gutter) * 0.5);
 
       @media (--small) {
         margin-right: var(--gutter);
@@ -137,7 +137,7 @@
           top: calc(var(--base-line-height) * -0.25);
           left: calc(var(--gutter) * 0.125);
 
-          color: $link-primary;
+          color: var(--link-primary);
           font-family: var(--heading-text);
           font-weight: 500;
         }
@@ -197,7 +197,7 @@
     font-weight: 400;
 
     a {
-      color: $text-primary;
+      color: var(--text-primary);
     }
 
     &:not(:last-child) {

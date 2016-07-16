@@ -10,11 +10,12 @@
   &__row {
 
     @neat-outer-container;
-    @neat-pad;
 
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+
+    padding: var(--gutter);
 
     text-align: center;
 
