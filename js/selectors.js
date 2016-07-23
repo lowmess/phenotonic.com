@@ -1,6 +1,7 @@
 // Returns an individual node (first node that querySelector matches)
 // @link https://gist.github.com/lowmess/9cf8b203c6507ba05e15
 
+/* eslint-disable */
 function q$ (node) {
   return document.querySelector(node)
 }
@@ -8,3 +9,4 @@ function q$ (node) {
 function q$$ (nodeList) {
   return document.querySelectorAll(nodeList)
 }
+/* eslint-enable */

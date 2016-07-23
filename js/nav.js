@@ -1,4 +1,4 @@
-/* global q$, q$$, Snipcart */
+/* global q$, Snipcart */
 
 var menuButton = q$('.nav__icon--menu')
 var navLinks = q$('.nav__container--links')
@@ -20,12 +20,12 @@ Snipcart.subscribe('cart.ready', function () {
 })
 
 // cartCount when item is added
-Snipcart.subscribe('item.added', function() {
+Snipcart.subscribe('item.added', function () {
   cartCount()
 })
 
 // cartCount when item is removed
-Snipcart.subscribe('item.removed', function() {
+Snipcart.subscribe('item.removed', function () {
   cartCount()
 })
 
