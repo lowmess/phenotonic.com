@@ -11,6 +11,7 @@ var permalinks = require('metalsmith-permalinks')
 var collections = require('metalsmith-collections')
 var pagination = require('metalsmith-pagination')
 var tags = require('metalsmith-tags')
+var minify = require('metalsmith-html-minifier')
 
 var siteBuild = Metalsmith(__dirname)
   .source('source')
@@ -117,6 +118,10 @@ var siteBuild = Metalsmith(__dirname)
   }))
   .use(sitemap('https://phenotonic.com'))
   .use(feed({collection: 'blog'}))
+
+if (process.env.NODE_ENV === 'production') {
+  siteBuild.use(minify())
+}
 
 siteBuild.build(function (err) {
   if (err) {

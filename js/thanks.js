@@ -1,40 +1,40 @@
 /* global q$ */
 
-var query = (window.location.search === '?thanks') ? true : false
+var query = window.location.search === '?thanks'
 
 if (query && q$('.contact--contact')) {
-  var contact = q$('.contact--contact')
+  var contactContact = q$('.contact--contact')
 
-  contact.removeChild(q$('.contact__form'))
+  contactContact.removeChild(q$('.contact__form'))
 
-  var h2 = document.createElement('h2')
-  h2.innerHTML = 'Thanks!'
-  contact.appendChild(h2)
+  var h2Contact = document.createElement('h2')
+  h2Contact.innerHTML = 'Thanks!'
+  contactContact.appendChild(h2Contact)
 
-  var p = document.createElement('p')
-  p.innerHTML = "We'll be getting back to you shortly. In the meantime, please enjoy this gif of an otter playing a keyboard."
-  contact.appendChild(p)
+  var pContact = document.createElement('p')
+  pContact.innerHTML = "We'll be getting back to you shortly. In the meantime, please enjoy this gif of an otter playing a keyboard."
+  contactContact.appendChild(pContact)
 
-  var img = document.createElement('img')
-  img.src = '/images/contact.thanks.gif'
-  img.alt = 'Just playing my keyboard, nbd.'
-  img.classList.add('is-full-width')
-  contact.appendChild(img)
+  var imgContact = document.createElement('img')
+  imgContact.src = '/images/contact.thanks.gif'
+  imgContact.alt = 'Just playing my keyboard, nbd.'
+  imgContact.classList.add('is-full-width')
+  contactContact.appendChild(imgContact)
 }
 
 if (query && q$('.contact--services')) {
-  var contact = q$('.contact--services')
+  var contactServices = q$('.contact--services')
 
-  contact.removeChild(q$('.contact__form'))
+  contactServices.removeChild(q$('.contact__form'))
   q$('.contact__tagline').innerHTML = 'Thanks!'
 
-  var img = document.createElement('img')
-  img.src = '/images/services.thanks.gif'
-  img.alt = 'Us, rushing back to our keyboards.'
-  img.classList.add('is-full-width')
-  contact.appendChild(img)
+  var imgServices = document.createElement('img')
+  imgServices.src = '/images/services.thanks.gif'
+  imgServices.alt = 'Us, rushing back to our keyboards.'
+  imgServices.classList.add('is-full-width')
+  contactServices.appendChild(imgServices)
 
-  var p = document.createElement('p')
-  p.innerHTML = 'We&rsquo;re rushing to get back to you. Hang tight, and we&rsquo;ll get back to you soon!</p><p>Need to fill out another form? No problem, just <a href="/services#contact">click here</a>.'
-  contact.appendChild(p)
+  var pServices = document.createElement('p')
+  pServices.innerHTML = 'We&rsquo;re rushing to get back to you. Hang tight, and we&rsquo;ll get back to you soon!</p><p>Need to fill out another form? No problem, just <a href="/services#contact">click here</a>.'
+  contactServices.appendChild(pServices)
 }
