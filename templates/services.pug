@@ -49,7 +49,10 @@ block page
 
     section.contact.contact--services#contact
       h2.contact__tagline Help Us Help&nbsp;You
-      form.contact__form(action="//formspree.io/services@phenotonic.com", method="POST")
+      form.contact__form(name="contact", action="/" + path "/?thanks#contact", netlify, netlify-honeypot="gotcha")
+
+        input(type="text", name="gotcha", style="display:none")
+
         .contact__row.contact__row--info
           .contact__col.contact__col--name
             label(for="name") Who Are You?*
@@ -59,7 +62,7 @@ block page
             input(name="email", type="email", placeholder="anne.onimuss@psuedonym.com", required)
 
         .contact__row.contact__row--info
-          .contact__col.contact__col--2.contact__col--service
+          .contact__col.contact__col--service
             label(for="service") How Can We Help?*
             select(name="service", required)
               option(value="", disabled, selected) Select a Service
@@ -68,6 +71,9 @@ block page
               option(value="installation") Installation
               option(value="maintenance") Maintenance
               option(value="other") Something Special
+          .contact__col.contact__col--date
+            label(for="date") When Should We Start?
+            input(type="date", name="date")
           .contact__col.contact__col--emergency
             label(for="emergency") Is This an Emergency?
             select(name="emergency")
@@ -76,9 +82,5 @@ block page
 
         label(for="message") Anything We Should Know?
         textarea(name="message", placeholder="Help! My venus fly traps learned to walk and are terrorizing my pet ferret!")
-
-        input(type="text", name="_gotcha", style="display:none")
-
-        input(type="hidden", name="_next", value=path + "/?thanks#contact")
 
         button.contact__button Get in Touch
