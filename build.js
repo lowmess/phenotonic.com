@@ -195,7 +195,17 @@ function stylesheets () {
         html: ['_build/**/*.html']
       }),
       require('css-mqpacker'),
-      require('cssnano')
+      require('cssnano')({
+        calc: {
+          mediaQueries: true
+        }
+      })
+    )
+  } else {
+    plugins.push(
+      require('postcss-calc')({
+        mediaQueries: true
+      })
     )
   }
 
