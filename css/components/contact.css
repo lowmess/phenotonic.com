@@ -1,4 +1,6 @@
 .contact {
+  @neat-outer-container;
+
   &__form {
     max-width: calc(var(--max-width) * 0.75);
 
