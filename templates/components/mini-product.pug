@@ -1,0 +1,25 @@
+//- Display product as a card
+mixin mini-product(id)
+
+  for product in collections.products
+    if id == product.id
+
+      .mini-product&attributes(attributes)
+
+        a.mini-product__image.is-image(href="/" + product.path): img(src="/images/" + product.image, alt=product.title)
+
+        .mini-product__info
+
+          h3.mini-product__manufacturer: a(href="/products/manufacturer/" + product.manufacturer)= product.manufacturer
+          h2.mini-product__name: a(href="/" + product.path)= product.title
+
+          //- if product.snippet
+            h4.mini-product__snippet= product.snippet
+
+          hr
+
+          .mini-product__purchase
+
+            h3.mini-product__price $#{ product.price }
+
+            +add-product(id)
