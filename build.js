@@ -186,25 +186,15 @@ function stylesheets () {
     require('postcss-pseudo-class-enter'),
     require('autoprefixer')({
       browsers: ['last 2 versions', '> 5%']
-    })
+    }),
+    require('css-mqpacker'),
+    require('cssnano')
   ]
 
   if (process.env.NODE_ENV === 'production') {
     plugins.push(
       require('postcss-uncss')({
         html: ['_build/**/*.html']
-      }),
-      require('css-mqpacker'),
-      require('cssnano')({
-        calc: {
-          mediaQueries: true
-        }
-      })
-    )
-  } else {
-    plugins.push(
-      require('postcss-calc')({
-        mediaQueries: true
       })
     )
   }
