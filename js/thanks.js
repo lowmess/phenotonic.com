@@ -2,9 +2,10 @@
 
 var query = window.location.search === '?thanks'
 
-if (query && q$('.contact--contact')) {
-  var contactContact = q$('.contact--contact')
+var contactContact = q$('.contact--contact')
+var contactServices = q$('.contact--services')
 
+if (query && contactContact) {
   contactContact.removeChild(q$('.contact__form'))
 
   var h2Contact = document.createElement('h2')
@@ -22,9 +23,7 @@ if (query && q$('.contact--contact')) {
   contactContact.appendChild(imgContact)
 }
 
-if (query && q$('.contact--services')) {
-  var contactServices = q$('.contact--services')
-
+if (query && contactServices) {
   contactServices.removeChild(q$('.contact__form'))
   q$('.contact__tagline').innerHTML = 'Thanks!'
 

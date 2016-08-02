@@ -2,7 +2,10 @@ extends page
 
 block content
   .contact.contact--contact
-    form.contact__form(action="//formspree.io/hi@phenotonic.com", method="POST")
+    form.contact__form(name="contact", action="/" + path + "/?thanks", netlify, netlify-honeypot="gotcha")
+
+      input(type="text", name="gotcha", style="display:none")
+
       label(for="name") Who Are You?*
       input(name="name", type="text", placeholder="Kareem Abdul-Jabbar", required)
       label(for="email") Where Can We Contact You?*
@@ -10,9 +13,5 @@ block content
 
       label(for="message") What Do You Have to Say?*
       textarea(name="message", placeholder="I can do something else besides stuff a ball through a hoop. My biggest resource is my mind.", required)
-
-      input(type="text", name="_gotcha", style="display:none")
-
-      input(type="hidden", name="_next", value="/#{ path }/?thanks")
 
       button.contact__button Get in Touch
