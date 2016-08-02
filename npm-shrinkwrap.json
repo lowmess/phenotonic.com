@@ -3939,6 +3939,11 @@
       "from": "postcss@>=5.1.0 <6.0.0",
       "resolved": "https://registry.npmjs.org/postcss/-/postcss-5.1.0.tgz"
     },
+    "postcss-calc": {
+      "version": "5.3.0",
+      "from": "postcss-calc@>=5.2.0 <6.0.0",
+      "resolved": "https://registry.npmjs.org/postcss-calc/-/postcss-calc-5.3.0.tgz"
+    },
     "postcss-clearfix": {
       "version": "1.0.0",
       "from": "postcss-clearfix@>=1.0.0 <2.0.0",
@@ -4349,6 +4354,30 @@
           "version": "0.3.0",
           "from": "minimatch@0.3.0",
           "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-0.3.0.tgz"
+        }
+      }
+    },
+    "reduce-css-calc": {
+      "version": "1.2.4",
+      "from": "reduce-css-calc@>=1.2.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/reduce-css-calc/-/reduce-css-calc-1.2.4.tgz",
+      "dependencies": {
+        "balanced-match": {
+          "version": "0.1.0",
+          "from": "balanced-match@>=0.1.0 <0.2.0",
+          "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-0.1.0.tgz"
+        }
+      }
+    },
+    "reduce-function-call": {
+      "version": "1.0.1",
+      "from": "reduce-function-call@>=1.0.1 <2.0.0",
+      "resolved": "https://registry.npmjs.org/reduce-function-call/-/reduce-function-call-1.0.1.tgz",
+      "dependencies": {
+        "balanced-match": {
+          "version": "0.1.0",
+          "from": "balanced-match@0.1.0",
+          "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-0.1.0.tgz"
         }
       }
     },

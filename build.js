@@ -186,9 +186,7 @@ function stylesheets () {
     require('postcss-pseudo-class-enter'),
     require('autoprefixer')({
       browsers: ['last 2 versions', '> 5%']
-    }),
-    require('css-mqpacker'),
-    require('cssnano')
+    })
   ]
 
   if (process.env.NODE_ENV === 'production') {
@@ -198,6 +196,12 @@ function stylesheets () {
       })
     )
   }
+
+  // Make sure cssnano is ran after uncss
+  plugins.push(
+    require('css-mqpacker'),
+    require('cssnano')
+  )
 
   postcss(plugins)
     .process(css, {
