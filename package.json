@@ -9,6 +9,8 @@
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.3.7",
+    "babel-core": "^6.13.2",
+    "babel-preset-es2015": "^6.13.2",
     "browser-sync": "^2.12.8",
     "css-modularscale": "^1.1.0",
     "css-mqpacker": "^5.0.1",
@@ -42,6 +44,7 @@
     "postcss-pseudo-class-enter": "^2.0.1",
     "postcss-uncss": "^0.14.0",
     "pug": "^2.0.0-alpha7",
+    "rollup": "^0.34.7",
     "standard": "^7.1.2",
     "uglify-js": "^2.7.0",
     "uncss": "^0.14.0"

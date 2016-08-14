@@ -1,7 +1,7 @@
 /* global q$, Snipcart */
 
-var menuButton = q$('.nav__icon--menu')
-var navLinks = q$('.nav__container--links')
+const menuButton = q$('.nav__icon--menu')
+const navLinks = q$('.nav__container--links')
 
 menuButton.addEventListener('click', function () {
   navLinks.classList.toggle('nav__container--open')
@@ -9,7 +9,7 @@ menuButton.addEventListener('click', function () {
 
 // Add item count next to cart icon
 function cartCount () {
-  var count = Snipcart.api.getItemsCount()
+  let count = Snipcart.api.getItemsCount()
 
   q$('.nav__icon--cart').setAttribute('data-snipcart-count', count)
 }

@@ -4,7 +4,7 @@
 // @link https://gist.github.com/lowmess/473f4c425b5be8d26e00
 // @link http://codepen.io/lowmess/pen/VvLBLR?editors=0010
 
-var addQueryString = function (el, queryString) {
+const addQueryString = function (el, queryString = window.location.hostname) {
   // Check if el is a link
   if (!el.href) {
     console.log(el + ': \n this element is not a link or is missing an href')
@@ -28,8 +28,10 @@ var addQueryString = function (el, queryString) {
   }
 }
 
-var links = q$$('a')
-var utmString = 'utm_source=phenotonic&utm_medium=referral'
+let links = q$$('a')
+let utmString = 'utm_source=phenotonic&utm_medium=referral'
 
 // Add query string to valid links
-for (var i = 0; i < links.length; i++) addQueryString(links[i], utmString)
+Array.prototype.forEach.call(links, function (link) {
+  addQueryString(link, utmString)
+})
