@@ -1,7 +1,0 @@
-header.header(class= card ? "header--card" : "", class="header--" + title.toLowerCase())
-  .header__text
-    if manufacturer
-      h3.header__manufacturer: a(href="/products/manufacturer/" + manufacturer)= manufacturer
-    h1.header__title= headline ? headline : title
-    if description
-      h3!= description

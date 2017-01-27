@@ -1,20 +1,13 @@
 doctype html
-include components/add-product
-include components/mini-product
-include components/product-preview
-include components/bloom-box
 
 html
   head
-    include partials/head
-  body
-    include partials/navigation
+    include head
+  body.min-vh-100.sans-serif.dark-gray.cover.bg-bottom
+    svg(role="presentation").h2.w-100.absolute.top-1.left-1
+      use(xlink:href="/images/phenotonic.svg#logo")
 
-    block page
-      main.main(role="main")
-        block content
-          h1= title
-          != contents
-
-    include partials/footer
-    include partials/scripts
+    main.main(role="main").flex.flex-column.items-center.justify-center.content-center.min-vh-100.ph3.bg-white-80
+      h1.f2.f1-ns.fw7.tc.mt0.mb3.green :(
+      h2.f4.f3-ns.fw6.tc.lh-title.mv3 Phenotonic has closed&nbsp;its (metaphorical)&nbsp;doors.
+      p.f5.f4-ns.tc.mt3.mb0.mb5-ns.measure-wide.lh-copy It was a fun ride. We were proud to provide our customers with the best possible service and products around. Unfortunately, we never got the traction we needed to become a sustainable&nbsp;business. Get it? <em>Sustainable</em>? Ha! Looks like we got the last laugh after&nbsp;all.
