@@ -1,3 +1,3 @@
 # Phenotonic
 
-RIP Sweet Prince
+Made with [Metalsmith](http://metalsmith.io).

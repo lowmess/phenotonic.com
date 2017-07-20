@@ -1,0 +1,12 @@
+//- Adds product to cart
+mixin add-product(id)
+
+  for product in collections.products
+    if id == product.id
+      a.snipcart-add-item.btn(href="#",
+        data-item-id= product.id ,
+        data-item-name= product.title ,
+        data-item-price= product.price ,
+        data-item-weight= product.weight ,
+        data-item-url= site.url + product.path ,
+        data-item-description= product.snippet ? product.snippet : product.description ? product.description : '') Add to Cart

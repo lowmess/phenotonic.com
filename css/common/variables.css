@@ -1,0 +1,118 @@
+/*******************************************************************************
+ This file contains all application-wide variables.
+ ******************************************************************************/
+
+/* Settings */
+:root {
+  --ms-base: 1rem;
+  --ms-ratio: var(--golden);
+  --base-font-size: var(--ms0);
+  --base-line-height: var(--ms1);
+  --gutter: var(--base-line-height);
+  --measure: 48rem;
+  --max-width: 64rem;
+  --nav-height: calc(var(--base-line-height) * 2.5);
+  --card-offset: calc(var(--gutter) * 3);
+
+  /* Colors */
+  /* stylelint-disable no-indistinguishable-colors */
+  --bulbasaur: #f4f6f4;
+  --ivysaur: #4daa50;
+  --venusaur: #454e3e;
+
+  --zapdos: #d7d76d;
+
+  --squirtle: #f4f5f6;
+  --wartortle: #518eaa;
+  --blastoise: #464a4b;
+
+  --lugia: #ffffff;
+  --onix: #dbd5cd;
+  --snorlax: #4c4845;
+  /* stylelint-enable */
+
+  /************************/
+
+  --brand-primary: var(--ivysaur);
+  --accent-primary: var(--zapdos);
+  --text-primary: var(--venusaur);
+  --link-primary: var(--ivysaur);
+  --button-primary: var(--ivysaur);
+  --outline-primary: var(--onix);
+  --background-primary: var(--lugia);
+  --shadow-primary: color(var(--venusaur) a(25%));
+
+  --link-inactive: var(--onix);
+  --button-inactive: var(--onix);
+
+  --header-heading: var(--lugia);
+
+  --text-reverse: var(--bulbasaur);
+  --link-reverse: var(--lugia);
+  --button-reverse: var(--lugia);
+  --background-reverse: var(--venusaur);
+
+  --nav-background: var(--bulbasaur);
+
+  --products-background: var(--bulbasaur);
+
+  --services-primary: var(--wartortle);
+  --services-header: var(--lugia);
+  --services-text: var(--blastoise);
+  --services-text-reverse: var(--squirtle);
+  --services-link: var(--wartortle);
+  --services-button: var(--wartortle);
+  --services-callout: var(--wartortle);
+  --services-background: var(--squirtle);
+  --services-shadow: color(var(--blastoise) a(25%));
+  --services-divider: var(--wartortle);
+
+  /* Breakpoints */
+
+  @custom-media --small screen and (min-width: 30em);
+  @custom-media --small-viewport screen and (max-width: 29.99em);
+  @custom-media --medium screen and (min-width: 40em);
+  @custom-media --medium-viewport screen and (min-width: 40em) and (max-width: 63.99em);
+  @custom-media --large screen and (min-width: 64em);
+  @custom-media --large-viewport screen and (min-width: 64em) and (max-width: 89.99em);
+  @custom-media --huge screen and (min-width: 90em);
+
+  @custom-media --contact screen and (min-width: 35em);
+
+  @custom-media --mobile-nav screen and (min-height: 22.5em);
+
+  @custom-media --product-cards screen and (min-width: 35em) and (max-width: 63.99em);
+
+  /* Font-stacks */
+  /* stylelint-disable value-keyword-case */
+  --heading-text: geomanist, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  /* stylelint-enable */
+  --body-text: bitter, georgia, serif;
+
+  /* line-heights */
+
+  --h1-line-height: calc(var(--base-line-height) * 3);
+  --h2-line-height: calc(var(--base-line-height) * 2);
+  --h3-line-height: calc(var(--base-line-height) * 1);
+  --h4-line-height: var(--base-line-height);
+
+  /* Headers */
+
+  --h1-font-size: var(--ms3);
+  --h2-font-size: var(--ms2);
+  --h3-font-size: var(--ms1);
+  --h4-font-size: var(--ms0);
+
+  /* Other */
+  --small-font-size: var(--ms-1);
+  --huge-font-size: var(--ms4);
+  --xhuge-font-size: var(--ms5);
+
+  /* z-indexii */
+
+  --z-landing: 1;
+  --z-hero: 100;
+  --z-nav: 1000;
+  --z-nav-content: 1010;
+  --z-nav-bar: 1100;
+}

@@ -1,0 +1,42 @@
+/*******************************************************************************
+ This file contains all styles related to the button component.
+ ******************************************************************************/
+
+.btn, button {
+  display: inline-block;
+
+  border-bottom: 0;
+  border: 3px solid var(--button-primary);
+  border-radius: calc(var(--base-font-size) * 1.5);
+  padding: calc(var(--base-font-size) * 0.5) calc(var(--base-font-size) * 1.5) calc(var(--base-font-size) * 0.5);
+
+  background-color: transparent;
+
+  color: var(--button-primary);
+  font-family: var(--heading-text);
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  &:enter {
+    background-color: var(--button-primary);
+
+    color: var(--button-reverse);
+  }
+
+  &--reverse {
+    border-color: var(--button-reverse);
+
+    color: var(--button-reverse);
+
+    &:enter {
+      background-color: var(--button-reverse);
+
+      color: var(--button-primary);
+    }
+  }
+}

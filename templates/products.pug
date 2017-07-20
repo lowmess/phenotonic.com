@@ -1,0 +1,15 @@
+extends default
+
+block page
+  - var card = true
+  include partials/header
+
+  .page.page--products
+
+    main.main.main--products(role="main")
+
+      block products
+
+        each item in collections.products
+
+          +product-preview(item.id)
