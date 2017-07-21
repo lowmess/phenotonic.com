@@ -8,13 +8,18 @@ html
   head
     include partials/head
   body
-    include partials/navigation
+    .archive
+      .archive__content
+        h1.archive__header You are viewing an archived version of this site. 
+        button.archive__button.btn.btn--reverse Read More
+    .content
+      include partials/navigation
 
-    block page
-      main.main(role="main")
-        block content
-          h1= title
-          != contents
+      block page
+        main.main(role="main")
+          block content
+            h1= titlee
+            != contents
 
-    include partials/footer
-    include partials/scripts
+      include partials/footer
+      include partials/scripts

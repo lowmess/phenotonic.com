@@ -25,6 +25,8 @@
 @import 'components/input-bar.css';
 @import 'components/mini-product.css';
 @import 'components/product-preview.css';
+@import 'components/archive.css';
+@import 'components/modal.css';
 
 /* 6. Page-specific styles */
 @import 'pages/blog.css';

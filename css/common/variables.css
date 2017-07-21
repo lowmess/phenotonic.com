@@ -115,4 +115,7 @@
   --z-nav: 1000;
   --z-nav-content: 1010;
   --z-nav-bar: 1100;
+  --z-archive: 9999;
+  --z-modal-bg: 10000;
+  --z-modal: 10001;
 }

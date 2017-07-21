@@ -1,0 +1,50 @@
+.modal {
+  background-color: var(--lugia);
+  border-radius: calc(var(--gutter) * 0.5);
+  padding: var(--gutter);
+  max-width: var(--measure);
+  position: relative;
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: var(--z-modal-bg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--gutter);
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    animation: 0.3s ease 0s fade;
+  }
+
+  &__close {
+    position: absolute;
+    top: var(--gutter);
+    right: var(--gutter);
+  }
+
+  &__header {
+    margin-top: 0;
+    padding-right: calc(var(--gutter) * 3);
+  }
+
+  &__content {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
