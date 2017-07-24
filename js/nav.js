@@ -1,4 +1,4 @@
-/* global q$, Snipcart */
+/* global q$ */
 
 var menuButton = q$('.nav__icon--menu')
 var navLinks = q$('.nav__container--links')
@@ -8,29 +8,8 @@ menuButton.addEventListener('click', function () {
 }, false)
 
 // Add item count next to cart icon
-function cartCount () {
-  var count = Snipcart.api.getItemsCount()
-
-  q$('.nav__icon--cart').setAttribute('data-snipcart-count', count)
+// Random cart count
+var random = function (min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
 }
-
-// cartCount when cart is loaded
-Snipcart.subscribe('cart.ready', function () {
-  cartCount()
-})
-
-// cartCount when item is added
-Snipcart.subscribe('item.added', function () {
-  cartCount()
-})
-
-// cartCount when item is removed
-Snipcart.subscribe('item.removed', function () {
-  cartCount()
-})
-
-// cartCount after order is done
-Snipcart.subscribe('order.completed', function (data) {
-  console.log('Order Complete')
-  cartCount()
-})
+q$('.nav__icon--cart').setAttribute('data-snipcart-count', random(0, 9))
