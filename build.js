@@ -188,7 +188,8 @@ function stylesheets () {
   if (process.env.NODE_ENV === 'production') {
     plugins.push(
       require('postcss-uncss')({
-        html: ['_build/**/*.html']
+        html: ['_build/**/*.html'],
+        ignore: [/.modal/]
       })
     )
   }
