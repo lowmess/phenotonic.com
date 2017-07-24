@@ -189,7 +189,7 @@ function stylesheets () {
     plugins.push(
       require('postcss-uncss')({
         html: ['_build/**/*.html'],
-        ignore: [/.modal/]
+        ignore: [/.modal/, /.animate/]
       })
     )
   }
